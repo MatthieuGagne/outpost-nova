@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; but the format is the following:
+;
+; [section] ; section goes between []
+; param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Outpost Nova"
+config/features=PackedStringArray("4.6", "Mobile")
+
+[autoload]
+
+GameState="*res://scripts/autoload/game_state.gd"
+CraftingSystem="*res://scripts/autoload/crafting_system.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"
