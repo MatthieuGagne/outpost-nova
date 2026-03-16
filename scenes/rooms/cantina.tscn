@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://cantina"]
+
+[ext_resource type="Script" path="res://scripts/rooms/cantina.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="2_rations_node"]
+[ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="3_parts_node"]
+[ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="4_energy_node"]
+[ext_resource type="PackedScene" path="res://scenes/characters/character.tscn" id="5_cook"]
+[ext_resource type="PackedScene" path="res://scenes/characters/character.tscn" id="6_engineer"]
+[ext_resource type="PackedScene" path="res://scenes/characters/character.tscn" id="7_drifter"]
+[ext_resource type="Script" path="res://scripts/characters/cook.gd" id="8_cook_script"]
+[ext_resource type="Script" path="res://scripts/characters/engineer.gd" id="9_engineer_script"]
+[ext_resource type="Script" path="res://scripts/characters/drifter.gd" id="10_drifter_script"]
+
+[node name="Cantina" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(512, 300)
+
+[node name="RationsNode" parent="." instance=ExtResource("2_rations_node")]
+position = Vector2(100, 200)
+resource_id = "rations"
+
+[node name="PartsNode" parent="." instance=ExtResource("3_parts_node")]
+position = Vector2(200, 200)
+resource_id = "parts"
+
+[node name="EnergyNode" parent="." instance=ExtResource("4_energy_node")]
+position = Vector2(300, 200)
+resource_id = "energy_cells"
+
+[node name="Cook" parent="." instance=ExtResource("5_cook")]
+position = Vector2(150, 400)
+script = ExtResource("8_cook_script")
+
+[node name="Engineer" parent="." instance=ExtResource("6_engineer")]
+position = Vector2(350, 400)
+script = ExtResource("9_engineer_script")
+
+[node name="Drifter" parent="." instance=ExtResource("7_drifter")]
+position = Vector2(550, 400)
+script = ExtResource("10_drifter_script")
+
+[node name="UpgradeFoodPrinter" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 500.0
+offset_right = 300.0
+offset_bottom = 530.0
+text = "Upgrade Food Printer (2 rations)"
+
+[node name="UpgradeLighting" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 500.0
+offset_right = 570.0
+offset_bottom = 530.0
+text = "Upgrade Lighting (1 part + 1 energy)"
+
+[node name="UnlockWorkshop" type="Button" parent="."]
+offset_left = 590.0
+offset_top = 500.0
+offset_right = 840.0
+offset_bottom = 530.0
+text = "Unlock Workshop (2 parts + 2 energy)"
+
+[node name="OpenCraftingBtn" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 550.0
+offset_right = 200.0
+offset_bottom = 580.0
+text = "Open Crafting"
