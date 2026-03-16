@@ -24,6 +24,14 @@ const NPC_SPAWN_AREAS = {
 var _current_area_id: String = ""
 var _npc_instances: Dictionary = {}
 
+# Spawn position when entering area_id coming from prev_area_id
+const AREA_ENTRY_POSITIONS = {
+	"cantina": { "engineering": Vector2(270, 90), "default": Vector2(160, 90) },
+	"engineering": { "cantina": Vector2(50, 90), "quarters": Vector2(270, 90), "default": Vector2(160, 90) },
+	"quarters": { "engineering": Vector2(50, 90), "default": Vector2(160, 90) },
+	"derelict_entrance": { "engineering": Vector2(50, 90), "default": Vector2(160, 90) },
+}
+
 func _ready() -> void:
 	DayManager.day_ended.connect(_on_day_ended)
 	DayManager.all_beats_done.connect(_on_all_beats_done)
@@ -33,14 +41,16 @@ func _ready() -> void:
 func go_to_area(area_id: String) -> void:
 	if _current_area_id == area_id:
 		return
+	var prev = _current_area_id
 	for child in area_container.get_children():
 		child.queue_free()
 	var scene = load(AREA_SCENES[area_id])
 	var area = scene.instantiate()
 	area_container.add_child(area)
 	_current_area_id = area_id
-	# Move player to area entry
-	player.position = Vector2(160, 90)
+	# Move player to the door they came through
+	var positions = AREA_ENTRY_POSITIONS.get(area_id, {})
+	player.position = positions.get(prev, positions.get("default", Vector2(160, 90)))
 	# Show/hide NPCs that belong in this area
 	for npc_id in _npc_instances:
 		var npc = _npc_instances[npc_id]
