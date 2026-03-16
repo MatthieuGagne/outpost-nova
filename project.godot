@@ -10,16 +10,21 @@ config_version=5
 [application]
 
 config/name="Outpost Nova"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.6", "C#", "Mobile")
 
 [autoload]
 
 GameState="*res://scripts/autoload/game_state.gd"
 CraftingSystem="*res://scripts/autoload/crafting_system.gd"
+DayManager="*res://scripts/autoload/day_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/YarnSpinner-Godot/plugin.cfg", "res://addons/YATI/plugin.cfg")
+
+[dotnet]
+
+project/assembly_name="OutpostNova"
 
 [rendering]
 
