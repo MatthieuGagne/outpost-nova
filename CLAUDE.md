@@ -9,10 +9,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-# Launch Godot editor
+# Launch Godot editor (binary at ~/.local/bin/godot — Godot 4.6.1)
 godot
 
-# Run tests (GUT plugin, once installed)
+# Run tests headlessly via GUT
 godot --headless -s addons/gut/gut_cmdln.gd
 
 # Export builds

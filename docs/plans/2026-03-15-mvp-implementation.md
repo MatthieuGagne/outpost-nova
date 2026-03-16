@@ -6,7 +6,24 @@
 
 **Architecture:** Godot 4 project using GDScript. Two autoloaded singletons handle global state (GameState) and crafting logic (CraftingSystem). Rooms and characters are independent scenes. Dialogue is flag-driven: character scripts check GameState flags to return the right line.
 
-**Tech Stack:** Godot 4.x (GDScript), GUT plugin (unit tests for pure logic), 2D pixel art scenes.
+**Tech Stack:** Godot 4.6.1 (GDScript), GUT v9.6.0 plugin (unit tests for pure logic), 2D pixel art scenes.
+
+---
+
+## Status
+
+| Task | Status |
+|------|--------|
+| Task 1: Godot Project Setup | ✅ Done (2026-03-15) |
+| Task 2: GameState Autoload | ⬜ Todo |
+| Task 3: Crafting System | ⬜ Todo |
+| Task 4: Resource Collection Nodes | ⬜ Todo |
+| Task 5: Dialogue System | ⬜ Todo |
+| Task 6: Base Character Scene & Scripts | ⬜ Todo |
+| Task 7: Cantina Room Scene | ⬜ Todo |
+| Task 8: Crafting Panel UI | ⬜ Todo |
+| Task 9: HUD (Resource Display) | ⬜ Todo |
+| Task 10: Main Scene — Wire Everything Together | ⬜ Todo |
 
 ---
 
