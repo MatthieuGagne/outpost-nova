@@ -4,6 +4,7 @@ extends Node
 const ROOM_POOL = [
 	"res://scenes/derelict/rooms/room_a.tscn",
 	"res://scenes/derelict/rooms/room_b.tscn",
+	"res://scenes/derelict/rooms/room_survivor.tscn",
 ]
 const EXIT_ROOM = "res://scenes/derelict/rooms/room_exit.tscn"
 const ROOMS_PER_RUN = 4
