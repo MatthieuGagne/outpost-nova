@@ -19,7 +19,6 @@ func _ready() -> void:
 	timer.wait_time = cooldown_seconds
 	timer.one_shot = true
 	timer.timeout.connect(_on_cooldown_done)
-	print("[ResourceNode] ready: ", resource_id, " at pos ", global_position)
 
 func _draw() -> void:
 	var col = _COLORS.get(resource_id, Color.WHITE)
@@ -29,10 +28,8 @@ func _draw() -> void:
 	draw_string(ThemeDB.fallback_font, Vector2(-22, 6), resource_id, HORIZONTAL_ALIGNMENT_LEFT, -1, 11)
 
 func _input_event(_viewport, event, _shape_idx) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		print("[ResourceNode] click registered: ", resource_id, " ready=", _ready_to_collect)
-		if _ready_to_collect:
-			_collect()
+	if event is InputEventMouseButton and event.pressed and _ready_to_collect:
+		_collect()
 
 func _collect() -> void:
 	_ready_to_collect = false
