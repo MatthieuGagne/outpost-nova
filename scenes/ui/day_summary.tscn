@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/day_summary.gd" id="1"]
+
+[node name="DaySummary" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="DayLabel" type="Label" parent="Panel/VBox"]
+text = "End of Day 1"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 20
+
+[node name="EventsContainer" type="VBoxContainer" parent="Panel/VBox"]
+theme_override_constants/separation = 6
+
+[node name="RestButton" type="Button" parent="Panel/VBox"]
+text = "Rest and begin next day"
