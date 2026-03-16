@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/areas/cantina.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="2"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(320, 8)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(32, 48)
+
+[node name="Cantina" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 0)
+shape = SubResource("1")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 180)
+shape = SubResource("1")
+
+[node name="RationsNode" type="Node2D" parent="."]
+position = Vector2(60, 90)
+
+[node name="ResourceNode" parent="RationsNode" instance=ExtResource("2")]
+resource_id = "rations"
+amount = 1
+
+[node name="MarisSpawn" type="Node2D" parent="."]
+position = Vector2(120, 90)
+
+[node name="SableSpawn" type="Node2D" parent="."]
+position = Vector2(200, 90)
+
+[node name="EngineeringDoor" type="Area2D" parent="."]
+position = Vector2(300, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EngineeringDoor"]
+shape = SubResource("2")
