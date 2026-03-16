@@ -15,15 +15,24 @@
 | Task | Status |
 |------|--------|
 | Task 1: Godot Project Setup | ✅ Done (2026-03-15) |
-| Task 2: GameState Autoload | ⬜ Todo |
-| Task 3: Crafting System | ⬜ Todo |
-| Task 4: Resource Collection Nodes | ⬜ Todo |
-| Task 5: Dialogue System | ⬜ Todo |
-| Task 6: Base Character Scene & Scripts | ⬜ Todo |
-| Task 7: Cantina Room Scene | ⬜ Todo |
-| Task 8: Crafting Panel UI | ⬜ Todo |
-| Task 9: HUD (Resource Display) | ⬜ Todo |
-| Task 10: Main Scene — Wire Everything Together | ⬜ Todo |
+| Task 2: GameState Autoload | ✅ Done (2026-03-15) |
+| Task 3: Crafting System | ✅ Done (2026-03-15) |
+| Task 4: Resource Collection Nodes | ✅ Done (2026-03-15) |
+| Task 5: Dialogue System | ✅ Done (2026-03-15) |
+| Task 6: Base Character Scene & Scripts | ✅ Done (2026-03-15) |
+| Task 7: Cantina Room Scene | ✅ Done (2026-03-15) |
+| Task 8: Crafting Panel UI | ✅ Done (2026-03-15) |
+| Task 9: HUD (Resource Display) | ✅ Done (2026-03-15) |
+| Task 10: Main Scene — Wire Everything Together | ✅ Done (2026-03-15) |
+
+
+
+
+
+
+
+
+
 
 ---
 

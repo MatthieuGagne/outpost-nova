@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://main"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/rooms/cantina.tscn" id="2_cantina"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="4_dialogue_box"]
+[ext_resource type="PackedScene" path="res://scenes/ui/crafting_panel.tscn" id="5_crafting_panel"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Cantina" parent="." instance=ExtResource("2_cantina")]
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="DialogueBox" parent="." instance=ExtResource("4_dialogue_box")]
+
+[node name="CraftingPanel" parent="." instance=ExtResource("5_crafting_panel")]
