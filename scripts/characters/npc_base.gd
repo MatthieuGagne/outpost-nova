@@ -47,6 +47,7 @@ func interact() -> void:
 	var tree = get_dialogue_tree()
 	DialogueManager.conversation_ended.connect(_on_conversation_ended, CONNECT_ONE_SHOT)
 	DialogueManager.start_conversation(tree)
+	get_tree().get_root().get_node("Main/DialogueBox").show_current_node()
 
 func _on_conversation_ended() -> void:
 	_is_talking = false
