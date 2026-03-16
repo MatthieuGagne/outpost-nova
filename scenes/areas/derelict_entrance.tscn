@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/areas/derelict_entrance.gd" id="1"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(48, 64)
+size = Vector2(48, 80)
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(32, 48)
@@ -15,8 +15,12 @@ script = ExtResource("1")
 position = Vector2(160, 90)
 modulate = Color(0.0, 0.05, 0.1, 1)
 
+[node name="DoorSprite" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+modulate = Color(1, 0, 0, 1)
+
 [node name="DoorLabel" type="Label" parent="."]
-position = Vector2(120, 60)
+position = Vector2(115, 60)
 text = "LOWER DECKS — SEALED"
 
 [node name="EntranceTrigger" type="Area2D" parent="."]
