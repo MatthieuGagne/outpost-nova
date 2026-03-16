@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scripts/areas/engineering.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/workbench.gd" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/characters/npc_base.tscn" id="4"]
-[ext_resource type="Script" path="res://scripts/characters/dex.gd" id="5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(320, 8)
@@ -52,10 +50,8 @@ shape = SubResource("3")
 [node name="Sprite2D" type="Sprite2D" parent="Workbench"]
 modulate = Color(0.6, 0.4, 0.2, 1)
 
-[node name="Dex" parent="." instance=ExtResource("4")]
+[node name="DexSpawn" type="Node2D" parent="."]
 position = Vector2(240, 90)
-script = ExtResource("5")
-wander_bounds = Rect2(-40, -30, 80, 60)
 
 [node name="CantinaDoor" type="Area2D" parent="."]
 position = Vector2(20, 90)

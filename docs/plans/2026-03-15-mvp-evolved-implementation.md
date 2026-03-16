@@ -17,22 +17,22 @@
 | Task | Status |
 |------|--------|
 | Task 1: Project Setup + Autoload stubs | ✅ Done |
-| Task 2: GameState (extended) | ⬜ Todo |
-| Task 3: DayManager Autoload | ⬜ Todo |
-| Task 4: DialogueManager Autoload | ⬜ Todo |
-| Task 5: CraftingSystem (extended) | ⬜ Todo |
-| Task 6: PlayerCharacter Scene & Movement | ⬜ Todo |
-| Task 7: NPC Base Scene & Wander | ⬜ Todo |
-| Task 8: Area Scenes (Cantina, Engineering, Quarters) | ⬜ Todo |
-| Task 9: Character Creation UI | ⬜ Todo |
-| Task 10: DialogueBox UI | ⬜ Todo |
-| Task 11: Character Dialogue Scripts (Maris, Dex, Sable) | ⬜ Todo |
-| Task 12: Derelict Run (Room Generator + Basic Combat) | ⬜ Todo |
-| Task 13: Enemy Base + Drone Enemy | ⬜ Todo |
-| Task 14: Survivor Encounter System | ⬜ Todo |
-| Task 15: Main Story Beats (7-day arc) | ⬜ Todo |
-| Task 16: HUD + Day Summary UI | ⬜ Todo |
-| Task 17: Main Scene — Wire Everything Together | ⬜ Todo |
+| Task 2: GameState (extended) | ✅ Done |
+| Task 3: DayManager Autoload | ✅ Done |
+| Task 4: DialogueManager Autoload | ✅ Done |
+| Task 5: CraftingSystem (extended) | ✅ Done |
+| Task 6: PlayerCharacter Scene & Movement | ✅ Done |
+| Task 7: NPC Base Scene & Wander | ✅ Done |
+| Task 8: Area Scenes (Cantina, Engineering, Quarters) | ✅ Done |
+| Task 9: Character Creation UI | ✅ Done |
+| Task 10: DialogueBox UI | ✅ Done |
+| Task 11: Character Dialogue Scripts (Maris, Dex, Sable) | ✅ Done |
+| Task 12: Derelict Run (Room Generator + Basic Combat) | ✅ Done |
+| Task 13: Enemy Base + Drone Enemy | ✅ Done |
+| Task 14: Survivor Encounter System | ✅ Done |
+| Task 15: Main Story Beats (7-day arc) | ✅ Done |
+| Task 16: HUD + Day Summary UI | ✅ Done |
+| Task 17: Main Scene — Wire Everything Together | ✅ Done |
 
 ---
 
