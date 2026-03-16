@@ -15,6 +15,7 @@ func _ready() -> void:
 	food_printer_btn.pressed.connect(_upgrade_food_printer)
 	lighting_btn.pressed.connect(_upgrade_lighting)
 	workshop_btn.pressed.connect(_unlock_workshop)
+	$OpenCraftingBtn.pressed.connect(_open_crafting)
 	GameState.resource_changed.connect(_refresh_buttons)
 	GameState.flag_changed.connect(_on_flag_changed)
 	_refresh_buttons("", 0)
@@ -53,6 +54,11 @@ func _unlock_workshop() -> void:
 		GameState.spend_resource(cost["id"], cost["qty"])
 	GameState.set_flag("workshop_unlocked", true)
 	workshop_btn.text = "Workshop Unlocked! →"
+
+func _open_crafting() -> void:
+	var crafting_panel = get_tree().root.find_child("CraftingPanel", true, false)
+	if crafting_panel:
+		crafting_panel.open()
 
 func _on_character_interaction(character: Node) -> void:
 	var dialogue_box = get_tree().root.find_child("DialogueBox", true, false)
