@@ -34,11 +34,10 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _pick_wander_target() -> void:
-	var origin = get_parent().position if get_parent() else Vector2.ZERO
-	_wander_target = Vector2(
+	_wander_target = position + Vector2(
 		randf_range(wander_bounds.position.x, wander_bounds.end.x),
 		randf_range(wander_bounds.position.y, wander_bounds.end.y)
-	) + origin
+	)
 	wander_timer.wait_time = randf_range(2.0, 5.0)
 	wander_timer.start()
 

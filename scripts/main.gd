@@ -50,6 +50,7 @@ func go_to_area(area_id: String) -> void:
 			var spawn = area.get_node_or_null("%sSpawn" % npc_id.capitalize())
 			if spawn:
 				npc.position = spawn.global_position
+				npc._pick_wander_target()
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {
