@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(320, 8)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(48, 48)
+
+[node name="RoomExit" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+modulate = Color(0.0, 0.1, 0.1, 1)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 0)
+shape = SubResource("1")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 180)
+shape = SubResource("1")
+
+[node name="EntryPoint" type="Marker2D" parent="."]
+position = Vector2(24, 90)
+
+[node name="LootSpawn" type="Marker2D" parent="."]
+position = Vector2(160, 90)
+
+[node name="ExitDoor" type="Area2D" parent="."]
+position = Vector2(280, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor"]
+shape = SubResource("2")
+
+[node name="ExitLabel" type="Label" parent="."]
+position = Vector2(240, 70)
+text = "[ EXIT ]"

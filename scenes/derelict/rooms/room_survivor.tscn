@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/derelict/survivor.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(320, 8)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(40, 48)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(12, 16)
+
+[node name="RoomSurvivor" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+modulate = Color(0.08, 0.05, 0.0, 1)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 0)
+shape = SubResource("1")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 180)
+shape = SubResource("1")
+
+[node name="EntryPoint" type="Marker2D" parent="."]
+position = Vector2(24, 90)
+
+[node name="Survivor" type="CharacterBody2D" parent="."]
+position = Vector2(180, 90)
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Survivor"]
+modulate = Color(1.0, 0.5, 0.1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Survivor"]
+shape = SubResource("3")
+
+[node name="ExitDoor" type="Area2D" parent="."]
+position = Vector2(300, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor"]
+shape = SubResource("2")

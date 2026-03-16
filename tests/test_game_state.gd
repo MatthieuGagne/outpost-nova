@@ -34,3 +34,35 @@ func test_set_flag():
 	GameState.reset()
 	GameState.set_flag("workshop_unlocked", true)
 	assert_true(GameState.get_flag("workshop_unlocked"))
+
+func test_player_background_defaults_empty():
+	GameState.reset()
+	assert_eq(GameState.player_background, "")
+
+func test_set_player_identity():
+	GameState.reset()
+	GameState.set_player_identity("Kael", "engineer", 0)
+	assert_eq(GameState.player_name, "Kael")
+	assert_eq(GameState.player_background, "engineer")
+	assert_eq(GameState.player_appearance, 0)
+
+func test_engineer_background_starts_with_parts():
+	GameState.reset()
+	GameState.apply_background_bonus("engineer")
+	assert_eq(GameState.get_resource("parts"), 3)
+
+func test_medic_background_starts_with_rations():
+	GameState.reset()
+	GameState.apply_background_bonus("medic")
+	assert_eq(GameState.get_resource("rations"), 3)
+
+func test_drifter_background_starts_with_energy_cells():
+	GameState.reset()
+	GameState.apply_background_bonus("drifter")
+	assert_eq(GameState.get_resource("energy_cells"), 3)
+
+func test_npc_flag_history():
+	GameState.reset()
+	GameState.record_npc_choice("maris", "was_honest")
+	assert_true(GameState.has_npc_flag("maris", "was_honest"))
+	assert_false(GameState.has_npc_flag("maris", "helped_her"))

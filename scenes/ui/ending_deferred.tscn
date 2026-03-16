@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[node name="EndingDeferred" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+
+[node name="EndingText" type="RichTextLabel" parent="VBoxContainer"]
+bbcode_enabled = true
+text = "[center]Sable went in alone.\nShe was down there for three hours.\n\nWhen she came back, she didn't say what happened.\nBut she's still here.[/center]"
+custom_minimum_size = Vector2(0, 120)
+
+[node name="CreditsBtn" type="Button" parent="VBoxContainer"]
+text = "Credits"

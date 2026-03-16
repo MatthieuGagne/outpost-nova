@@ -3,7 +3,6 @@ extends Node
 
 signal item_crafted(item_id: String)
 
-# Recipe format: { inputs: [{id, qty}], requires_flag: "" }
 const RECIPES: Dictionary = {
 	"hot_meal": {
 		"inputs": [{ "id": "rations", "qty": 2 }],
@@ -23,6 +22,10 @@ const RECIPES: Dictionary = {
 	},
 	"station_light": {
 		"inputs": [{ "id": "parts", "qty": 1 }, { "id": "rations", "qty": 1 }],
+		"requires_flag": ""
+	},
+	"jury_rig": {
+		"inputs": [{ "id": "scrap", "qty": 2 }, { "id": "parts", "qty": 1 }],
 		"requires_flag": ""
 	}
 }

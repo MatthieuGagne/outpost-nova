@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(320, 8)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(40, 48)
+
+[node name="RoomB" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+modulate = Color(0.05, 0.08, 0.05, 1)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 0)
+shape = SubResource("1")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 180)
+shape = SubResource("1")
+
+[node name="EntryPoint" type="Marker2D" parent="."]
+position = Vector2(24, 90)
+
+[node name="LootSpawn" type="Marker2D" parent="."]
+position = Vector2(80, 50)
+
+[node name="EnemySpawn1" type="Marker2D" parent="."]
+position = Vector2(130, 90)
+
+[node name="EnemySpawn2" type="Marker2D" parent="."]
+position = Vector2(200, 130)
+
+[node name="ExitDoor" type="Area2D" parent="."]
+position = Vector2(300, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor"]
+shape = SubResource("2")
