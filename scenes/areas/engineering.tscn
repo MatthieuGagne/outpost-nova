@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://scripts/areas/engineering.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/workbench.gd" id="2"]
@@ -12,6 +12,9 @@ size = Vector2(32, 48)
 
 [sub_resource type="RectangleShape2D" id="3"]
 size = Vector2(24, 16)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(8, 180)
 
 [node name="Engineering" type="Node2D"]
 script = ExtResource("1")
@@ -29,6 +32,14 @@ shape = SubResource("1")
 [node name="BottomWall" type="CollisionShape2D" parent="Walls"]
 position = Vector2(160, 180)
 shape = SubResource("1")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, 90)
+shape = SubResource("4")
+
+[node name="RightWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(320, 90)
+shape = SubResource("4")
 
 [node name="PartsNode" type="Node2D" parent="."]
 position = Vector2(80, 60)
