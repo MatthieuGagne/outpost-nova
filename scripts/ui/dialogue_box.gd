@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var choices_container: VBoxContainer = $PanelContainer/VBoxContainer/ChoicesContainer
 
 func _ready() -> void:
+	add_to_group("dialogue_box")
 	hide()
 	DialogueManager.conversation_ended.connect(hide)
 

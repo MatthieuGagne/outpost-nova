@@ -1,6 +1,7 @@
 # Outpost Nova — Story Bible
 
 **Date:** 2026-03-16
+**Updated:** 2026-04-02
 **Status:** Approved
 
 ---
@@ -29,6 +30,7 @@ The war didn't just kill people. It taught a generation that openness gets you h
 - **The cost of armor** — cynicism and detachment are survival responses, not character flaws; the game treats them with compassion while asking what they cost
 - **Wonder as resistance** — staying curious about the universe, about the alien, about what you don't know yet, is itself a political act in a world that rewards closed-ness
 - **Who owns a discovery** — the ruins under the station pose the game's sharpest ethical question: does something ancient belong to the person who found it, the corporation that built on top of it, the species that recognize it, or everyone?
+- **Legacy without inheritors** — what it means to build something that outlasts you, aimed at an enemy that's also gone, inside a home people are trying to make worth having; the crew of Outpost Nova didn't ask to inherit anything, and they have to decide what to do with it anyway
 
 ---
 
@@ -44,7 +46,7 @@ The war lasted eleven years. Nobody calls it the War anymore — each faction ha
 - The Unaligned worlds call it the **Fracture**
 - The Keth have no word for it yet in any human language
 
-It began as a resource conflict: human factions fighting over territory and extraction lanes. It became something worse when first contact with the Keth happened in a warzone, between frightened people with weapons. It took four more years of that before anyone thought to try talking. The truce that followed is five years old, built on commerce because neither side trusts anything else yet.
+It began as a resource conflict: human factions fighting over territory and extraction lanes. It became something worse when first contact with the Keth happened in a warzone, between frightened people with weapons. It took four more years of that before anyone thought to try talking. The truce that follows is five years old, built on commerce because neither side trusts anything else yet.
 
 The war is over. The wounds are not.
 
@@ -99,11 +101,67 @@ The ruins have been inert. Then the crew starts going deeper into the Derelict �
 **The layers:**
 
 - **A mirror** — a species that had everything humanity and the Keth are still fighting over, and is gone. Whatever they built still works. Whatever they became, didn't last. The ruins don't explain why. That ambiguity is the point.
-- **A shared prehistory** — the Keth recognize fragments of it. Not the civilization itself, but echoes — shapes in their oldest myths. This means first contact was never really first contact. The Keth and humanity have a shared prehistory neither side knows about yet.
+- **A shared prehistory** — the Keth recognize fragments of it. Not the civilization itself, but echoes — shapes in their oldest sacred architecture, recurring symbols whose source they never identified. This means first contact was never really first contact. The Keth and humanity have a shared prehistory neither side knows about yet.
 - **A forced choice** — the crew didn't ask for this. The commander is supposed to be filing reports for Hegemony. Instead they're standing in front of something that could rewrite the history of every species in the Frontier.
 - **A question of ownership** — Hegemony wants to own it. Not understand it. Own it.
 
 The crew of Outpost Nova — refugees, drifters, damaged people trying to start over — become the accidental custodians of something that belongs to everyone.
+
+*For what the station actually is, and what activates when the commander goes deep enough: see The Weapon.*
+
+---
+
+## The Weapon
+
+The station is not built on top of the weapon. The station is the weapon.
+
+The dead civilization didn't construct a waypoint and a weapon separately. The structure Hegemony built their waypoint around — the lower decks, the sealed corridors, the power systems nobody could fully map — is a single integrated weapons platform, dormant for millennia. Hegemony's buried survey recognized this. They said nothing. They built on top of it and waited.
+
+The crew has been making a home inside a weapon without knowing it. The flickering lights, the odd corridors, the hull panels painted over until the original color is a mystery — all of it is the outer layer of something designed to project violence at scale.
+
+### What the Ruins Contain
+
+The player assembles the picture from fragments. The ruins never explain themselves — the horror is in the shape, not the caption:
+
+- **Extraction infrastructure at scale, minimal habitation** — the station was built for accumulation, not for people. The living quarters are small, late additions. Everything else is dedicated to resource processing and power generation.
+- **No individuals** — no art, no graves, no faces, no record of anyone who lived here. An inventory, not a history. A civilization that built for permanence but not for people.
+- **The weapon's orientation** — it is large, structural, built into the architecture of the lower decks. It was designed to project outward. It is not pointed at anything nearby. Its target is elsewhere. The player walks through it before understanding what it is.
+
+### What Activates
+
+When the commander goes deep enough into the Derelict:
+
+- **The weapon begins broadcasting** — a signal, now transmitting, announcing its coordinates to whoever was meant to receive it. The danger is who's listening.
+- **The weapon begins charging** — slowly, over days. The crew notices power anomalies they can't explain. By Act 3 it is operational. The question of who owns it becomes: who controls whether it fires.
+
+### What It Is Pointing At
+
+The weapon is oriented toward a fixed point in uncharted space — beyond the Frontier's mapped territory, beyond known Keth space. What is there is not on any chart.
+
+It is the ruins of the civilization the dead builders were at war with. *See: The Second Civilization.*
+
+When the commander describes the coordinates, the Keth trader goes silent. They do not explain why.
+
+---
+
+## The Second Civilization
+
+In uncharted space, at the coordinates the weapon has been pointing at for millennia, are the ruins of a second dead civilization.
+
+The builders of Outpost Nova destroyed themselves through war with this species. Neither side survived. The weapon is still aimed. Whatever they were fighting over, it outlasted both of them.
+
+**What we know:**
+- Their ruins are the opposite of the station's — full of individuals. Faces, names, records, art. A civilization that documented its people.
+- They are completely unknown to the Keth. The Keth recognize shapes from the station's builders in their oldest sacred architecture; they recognize nothing from the second civilization. That asymmetry is its own information.
+- Their ruins are in uncharted space. Neither the Federation, the Unaligned Alliance, nor the Keth claim the territory — as far as any current map shows.
+
+**What we don't know (TBD):**
+- The name of either civilization
+- The full nature and history of the war between them
+- What the second civilization's ruins contain, beyond the broad contrast with the station
+- Whether the broadcast, now active, will reach something there — and whether something will answer
+
+**How to write toward this:** The second civilization is a full-game seed. In the MVP and vertical slice, it exists only as a destination: coordinates the weapon is pointing at, silence from the Keth trader, a question the game does not yet answer. Do not over-explain. Let the image carry it — two dead civilizations, one weapon still aimed at the other's grave.
 
 ---
 
@@ -111,7 +169,9 @@ The crew of Outpost Nova — refugees, drifters, damaged people trying to start 
 
 The player arrives as Hegemony Combine's appointed station manager. Officially: stabilize operations, assess viability, file reports. The crew knows who sent them. The tension is immediate.
 
-The player character has their own reasons to be suspicious of Hegemony, shaped by their background:
+The commander arrives with general institutional distrust of Hegemony — earned by experience, not specific intelligence. They do not know about the buried survey or the ruins before arrival. Their suspicion is real but unspecific: they know what Hegemony does, they've seen it operate, they don't fully trust the assignment. They came anyway, for their own reasons.
+
+The ruins are a genuine discovery. This matters.
 
 | Background | Inner Voice | Why they're here | Why they're suspicious |
 |------------|-------------|-----------------|----------------------|
@@ -145,13 +205,91 @@ The Federation trained him, used his skills during the Consolidation, and had no
 
 His arc is about whether he can let someone in — whether curiosity about systems can become curiosity about people.
 
-### Sable — The Drifter
+### Sable — The Trader
 
+**Species:** Drueth (Displaced) — red skin, compound eyes, antennae that carry expression
 **Emotional profile:** Cynical / Warm / Curious
 
 She has been everywhere and stayed nowhere. She connects easily — she is genuinely interested in people, genuinely warm — and she leaves before it gets complicated. She has watched too many "fresh starts" collapse to believe in destinations. She is not closed to the universe: she is still curious, still watching, still willing to be surprised. What she has given up on is the future as a place you can get to. She lives entirely in the present tense.
 
-Her arc is about whether she can commit to a place — whether she can stop treating warmth as something you can give without cost and move on from.
+"Sable" is a go-by she picked up in her travels. Her actual Drueth name is harder to pronounce in human languages — she doesn't offer it easily.
+
+Her arc is about whether she can commit to a place — whether she can treat warmth as something you give with cost and stay for.
+
+### Soriel — The Medic
+
+**Emotional profile:** Warm / Cynical / Curious
+
+The last Thessari on the station, possibly one of the last anywhere. Their world was caught in the early years of human-Keth first contact — not a target, just in the way of two frightened species with weapons. Neither side claimed what happened. Soriel doesn't ask them to. What they've built since is theirs: a warmth with no cultural backing, no community to reflect it, assembled from choice and sustained by nothing but the decision to keep making it.
+
+They are the station's medic because everyone needs one eventually, and because knowing what's wrong with people — specifically, physically — turns out to be the closest thing they've found to understanding them. Their curiosity is the same: there is nothing left to protect, so the universe becomes interesting again. Their cynicism is quieter than Dex's or Sable's. It lives in the future — they've stopped expecting things to get better in any systemic sense. What they believe in is smaller and more durable: this person, this wound, this moment.
+
+The most lived-in relationship on the station is theirs and Maris's — two warm people, opposite on every other axis. Maris faces forward and has given up on the unknown; Soriel stays curious and has given up on the future. They have been each other's counterweight for years before the commander arrives.
+
+Their arc is not about becoming warm — the warmth is already there, and it's already costing more than it looks. It's about whether it runs out. The commander is Hegemony-sent, which means they represent the human half of something Soriel has spent years deciding not to be bitter about. The Keth trader's arrival in Act 2 is harder — the other half of that same decision, arriving in person. Soriel thought they'd resolved it. They hadn't.
+
+### Quen — Security
+
+**Species:** Maevet (Unbound) — cephalopod semi-humanoid, chromatophore skin, fluid movement. Pronouns: it/its.
+**Emotional profile:** Detached / Warm / Bitter
+
+The oldest presence on the station — here at least 15 years, possibly more, predating Maris by almost a decade. The Maevet are Unbound: wandering collectives that live in the margins between powers. Quen chose to stay, which for a Maevet is significant. It manages station security and access to all areas, including the sealed Derelict.
+
+It was there when the Derelict was sealed. It sealed the door. What it saw wasn't danger it could guard against — it was something it couldn't protect people from, which is the only thing that genuinely frightens it. It stopped asking questions after that.
+
+The warmth underneath surfaces rarely and means something when it does. The Detachment is the surface; the Bitter/Unknown is load-bearing.
+
+Its arc is about whether the commander's investigation reopens the question it decided to stop asking — and what it does if the answer is worse than it imagined.
+
+---
+
+## The Keth Trader
+
+**Name:** Vaen (full name: Vaensoleth — Merchant caste registry name, shed)
+
+**Emotional profile:** Hopeful / Detached / Curious
+
+**What we know:**
+
+A rogue Keth — here because "here" is away from Keth society. Whatever sent them out of Keth space is not something they volunteer. They arrived at Outpost Nova as one of the first Keth to use the emerging trade lane, which is true, and also convenient cover for someone who needed to be somewhere the Keth establishment wasn't watching.
+
+They are not the Keth's official face — patient, formal, meticulous. They are something else: curious, a little reckless, carrying something they're not supposed to carry. Years of exile holding a forbidden question alone have made them Detached — they don't give trust easily, and they don't invite it. But they still believe the question matters. That's the Hopeful underneath the armor.
+
+**Their role:**
+
+The Act 2 pivot. Their arrival is mundane — trade business on a new lane — until the commander describes what they found in the lower decks. Vaen goes quiet. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
+
+They recognize the weapon's orientation coordinates. They do not explain how. They did not come here for this — and now they can't un-know it, and they can't report it even if they wanted to.
+
+**The alliance:**
+
+The commander and Vaen end up in the same position: both holding knowledge they're not supposed to have, both cut off from the institutions that might claim it. The alliance that forms is fragile and real. Neither of them planned it. Vaen's Detachment makes the alliance harder to build and more meaningful when it holds.
+
+**What's deferred:** Vaen's specific backstory — what they found, what they know about the sacred architecture, why they fled — pending Keth society development session.
+
+---
+
+## The Hegemony Representative
+
+**Name:** Harlan (full title: Senior Operations Director, Frontier Acquisitions)
+**Emotional profile:** Hopeful / Warm / Bitter
+**Appearance:** Human, 50s. Silver-haired, impeccably composed. Visual reference: John Slattery.
+
+The person Hegemony sends in Act 3 is not a fixer. They are someone the commander genuinely respects — a mentor or former colleague who believes in what Hegemony does, and means it. The threat they represent is not institutional pressure. It is the cost of choosing against someone you care about.
+
+Their arrival is the moment the commander's final choice stops being abstract.
+
+The scene that matters: this person says *I know you. This isn't like you. Just file the report.* And they mean it. They are not wrong about who the commander is. They are wrong about what the commander should do. Those are different things.
+
+**By background:**
+
+**Engineer background** — A senior Hegemony surveyor who recognized the commander's technical ability early and brought them into increasingly significant assessments. They introduced the commander to what "assess viability" really means at Hegemony — and the commander learned, and stayed anyway, because the work was real and this person made it feel worth doing. Their arrival in Act 3 is the hardest version: someone who taught the commander to see clearly, now asking them to look away.
+
+**Medic background** — A Hegemony operations coordinator who ran the humanitarian framing that brought the commander in. They believe in it sincerely — they have seen Hegemony's support do genuine good in desperate places, and they have learned not to look too closely at the cost. They are not cynical. They are practiced. Their arrival asks the commander: is the person who taught you that care has consequences the same person who is asking you to ignore consequences now?
+
+**Drifter background** — Someone who offered the commander stability at a moment when stability felt impossible. The arrangement was transactional — a report in exchange for a footing — but the relationship became real. They kept their end. They are here to collect the commander's. Their arrival is the most personal version: not ideology, not institution, just a debt to a person who was there when no one else was.
+
+**What they all share:** They are not villains. They believe in what they're asking for. That is what makes the scene work.
 
 ---
 
@@ -205,15 +343,23 @@ Small daily stakes: a broken conduit, tension between crew members, a minor spec
 
 ### Act 2 — Something Stirs (Days 4-6)
 
-A Keth trader arrives — one of the first to use this lane. Minor species on the station react in unexpected ways. Hegemony's communications become pointed: *we need that assessment.*
+A rogue Keth arrives — one of the first to use this lane, or so they say. Minor species on the station react in unexpected ways. Hegemony's communications become pointed: *we need that assessment.*
 
-The commander goes deeper into the Derelict. Something activates. The Keth trader recognizes what they describe. The crew starts to understand the ground has shifted — and that their commander may not be who they said they were.
+The commander goes deeper into the Derelict. The weapon activates: power anomalies ripple through the station, and somewhere, a broadcast begins transmitting. The Keth trader recognizes the coordinates when the commander describes them — and goes quiet in a way that is not surprise but confirmation. The crew starts to understand the ground has shifted. Their commander may not be who they said they were. And the station they've been keeping alive may not be what they thought it was.
 
 The trust built or withheld in Act 1 now has weight.
 
 ### Act 3 — The Reckoning (Days 7-10)
 
-Everything converges. Hegemony sends someone in person. The nature of the ruins becomes undeniable. The commander must choose: deliver the discovery to Hegemony, share it with the Keth, protect it by keeping it secret, or find a way to make it belong to everyone — including the species it came from, whoever they were.
+Everything converges. The weapon is charging — the power anomalies are worsening, and Dex has started to understand what he's looking at. Hegemony sends someone in person: someone the commander respects, who means everything they say. The nature of the weapon becomes undeniable.
+
+The commander must choose:
+
+1. **Deliver it to Hegemony** — hand a functional weapons platform to the corporation that buried the survey and built on top of it. They will own it. They will use it or sell access to it. This is what the commander was sent here to enable.
+2. **Share it with the Keth** — give one faction a weapon aimed at a grave they half-recognize. The Keth trader's silence was confirmation, not neutrality. What they do with that knowledge — and with the weapon — is not something the commander controls.
+3. **Protect it by keeping it secret** — hold the line, refuse all parties, keep the station between the weapon and the world. The weapon is still charging. This buys time. It doesn't solve the problem.
+4. **Make it belong to everyone** — share the discovery publicly, force the secret into the open, make it impossible for any single party to quietly own. The most idealistic choice. Also the most dangerous: the Frontier will tear itself apart to possess it, and the station is in the middle.
+5. **Destroy it** — the crew that made a home inside a weapon chooses to dismantle the weapon. The station may not survive what that requires. Everything they built here is at risk. This is the hardest ending and probably the most honest one.
 
 The crew's accumulated trust shapes what's possible. No clean endings. Bittersweet by default.
 
