@@ -56,10 +56,11 @@ Connected walkable areas navigated by passing through doors.
 **Areas (MVP vertical slice):**
 - **Cantina** — social hub, food/ration nodes, Maris and Sable's territory
 - **Engineering Bay** — parts nodes, crafting workbench, Dex's territory
+- **Medbay** — medical supplies, the new character's territory; people come to them, they rarely seek others
 - **Quarters** — player bunk (end day), bulletin board (day hints/summary), background crew housing
 - **Derelict Entrance** — sealed lower-deck door; opens partway through the arc
 
-**Main NPCs:** Maris (Cook), Dex (Engineer), Sable (Drifter). They wander their areas on loose schedules and react to player flag history — not a friendship meter, just accumulated choices.
+**Main NPCs:** Maris (Cook), Dex (Engineer), Sable (Drifter), Soriel (Medic — Thessari, Displaced). They wander their areas on loose schedules and react to player flag history — not a friendship meter, just accumulated choices.
 
 **Background crew** populate the station over time as survivors are recruited from the Derelict. The station feels emptier early and more alive later.
 
@@ -122,6 +123,7 @@ scenes/
   areas/
     cantina.tscn
     engineering.tscn
+    medbay.tscn
     quarters.tscn
     derelict_entrance.tscn
   characters/
@@ -147,7 +149,7 @@ scripts/
   characters/
     player.gd
     npc_base.gd
-    maris.gd / dex.gd / sable.gd
+    maris.gd / dex.gd / sable.gd / soriel.gd
   derelict/
     run.gd
     room_generator.gd
@@ -157,8 +159,8 @@ scripts/
 
 ### MVP Vertical Slice Scope
 
-- Cantina + Engineering + Quarters + Derelict (3-4 floors)
-- Three main NPCs (Maris, Dex, Sable)
+- Cantina + Engineering + Medbay + Quarters + Derelict (3-4 floors)
+- Four main NPCs (Maris, Dex, Sable, Soriel)
 - 2-3 recruitable survivors from the Derelict
 - 7-day arc with a real ending
 - Character creation with 3 backgrounds
