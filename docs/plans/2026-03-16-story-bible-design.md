@@ -116,6 +116,8 @@ The crew of Outpost Nova — refugees, drifters, damaged people trying to start 
 
 The station is not built on top of the weapon. The station is the weapon.
 
+**Critical consequence:** The weapon cannot fire without destroying the station. The AI builders designed it for a civilization with no individuals, no lives to protect. The crew has been making a home inside something designed with no regard for their survival. By Act 3, when Dex says what he's been thinking for a week, this is what the commander has to sit with: firing it means none of them survive.
+
 The dead civilization didn't construct a waypoint and a weapon separately. The structure Hegemony built their waypoint around — the lower decks, the sealed corridors, the power systems nobody could fully map — is a single integrated weapons platform, dormant for millennia. Hegemony's buried survey recognized this. They said nothing. They built on top of it and waited.
 
 The crew has been making a home inside a weapon without knowing it. The flickering lights, the odd corridors, the hull panels painted over until the original color is a mystery — all of it is the outer layer of something designed to project violence at scale.
@@ -139,9 +141,7 @@ When the commander goes deep enough into the Derelict:
 
 ### What It Is Pointing At
 
-The weapon is oriented toward a fixed point in uncharted space — beyond the Frontier's mapped territory, beyond known Keth space. What is there is not on any chart.
-
-It is the ruins of the civilization the dead builders were at war with. *See: The Second Civilization.*
+The weapon is oriented toward the Keth homeworld. What this means — why the Builders aimed there, what was there before the Keth — is a mystery the game plants but does not answer.
 
 When the commander describes the coordinates, the Keth trader goes silent. They do not explain why.
 
@@ -342,35 +342,52 @@ The goal is not to "fix" characters. It's to have real conversations with people
 
 ## The Main Arc
 
-**Three acts, ~7-10 in-game days.**
+**Three acts, ~58 in-game days total.**
 
-### Act 1 — Arrival (Days 1-3)
+| Act | Length | Shape |
+|-----|--------|-------|
+| Act 1 — Arrival | 30 days | Settlement. Mechanics, building, crew relationships. The station becomes home. |
+| Act 2 — Something Stirs | 21 days | Creeping wrongness. Anomalies escalate. Vaen arrives. Builder logs surface. |
+| Act 3 — The Reckoning | 7 days | Fast and pressurized. Harlan arrives. Three choices. |
 
-The commander lands at a struggling station whose crew doesn't trust them. Learn the rhythms: collect resources, talk to people, file sanitized reports to Hegemony. The Derelict's lower decks are sealed — officially a structural hazard. Maris is warm but watchful. Dex is functional and closed. Sable is already thinking about leaving. The station feels like it might not survive the month.
+### Act 1 — Arrival (Days 1-30)
+
+The commander lands at a struggling station whose crew doesn't trust them. Learn the rhythms: collect resources, talk to people, file sanitized reports to Hegemony. The player learns mechanics, manages resources, builds the station, and cycles through meaningful crew conversations multiple times. By day 30 the station feels genuinely lived in. The Derelict's lower decks are sealed — officially structural hazard. The vertical slice covers the first 7 days of Act 1 only. Maris is warm but watchful. Dex is functional and closed. Sable is already thinking about leaving. The station feels like it might not survive the month.
 
 Small daily stakes: a broken conduit, tension between crew members, a minor species family who's been waiting for transit that isn't coming. The larger world is present only as pressure — a Federation patrol that asks too many questions, a Hegemony message that's slightly too specific.
 
-### Act 2 — Something Stirs (Days 4-6)
+### Act 2 — Something Stirs (Days 31-51)
 
-A rogue Keth arrives — one of the first to use this lane, or so they say. Minor species on the station react in unexpected ways. Hegemony's communications become pointed: *we need that assessment.*
+The commander goes deeper into the Derelict, triggering the weapon's charging sequence. This is the Act 2 pivot — the commander caused this.
 
-The commander goes deeper into the Derelict. The weapon activates: power anomalies ripple through the station, and somewhere, a broadcast begins transmitting. The Keth trader recognizes the coordinates when the commander describes them — and goes quiet in a way that is not surprise but confirmation. The crew starts to understand the ground has shifted. Their commander may not be who they said they were. And the station they've been keeping alive may not be what they thought it was.
+Anomalies escalate in three waves:
+- **Week 1 (Days 31-37):** Flickering lights in new corridors, a low hum nobody can source, one conduit reading Dex can't explain. Deniable.
+- **Week 2 (Days 38-44):** Power rerouting without commands, sections becoming inaccessible, the hum audible to everyone. Undeniable.
+- **Week 3 (Days 45-51):** Dex has a theory he doesn't want to say out loud. The crew stops pretending it's maintenance issues.
+
+The commander also begins discovering Builder logs in the Derelict — clinical records referring to the weapon's target as 'The Others.' Early logs are pure inventory notation. Later logs describe The Others with escalating specificity — they name their dead, they count themselves, they build for individuals. A player paying attention will start to recognize the shape.
+
+Vaen arrives mid-Act 2, triggered by the spike in Builder emissions when the weapon begins charging. They present themselves as a trader on the new lane and do not immediately reveal why they came. They carry a physical artifact found at a secondary Builder ruins site — unreadable without context. The weapon's architecture is the decoder ring they didn't know they were looking for.
 
 The trust built or withheld in Act 1 now has weight.
 
-### Act 3 — The Reckoning (Days 7-10)
+### Act 3 — The Reckoning (Days 52-58)
 
-Everything converges. The weapon is charging — the power anomalies are worsening, and Dex has started to understand what he's looking at. Hegemony sends someone in person: someone the commander respects, who means everything they say. The nature of the weapon becomes undeniable.
+Everything converges. The weapon is charging — Dex has worked out the orientation data and comes to the commander with a calculation he wishes he'd gotten wrong: the weapon is aimed at the Keth homeworld.
 
-The commander must choose:
+Hegemony sends Harlan in person. He arrives not just as someone the commander respects, but with a bargaining chip: Hegemony's buried survey found a shutdown mechanism — a control interface documented but not understood at the time. Hegemony has spent years quietly studying it. Harlan holds the only known way to stop the weapon. He didn't come to negotiate. He came knowing he held the only card that mattered.
 
-1. **Deliver it to Hegemony** — hand a functional weapons platform to the corporation that buried the survey and built on top of it. They will own it. They will use it or sell access to it. This is what the commander was sent here to enable.
-2. **Share it with the Keth** — give one faction a weapon aimed at a grave they half-recognize. The Keth trader's silence was confirmation, not neutrality. What they do with that knowledge — and with the weapon — is not something the commander controls.
-3. **Protect it by keeping it secret** — hold the line, refuse all parties, keep the station between the weapon and the world. The weapon is still charging. This buys time. It doesn't solve the problem.
-4. **Make it belong to everyone** — share the discovery publicly, force the secret into the open, make it impossible for any single party to quietly own. The most idealistic choice. Also the most dangerous: the Frontier will tear itself apart to possess it, and the station is in the middle.
-5. **Destroy it** — the crew that made a home inside a weapon chooses to dismantle the weapon. The station may not survive what that requires. Everything they built here is at risk. This is the hardest ending and probably the most honest one.
+The commander must choose.
 
-The crew's accumulated trust shapes what's possible. No clean endings. Bittersweet by default.
+The commander faces three choices — all cliffhangers. The game ends at the moment of decision, not the consequence.
+
+**1. Defend it** — Refuse everyone, including Harlan's offer. Hold the line on a charging weapon aimed at the Keth homeworld. Trust the crew to find another way. *We built something worth fighting for — without his help.* Screen goes dark on the crew together.
+
+**2. Accept Harlan's offer** — He stops the weapon. The station survives. The crew lives. The station is no longer yours. *We built something worth saving — even at that cost.* Screen goes dark on Harlan taking the keys.
+
+**3. Sacrifice it** — Destroy the weapon yourselves, before anyone can claim it. The station may not survive. *We built something worth ending on our own terms.* Screen goes dark on the crew running.
+
+The moral: *what do you do when the home you built is the weapon?*
 
 **The throughline:** A group of damaged people, on a forgotten station, holding something the universe will tear itself apart to possess — deciding together what kind of people they want to be.
 
