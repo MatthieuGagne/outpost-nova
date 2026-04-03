@@ -191,7 +191,88 @@ This is what makes Thessari warmth-as-resistance specific and costly: it is a mo
 > *Additional Displaced species may be added as the game's world expands.*
 
 ### Unbound Species
+
+The Unbound are species that were never organized into empires or governments: clans, guilds, wandering collectives. They've always lived in the margins between powers. They trade, carry information, go where the big powers don't bother to look. Several have been passing through Outpost Nova since before Hegemony bought the debt.
+
+---
+
+#### Maevet
+
+*Quen's species.*
+
+**Physical:** Cephalopod semi-humanoid. Fluid, boneless movement — they compress, extend, and reorient in ways that read as wrong to species with skeletons. Chromatophore skin that shifts color and pattern with emotional state; they cannot fully suppress it. Bilateral symmetry is approximate. Pronouns: it/its (standard Maevet convention; individual Maevet may use others).
+
+**Culture:** Maevet move in small, loose collectives — not families, not guilds, something in between. Membership is fluid; a Maevet stays with a collective as long as it serves both. The chromatophore skin means emotional concealment is impossible among Maevet — this is not a vulnerability, it is the social contract. You can see exactly who you're dealing with. Among other species, this makes Maevet unsettling to negotiate with (they read everything you hide) and valuable to employ (they can't lie with their bodies even if they try).
+
+**What they never had:** Fixed territory, formal government, recognized legal standing in any jurisdiction. They exist in the gaps. They are very good at gaps.
+
+**How they navigate the Frontier:** Wherever the big powers don't bother to look. Information brokerage, access facilitation, transit through complicated jurisdictions. A Maevet collective that has been through a region knows it better than any government map.
+
+**Note on Quen:** Has been on Outpost Nova 15+ years — longer than any other current crew member. Chose to stay, which for a Maevet is significant. What Quen saw when it sealed the Derelict door is the reason it stopped asking questions. Its arc is whether the commander's investigation reopens that question.
+
+---
+
+#### Velhari
+
+**Physical:** Tall and very thin — elongated limbs that fold at multiple joints, giving them the look of something assembled from angles. Faces are narrow, eyes set wide, with a translucent nictitating membrane that closes horizontally. Skin is pale and slightly luminescent at the fingertips and along the spine — faint enough to be invisible in daylight, visible in low light. They do not radiate heat in any wavelength that most bioscanners catch, which has historically been useful.
+
+**Culture:** Velhari society is organized around *networks of obligation* — complex, interlocking debts and favors that a Velhari tracks across their entire life. Not transactional in a monetary sense: obligations include things like "witnessed my grief," "was honest when honesty cost them something," "held a secret I needed held." A Velhari knows exactly what they owe and what they're owed by everyone they've ever encountered, and this ledger is carried internally, never written down. The network is the individual's social standing, inheritance, and identity simultaneously. Strangers are met with formal neutrality until the first exchange — after which the ledger opens.
+
+This makes Velhari extraordinary keepers of confidence. A secret given to a Velhari becomes an obligation they carry. Betraying it would collapse their entire social standing with everyone who has ever trusted them — which is not a risk any Velhari takes lightly.
+
+**What they never had:** Geographic home. The Velhari have no record of a homeworld — not because they lost it, but because their oldest oral histories don't describe one. The leading theory, not one the Velhari dispute, is that they have been marginal for so long that the concept has ceased to apply. They find questions about their origin mildly interesting and not painful.
+
+**How they navigate the Frontier:** As couriers, confidential intermediaries, and archivists of the unofficial record. Any faction that needs something carried, delivered, or kept safe without it appearing on any formal registry has probably used a Velhari at some point. Their reputation for absolute discretion is commercially load-bearing — they protect it with everything they have, because they are the product.
+
+---
+
+#### Orath
+
+**Physical:** Broad, low-slung, four-armed. The body plan is built for physical resilience — dense musculature, low center of gravity, a short thick neck that sits the head close to the torso. Skin is layered and ridged, ranging from grey-green to deep brown, with natural patterning that functions like camouflage in rocky or industrial terrain (evolved, not deliberate). Two of the four arms are primary — larger, used for manipulation and strength; two are secondary — shorter, faster, better suited for fine work. They breathe through filtration structures along the neck that can handle atmospheres most species need equipment for.
+
+**Culture:** Orath don't organize by bloodline, geography, or species solidarity. They organize by *craft*. An Orath's primary social identity is their trade — not as a job, but as a calling and a lineage. An Orath who repairs atmospheric systems belongs to the Atmospheric lineage, which has its own history, traditions, masters, and apprentices going back centuries. Changing craft is not impossible but is understood as a kind of social death and rebirth: you exit one lineage and must earn entry into another from the bottom.
+
+This means an Orath collective on a station looks nothing like a community of like minds — it looks like a full-service operation, because each member belongs to a different lineage and they've deliberately assembled complementary skills. This is how Orath travel: not alone, and not as family, but as a complete toolkit.
+
+**What they never had:** Political voice. Orath craft lineages are apolitical by doctrine — not because they can't form opinions, but because historically, political alignment destroyed lineages. A lineage that backed the wrong faction lost everything; the craftwork that survived the Fracture was the work that stayed neutral. The doctrine calcified into culture. Orath are very good at working with everyone, and they distrust anyone who asks them to choose.
+
+**How they navigate the Frontier:** Maintenance, construction, and repair work that most species outsource but nobody wants to be without. An Orath team that has serviced a station knows its systems better than its official engineers. They move between posts on short contracts, carry their knowledge as lineage property, and leave when the work is done. They are everywhere in the Frontier's infrastructure and almost nowhere in its politics.
+
+---
+
+> *Additional Unbound species may be added as the game's world expands.*
+
 ### Sovereign Species
+
+The Sovereign are species organized into their own independent empires, confederacies, or governing structures — too small to rival the Federation or the Keth, but too organized and established to be displaced or unbound. They survived the Fracture by not being worth fighting over, or by being too costly to fight. Post-war, they are courted by the major powers for access to their territory, trade routes, or specific knowledge.
+
+---
+
+#### The Ishari Compact
+
+**Civilization structure:** A confederacy of seven semi-autonomous city-states, each governing a different orbital body in the same star system. The city-states share a common legal framework and a rotating council seat but maintain independent economies and internal governance. Decisions that affect only one city-state are made locally; decisions that affect the Compact's external relationships require four-council consensus. This structure is slow, deliberate, and almost impossible for outside powers to pressure — a move against one city-state triggers the others, but fractures within are common and exploitable.
+
+**Physical:** Ishari are amphibious — bipedal on land, fully aquatic swimmers. Stocky, wide-shouldered, with webbed hands kept partially closed in dry environments. Bioluminescent patterning along the jaw and upper chest that functions as social signaling. Their faces are broad and expressive by non-Ishari standards: large, clear eyes that work well in low-light conditions, a wide mouth, a pronounced brow ridge that carries emotional expression the way Drueth antennae do. Voices are deep and resonant — the result of resonance chambers evolved for underwater communication that translate unexpectedly well across species.
+
+**What makes them politically significant:** The Ishari system sits at the junction of what is becoming the most direct transit route between Federation space and the emerging Keth trade lanes. Anyone who wants efficient access to post-truce commerce wants an Ishari docking permit. The Compact has known this was coming for fifteen years and has been quietly building the negotiating leverage to extract maximum concessions before granting it. They are not yet a major power. They are very good at being the next thing everyone needs.
+
+**Current posture toward the truce:** Cautiously optimistic, openly calculating. The Ishari Compact issued a formal statement supporting the truce within six months of its signing — notably before several larger powers did. This was not sentiment. They had run the numbers. A stable truce means their transit leverage compounds annually; renewed conflict makes them a target. They are the loudest public supporters of the truce's commercial framework, which suits their interests and also happens to be true.
+
+---
+
+#### The Surev Reaches
+
+**Civilization structure:** A loose hegemony of eight inhabited worlds unified under a hereditary Directorate — not a monarchy, but a council of long-established families who have governed collectively for four centuries. Directorate families are identifiable by a genetic marker that emerged from a historical founder population, which has made their authority both self-reinforcing (the marker is visible as a distinctive banding pattern in the eyes) and politically complex (anyone born with the marker has a theoretical claim to council standing, which the Directorate manages carefully). The eight worlds each have a senior family representative and a planetary assembly below them; the Directorate makes foreign policy, the assemblies handle everything internal.
+
+**Physical:** Bilaterally symmetrical, mammalian. Slender build, long-fingered hands. Hair is vestigial — only a fine, dense down along the scalp and forearms. The Directorate genetic marker manifests as radial banding in the iris: gold-and-grey in families of full standing, which is immediately visible. Non-Directorate Surev have irises in the more common amber range. The banding is not a cultural affectation — it's biological — but it has been so thoroughly politicized that most non-Surev learn to notice it immediately.
+
+**What makes them politically significant:** The Surev Reaches contain the only known intact pre-Keth-contact astronomical records that predate human arrival in the Frontier by over two centuries. The Directorate's founding families were spacefarers before they settled — explorers who mapped large sections of what is now contested or unmapped space. Those charts, which the Directorate maintains under controlled access as a hereditary asset, include detailed surveys of regions the Federation and Keth both want to understand better. The records also contain observational data from periods that overlap with what little is known about the ancient Builder civilization's active era — not direct contact, but proximity. The Directorate does not discuss the older records freely.
+
+**Current posture toward the truce:** Formally neutral, practically leaning toward whoever offers the most favorable access arrangement without demanding the deep archive. They have been courted by the Federation, by Keth Merchant caste intermediaries, and by Hegemony Combine, all simultaneously. The Directorate's external affairs council is managing all three relationships in parallel, which is their preferred operating condition. Their concern is not the truce failing — it is one party winning the post-truce landscape so decisively that the Reaches become strategically irrelevant. They are quietly rooting for continued competitive balance.
+
+---
+
+> *Additional Sovereign species may be added as the game's world expands.*
 
 ---
 
