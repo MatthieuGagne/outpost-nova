@@ -2,13 +2,25 @@
 extends CharacterBody2D
 
 const SPEED = 80.0
+const ROOM_W = 30
+const ROOM_H = 16
+const TILE_SIZE = 16
 
 @export var attack_damage: int = 1
 
 @onready var interaction_zone: Area2D = $InteractionZone
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var camera: Camera2D = $Camera2D
+
+var _facing: String = "down"
 
 func _ready() -> void:
 	add_to_group("player")
+	camera.position_smoothing_enabled = false
+	camera.limit_left = 0
+	camera.limit_top = 0
+	camera.limit_right = ROOM_W * TILE_SIZE   # 480
+	camera.limit_bottom = ROOM_H * TILE_SIZE  # 256
 
 func _physics_process(_delta: float) -> void:
 	var direction = Vector2(
@@ -17,6 +29,19 @@ func _physics_process(_delta: float) -> void:
 	).normalized()
 	velocity = direction * SPEED
 	move_and_slide()
+	_update_animation(direction)
+
+func _update_animation(direction: Vector2) -> void:
+	if direction != Vector2.ZERO:
+		_facing = _get_facing(direction)
+		sprite.play("walk_" + _facing)
+	else:
+		sprite.play("idle_" + _facing)
+
+func _get_facing(direction: Vector2) -> String:
+	if abs(direction.x) >= abs(direction.y):
+		return "right" if direction.x > 0 else "left"
+	return "down" if direction.y > 0 else "up"
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
@@ -27,7 +52,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func _try_interact() -> void:
 	var bodies = interaction_zone.get_overlapping_bodies()
 	var areas = interaction_zone.get_overlapping_areas()
-	# NPCs are CharacterBody2D (bodies), resource nodes are Area2D (areas)
 	for body in bodies:
 		if body.is_in_group("interactable"):
 			body.interact()

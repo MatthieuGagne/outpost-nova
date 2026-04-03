@@ -1,0 +1,7 @@
+[gd_resource type="FontFile" format=3]
+
+[resource]
+antialiasing = 0
+hinting = 0
+subpixel_positioning = 3
+fixed_size = 16
