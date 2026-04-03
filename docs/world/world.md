@@ -32,6 +32,8 @@ Located in uncharted space, at the coordinates the weapon is aimed at.
 
 Completely unknown to the Keth — the Keth recognize nothing from the second civilization. That asymmetry is its own information.
 
+The Keth have never encountered any physical traces of the second civilization. The weapon's orientation points past everything Keth exploration has ever reached. That absence — Builder echoes everywhere the Keth have been, nothing from the second civilization anywhere — is part of what alarms the ruling coalition when the broadcast begins.
+
 **Name:** [SECOND CIV NAME TBD]
 
 #### The War
@@ -128,7 +130,7 @@ A spacefaring empire older than humanity's presence in the Frontier. Not a monol
 
 Serves no flag. Has shareholders. Built half the infrastructure in the Frontier and holds the debt on the other half. Operated on all sides during the war and profits from the peace. Doesn't take sides — profits from the sides existing.
 
-**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified something extraordinary in the station's lower decks. Hegemony said nothing. They built a waypoint on top of it and waited. The commander's posting is not coincidental.
+**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified an extraordinary alien structure of unknown origin and massive scale — clearly pre-dating any known civilization, clearly worth controlling. The weapon's functionality was dormant or beyond the survey team's ability to interpret. Hegemony knew they were sitting on something extraordinary. They didn't know it still worked. Hegemony said nothing. They built a waypoint on top of it and waited. The commander's posting is not coincidental.
 
 **Publicly want:** Operational stability, debt repayment, access to the new Keth trade lanes.
 
@@ -158,6 +160,8 @@ The alienness reveals itself in layers: passes at a glance in dim light, then yo
 
 **What they lost:** Their world was caught in the resource extraction era that preceded the Fracture. Hegemony's operations disrupted the land systems the kinship networks depended on. By the time the Fracture started, Drueth displacement was already a generation old. The war didn't cause the loss — it finished it.
 
+This ordering matters for understanding Drueth displacement: it wasn't defeat in war. It was erasure by paperwork and profit margins, slowly, before anyone was paying attention. No enemy to point at. No moment of defeat. Just a gradual loss that nobody claimed responsibility for.
+
 What scattered Drueth carry is the shape of a structure that no longer exists. The people are still alive, scattered across the Frontier. The decision-making architecture is gone. Individual Drueth navigate a universe they were never designed to navigate alone.
 
 **How they navigate the Frontier:** Trade, brokerage, information. Skills that don't require a fixed home. Drueth are trained from birth to read the people around them — the antennae help, but the skill is also cultural, inherited from a society that ran on relationship. This makes them effective intermediaries and exhausting to deceive.
@@ -185,6 +189,8 @@ The culture is gone. The language Thessari names draw from is effectively dead �
 What remains is a choice: whether to keep making the warmth anyway. Without backing. Without the cultural architecture that made it feel natural. Without anyone to practice it with who shares the same frame.
 
 This is what makes Thessari warmth-as-resistance specific and costly: it is a moral choice made against a concrete wound, sustained entirely by the decision to keep making it. Not pragmatism. Not instinct. Not the natural expression of a culture still intact. A decision, remade continuously.
+
+**Timeline note:** Thessari displacement happened in the early years of human-Keth first contact, roughly 16+ years before the game's present. Soriel, at mid-40s equivalent, was in their mid-to-late 20s when their world was lost — old enough to remember the culture fully, young enough that most of their adult life has been built in the aftermath. The warmth Soriel carries is not a nostalgic remnant of an intact culture. It is a practice chosen and rebuilt after the loss.
 
 ---
 
@@ -306,6 +312,8 @@ The Keth have NOT encountered the station itself before the game. They have enco
 
 The Navigator caste is the most destabilized post-war — they dealt with humans directly, and what they saw doesn't fit the cosmology they were handed. This is the social pressure that makes the ruling coalition nervous.
 
+**Internal layering (applies to all ruling castes):** The lie does not require everyone to be a conscious liar. Within the Merchant, Keeper, and Sentinel castes, only inner leadership knows the full truth. Rank-and-file members of those castes are true believers — they revere the shapes as sacred, enforce the cosmology sincerely, and sense that something is being withheld without being able to name what. The institution suppresses curiosity from within: a caste member who asks too many questions gets quietly reassigned, not told. This is what makes the Keeper who referred Vaen's documentation upward an instrument of the lie rather than a knowing participant in it.
+
 ---
 
 ### 4.3 What Cracked Post-War
@@ -332,9 +340,11 @@ Vaen documented it. Then asked the Keeper caste about it.
 
 The Keeper caste's response was to refer the matter to the Merchant caste leadership. Vaen's documentation was suppressed. Their Merchant caste standing was revoked. They were given a choice: silence and marginalization within Keth space, or departure.
 
-Vaen departed. "Here" is away from Keth society. The trade lane opening near Outpost Nova was a convenient reason.
+Vaen departed. "Here" is away from Keth society. But departure was not passivity — Vaen has spent years in exile actively working toward the coordinates. Two tracks, running in parallel: slowly accumulating trade credits toward eventually chartering a ship capable of reaching uncharted space, and scanning for any signal or navigational anomaly that might give the coordinates more context. It was the second track that brought them to this specific trade lane. Low-level emissions — faint, irregular, consistent with dormant Builder infrastructure — were detectable from this region. Vaen came to investigate. The station was not what they expected to find on top of it.
 
 What Vaen carries: the knowledge that the lie exists, but not its full extent. They know the shapes are external. They don't yet know the station is Builder infrastructure. When they recognize the weapon's orientation coordinates — the target is in a region Vaen has been thinking about since the secondary site — the silence isn't surprise. It's confirmation of something they've been sitting with alone for years.
+
+**Post-Act 3 note:** Depending on the ending, Vaen's accumulated ship fund and the now-confirmed coordinates of the second civilization's ruins become a concrete next chapter. The weapon pointed somewhere for millennia. Someone might finally go.
 
 ---
 
