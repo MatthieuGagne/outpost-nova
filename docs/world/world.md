@@ -83,9 +83,58 @@ Neither side survived. The weapon is still aimed. Whatever they were fighting ov
 ## Chapter 2: Living Factions
 
 ### 2.1 The Federation
+
+A military that won a war and never stood down. Bureaucratic, disciplined, believes its own rhetoric about stability and order. It contains real idealists who think they're building something worth having. But it consolidates, surveils, and extracts — and calls this protection. The people it protects didn't always ask to be.
+
+**Current internal state:** Post-war, the Federation is the dominant human power but stretched. Maintaining the truce with the Keth is politically costly domestically. Hawks and doves are in tension — the idealists and the enforcers are not the same people, and they know it.
+
+**Publicly want:** Stability, order, safe trade lanes, protection of human interests.
+
+**Actually want:** Continued dominance of human space; monitoring of Hegemony's increasingly independent operations; intelligence on Keth internal politics.
+
+**Posture toward the station:** A Federation patrol passes near Outpost Nova occasionally, asking questions that are slightly too specific for routine transit checks. They've noticed Hegemony's unusual interest in a forgotten waypoint station and are trying to understand why — without tipping their hand.
+
+---
+
 ### 2.2 The Unaligned Alliance
+
+Less a government than a pact of refusal. Dozens of worlds that said *not our war* and held that line — blockaded and sanctioned throughout the Fracture, still standing. They consider their survival vindication.
+
+**Current internal state:** Vindicated but fractured internally. Their isolationism holds them together and limits them. Post-war, some worlds want to re-engage; the old guard sees engagement as compromise. "Not our war" is a principle until someone needs help and you look away — and some of them are starting to understand that.
+
+**Publicly want:** Local sovereignty, non-interference, fair access to emerging trade lanes.
+
+**Actually want:** Recognition without entanglement. They want the Federation and Keth to leave them alone while still benefiting from the trade routes the truce has opened.
+
+**Posture toward the station:** Outpost Nova sits in legal ambiguity near Unaligned territory. The Alliance hasn't formally claimed it, but they watch it. Any Hegemony power move on the station would be a provocation — Hegemony knows this and is moving quietly.
+
+---
+
 ### 2.3 The Keth (as Political Entity)
+
+A spacefaring empire older than humanity's presence in the Frontier. Not a monolith — multiple internal factions with their own wounds. The face they show humans is patient, formal, meticulous. What's underneath is cracking. *(For the full internal picture, see Chapter 4: Keth Deep-Dive.)*
+
+**Current internal state:** The truce is commercially driven, which suits the Merchant caste. But younger Keth who dealt with humans during the Fracture are less willing to maintain the controlled face. The trade lane opening near Outpost Nova is a source of internal tension — it runs too close to sites the ruling coalition monitors closely.
+
+**Publicly want:** Profitable trade relationships, respect for Keth territorial claims, gradual diplomatic normalization.
+
+**Actually want:** *(This is the ruling coalition's want, not all Keth.)* Quiet monopoly over whatever intelligence the ancient sites provide; containment of any discovery that threatens the cosmological foundation of Keth society.
+
+**Posture toward the station:** The ruling coalition is monitoring the trade lane. The station's proximity to old signal patterns is noted. When one of their own — Vaen — goes rogue to that area, they are not entirely surprised.
+
+---
+
 ### 2.4 Hegemony Combine
+
+Serves no flag. Has shareholders. Built half the infrastructure in the Frontier and holds the debt on the other half. Operated on all sides during the war and profits from the peace. Doesn't take sides — profits from the sides existing.
+
+**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified something extraordinary in the station's lower decks. Hegemony said nothing. They built a waypoint on top of it and waited. The commander's posting is not coincidental.
+
+**Publicly want:** Operational stability, debt repayment, access to the new Keth trade lanes.
+
+**Actually want:** Quiet ownership of the ancient site under the station. Whatever is down there — they want to own it, not understand it.
+
+**Posture toward the station:** Hegemony already has monitoring equipment on the station, watching for activation events. The commander's reports are being read very carefully. Communications from Hegemony to the commander are friendly but slightly too specific to be routine.
 
 ---
 
