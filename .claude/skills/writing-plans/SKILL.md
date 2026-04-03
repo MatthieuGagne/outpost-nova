@@ -21,6 +21,8 @@ git fetch origin && git merge origin/master
 ```
 Resolve any conflicts before proceeding.
 
+**Note on worktrees:** Plan execution happens inside a git worktree, created automatically by `EnterWorktree` in executing-plans Step 1. You do not need to create the worktree here — just write the plan. Branch name convention: `feat/issue-<N>-<short-description>`.
+
 **Save plans to:** `docs/plans/YYYY-MM-DD-<feature-name>.md`
 
 **Last step before writing:** Always invoke the `grill-me` skill — it will surface requirements, acceptance criteria, scope, and Godot constraints. Once grill-me is satisfied, proceed to writing the plan.
@@ -278,3 +280,5 @@ Only after explicit affirmative, offer execution choice:
 **If Parallel Session chosen:**
 - Guide them to open new session
 - **REQUIRED SUB-SKILL:** New session uses superpowers:executing-plans
+
+**Both execution paths work inside a git worktree.** The worktree is created at `/home/mathdaman/code/worktrees/<sanitized-branch>` by executing-plans Step 1 (`EnterWorktree`). Cleanup is handled by `finishing-a-development-branch` after the PR is merged.
