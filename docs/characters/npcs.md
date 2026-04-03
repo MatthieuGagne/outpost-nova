@@ -101,6 +101,8 @@ He never stopped wanting to understand how things work. He will spend forty minu
 
 **Background:** The Drueth were Displaced — their world was caught in the early years of human-Keth first contact, not a target, just in the way of two frightened species with weapons. She grew up on an Unaligned world that said *not our war* and got blockaded and sanctioned for it anyway. Watching her home do everything right and get punished for it taught her that commitment to a place is a liability. The place suffers for it. She left. She has been everywhere and stayed nowhere since.
 
+**Cause ordering:** Drueth displacement was not primarily caused by the Fracture. Hegemony's extraction operations disrupted the land systems the kinship networks depended on before the war started — by the time the Fracture began, displacement was already a generation old. The war finished what corporate extraction started. There was no enemy to point at, no moment of defeat. This is specific to Sable's cynicism: she doesn't distrust people, she distrusts systems that erase you without noticing.
+
 She connects easily — genuinely interested in people, genuinely warm — and leaves before it gets complicated. She's watched too many fresh starts collapse to believe in destinations. She is not closed to the universe: still curious, still watching, still willing to be surprised. What she has given up on is the future as a place you can get to. She lives entirely in the present tense.
 
 **Role:** Informal trader and information broker. No official title, but she knows everyone passing through, remembers everything, and has contacts across three factions from years of moving between them. The station runs better with her in it.
@@ -131,6 +133,8 @@ She connects easily — genuinely interested in people, genuinely warm — and l
 **Appearance:** Feline — digitigrade legs, fur in muted earth tones going slightly grey at the edges. Moves quietly, not deliberately, just naturally. Appears in a room without you noticing them arrive. Large eyes that catch light differently than mammalian eyes — warm in a way that's immediately readable even at low resolution. The rest of Soriel is muted and quiet; the eyes are what you notice first, and what you remember. Medical coat over practical clothes underneath. Three syllables, used in full.
 
 **Background:** One of the last Thessari on the station, possibly one of the last anywhere. Their world was caught in the early years of human-Keth first contact — not a target, just in the way. Neither side claimed what happened. Soriel doesn't ask them to.
+
+**Timeline:** Thessari displacement happened roughly 16+ years before the game's present, in the early years of human-Keth first contact. Soriel, at mid-40s equivalent, was in their mid-to-late 20s when their world was lost. The warmth they carry is not a remnant of an intact culture — it is a practice rebuilt from scratch after the loss, sustained entirely by the decision to keep making it.
 
 What they've built since is theirs: a warmth with no cultural backing, no community to reflect it, assembled from choice and sustained by nothing but the decision to keep making it. They are the station's medic because everyone needs one eventually, and because knowing what's wrong with people — specifically, physically — turns out to be the closest thing they've found to understanding them.
 
@@ -166,6 +170,8 @@ It stopped asking questions after that. The Bitter/Unknown axis is load-bearing:
 
 **What it knows about the Derelict (Act 1):** It was there. It sealed the door. The specific nature of the incident is TBD — a story beat, not a design decision.
 
+**Timeline clarification:** Quen sealed the Derelict door after a partial activation event years before the commander's arrival — something stirred in the lower decks, Quen saw enough to be frightened, sealed the door, and the weapon went dormant again. The commander's investigation reopens what Quen closed, triggering full activation. What Quen saw during that partial activation is the specific thing it stopped asking questions about.
+
 ---
 
 ## Act 2 Arrival
@@ -185,13 +191,15 @@ It stopped asking questions after that. The Bitter/Unknown axis is load-bearing:
 
 The connection to the ancient civilization's echoes in Keth sacred architecture is what they found. They didn't come to Outpost Nova looking for the weapon. But they recognized the shape of the question immediately.
 
-**Dramatic function:** The Act 2 pivot. Their arrival is mundane — trade business on a new lane — until the commander describes what they found in the lower decks. Vaen goes quiet. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
+**Dramatic function:** The Act 2 pivot. Their arrival is not coincidental — Vaen detected low-level emissions consistent with dormant Builder infrastructure from this region and came to investigate. The trade business on the new lane is real, but secondary. Vaen has been running two parallel tracks in exile: slowly accumulating credits toward chartering a ship capable of reaching the coordinates in uncharted space, and scanning for any signal that might give those coordinates more context. The station was not what they expected to find. Until the commander describes what they found in the lower decks. Vaen goes quiet. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
 
 They recognize the weapon's orientation coordinates. They do not explain how. They and the commander end up holding knowledge they're not supposed to have, cut off from the institutions that might claim it. The alliance that forms is fragile and real. Neither of them planned it.
 
 **Parallel with Sable:** Both Curious — that's the bridge. But opposites on both other axes: Vaen is Hopeful where Sable is Cynical; Vaen is Detached where Sable is Warm. Sable gives warmth easily and has given up on futures. Vaen believes in the future but has stopped giving warmth easily — years of exile, holding a forbidden question alone, trusting no one with it. They meet on the Unknown axis and have to work toward everything else.
 
-**Deferred:** Vaen's specific backstory details — what exactly they found, what they know about the sacred architecture, why they fled — pending Keth society development session.
+**What's deferred:** The full nature of what Vaen found at the secondary Builder site — specifically what navigational data was embedded in the infrastructure, and how legible it was to Vaen at the time. Also deferred: whether the Keth ruling coalition suspects Vaen has the coordinates, or believes the suppression of their documentation was complete.
+
+**Post-Act 3 hook:** Vaen's accumulated ship fund and the now-confirmed coordinates of the second civilization's ruins are a concrete next chapter depending on the ending. Vaen came to this station following a signal. The signal now has a source and a target. Someone might finally go.
 
 ---
 
