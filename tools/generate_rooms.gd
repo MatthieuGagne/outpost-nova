@@ -8,10 +8,8 @@ const ROOM_H: int = 16
 const TILE_SOURCE_ID: int = 0
 const TILESET_PATH: String = "res://data/tilesets/station.tres"
 
-# ⚠ UPDATE THESE after importing your tileset in Task 8
-# Open station.tres in the TileSet editor, hover tiles to read their atlas coords
-const FLOOR_ATLAS: Vector2i = Vector2i(0, 0)  # <-- set to your floor tile
-const WALL_ATLAS: Vector2i  = Vector2i(1, 0)  # <-- set to your wall tile
+const FLOOR_ATLAS: Vector2i = Vector2i(18, 15)
+const WALL_ATLAS: Vector2i  = Vector2i(25, 15)
 
 func _run() -> void:
 	var tileset = load(TILESET_PATH)
