@@ -38,8 +38,6 @@ Completely unknown to the Keth — the Keth recognize nothing from the second ci
 
 Resource-driven. The Builder AI initiated because its optimization logic flagged the second civilization's territory as containing necessary materials.
 
-Two incompatible ontologies: one civilization had no concept of self; the other had no concept of other. Neither could find a frame for the conflict that allowed for peace.
-
 Neither side survived. The weapon is still aimed. Whatever they were fighting over, it outlasted both of them.
 
 ---
