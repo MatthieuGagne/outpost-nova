@@ -3,6 +3,7 @@
 **Date:** 2026-03-16
 **Updated:** 2026-04-02
 **Status:** Approved
+**World documentation:** For detailed history, faction profiles, species reference, and geo-political ripple, see `docs/world/world.md`.
 
 ---
 
