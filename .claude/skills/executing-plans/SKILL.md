@@ -15,33 +15,32 @@ Load plan, review critically, execute tasks in batches, report for review betwee
 
 ## The Process
 
-### Step 1: Confirm Branch
+### Step 1: Enter Worktree
 
-Before reading the plan or touching any file, confirm you are on the correct feature branch (not `master`):
+Before reading the plan or touching any file, check whether you are already inside a worktree:
 
 ```bash
-git branch --show-current
 pwd
+git worktree list
 ```
 
-Expected: current branch is a feature branch (not `master`). If on master, create or switch to a feature branch before proceeding.
+If `pwd` output is already under `/home/mathdaman/code/worktrees/`, you are in a worktree — skip to Step 2.
 
-### Step 2: Sync with master
+Otherwise, determine the feature branch name from the plan (use `feat/issue-<N>-<short-description>` convention, where `<N>` is the GitHub issue number). Then use the `EnterWorktree` tool to create and enter the worktree:
 
-Pull and merge latest master:
-```bash
-git fetch origin && git merge origin/master
-```
-NEVER use `git merge master` alone — the local master ref may be stale. Resolve any conflicts before proceeding.
+- Worktree path: `/home/mathdaman/code/worktrees/<branch-name-with-slashes-as-dashes>`
+- Branch: `feat/issue-<N>-<short-description>`
 
-### Step 3: Load and Review Plan
+`EnterWorktree` creates a fresh branch off master — no separate sync step is needed.
+
+### Step 2: Load and Review Plan
 
 1. Read plan file
 2. Review critically — identify any questions or concerns about the plan
 3. If concerns: raise them with your human partner before starting
 4. If no concerns: create TodoWrite tasks and proceed
 
-### Step 4: Execute Batch
+### Step 3: Execute Batch
 
 **Before dispatching any task, read the parallel dispatch source of truth (priority order):**
 
@@ -67,49 +66,31 @@ For each task (whether parallel or sequential):
 **Parallel reviewer rule (within each batch):**
 After each task's work is committed, dispatch spec and quality reviewers as two concurrent Agent calls in a single message. Both must pass before marking the task complete.
 
-### Step 5: Report
+### Step 4: Report
 
 When batch complete:
 - Show what was implemented
 - Show verification output
 - Say: "Ready for feedback."
 
-### Step 6: Continue
+### Step 5: Continue
 
 Based on feedback:
 - Apply changes if needed
 - Execute next batch
 - Repeat until complete
 
-### Step 7: Complete Development
+### Step 6: Complete Development
 
-After all tasks complete and verified, run the smoketest sequence:
+After all tasks complete and verified, announce: "I'm using the finishing-a-development-branch skill to complete this work."
 
-**Step 1: Fetch and merge latest master**
-```bash
-git fetch origin && git merge origin/master
-```
+**REQUIRED SUB-SKILL:** Use superpowers:finishing-a-development-branch
 
-**Step 2: Run all GUT tests**
-```bash
-godot --headless -s addons/gut/gut_cmdln.gd
-```
-Expected: All tests pass, zero failures.
+Follow that skill to verify tests, run smoketest, present options, execute choice, and clean up.
 
-**Step 3: Launch game and verify visually**
-```bash
-godot
-```
-Tell the user what to verify. Wait for confirmation before continuing.
+### Step 7: Lessons Learned — HARD GATE (do not skip)
 
-Only after the user confirms the game looks correct:
-- Announce: "I'm using the finishing-a-development-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use superpowers:finishing-a-development-branch
-- Follow that skill to verify tests, present options, execute choice.
-
-### Step 8: Lessons Learned — HARD GATE (do not skip)
-
-After the smoketest passes, **before pushing or creating the PR**, explicitly ask:
+After the smoketest passes (inside finishing-a-development-branch), **before pushing or creating the PR**, explicitly ask:
 
 > "Any important lessons learned from this implementation? (e.g. surprises, sharp edges, things that should update CLAUDE.md / skills / agents / memory)"
 
@@ -132,14 +113,14 @@ Do not push or open the PR until you have received an explicit answer to this qu
 
 ## When to Revisit Earlier Steps
 
-**Return to Review (Step 3) when:**
+**Return to Review (Step 2) when:**
 - Partner updates the plan based on your feedback
 - Fundamental approach needs rethinking
 
 **Don't force through blockers** — stop and ask.
 
 ## Remember
-- Confirm feature branch FIRST before any other action
+- Enter worktree FIRST before any other action (use `EnterWorktree` tool if not already under `/home/mathdaman/code/worktrees/`)
 - Review plan critically before starting
 - Follow plan steps exactly
 - Don't skip verifications
@@ -148,7 +129,7 @@ Do not push or open the PR until you have received an explicit answer to this qu
 - Never start implementation on master branch
 - GDScript tasks: TDD cycle — failing test → implementation → passing test → refactor → commit
 - Run full test suite after every GDScript task to catch regressions
-- Merge command is `git fetch origin && git merge origin/master`
+- When merging (e.g. resolving conflicts): `git fetch origin && git merge origin/master`
 - Parallel implementers: read `#### Parallel Execution Groups` table first; dispatch parallel groups as concurrent Agent calls (max 3); batch atomicity — if any fails, ALL discard and retry from scratch
 - Parallel reviewers: fire spec + quality in one message after each implementer commit
 
