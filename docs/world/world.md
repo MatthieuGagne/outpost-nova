@@ -28,11 +28,11 @@ Biological. Deeply individualistic — almost to the point of narcissism. They d
 
 Their ruins are the structural opposite of the station: full of selves.
 
-Located in uncharted space, at the coordinates the weapon is aimed at.
+The weapon built into Outpost Nova is aimed at the Keth homeworld. What this means — why the Builders targeted that location, what was there before the Keth — is a mystery the game plants but does not answer. The Builder logs refer to their target only as "The Others."
 
 Completely unknown to the Keth — the Keth recognize nothing from the second civilization. That asymmetry is its own information.
 
-The Keth have never encountered any physical traces of the second civilization. The weapon's orientation points past everything Keth exploration has ever reached. That absence — Builder echoes everywhere the Keth have been, nothing from the second civilization anywhere — is part of what alarms the ruling coalition when the broadcast begins.
+The Keth have never encountered any physical traces of the second civilization. The weapon's orientation points at their homeworld, yet that absence — Builder echoes everywhere the Keth have been, nothing from the second civilization anywhere — is part of what alarms the ruling coalition when the broadcast begins. The second civilization's relationship to the Keth homeworld is deliberately unresolved.
 
 **Name:** [SECOND CIV NAME TBD]
 
@@ -134,7 +134,7 @@ Serves no flag. Has shareholders. Built half the infrastructure in the Frontier 
 
 **Publicly want:** Operational stability, debt repayment, access to the new Keth trade lanes.
 
-**Actually want:** Quiet ownership of the ancient site under the station. Whatever is down there — they want to own it, not understand it.
+**Actually want:** Quiet ownership of the ancient site under the station. Whatever is down there — they want to own it, not understand it. More specifically: Hegemony's buried survey found not just the structure, but a shutdown mechanism — a control interface the survey team documented but couldn't interpret. Hegemony has spent years quietly studying it. By Act 3, they understand it well enough to use it. This is Harlan's bargaining chip: not a threat, not institutional pressure — the only known way to stop a weapon that will otherwise destroy the station and everyone on it.
 
 **Posture toward the station:** Hegemony already has monitoring equipment on the station, watching for activation events. The commander's reports are being read very carefully. Communications from Hegemony to the commander are friendly but slightly too specific to be routine.
 
@@ -340,9 +340,11 @@ Vaen documented it. Then asked the Keeper caste about it.
 
 The Keeper caste's response was to refer the matter to the Merchant caste leadership. Vaen's documentation was suppressed. Their Merchant caste standing was revoked. They were given a choice: silence and marginalization within Keth space, or departure.
 
-Vaen departed. "Here" is away from Keth society. But departure was not passivity — Vaen has spent years in exile actively working toward the coordinates. Two tracks, running in parallel: slowly accumulating trade credits toward eventually chartering a ship capable of reaching uncharted space, and scanning for any signal or navigational anomaly that might give the coordinates more context. It was the second track that brought them to this specific trade lane. Low-level emissions — faint, irregular, consistent with dormant Builder infrastructure — were detectable from this region. Vaen came to investigate. The station was not what they expected to find on top of it.
+Vaen departed. "Here" is away from Keth society. But departure was not passivity.
 
-What Vaen carries: the knowledge that the lie exists, but not its full extent. They know the shapes are external. They don't yet know the station is Builder infrastructure. When they recognize the weapon's orientation coordinates — the target is in a region Vaen has been thinking about since the secondary site — the silence isn't surprise. It's confirmation of something they've been sitting with alone for years.
+What drew Vaen to this specific trade lane: a spike in Builder emissions, detectable when the commander first goes deep into the Derelict and triggers the weapon's charging sequence. Vaen has been monitoring Builder signal patterns for years. When the spike hit, they redirected immediately. They arrived presenting themselves as a trader on the new lane — they do not immediately reveal why they came.
+
+What Vaen carries: a physical artifact found at the secondary Builder ruins site. Unlike coordinates, the artifact is unreadable without context — it is a fragment of Builder notation that describes a target in relative, geometric terms. The weapon's architecture is the decoder ring. When Vaen encounters the weapon's structure, the artifact resolves. The recognition is not of coordinates — it is of the artifact suddenly making sense. The second beat, working out what location it resolves to, happens privately.
 
 **Post-Act 3 note:** Depending on the ending, Vaen's accumulated ship fund and the now-confirmed coordinates of the second civilization's ruins become a concrete next chapter. The weapon pointed somewhere for millennia. Someone might finally go.
 
@@ -356,7 +358,7 @@ The events below happen regardless of player choices. They are the world turning
 
 ---
 
-#### Act 1 — Before the weapon activates (Days 1-3)
+#### Act 1 — Before the weapon activates (Days 1-30)
 
 **Hegemony Combine:** Running a quiet acquisition play that has been in preparation for years. The commander's posting is not coincidental — Hegemony's buried survey identified the lower decks as extraordinary, and a live station manager is a necessary part of turning quiet access into documented control. Monitoring equipment already embedded in the station's systems is watching for activation events. The commander's routine reports are being read at a level above their stated supervisor.
 
@@ -368,7 +370,7 @@ The events below happen regardless of player choices. They are the world turning
 
 ---
 
-#### Act 2 — Weapon activates, broadcast begins (Days 4-6)
+#### Act 2 — Weapon activates, anomalies build (Days 31-51)
 
 **Hegemony Combine:** Detects the broadcast first. Their monitoring equipment was designed for exactly this. Internal communications escalate immediately. The patient acquisition play shifts to urgent — years of quiet positioning are suddenly on a clock the corporation didn't set. The commander's reports become pointed requests. The word "assessment" is replaced by the word "confirmation."
 
@@ -380,7 +382,7 @@ The events below happen regardless of player choices. They are the world turning
 
 ---
 
-#### Act 3 — Weapon charging, Harlan arrives (Days 7-10)
+#### Act 3 — Weapon charging, Harlan arrives (Days 52-58)
 
 **Hegemony Combine:** Harlan's arrival is the acquisition play going overt. Hegemony is done waiting. They believe they can still close this quietly — one person the commander respects, a reasonable ask, a situation that doesn't have to become a crisis if everyone acts professionally. What Hegemony cannot yet see is that the commander they sent is no longer the situation's passive element. The calculation Hegemony made — that the commander could be managed — may have been wrong from the beginning.
 
@@ -398,64 +400,42 @@ These are not clean outcomes. The story bible is explicit: no clean endings, bit
 
 ---
 
-#### Ending 1 — Deliver it to Hegemony
+#### Ending 1 — Defend it
 
-Hegemony gains quiet monopoly over the station and its weapon. Harlan's arrival was worth it. The patient years of buried surveys and watched debt and calibrated postings paid off. Hegemony does not announce what they have — they never announce what they have. They simply hold it.
+The crew refuses everyone, including Harlan. The weapon continues charging, aimed at the Keth homeworld.
 
-The Federation and Unaligned know something significant was handed over, but not exactly what. Hegemony's new position is visible in the way a shift in weight is visible: nothing looks different, and everything is different. The power imbalance from this acquisition will take years to fully surface. When it does, the Frontier will call it unexpected.
+Hegemony loses its acquisition play. Harlan's bargaining chip goes unused.
 
-The Keth ruling coalition is caught in the worst possible arrangement: a functioning Builder weapon aimed at coordinates they secretly recognize, now in Hegemony hands. They cannot object without explaining how they knew to be alarmed. The lie that has held their society together for generations is now load-bearing for someone else's leverage. The ruling coalition knows this. They have no good move.
+The Federation and Unaligned Alliance are watching a station that just refused the only known shutdown option — with a charging weapon inside.
 
-The Frontier doesn't fracture immediately. Hegemony is good at slow. But what is now possible has changed.
+The Keth ruling coalition is in crisis: their homeworld is the target, they cannot publicly object without exposing what they know, and the commander has just refused the one person who could stop it.
 
----
-
-#### Ending 2 — Share it with the Keth
-
-The weapon passes to the Keth — but which Keth? That is the ending's real question, and the commander may not control the answer.
-
-If the ruling coalition receives it: a functional Builder weapon in coalition hands changes the Federation's calculus about the truce completely. The commerce-based diplomatic framework was fragile; this breaks the frame it was resting on. The Federation does not call this a violation of the truce, because calling it a violation would require them to act, and they're not ready to act. They treat the truce as effectively suspended while they assess.
-
-If Vaen's involvement routes the discovery to non-coalition Keth — through the Navigator caste contacts that kept asking questions, through the lower castes who never chose the lie — then a Keth reformation becomes possible. The cosmology the ruling coalition built is suddenly contested from inside. This is not a clean thing: a society whose spiritual foundation is abruptly revealed as fabricated does not become enlightened. It fractures. What it becomes afterward is not determined in this act.
-
-The commander handed the weapon to the Keth. Whether that was a gift or a detonator depends on which Keth received it.
+The Frontier holds its breath. The station — and the crew — are on a weapon that is still charging.
 
 ---
 
-#### Ending 3 — Keep it secret
+#### Ending 2 — Accept Harlan's offer
 
-The weapon is still charging. The secret is held by the commander and the crew they trusted enough to tell. No faction gets what they came for.
+Harlan stops the weapon. The station survives. Hegemony takes control.
 
-Hegemony is frustrated but not finished. They still hold the station's debt. Harlan returned without the confirmation Hegemony sent them for, which is not something Hegemony accepts as a closed chapter. The acquisition play is not abandoned — it is delayed and recalibrated. The next approach will be different.
+The crew lives. The station becomes something else — Hegemony's asset, Hegemony's secret, Hegemony's weapon to eventually wield or sell.
 
-The Federation and Unaligned are watching a situation they don't fully understand from outside. The anomalous signal has stopped, which is either reassuring or alarming depending on what you assume silence means. Neither faction has the intelligence to determine which.
+The Keth ruling coalition's crisis is quietly resolved — for now. The weapon is off. But Hegemony now knows where it was pointed, and so does the ruling coalition.
 
-The station survives. The crew holds together — at whatever cost the trust that built them required. The weapon is still there. The problem is deferred, not solved. Every faction's interest in the station persists unchanged, and will eventually find a new expression. Everything is still on the table.
+The Federation and Unaligned Alliance know Hegemony got something significant. The power imbalance takes years to play out.
 
----
-
-#### Ending 4 — Make it belong to everyone (go public)
-
-The most geopolitically destabilizing outcome. Every faction now knows what the station is and what it contains. The commander has forced the secret into the open — which means no single party can quietly own it, and every party now has to position in public, where positioning is harder to walk back.
-
-Hegemony loses its quiet acquisition play and pivots immediately to overt legal and political mechanisms. They have claims: the debt, the original extraction survey, the monitoring infrastructure already installed. None of these claims are clearly sufficient, which is why they'll pursue all of them simultaneously. They will not stop.
-
-The Federation and Unaligned are suddenly competing with each other and with Hegemony to claim oversight of what is now a public discovery. The truce with the Keth becomes a secondary concern as human factions maneuver. The Ishari Compact, watching from their transit junction, is quietly doing the math on how this changes their leverage.
-
-The Keth ruling coalition's lie is exposed — at least in part. The sacred shapes are publicly identified as Builder infrastructure, which is not the same as the full exposure of the fabrication, but it is the beginning of one. Keth internal politics fracture publicly for the first time. The lower castes and the Navigator caste are asking questions the ruling coalition can no longer contain through formal protocol. The truce is in immediate jeopardy — not because of what the Keth choose, but because what the ruling coalition needs to do to survive internally may be incompatible with what the truce requires externally.
-
-The Frontier is heading toward crisis. The station and everyone on it are at the center of it. The commander made a choice that was idealistic and expensive, and they knew it was expensive when they made it.
+The station survives. The home does not.
 
 ---
 
-#### Ending 5 — Destroy it
+#### Ending 3 — Sacrifice it
 
-The crew that made a home inside a weapon chooses to dismantle the weapon. The station may not survive what that requires.
+The crew destroys the weapon themselves. The station may not survive.
 
-The discovery still happened. The broadcast went out during Act 2 — the signal was detected, logged, and analyzed by three separate factions before the weapon went dark. What was destroyed cannot be undiscovered. Destroying the weapon is not the same as erasing the event; it is a choice about what kind of future is built from it.
+The discovery still happened — the broadcast went out, the signal was detected, the Builder logs exist. What was destroyed cannot be undiscovered.
 
-Hegemony loses its acquisition target. They are not philosophical about this. The station's debt, previously a lever for compliance, becomes an instrument of punishment. Whatever legal, financial, and operational pressure Hegemony can bring to bear on a waypoint station that just destroyed something of extraordinary value — they will bring it. The station that already wasn't sure it would survive the month now faces that question with compounded urgency.
+Hegemony loses its acquisition target and its shutdown mechanism advantage. They are not pleased.
 
-The Federation and Keth know something significant happened at Outpost Nova. They cannot confirm what was destroyed. The signal appeared and then the station went dark in ways consistent with either decommissioning or catastrophic failure. Both factions are analyzing the same ambiguous data and reaching different conclusions. The uncertainty is its own geopolitical condition — a discovery that everyone knows was real and no one can prove is gone.
+The Keth homeworld is no longer in immediate danger. But the ruling coalition knows the weapon existed and was aimed at them — and that someone knows about The Others.
 
-The Frontier doesn't fracture. The weapon is gone. But the question of what the Builders were, what the second civilization was, and what their war produced — that question is now open knowledge without an artifact. Every faction with the resources to mount an expedition will spend years looking for the next site. The Surev Reaches' deep archive, which the Directorate has been managing carefully, becomes the most valuable known trove of pre-contact astronomical data in the Frontier. That leverage will not sit quietly.
+The Frontier doesn't fracture. But every faction will spend years trying to find the next Builder site. And the crew has to find somewhere to go.
