@@ -141,6 +141,55 @@ Serves no flag. Has shareholders. Built half the infrastructure in the Frontier 
 ## Chapter 3: Species Profiles
 
 ### Displaced Species
+
+The Displaced are species whose worlds were caught between human factions or in the Keth conflict zone during the Fracture. They didn't have governments powerful enough to stay neutral or militaries strong enough to fight back. Some lost territory. Some lost everything. They exist throughout the Frontier now in communities of refugees and resettled populations, navigating jurisdictions that weren't designed with them in mind.
+
+---
+
+#### Drueth
+
+*Sable's species.*
+
+**Physical:** Humanoid build, red-tinted skin, compound eyes that catch light strangely. Paired antennae that carry emotional expression the way human eyebrows do — readable, expressive, harder to control than most Drueth would like. The antennae read pressure, humidity, and the electrical fields of nearby beings. Other species often find extended eye contact with a Drueth unsettling without being able to say why — the antennae are reading them, and some part of them knows it.
+
+The alienness reveals itself in layers: passes at a glance in dim light, then you notice the eyes, then the antennae.
+
+**Culture:** Drueth society was organized around extended kinship networks — large, multigenerational groups that shared resources, decision-making, and identity. Individual Drueth didn't make major decisions alone. They consulted the network. The network was the unit of selfhood in the way that individual personhood is for humans: not a support structure, but the structure.
+
+**What they lost:** Their world was caught in the resource extraction era that preceded the Fracture. Hegemony's operations disrupted the land systems the kinship networks depended on. By the time the Fracture started, Drueth displacement was already a generation old. The war didn't cause the loss — it finished it.
+
+What scattered Drueth carry is the shape of a structure that no longer exists. The people are still alive, scattered across the Frontier. The decision-making architecture is gone. Individual Drueth navigate a universe they were never designed to navigate alone.
+
+**How they navigate the Frontier:** Trade, brokerage, information. Skills that don't require a fixed home. Drueth are trained from birth to read the people around them — the antennae help, but the skill is also cultural, inherited from a society that ran on relationship. This makes them effective intermediaries and exhausting to deceive.
+
+**Note on names:** Drueth names are network-specific — they carry the kinship lineage encoded in syllable structure. Sable doesn't offer her real name easily because it belongs to a network that no longer exists in any coherent form. Sharing it would be claiming a context she's not sure she can claim anymore.
+
+---
+
+#### Thessari
+
+*Soriel's species.*
+
+**Physical:** Feline. Digitigrade legs, fur in muted earth tones with grey edging. The grey is age-related — older Thessari are more fully grey, and it reads at a distance. Soriel, mid-40s equivalent, has just begun to show it at the edges. Large, warm eyes that catch light differently than mammalian eyes — warm in a way that's immediately readable even at low resolution. Move quietly, not deliberately, just naturally.
+
+**Culture:** Thessari culture was built around communal warmth — not abstractly, but structurally. Their architecture, social organization, and art were organized around shared physical and emotional closeness. They had elaborate hospitality traditions, complex systems for integrating strangers into community over time, rituals for maintaining bonds across distance.
+
+The warmth was chosen and practiced, not assumed. It was a technology as much as a value — a set of skills and structures that had to be actively maintained, and was.
+
+**What they lost:** Their world was caught in the early years of human-Keth first contact — not a target, just in the way of two frightened species with weapons. Neither side claimed what happened. Neither side has been asked to.
+
+The culture is gone. The language Thessari names draw from is effectively dead — Soriel is one of the last fluent speakers, and there is no one left to speak it with. The name "Soriel" and the species name "Thessari" share phonological roots — both carry the ghost of a lost linguistic system that no longer has a living community to sustain it.
+
+**How they navigate the Frontier:** There are very few Thessari left. Each one carries the culture alone, with no community to reflect it back. The hospitality traditions, the warmth structures, the integration rituals — these were collective technologies, and the collective is gone.
+
+What remains is a choice: whether to keep making the warmth anyway. Without backing. Without the cultural architecture that made it feel natural. Without anyone to practice it with who shares the same frame.
+
+This is what makes Thessari warmth-as-resistance specific and costly: it is a moral choice made against a concrete wound, sustained entirely by the decision to keep making it. Not pragmatism. Not instinct. Not the natural expression of a culture still intact. A decision, remade continuously.
+
+---
+
+> *Additional Displaced species may be added as the game's world expands.*
+
 ### Unbound Species
 ### Sovereign Species
 
