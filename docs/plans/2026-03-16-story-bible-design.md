@@ -130,6 +130,8 @@ The player assembles the picture from fragments. The ruins never explain themsel
 
 ### What Activates
 
+**Pre-game context:** Years before the commander's arrival, the weapon experienced a partial activation event — something stirred in the lower decks. Quen (station security, the oldest crew member) witnessed it, sealed the Derelict door, and the weapon went dormant again. The current crew knows the lower decks are sealed as a structural hazard. They don't know why Quen sealed them, and Quen hasn't said. The commander's investigation reopens what Quen closed.
+
 When the commander goes deep enough into the Derelict:
 
 - **The weapon begins broadcasting** — a signal, now transmitting, announcing its coordinates to whoever was meant to receive it. The danger is who's listening.
@@ -258,7 +260,9 @@ They are not the Keth's official face — patient, formal, meticulous. They are 
 
 **Their role:**
 
-The Act 2 pivot. Their arrival is mundane — trade business on a new lane — until the commander describes what they found in the lower decks. Vaen goes quiet. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
+The Act 2 pivot. Their arrival is not coincidental — Vaen detected low-level emissions consistent with dormant Builder infrastructure from this region and came to investigate. The trade business on the new lane is real but secondary. In exile, Vaen has been running two tracks: slowly accumulating credits toward chartering a ship to reach the coordinates, and scanning for any signal that might give those coordinates more context. The station was not what they expected to find on top of the signal.
+
+Vaen goes quiet when the commander describes what they found in the lower decks. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
 
 They recognize the weapon's orientation coordinates. They do not explain how. They did not come here for this — and now they can't un-know it, and they can't report it even if they wanted to.
 
@@ -267,6 +271,8 @@ They recognize the weapon's orientation coordinates. They do not explain how. Th
 The commander and Vaen end up in the same position: both holding knowledge they're not supposed to have, both cut off from the institutions that might claim it. The alliance that forms is fragile and real. Neither of them planned it. Vaen's Detachment makes the alliance harder to build and more meaningful when it holds.
 
 **What's deferred:** Vaen's specific backstory — what they found, what they know about the sacred architecture, why they fled — pending Keth society development session.
+
+**Post-Act 3 hook:** Depending on the ending, Vaen's ship fund and the now-confirmed coordinates of the second civilization's ruins become a concrete next chapter. The weapon pointed somewhere for millennia. Vaen came to this station following a signal. Someone might finally go.
 
 ---
 
@@ -291,6 +297,8 @@ The scene that matters: this person says *I know you. This isn't like you. Just 
 **Drifter background** — Someone who offered the commander stability at a moment when stability felt impossible. The arrangement was transactional — a report in exchange for a footing — but the relationship became real. They kept their end. They are here to collect the commander's. Their arrival is the most personal version: not ideology, not institution, just a debt to a person who was there when no one else was.
 
 **What they all share:** They are not villains. They believe in what they're asking for. That is what makes the scene work.
+
+**Character note:** Harlan's motivation is personal first, institutional second — and he doesn't fully see the gap between them. He believes in Hegemony's mission sincerely enough that coming here as a representative and coming here as someone who cares about the commander feel like the same thing to him. The crack in Act 3 is realizing those two things he thought were aligned are in direct opposition. He is not deploying a relationship. He is a person whose identity depended on the belief that caring about people and serving Hegemony were compatible — and the commander is the moment that belief breaks.
 
 ---
 
