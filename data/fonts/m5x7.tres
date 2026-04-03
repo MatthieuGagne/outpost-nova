@@ -1,0 +1,10 @@
+[gd_resource type="FontFile" load_steps=2 format=3]
+
+[ext_resource type="FontData" path="res://art/placeholder/fonts/m5x7.ttf" id="1"]
+
+[resource]
+antialiasing = 0
+hinting = 0
+subpixel_positioning = 3
+fixed_size = 16
+font_data = ExtResource("1")

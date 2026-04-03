@@ -1,15 +1,19 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://d1egurn6jhlow"]
 
-[ext_resource type="Script" path="res://scripts/ui/character_creation.gd" id="1"]
+[ext_resource type="Script" uid="uid://cnm3hfp72i82p" path="res://scripts/ui/character_creation.gd" id="1"]
 
-[node name="CharacterCreation" type="Control"]
+[node name="CharacterCreation" type="Control" unique_id=1216842655]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=37817519]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -20,42 +24,57 @@ offset_left = -150.0
 offset_top = -180.0
 offset_right = 150.0
 offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 12
 
-[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1288604451]
+layout_mode = 2
 text = "Outpost Nova"
 horizontal_alignment = 1
 
-[node name="NameInput" type="LineEdit" parent="VBoxContainer"]
+[node name="NameInput" type="LineEdit" parent="VBoxContainer" unique_id=1680166273]
+layout_mode = 2
 placeholder_text = "Your name..."
 
-[node name="AppearanceLabel" type="Label" parent="VBoxContainer"]
+[node name="AppearanceLabel" type="Label" parent="VBoxContainer" unique_id=886582674]
+layout_mode = 2
 text = "Appearance"
 
-[node name="AppearancePicker" type="HBoxContainer" parent="VBoxContainer"]
+[node name="AppearancePicker" type="HBoxContainer" parent="VBoxContainer" unique_id=1003301982]
+layout_mode = 2
 
-[node name="Appearance0" type="Button" parent="VBoxContainer/AppearancePicker"]
+[node name="Appearance0" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=600960377]
+layout_mode = 2
 text = "A"
 
-[node name="Appearance1" type="Button" parent="VBoxContainer/AppearancePicker"]
+[node name="Appearance1" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=98444489]
+layout_mode = 2
 text = "B"
 
-[node name="Appearance2" type="Button" parent="VBoxContainer/AppearancePicker"]
+[node name="Appearance2" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=1684006321]
+layout_mode = 2
 text = "C"
 
-[node name="BackgroundLabel" type="Label" parent="VBoxContainer"]
+[node name="BackgroundLabel" type="Label" parent="VBoxContainer" unique_id=1635339208]
+layout_mode = 2
 text = "Background"
 
-[node name="BackgroundPicker" type="VBoxContainer" parent="VBoxContainer"]
+[node name="BackgroundPicker" type="VBoxContainer" parent="VBoxContainer" unique_id=1542873528]
+layout_mode = 2
 
-[node name="Engineer" type="Button" parent="VBoxContainer/BackgroundPicker"]
+[node name="Engineer" type="Button" parent="VBoxContainer/BackgroundPicker" unique_id=574058161]
+layout_mode = 2
 text = "Engineer (starts with Parts)"
 
-[node name="Medic" type="Button" parent="VBoxContainer/BackgroundPicker"]
+[node name="Medic" type="Button" parent="VBoxContainer/BackgroundPicker" unique_id=395805715]
+layout_mode = 2
 text = "Medic (starts with Rations)"
 
-[node name="Drifter" type="Button" parent="VBoxContainer/BackgroundPicker"]
+[node name="Drifter" type="Button" parent="VBoxContainer/BackgroundPicker" unique_id=684165331]
+layout_mode = 2
 text = "Drifter (starts with Energy Cells)"
 
-[node name="StartBtn" type="Button" parent="VBoxContainer"]
+[node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=67328775]
+layout_mode = 2
 text = "Begin"

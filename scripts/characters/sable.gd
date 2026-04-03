@@ -5,6 +5,7 @@ func _ready() -> void:
 	super()
 	npc_id = "sable"
 	display_name = "Sable"
+	$AnimatedSprite2D.modulate = Color(0.7, 1.0, 0.7)  # green tint
 
 func get_dialogue_tree() -> Dictionary:
 	if not GameState.get_flag("met_sable"):

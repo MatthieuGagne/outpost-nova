@@ -5,6 +5,7 @@ func _ready() -> void:
 	super()
 	npc_id = "maris"
 	display_name = "Maris"
+	$AnimatedSprite2D.modulate = Color(1.0, 0.7, 0.7)  # warm pink tint
 
 func get_dialogue_tree() -> Dictionary:
 	if not GameState.get_flag("met_maris"):

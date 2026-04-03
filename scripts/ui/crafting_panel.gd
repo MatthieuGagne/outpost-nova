@@ -21,6 +21,8 @@ func _build_recipe_list() -> void:
 			continue
 		var hbox = HBoxContainer.new()
 		var lbl = Label.new()
+		lbl.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
+		lbl.add_theme_font_size_override("font_size", 16)
 		var recipe = CraftingSystem.get_all_recipes()[recipe_id]
 		var cost_parts = []
 		for input in recipe["inputs"]:
@@ -28,6 +30,8 @@ func _build_recipe_list() -> void:
 		lbl.text = "%s  (%s)" % [recipe_id.replace("_", " ").capitalize(), ", ".join(cost_parts)]
 		lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		var btn = Button.new()
+		btn.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
+		btn.add_theme_font_size_override("font_size", 16)
 		btn.text = "Craft"
 		btn.disabled = not CraftingSystem.can_craft(recipe_id)
 		btn.pressed.connect(_craft.bind(recipe_id))
