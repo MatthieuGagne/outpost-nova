@@ -149,9 +149,62 @@ Serves no flag. Has shareholders. Built half the infrastructure in the Frontier 
 ## Chapter 4: Keth Deep-Dive
 
 ### 4.1 The Lie
+
+The entire foundation of Keth society is a fabrication maintained by the ruling coalition.
+
+During early Keth space exploration, the Merchant, Keeper, and Sentinel castes discovered ancient AI Builder infrastructure at secondary sites — relay nodes, processing stations. The technology was millennia old and far beyond Keth capability.
+
+Rather than disclose the discovery, the ruling castes reverse-engineered what they could, incorporated the geometric patterns and structural logic into Keth sacred architecture, and built a cosmology around it: the shapes are divine gifts, evidence of Keth cosmic significance, the foundation of their civilization's spiritual identity.
+
+The lie serves power. The ruling coalition has exclusive access to the technology derived from the sites, maintains that access through religious authority, and suppresses any inquiry into the shapes' external origin — because that inquiry threatens everything built on top of it.
+
+The lower castes (Navigator, Hearth) are true believers. They did not choose the lie. They were born into it.
+
+The Keth have NOT encountered the station itself before the game. They have encountered other Builder sites. The station's existence — and what it actually is — is new information even to the ruling coalition.
+
+---
+
 ### 4.2 Caste Structure
+
+| Caste | Role | Alignment | Status |
+|-------|------|-----------|--------|
+| Merchant | External relations, trade, the face shown to other species | Detached / Cynical | Ruling coalition |
+| Keeper | Sacred knowledge, maintains ancient architecture | Curious / Bitter — senses there's more to know, bound by tradition | Ruling coalition |
+| Sentinel | Military, security | Pre-war: Hopeful / Detached. Post-war: Cynical / Detached | Ruling coalition |
+| Navigator | Pilots, mappers, range farthest from Keth space | Hopeful / Curious — most exposed to the galaxy, most changed by the war | True Believers |
+| Hearth | Community, kin networks, domestic governance | Warm / Hopeful — hold Keth society together from inside, most conservative | True Believers |
+
+The Navigator caste is the most destabilized post-war — they dealt with humans directly, and what they saw doesn't fit the cosmology they were handed. This is the social pressure that makes the ruling coalition nervous.
+
+---
+
 ### 4.3 What Cracked Post-War
+
+The Fracture exposed Navigator and lower-caste Keth to human space in ways the ruling coalition didn't control. They saw things that raised questions.
+
+The ruling coalition's post-war strategy: use the Merchant caste's new commercial relationships to manage the information flow — frame everything through trade and formal protocol, keep the informal encounters contained.
+
+What they can't fully manage: Keth who came back from the Fracture carrying questions. Some of these Keth are in the Navigator caste. Some have started asking the Keeper caste things the Keeper caste cannot answer without unraveling the lie.
+
+The cracking is slow. It is not a revolution yet. But the ruling coalition knows it's happening.
+
+---
+
 ### 4.4 Vaen's Exile
+
+Vaen (full name: Vaensoleth) was Merchant caste — inside the ruling coalition, with access to privileged information channels.
+
+During a Navigator-caste survey mission Vaen was attached to, they encountered a secondary Builder ruins site in a region the ruling coalition monitors but doesn't publicize.
+
+What Vaen found: the site contained Builder infrastructure in a context that made the "sacred gift" narrative impossible. The technology predated Keth civilization by millennia, showed no evidence of transfer or gifting, and had clearly been found and reverse-engineered, not received. The sacred shapes were load-bearing structures, not symbols.
+
+Vaen documented it. Then asked the Keeper caste about it.
+
+The Keeper caste's response was to refer the matter to the Merchant caste leadership. Vaen's documentation was suppressed. Their Merchant caste standing was revoked. They were given a choice: silence and marginalization within Keth space, or departure.
+
+Vaen departed. "Here" is away from Keth society. The trade lane opening near Outpost Nova was a convenient reason.
+
+What Vaen carries: the knowledge that the lie exists, but not its full extent. They know the shapes are external. They don't yet know the station is Builder infrastructure. When they recognize the weapon's orientation coordinates — the target is in a region Vaen has been thinking about since the secondary site — the silence isn't surprise. It's confirmation of something they've been sitting with alone for years.
 
 ---
 
