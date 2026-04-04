@@ -3,8 +3,8 @@ extends CanvasLayer
 signal conversation_ended
 
 const PORTRAIT_SHEET := preload("res://assets/portraits/portraits.png")
-const PORTRAIT_WIDTH := 32
-const PORTRAIT_HEIGHT := 128
+const PORTRAIT_WIDTH := 64
+const PORTRAIT_HEIGHT := 64
 
 const NPC_PORTRAIT_INDEX: Dictionary = {
 	"Maris": 0,
