@@ -117,3 +117,20 @@ Invoked automatically by `executing-plans` (or standalone). It:
 | Plan work | `writing-plans` | `docs/plans/*.md` |
 | Implement | `executing-plans` | Committed code in worktree |
 | Ship | `finishing-a-development-branch` | PR → merge → cleanup |
+
+---
+
+## Subagents
+
+### `godot-expert`
+
+**File:** `.claude/agents/godot-expert.md`
+
+A reusable Godot 4 / GDScript engine expert subagent with two modes:
+
+- **Consultation mode** — ask any Godot 4 question (GDScript syntax, nodes, signals, Control nodes, GUT testing, Mobile renderer, API gotchas). Invoke via `Agent` tool with `subagent_type: "godot-expert"`.
+- **Implementation mode** — trigger with `"implement this task: <task text>"` to run a full TDD cycle: write failing GUT test → implement → run tests headlessly → commit.
+
+The agent reads and writes a persistent memory file at `~/.claude/projects/-home-mathdaman-code-outpost-nova/memory/godot-expert.md` to accumulate confirmed patterns and API gotchas across sessions.
+
+**No Outpost Nova–specific content is embedded in the agent** — CLAUDE.md remains the project source of truth. The memory file accumulates project-scoped knowledge over time.
