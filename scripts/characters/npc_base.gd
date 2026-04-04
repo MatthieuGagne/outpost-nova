@@ -15,6 +15,8 @@ var _wander_target: Vector2 = Vector2.ZERO
 var _is_talking: bool = false
 var _facing: String = "down"
 
+static var _commands_registered: bool = false
+
 func _ready() -> void:
 	add_to_group("npcs")
 	add_to_group("interactable")
@@ -53,14 +55,29 @@ func _pick_wander_target() -> void:
 	wander_timer.start()
 
 func interact() -> void:
+	if _is_talking:
+		return
+	var runners := get_tree().get_nodes_in_group("dialogue_runner")
+	if runners.is_empty():
+		push_error("npc_base: no node in group 'dialogue_runner'")
+		return
+	var runner := runners[0]
+	if not _commands_registered:
+		runner.AddCommandHandlerCallable("register", Callable(GameState, "record_register"))
+		runner.AddCommandHandlerCallable("beat", Callable(DayManager, "complete_beat"))
+		runner.AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
+		_commands_registered = true
+	var boxes := get_tree().get_nodes_in_group("dialogue_box")
+	if not boxes.is_empty():
+		var box := boxes[0]
+		if not box.conversation_ended.is_connected(_on_conversation_ended):
+			box.conversation_ended.connect(_on_conversation_ended)
 	_is_talking = true
-	var tree = get_dialogue_tree()
-	DialogueManager.conversation_ended.connect(_on_conversation_ended, CONNECT_ONE_SHOT)
-	DialogueManager.start_conversation(tree)
-	get_tree().get_first_node_in_group("dialogue_box").show_current_node()
+	runner.StartDialogueForget(get_dialogue_node())
 
 func _on_conversation_ended() -> void:
 	_is_talking = false
 
-func get_dialogue_tree() -> Dictionary:
-	return {}  # Overridden by subclass scripts (maris.gd, dex.gd, sable.gd)
+## Override in subclass to return the Yarn node title for this NPC.
+func get_dialogue_node() -> String:
+	return display_name

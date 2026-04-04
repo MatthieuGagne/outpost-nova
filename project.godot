@@ -12,14 +12,13 @@ config_version=5
 
 config/name="Outpost Nova"
 run/main_scene="res://scenes/character_creation.tscn"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.6", "C#", "Mobile")
 
 [autoload]
 
 GameState="*res://scripts/autoload/game_state.gd"
 CraftingSystem="*res://scripts/autoload/crafting_system.gd"
 DayManager="*res://scripts/autoload/day_manager.gd"
-DialogueManager="*res://scripts/autoload/dialogue_manager.gd"
 RoomGenerator="*res://scripts/derelict/room_generator.gd"
 
 [display]
@@ -27,7 +26,6 @@ RoomGenerator="*res://scripts/derelict/room_generator.gd"
 window/size/viewport_width=480
 window/size/viewport_height=270
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep"
 
 [dotnet]
 
@@ -35,7 +33,7 @@ project/assembly_name="Outpost Nova"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/YarnSpinner-Godot/plugin.cfg", "res://addons/gut/plugin.cfg")
 
 [input]
 

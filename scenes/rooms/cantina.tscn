@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cantina"]
+[gd_scene load_steps=7 format=3 uid="uid://cantina"]
 
 [ext_resource type="Script" path="res://scripts/rooms/cantina.gd" id="1_script"]
 [ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="2_rations_node"]
@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" path="res://scenes/characters/character.tscn" id="5_cook"]
 [ext_resource type="PackedScene" path="res://scenes/characters/character.tscn" id="6_engineer"]
 [ext_resource type="PackedScene" path="res://scenes/characters/character.tscn" id="7_drifter"]
-[ext_resource type="Script" path="res://scripts/characters/cook.gd" id="8_cook_script"]
-[ext_resource type="Script" path="res://scripts/characters/engineer.gd" id="9_engineer_script"]
-[ext_resource type="Script" path="res://scripts/characters/drifter.gd" id="10_drifter_script"]
 
 [node name="Cantina" type="Node2D"]
 script = ExtResource("1_script")
@@ -31,15 +28,12 @@ resource_id = "energy_cells"
 
 [node name="Cook" parent="." instance=ExtResource("5_cook")]
 position = Vector2(150, 400)
-script = ExtResource("8_cook_script")
 
 [node name="Engineer" parent="." instance=ExtResource("6_engineer")]
 position = Vector2(350, 400)
-script = ExtResource("9_engineer_script")
 
 [node name="Drifter" parent="." instance=ExtResource("7_drifter")]
 position = Vector2(550, 400)
-script = ExtResource("10_drifter_script")
 
 [node name="UpgradeFoodPrinter" type="Button" parent="."]
 offset_left = 50.0
