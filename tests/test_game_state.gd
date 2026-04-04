@@ -68,6 +68,7 @@ func test_npc_flag_history():
 	assert_false(GameState.has_npc_flag("maris", "helped_her"))
 
 func test_record_register_increments_count():
+	GameState.reset()
 	GameState.record_register("warm")
 	GameState.record_register("warm")
 	GameState.record_register("curious")
