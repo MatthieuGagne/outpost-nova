@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://cnm3hfp72i82p" path="res://scripts/ui/character_creation.gd" id="1"]
 [ext_resource type="Theme" path="res://data/themes/character_creation_theme.tres" id="2"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_1"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_2"]
+
 [node name="CharacterCreation" type="Control" unique_id=1216842655]
 layout_mode = 3
 anchors_preset = 15
@@ -48,17 +52,23 @@ layout_mode = 2
 
 [node name="Appearance0" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=600960377]
 layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1")
 text = "A"
 focus_neighbor_right = NodePath("../Appearance1")
 
 [node name="Appearance1" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=98444489]
 layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1")
 text = "B"
 focus_neighbor_left = NodePath("../Appearance0")
 focus_neighbor_right = NodePath("../Appearance2")
 
 [node name="Appearance2" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=1684006321]
 layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_1")
 text = "C"
 focus_neighbor_left = NodePath("../Appearance1")
 
@@ -72,20 +82,27 @@ theme_override_constants/separation = 4
 
 [node name="Engineer" type="Button" parent="VBoxContainer/BackgroundPicker" unique_id=574058161]
 layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_2")
 text = "Engineer (starts with Parts)"
 focus_neighbor_bottom = NodePath("../Medic")
 
 [node name="Medic" type="Button" parent="VBoxContainer/BackgroundPicker" unique_id=395805715]
 layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_2")
 text = "Medic (starts with Rations)"
 focus_neighbor_top = NodePath("../Engineer")
 focus_neighbor_bottom = NodePath("../Drifter")
 
 [node name="Drifter" type="Button" parent="VBoxContainer/BackgroundPicker" unique_id=684165331]
 layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_2")
 text = "Drifter (starts with Energy Cells)"
 focus_neighbor_top = NodePath("../Medic")
 
 [node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=67328775]
 layout_mode = 2
+disabled = true
 text = "Begin"
