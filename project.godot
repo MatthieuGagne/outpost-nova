@@ -19,7 +19,6 @@ config/features=PackedStringArray("4.6", "Mobile")
 GameState="*res://scripts/autoload/game_state.gd"
 CraftingSystem="*res://scripts/autoload/crafting_system.gd"
 DayManager="*res://scripts/autoload/day_manager.gd"
-DialogueManager="*res://scripts/autoload/dialogue_manager.gd"
 RoomGenerator="*res://scripts/derelict/room_generator.gd"
 
 [display]
