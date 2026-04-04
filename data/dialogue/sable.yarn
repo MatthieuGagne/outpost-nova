@@ -1,0 +1,20 @@
+title: Sable
+---
+<<jump Sable_FirstMeeting>>
+===
+
+title: Sable_FirstMeeting
+---
+Sable: Don't mind me. Just passing through.
+Sable: ...you're going to ask, aren't you.
+-> What brings you to the station? #register:curious
+    <<register curious>>
+    Sable: Needed a place to be quiet for a while. This seemed quiet enough.
+-> We could use more people willing to stick around. #register:warm
+    <<register warm>>
+    Sable: I said passing through. I didn't say how fast.
+-> Sure. #register:detached
+    <<register detached>>
+    Sable: ...hm. Maybe you're alright.
+<<beat sable_arrives>>
+===

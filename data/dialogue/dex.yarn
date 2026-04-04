@@ -1,0 +1,20 @@
+title: Dex
+---
+<<jump Dex_FirstMeeting>>
+===
+
+title: Dex_FirstMeeting
+---
+Dex: You're the new face. Good timing — station needs an extra set of eyes.
+Dex: I'm Dex. I keep the systems from eating themselves. So far, so good.
+-> What should I know about this place? #register:curious
+    <<register curious>>
+    Dex: Where to start. The power grid's held together by habits and stubbornness. Watch the lower decks.
+-> Fair enough. #register:detached
+    <<register detached>>
+    Dex: Fair enough is about the best you can hope for out here.
+-> You sound like you've been here a while. #register:sharp
+    <<register sharp>>
+    Dex: Long enough to know where the bodies are buried. Metaphorically. Probably.
+<<beat check_engineering>>
+===

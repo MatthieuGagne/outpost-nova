@@ -9,12 +9,8 @@ func _ready() -> void:
 	add_to_group("interactable")
 
 func interact() -> void:
-	var tree = _get_dialogue_tree()
-	DialogueManager.conversation_ended.connect(_on_conversation_ended, CONNECT_ONE_SHOT)
-	DialogueManager.start_conversation(tree)
-	var dialogue_box = get_tree().get_root().find_child("DialogueBox", true, false)
-	if dialogue_box:
-		dialogue_box.show_current_node()
+	# TODO: wire survivor dialogue to YarnSpinner runner in a future issue
+	pass
 
 func _get_dialogue_tree() -> Dictionary:
 	return {

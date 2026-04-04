@@ -34,12 +34,23 @@ const AREA_ENTRY_POSITIONS = {
 var _current_area_id: String = ""
 var _current_area: Node = null
 var _npc_instances: Dictionary = {}
+var _is_transitioning: bool = false
 
 func _ready() -> void:
 	DayManager.day_ended.connect(_on_day_ended)
 	DayManager.all_beats_done.connect(_on_all_beats_done)
+	_setup_dialogue_runner()
 	_spawn_npcs()
 	go_to_area("cantina")
+	get_viewport().gui_release_focus()
+
+func _setup_dialogue_runner() -> void:
+	var runners := get_tree().get_nodes_in_group("dialogue_runner")
+	if runners.is_empty():
+		push_error("main: no dialogue_runner in scene")
+		return
+	var project := load("res://data/dialogue/outpost-nova.yarnproject")
+	runners[0].SetProject(project)
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {
@@ -54,8 +65,9 @@ func _spawn_npcs() -> void:
 		_npc_instances[npc_id] = base
 
 func go_to_area(area_id: String) -> void:
-	if _current_area_id == area_id:
+	if _current_area_id == area_id or _is_transitioning:
 		return
+	_is_transitioning = true
 	var prev = _current_area_id
 
 	fade_anim.play("fade_out")
@@ -86,6 +98,8 @@ func go_to_area(area_id: String) -> void:
 				npc._pick_wander_target()
 
 	fade_anim.play("fade_in")
+	_is_transitioning = false
+	get_viewport().gui_release_focus()
 
 func open_crafting() -> void:
 	crafting_panel.open()
