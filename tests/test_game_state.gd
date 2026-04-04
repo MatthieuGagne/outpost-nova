@@ -80,3 +80,13 @@ func test_record_register_cleared_on_reset():
 	GameState.record_register("warm")
 	GameState.reset()
 	assert_eq(GameState.get_register_history().is_empty(), true)
+
+func test_set_flag_on():
+	GameState.reset()
+	GameState.set_flag_on("met_maris")
+	assert_true(GameState.get_flag("met_maris"))
+
+func test_set_flag_on_cleared_on_reset():
+	GameState.set_flag_on("met_maris")
+	GameState.reset()
+	assert_false(GameState.get_flag("met_maris"))

@@ -77,3 +77,6 @@ func record_register(register: String) -> void:
 
 func get_register_history() -> Dictionary:
 	return _register_history.duplicate()
+
+func set_flag_on(flag_id: String) -> void:
+	set_flag(flag_id, true)
