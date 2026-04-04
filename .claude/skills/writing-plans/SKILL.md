@@ -21,11 +21,16 @@ git fetch origin && git merge origin/master
 ```
 Resolve any conflicts before proceeding.
 
-**Note on worktrees:** Plan execution happens inside a git worktree, created automatically by `EnterWorktree` in executing-plans Step 1. You do not need to create the worktree here — just write the plan. Branch name convention: `feat/issue-<N>-<short-description>`.
+**Second: run grill-me.** Always invoke the `grill-me` skill before writing — it surfaces requirements, acceptance criteria, scope, and constraints. Once grill-me is satisfied, continue below.
 
-**Save plans to:** `docs/plans/YYYY-MM-DD-<feature-name>.md`
+**Third: create a git worktree.** After grill-me and before writing the plan file, use `EnterWorktree` to create a feature branch:
 
-**Last step before writing:** Always invoke the `grill-me` skill — it will surface requirements, acceptance criteria, scope, and Godot constraints. Once grill-me is satisfied, proceed to writing the plan.
+- **With issue number:** branch = `feat/issue-<N>-<short-description>` — use the GitHub issue number from the arguments; derive the short description from the issue title or grill-me output.
+- **Without issue number:** branch = `feat/<short-description>` — derive the slug from grill-me output.
+
+Use the `EnterWorktree` tool with the branch name as the `name` parameter. All subsequent work — including saving the plan file — happens inside the worktree.
+
+**Save plans to:** `docs/plans/YYYY-MM-DD-<feature-name>.md` (inside the worktree)
 
 ## Hard Gate Sequence
 
@@ -281,4 +286,4 @@ Only after explicit affirmative, offer execution choice:
 - Guide them to open new session
 - **REQUIRED SUB-SKILL:** New session uses superpowers:executing-plans
 
-**Both execution paths work inside a git worktree.** The worktree is created at `/home/mathdaman/code/worktrees/<sanitized-branch>` by executing-plans Step 1 (`EnterWorktree`). Cleanup is handled by `finishing-a-development-branch` after the PR is merged.
+**Both execution paths work inside a git worktree.** The worktree is created by `writing-plans` (using `EnterWorktree` after grill-me) so the plan file lives on the feature branch from day one. Cleanup is handled by `finishing-a-development-branch` after the PR is merged.

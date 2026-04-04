@@ -40,7 +40,8 @@ The GitHub issue is the single source of truth for what the feature does. No loc
 Invoke the `writing-plans` skill with the GitHub issue URL as argument. It:
 1. Pulls latest master
 2. Runs the `grill-me` skill to surface edge cases and open questions
-3. Writes a detailed implementation plan to `docs/plans/YYYY-MM-DD-<feature-name>.md`
+3. Creates a git worktree via `EnterWorktree` — the plan file lives on the feature branch from day one
+4. Writes a detailed implementation plan to `docs/plans/YYYY-MM-DD-<feature-name>.md` inside the worktree
 
 Plans are broken into batches of 2–4 tasks, each ending with a smoketest checkpoint. Every GDScript task follows a TDD cycle (failing test → implementation → passing tests → commit). All tasks include exact file paths and complete code.
 
@@ -56,7 +57,7 @@ Plans are broken into batches of 2–4 tasks, each ending with a smoketest check
 
 Open a new Claude Code session (or use Subagent-Driven mode) and invoke the `executing-plans` skill with the plan file. It:
 
-1. **Enters a git worktree** via `EnterWorktree` — creates a fresh branch off master at `/home/mathdaman/code/worktrees/<sanitized-branch>`. All implementation work happens here, isolated from the main repo.
+1. **Checks for an existing worktree** — `writing-plans` creates the worktree before saving the plan, so the session may already be inside it. If not, `EnterWorktree` creates it now. All implementation work happens in the worktree, isolated from the main repo.
 2. Loads and reviews the plan critically
 3. Executes tasks in batches, running GUT tests after every GDScript change:
    ```bash
@@ -81,7 +82,7 @@ Invoked automatically by `executing-plans` (or standalone). It:
 2. Runs all GUT tests headlessly — must pass before continuing
 3. Launches the game for a visual smoketest:
    ```bash
-   godot scenes/main.tscn &
+   godot &
    ```
    Waits for explicit user confirmation before proceeding.
 4. Checks if any `.claude/skills/`, `.claude/agents/`, or `CLAUDE.md` files changed — if so, updates this document (`docs/dev-workflow.md`) to stay in sync
@@ -90,7 +91,9 @@ Invoked automatically by `executing-plans` (or standalone). It:
    - **Keep branch as-is**
    - **Discard**
 6. For Option 1: pushes branch, creates PR on GitHub with GUT + smoketest checkboxes, and waits for merge confirmation before cleaning up
-7. After merge confirmed: removes worktree, prunes stale refs, deletes local branch
+7. After merge confirmed: closes the linked GitHub issue (if issue number is in the branch name), removes worktree, prunes stale refs, deletes local branch
+
+**Automatic issue close:** A GitHub Actions workflow (`.github/workflows/close-issue-on-merge.yml`) also closes the linked issue on PR merge by parsing the issue number from `feat/issue-<N>-...` branch names — this is the primary mechanism; the `finishing-a-development-branch` call above is belt-and-suspenders.
 
 ---
 

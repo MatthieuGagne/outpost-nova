@@ -34,7 +34,7 @@ If tests fail: stop, show failures. Do not proceed until they pass.
 Launch the game in the background (always run this step, even when called from executing-plans):
 
 ```bash
-godot scenes/main.tscn &
+godot &
 ```
 
 Tell the user what to look for. Then ask:
@@ -136,6 +136,20 @@ Then run Step 7 immediately.
 
 Only run after the user explicitly confirms the PR was merged — **never preemptively**.
 
+**Step 7-pre: Close linked issue**
+
+Parse the issue number from the branch name and close the issue if found:
+
+```bash
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [[ "$BRANCH" =~ feat/issue-([0-9]+)- ]]; then
+  gh issue close "${BASH_REMATCH[1]}"
+  echo "Closed issue #${BASH_REMATCH[1]}"
+else
+  echo "No issue number in branch name — skipping issue close."
+fi
+```
+
 **Step 7a: Exit EnterWorktree session if active**
 
 If the current session was started with `EnterWorktree` and is still inside the worktree, use `ExitWorktree` first:
@@ -212,11 +226,11 @@ Branch names are sanitized before use as directory names: replace all `/` with `
 
 ## Quick Reference
 
-| Option | Push | Delete Branch | Cleanup Worktree |
-|--------|------|--------------|-----------------|
-| 1. Push and Create PR | ✓ | `git branch -d` → `-D` fallback, after merge | After merge confirmed |
-| 2. Keep as-is | — | — | Never |
-| 3. Discard | — | `git branch -D` (immediate) | Immediately |
+| Option | Push | Close Issue | Delete Branch | Cleanup Worktree |
+|--------|------|-------------|--------------|-----------------|
+| 1. Push and Create PR | ✓ | After merge confirmed (if branch has issue number) | `git branch -d` → `-D` fallback, after merge | After merge confirmed |
+| 2. Keep as-is | — | — | — | Never |
+| 3. Discard | — | — | `git branch -D` (immediate) | Immediately |
 
 ## Common Mistakes
 
@@ -256,7 +270,7 @@ Branch names are sanitized before use as directory names: replace all `/` with `
 - Work on a feature branch inside a worktree
 - Integrate via PR only
 - Run GUT tests headlessly before presenting options
-- Run smoketest — launch `godot scenes/main.tscn &`, wait for explicit user confirmation
+- Run smoketest — launch `godot &`, wait for explicit user confirmation
 - Sanitize branch name (replace `/` with `-`) for worktree paths
 - Infer issue number from branch name before asking
 - Present exactly 3 options
