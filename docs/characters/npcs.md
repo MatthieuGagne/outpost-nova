@@ -1,6 +1,6 @@
 # Outpost Nova — NPC Reference
 
-**Date:** 2026-04-02
+**Date:** 2026-04-04
 **Status:** Approved
 
 ---
@@ -174,6 +174,35 @@ It stopped asking questions after that. The Bitter/Unknown axis is load-bearing:
 
 ---
 
+## Act 1 Arrival
+
+### Nadia — The Journalist
+
+**Age:** Mid-20s
+**Species:** Human
+**Emotional profile:** Hopeful / Detached / Curious
+**On station:** Year 1 Act 1 arrival
+
+**Appearance:** TBD — deferred.
+
+**Background:** Federation intelligence operative under journalist cover — officially filing a story on the emerging Keth trade lanes near the Frontier's edge. The cover is not entirely false: she files actual journalism alongside her intelligence reports, and she believes both jobs matter. She was recruited in her early 20s by a Federation handler who recognized her talent for reading people and situations quickly. She accepted because she believed in the Federation's mission — stability, open trade, protection of civilian populations. She still does.
+
+She grew up on a Federation world at the end of the Fracture. Old enough to remember the war's final years; young enough that the Federation's victory felt like relief rather than consolidation. She is an idealist who believes in what the Federation says it is. The gap between what the Federation says and what it does is something she has not yet been forced to look at directly.
+
+**What she does not know:** Nadia was not read into the Federation's warzone intelligence — the discovery of Others ruins in the Fracture warzone, the decoded Builder technology, the suspected Keth/Others biological connection. She was sent to Outpost Nova to monitor the station and its traffic and report back. She was not told what to look for. She is doing her job exactly as she understands it, and her understanding is incomplete by design.
+
+**Role:** Freelance journalist on assignment for a Federation-affiliated media outlet. She covers trade lane development, interviews travelers and crew, and files thorough, genuinely good work. The intelligence reports run on a separate channel. She keeps both tracks clean.
+
+**Arc:** Year 2. She learns the Federation buried the warzone discovery — that she was an unwitting asset, sent to watch for something she was never told about, by an institution she trusted completely. The Detached axis cracks. The woman who filed real journalism alongside her intel reports has to reckon with what it means that she was useful in a way she never consented to.
+
+**Relationships:**
+- *Dex:* Friction — instinctive. Dex's Federation-bred posture reads immediately to Nadia as someone the institution shaped, and to Dex as someone the institution hasn't broken yet. He distrusts her presence not because she's a journalist but because he recognizes the specific kind of Federation person she is: the idealist before the lesson. He was that person. He knows where it ends.
+- *Soriel:* Unexpected anchor. Soriel's warmth doesn't require Nadia to perform or justify — it's available regardless of whether she's earned it. For someone whose relationships are all transactional (the journalism, the intel), that's unfamiliar. She doesn't know what to do with it, which means she keeps coming back.
+
+**What she knows about the Derelict (Act 1):** Nothing specific. She's heard the station has an unusual lower deck situation from informal channels — the same networks that made it a useful assignment. Filed as a curiosity, not an assignment.
+
+---
+
 ## Act 2 Arrival
 
 ### Vaen — The Keth Trader
@@ -196,6 +225,8 @@ The connection to the ancient civilization's echoes in Keth sacred architecture 
 Vaen has been running two parallel tracks in exile: slowly accumulating credits toward chartering a ship, and scanning for any Builder signal that might give the question more context. The ship fund is not about a specific destination — it is about independence. As an exile with no caste standing, Vaen cannot investigate Builder sites without being tied to trade routes and other people's schedules. The fund is slow. The goal is the freedom to follow threads wherever they lead, without asking permission. The station was not what they expected to find. Until the commander describes what they found in the lower decks. Vaen goes quiet. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
 
 What Vaen carries from the secondary ruins site is not coordinates — it is a physical artifact: a fragment of Builder notation that describes a target in relative, geometric terms. It has been unreadable for years. The weapon's architecture is the decoder ring. When Vaen encounters the weapon's structure, the artifact resolves — the notation suddenly makes sense. The recognition is not of a location, but of the artifact finally being readable. The second beat — working out what location it actually points to — happens privately, off-screen. What Vaen does with that knowledge, and when they share it with the commander, is a key Act 2-3 beat.
+
+**Warzone discovery context (locked 2026-04-04):** Both the Federation and the Keth ruling coalition independently found Others ruins in the Fracture warzone. Vaen does not know about the Keth coalition's discovery — they were exiled before the ruling coalition's inner leadership acted on it. Vaen's artifact predates the warzone discovery; they found it at a secondary Builder site, not an Others site. The artifact's connection to the Others (via the weapon's targeting logic) is something Vaen works out in Act 2-3, not something they arrived with. The weapon points at the Keth homeworld — which is where the Others' ruins are buried under living Keth civilization. Vaen's accumulated ship fund and the now-readable artifact pointing to those ruins are the concrete material for Years 2-3 and beyond.
 
 They and the commander end up holding knowledge they're not supposed to have, cut off from the institutions that might claim it. The alliance that forms is fragile and real. Neither of them planned it.
 
@@ -242,13 +273,15 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 
 ## Relationship Web
 
-| | Maris | Dex | Sable | Soriel | Quen |
-|---|---|---|---|---|---|
-| **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | TBD |
-| **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | TBD |
-| **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | TBD |
-| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | TBD |
-| **Quen** | TBD | TBD | TBD | TBD | — |
+| | Maris | Dex | Sable | Soriel | Quen | Nadia | Vaen |
+|---|---|---|---|---|---|---|---|
+| **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | Shared silence about the Derelict became trust | Genuine warmth, small unnamed reserve | Cautious welcome becoming genuine; bond over institutional failure |
+| **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | Professional respect; Quen quietly marks Dex as the one who could understand the lower decks | Friction, instinctive | Federation distrust first; reluctant intellectual partnership |
+| **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | Quiet recognition; no performance for each other | Cordial surface; one moment of Sable reading too accurately, neither addresses it | Bridge on Curious; opposites on Hope and Warmth |
+| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | Wary warmth; one medical moment where both chose not to ask | Unexpected anchor | The decision Soriel thought they'd resolved, arriving in person; arc deferred to future years |
+| **Quen** | Shared silence about the Derelict became trust | Professional respect; Quen quietly marks Dex as the one who could understand the lower decks | Quiet recognition; no performance for each other | Wary warmth; one medical moment where both chose not to ask | — | Functional obstruction; professional not hostile, quiet respect for her persistence | Mutual wariness; one overture, one clean shutdown, both keep watching |
+| **Nadia** | Genuine warmth, small unnamed reserve | Friction, instinctive | Cordial surface; one moment of Sable reading too accurately, neither addresses it | Unexpected anchor | Functional obstruction; professional not hostile, quiet respect for her persistence | — | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 |
+| **Vaen** | Cautious welcome becoming genuine; bond over institutional failure | Federation distrust first; reluctant intellectual partnership | Bridge on Curious; opposites on Hope and Warmth | The decision Soriel thought they'd resolved, arriving in person; arc deferred to future years | Mutual wariness; one overture, one clean shutdown, both keep watching | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 | — |
 
 ---
 
@@ -261,6 +294,7 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 | Sable | Has heard rumors from passing ships. Knows the station has a reputation. Hasn't shared it. |
 | Soriel | Treated crew who came back from the lower decks before sealing. Never asked what happened to them. |
 | Quen | Was there. Sealed the door. Knows the most. Says the least. |
+| Nadia | Nothing specific. Has heard the station has an unusual lower deck situation from informal channels. Filed as a curiosity, not an assignment. |
 
 ---
 
@@ -276,7 +310,9 @@ Cephalopod-inspired, semi-humanoid. Central body mass, two primary manipulators,
 Humanoid. Red skin. Compound eyes. Antennae that carry expression. The alienness reveals itself in layers — passes at a glance in dim light, then you notice the eyes, then the antennae. Their world was also caught in early human-Keth first contact. Unaligned, blockaded, punished for refusing a war that wasn't theirs.
 
 ### Keth
-Avian — corvid. Iridescent plumage. Shorter, flatter beak. Forward-facing raptor eyes. Taloned feet. A spacefaring empire older than humanity's presence in the Frontier, organized by function-based caste assessed in youth. The Merchant caste's formal trade face is trained suppression of natural corvid temperament: quick, curious, socially warm. Post-war pressure has fractured Keth society between caste traditionalists and a reform faction. The Keth half-remember the first ancient civilization through shapes in their oldest sacred architecture — echoes they never identified.
+Avian — corvid. Iridescent plumage. Shorter, flatter beak. Forward-facing raptor eyes. Taloned feet. A spacefaring empire older than humanity's presence in the Frontier, organized by function-based caste assessed in youth. The Merchant caste's formal trade face is trained suppression of natural corvid temperament: quick, curious, socially warm. Post-war pressure has fractured Keth society between caste traditionalists and a reform faction. The Keth half-remember the first ancient civilization through shapes in their oldest sacred architecture — echoes they never identified as external.
+
+**Ancestry retcon (locked 2026-04-04):** The Keth are the biological descendants of the Others — the second civilization nearly destroyed by the Builders. Survivors scattered after the war and became the Keth over millennia. All cultural memory was lost in the dispersal. The Keth have no knowledge of this origin. The ruling coalition's inner leadership recently began to suspect the biological connection, triggered by discovering Others ruins in the Fracture warzone that showed biological and cultural similarities to Keth species. This suspicion is not shared with lower castes, not disclosed to humans, and not confirmed. The Others' homeworld is the current Keth homeworld — their ruins are buried under living Keth civilization.
 
 ---
 
