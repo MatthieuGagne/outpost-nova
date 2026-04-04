@@ -275,13 +275,13 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 
 | | Maris | Dex | Sable | Soriel | Quen | Nadia | Vaen |
 |---|---|---|---|---|---|---|---|
-| **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | TBD | TBD | TBD |
-| **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | TBD | Friction, instinctive | TBD |
-| **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | TBD | TBD | Bridge on Curious; opposites on Hope and Warmth |
-| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | TBD | Unexpected anchor | TBD |
-| **Quen** | TBD | TBD | TBD | TBD | — | TBD | TBD |
-| **Nadia** | TBD | Friction, instinctive | TBD | Unexpected anchor | TBD | — | TBD |
-| **Vaen** | TBD | TBD | Bridge on Curious; opposites on Hope and Warmth | TBD | TBD | TBD | — |
+| **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | Shared silence about the Derelict became trust | Genuine warmth, small unnamed reserve | Cautious welcome becoming genuine; bond over institutional failure |
+| **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | Professional respect; Quen quietly marks Dex as the one who could understand the lower decks | Friction, instinctive | Federation distrust first; reluctant intellectual partnership |
+| **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | Quiet recognition; no performance for each other | Cordial surface; one moment of Sable reading too accurately, neither addresses it | Bridge on Curious; opposites on Hope and Warmth |
+| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | Wary warmth; one medical moment where both chose not to ask | Unexpected anchor | The decision Soriel thought they'd resolved, arriving in person; arc deferred to future years |
+| **Quen** | Shared silence about the Derelict became trust | Professional respect; Quen quietly marks Dex as the one who could understand the lower decks | Quiet recognition; no performance for each other | Wary warmth; one medical moment where both chose not to ask | — | Functional obstruction; professional not hostile, quiet respect for her persistence | Mutual wariness; one overture, one clean shutdown, both keep watching |
+| **Nadia** | Genuine warmth, small unnamed reserve | Friction, instinctive | Cordial surface; one moment of Sable reading too accurately, neither addresses it | Unexpected anchor | Functional obstruction; professional not hostile, quiet respect for her persistence | — | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 |
+| **Vaen** | Cautious welcome becoming genuine; bond over institutional failure | Federation distrust first; reluctant intellectual partnership | Bridge on Curious; opposites on Hope and Warmth | The decision Soriel thought they'd resolved, arriving in person; arc deferred to future years | Mutual wariness; one overture, one clean shutdown, both keep watching | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 | — |
 
 ---
 
