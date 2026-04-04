@@ -1,0 +1,21 @@
+name: Close linked issue on merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  close-issue:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Close linked issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${{ github.event.pull_request.head.ref }}"
+          if [[ "$BRANCH" =~ feat/issue-([0-9]+)- ]]; then
+            gh issue close "${BASH_REMATCH[1]}" --repo ${{ github.repository }}
+          fi
