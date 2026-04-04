@@ -7,15 +7,8 @@ func _ready() -> void:
 	display_name = "Dex"
 	$AnimatedSprite2D.modulate = Color(0.7, 0.9, 1.0)  # cool blue tint
 
-func get_dialogue_tree() -> Dictionary:
-	if not GameState.get_flag("met_dex"):
-		return _tree_first_meeting()
-	elif GameState.get_flag("power_flicker_noticed") and not GameState.get_flag("dex_secret_known"):
-		return _tree_power_concern()
-	elif GameState.get_flag("dex_secret_known"):
-		return _tree_post_secret()
-	else:
-		return _tree_casual()
+func get_dialogue_node() -> String:
+	return "Dex"
 
 func _tree_first_meeting() -> Dictionary:
 	return {

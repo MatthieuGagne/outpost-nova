@@ -7,15 +7,8 @@ func _ready() -> void:
 	display_name = "Maris"
 	$AnimatedSprite2D.modulate = Color(1.0, 0.7, 0.7)  # warm pink tint
 
-func get_dialogue_tree() -> Dictionary:
-	if not GameState.get_flag("met_maris"):
-		return _tree_first_meeting()
-	elif GameState.get_flag("maris_confided") and not GameState.get_flag("maris_favour_done"):
-		return _tree_favour_pending()
-	elif GameState.get_flag("maris_favour_done"):
-		return _tree_post_favour()
-	else:
-		return _tree_casual()
+func get_dialogue_node() -> String:
+	return "Maris"
 
 func _tree_first_meeting() -> Dictionary:
 	return {

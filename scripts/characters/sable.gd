@@ -7,13 +7,8 @@ func _ready() -> void:
 	display_name = "Sable"
 	$AnimatedSprite2D.modulate = Color(0.7, 1.0, 0.7)  # green tint
 
-func get_dialogue_tree() -> Dictionary:
-	if not GameState.get_flag("met_sable"):
-		return _tree_first_meeting()
-	elif GameState.get_flag("sable_past_revealed"):
-		return _tree_post_revelation()
-	else:
-		return _tree_guarded()
+func get_dialogue_node() -> String:
+	return "Sable"
 
 func _tree_first_meeting() -> Dictionary:
 	return {
