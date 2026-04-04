@@ -273,13 +273,15 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 
 ## Relationship Web
 
-| | Maris | Dex | Sable | Soriel | Quen |
-|---|---|---|---|---|---|
-| **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | TBD |
-| **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | TBD |
-| **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | TBD |
-| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | TBD |
-| **Quen** | TBD | TBD | TBD | TBD | — |
+| | Maris | Dex | Sable | Soriel | Quen | Nadia | Vaen |
+|---|---|---|---|---|---|---|---|
+| **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | TBD | TBD | TBD |
+| **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | TBD | Friction, instinctive | TBD |
+| **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | TBD | TBD | Bridge on Curious; opposites on Hope and Warmth |
+| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | TBD | Unexpected anchor | TBD |
+| **Quen** | TBD | TBD | TBD | TBD | — | TBD | TBD |
+| **Nadia** | TBD | Friction, instinctive | TBD | Unexpected anchor | TBD | — | TBD |
+| **Vaen** | TBD | TBD | Bridge on Curious; opposites on Hope and Warmth | TBD | TBD | TBD | — |
 
 ---
 
@@ -292,6 +294,7 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 | Sable | Has heard rumors from passing ships. Knows the station has a reputation. Hasn't shared it. |
 | Soriel | Treated crew who came back from the lower decks before sealing. Never asked what happened to them. |
 | Quen | Was there. Sealed the door. Knows the most. Says the least. |
+| Nadia | Nothing specific. Has heard the station has an unusual lower deck situation from informal channels. Filed as a curiosity, not an assignment. |
 
 ---
 
