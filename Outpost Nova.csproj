@@ -10,4 +10,8 @@
   <ItemGroup>
     <Compile Remove="addons/YarnSpinner-Godot/SourceGenerator/**" />
   </ItemGroup>
+  <!-- Suppress CS0618 obsolete warnings from YATI addon (ParallaxBackground/ParallaxLayer) -->
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS0618</NoWarn>
+  </PropertyGroup>
 </Project>
