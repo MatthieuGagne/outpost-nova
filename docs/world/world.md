@@ -1,8 +1,8 @@
 # Outpost Nova — World Documentation
 
 **Status:** Living document — sections fill in as story decisions lock.
-**Last updated:** 2026-04-02
-**Cross-references:** `docs/plans/2026-03-16-story-bible-design.md` (story bible), `docs/characters/npcs.md` (NPC reference)
+**Last updated:** 2026-04-04
+**Cross-references:** `docs/characters/npcs.md` (NPC reference), `docs/story/year1.md` (Year 1 narrative + endings), `docs/story/years2-5.md` (long-game arc)
 
 ---
 
@@ -30,9 +30,11 @@ Their ruins are the structural opposite of the station: full of selves.
 
 The weapon built into Outpost Nova is aimed at the Keth homeworld. What this means — why the Builders targeted that location, what was there before the Keth — is a mystery the game plants but does not answer. The Builder logs refer to their target only as "The Others."
 
-Completely unknown to the Keth — the Keth recognize nothing from the second civilization. That asymmetry is its own information.
+Unknown to the Keth as cultural memory — the Keth recognize nothing of themselves in the second civilization's ruins. The dispersal erased everything. There is no conscious knowledge of descent, no preserved language, no cultural throughline. The absence is total, which is exactly what makes it invisible.
 
-The Keth have never encountered any physical traces of the second civilization. The weapon's orientation points at their homeworld, yet that absence — Builder echoes everywhere the Keth have been, nothing from the second civilization anywhere — is part of what alarms the ruling coalition when the broadcast begins. The second civilization's relationship to the Keth homeworld is deliberately unresolved.
+The ruling coalition recently suspects a biological connection. During the Fracture, they discovered Others ruins in the warzone that showed biological and cultural similarities to Keth species. This suspicion is held by the ruling coalition's inner leadership only — not shared with lower castes, not discussed with humans, not confirmed. The Others' homeworld is the current Keth homeworld: their ruins are buried under living Keth civilization. The weapon has been aimed there all along.
+
+*See `docs/story/years2-5.md` for the expedition arc: secondary sites + Vaen's knowledge (Years 2–3), homeworld access after the ruling coalition's authority cracks (Year 4).*
 
 **Name:** [SECOND CIV NAME TBD]
 
@@ -40,7 +42,7 @@ The Keth have never encountered any physical traces of the second civilization. 
 
 Resource-driven. The Builder AI initiated because its optimization logic flagged the second civilization's territory as containing necessary materials.
 
-Neither side survived. The weapon is still aimed. Whatever they were fighting over, it outlasted both of them.
+The Builders were destroyed. The second civilization was nearly so — survivors scattered and over millennia became the Keth, all cultural memory lost in the dispersal. The weapon is still aimed. Whatever they were fighting over, one side outlasted both of them without knowing it.
 
 ---
 
@@ -298,6 +300,8 @@ The lower castes (Navigator, Hearth) are true believers. They did not choose the
 
 The Keth have NOT encountered the station itself before the game. They have encountered other Builder sites. The station's existence — and what it actually is — is new information even to the ruling coalition.
 
+**Warzone discovery (locked 2026-04-04):** During the Fracture, the ruling coalition independently discovered Others ruins in the warzone — the same discovery the Federation made separately (see `docs/story/years2-5.md`, Federation track). The Others had documented the Builders from the victim's perspective. The Keth ruling coalition used these records to understand what they had been building their cosmology on top of, and began to suspect the biological connection between the Others and the Keth. Both sides kept the discovery secret for different reasons. The Federation suspects the Keth/Others connection but has not confirmed it. This is part of why the weapon at Outpost Nova is so valuable to them: it points at the Keth homeworld, where the Others' ruins are buried.
+
 ---
 
 ### 4.2 Caste Structure
@@ -350,92 +354,8 @@ What Vaen carries: a physical artifact found at the secondary Builder ruins site
 
 ---
 
-## Chapter 5: Political Ripple
-
-### 5.1 Act-by-Act Off-Screen Shifts
-
-The events below happen regardless of player choices. They are the world turning on its own axis while the commander stands in the station's corridors deciding what kind of person they want to be.
-
 ---
 
-#### Act 1 — Before the weapon activates (Days 1-30)
+## Chapter 5: Year 1 Story Narrative
 
-**Hegemony Combine:** Running a quiet acquisition play that has been in preparation for years. The commander's posting is not coincidental — Hegemony's buried survey identified the lower decks as extraordinary, and a live station manager is a necessary part of turning quiet access into documented control. Monitoring equipment already embedded in the station's systems is watching for activation events. The commander's routine reports are being read at a level above their stated supervisor.
-
-**The Federation:** Has noticed Hegemony's unusual interest in a forgotten waypoint station. A patrol passes near Outpost Nova carrying questions that are slightly too specific for routine transit checks — the patrol commander's briefing referenced the station by designation, not by location, which is not standard protocol. The Federation doesn't yet know what Hegemony is watching for. They're trying to find out without revealing that they're watching Hegemony.
-
-**Keth ruling coalition:** The trade lane opening near Outpost Nova runs too close to old Builder signal patterns for comfort. The coalition is monitoring through channels they don't acknowledge publicly — ancient-tech detection systems that are themselves part of what they've hidden. When Vaen arrives at the station, the ruling coalition notes it. Vaen has no official Keth standing anymore, and the station is outside Keth jurisdiction. They watch and wait, which is their preference until preference runs out.
-
-**Unaligned Alliance:** Aware that Outpost Nova sits in legally ambiguous territory adjacent to their space. Watching Hegemony's interest with suspicion, from a distance they won't close. They haven't formally engaged because doing so would require acknowledging the station's strategic value — which they don't want to do publicly while the situation is still containable.
-
----
-
-#### Act 2 — Weapon activates, anomalies build (Days 31-51)
-
-**Hegemony Combine:** Detects the broadcast first. Their monitoring equipment was designed for exactly this. Internal communications escalate immediately. The patient acquisition play shifts to urgent — years of quiet positioning are suddenly on a clock the corporation didn't set. The commander's reports become pointed requests. The word "assessment" is replaced by the word "confirmation."
-
-**Keth ruling coalition:** Detects the broadcast second, through the same ancient-tech detection systems they don't publicly acknowledge. This is precisely the scenario those systems were built to flag. An internal emergency session of the coalition is called. Vaen's presence at the station — previously noted as an irritant — is now a serious operational concern. They cannot contact Vaen through official channels because Vaen has no official standing. This is the trap they set by exiling them.
-
-**The Federation:** Detects the broadcast third, through conventional means. The signal doesn't match any known format in their database — not human, not Keth, not anything on record. Intelligence assets are redirected to the station. The Federation patrol that was asking too-specific questions is recalled for debriefing and re-tasked.
-
-**Unaligned Alliance:** Learns of the broadcast through Federation-adjacent intelligence sharing — they are not close enough to the Federation to receive primary intelligence, but they are close enough to notice when the Federation changes posture. Their "watch and wait" position shifts to active monitoring. The first internal discussion of whether to make formal contact with the station occurs.
-
----
-
-#### Act 3 — Weapon charging, Harlan arrives (Days 52-58)
-
-**Hegemony Combine:** Harlan's arrival is the acquisition play going overt. Hegemony is done waiting. They believe they can still close this quietly — one person the commander respects, a reasonable ask, a situation that doesn't have to become a crisis if everyone acts professionally. What Hegemony cannot yet see is that the commander they sent is no longer the situation's passive element. The calculation Hegemony made — that the commander could be managed — may have been wrong from the beginning.
-
-**The Federation:** Has identified Outpost Nova as the source of an anomalous signal of unknown origin and confirmed that Hegemony sent a senior director in person, which is not normal operational behavior for a waypoint station assessment. They do not yet know about the ruins. They know they are behind. Their patience is running out and their internal hawks are becoming harder to manage.
-
-**Keth ruling coalition:** Internal crisis. The weapon's orientation — toward the coordinates of the second civilization's ruins, in territory the coalition has been watching — confirms their worst-case interpretation of what the Builder sites are and what the ruling coalition has been sitting on. They cannot object to the discovery publicly without explaining how they knew to be alarmed and what systems they've been using to monitor for it. Vaen, on the station, is holding knowledge the coalition cannot safely allow to circulate. What they decide to do about Vaen is the question they have not yet answered.
-
-**Unaligned Alliance:** Has confirmed the signal is not Federation or Keth in origin. Treating the station as a significant intelligence priority. Has not yet made overt contact. Internally debating whether the moment has come to formally acknowledge the station's existence in their political calculations — which they have been avoiding, because doing so commits them to a position they may not be able to walk back.
-
----
-
-### 5.2 Per-Ending Faction Outcomes
-
-These are not clean outcomes. The story bible is explicit: no clean endings, bittersweet by default. Each choice forecloses something and opens something else.
-
----
-
-#### Ending 1 — Defend it
-
-The crew refuses everyone, including Harlan. The weapon continues charging, aimed at the Keth homeworld.
-
-Hegemony loses its acquisition play. Harlan's bargaining chip goes unused.
-
-The Federation and Unaligned Alliance are watching a station that just refused the only known shutdown option — with a charging weapon inside.
-
-The Keth ruling coalition is in crisis: their homeworld is the target, they cannot publicly object without exposing what they know, and the commander has just refused the one person who could stop it.
-
-The Frontier holds its breath. The station — and the crew — are on a weapon that is still charging.
-
----
-
-#### Ending 2 — Accept Harlan's offer
-
-Harlan stops the weapon. The station survives. Hegemony takes control.
-
-The crew lives. The station becomes something else — Hegemony's asset, Hegemony's secret, Hegemony's weapon to eventually wield or sell.
-
-The Keth ruling coalition's crisis is quietly resolved — for now. The weapon is off. But Hegemony now knows where it was pointed, and so does the ruling coalition.
-
-The Federation and Unaligned Alliance know Hegemony got something significant. The power imbalance takes years to play out.
-
-The station survives. The home does not.
-
----
-
-#### Ending 3 — Sacrifice it
-
-The crew destroys the weapon themselves. The station may not survive.
-
-The discovery still happened — the broadcast went out, the signal was detected, the Builder logs exist. What was destroyed cannot be undiscovered.
-
-Hegemony loses its acquisition target and its shutdown mechanism advantage. They are not pleased.
-
-The Keth homeworld is no longer in immediate danger. But the ruling coalition knows the weapon existed and was aimed at them — and that someone knows about The Others.
-
-The Frontier doesn't fracture. But every faction will spend years trying to find the next Builder site. And the crew has to find somewhere to go.
+*Moved to `docs/story/year1.md`. See that document for: 3-act structure, per-act faction postures, and Year 1 endings.*
