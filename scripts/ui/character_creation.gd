@@ -8,26 +8,38 @@ extends Control
 
 const BACKGROUNDS = ["engineer", "medic", "drifter"]
 
-var _selected_appearance: int = 0
-var _selected_background: String = "drifter"
+var _selected_appearance: int = -1
+var _selected_background: String = ""
 
 func _ready() -> void:
 	start_btn.pressed.connect(_on_start)
+	name_input.text_submitted.connect(_on_start.unbind(1))
+	name_input.text_changed.connect(_update_start_btn)
 	for i in appearance_picker.get_child_count():
 		appearance_picker.get_child(i).pressed.connect(_set_appearance.bind(i))
 	for i in background_picker.get_child_count():
 		background_picker.get_child(i).pressed.connect(_set_background.bind(i))
+	name_input.grab_focus()
+	_update_start_btn()
 
 func _set_appearance(idx: int) -> void:
 	_selected_appearance = idx
+	_update_start_btn()
 
 func _set_background(idx: int) -> void:
 	_selected_background = BACKGROUNDS[idx]
+	_update_start_btn()
+
+func _update_start_btn(_ignored: String = "") -> void:
+	start_btn.disabled = (
+		name_input.text.strip_edges() == "" or
+		_selected_appearance == -1 or
+		_selected_background == ""
+	)
 
 func _on_start() -> void:
-	var name_val = name_input.text.strip_edges()
-	if name_val == "":
-		name_val = "Crew"
-	GameState.set_player_identity(name_val, _selected_background, _selected_appearance)
+	if start_btn.disabled:
+		return
+	GameState.set_player_identity(name_input.text.strip_edges(), _selected_background, _selected_appearance)
 	GameState.apply_background_bonus(_selected_background)
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
