@@ -66,3 +66,16 @@ func test_npc_flag_history():
 	GameState.record_npc_choice("maris", "was_honest")
 	assert_true(GameState.has_npc_flag("maris", "was_honest"))
 	assert_false(GameState.has_npc_flag("maris", "helped_her"))
+
+func test_record_register_increments_count():
+	GameState.record_register("warm")
+	GameState.record_register("warm")
+	GameState.record_register("curious")
+	var history = GameState.get_register_history()
+	assert_eq(history.get("warm", 0), 2)
+	assert_eq(history.get("curious", 0), 1)
+
+func test_record_register_cleared_on_reset():
+	GameState.record_register("warm")
+	GameState.reset()
+	assert_eq(GameState.get_register_history().is_empty(), true)

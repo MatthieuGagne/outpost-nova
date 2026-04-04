@@ -11,6 +11,7 @@ var player_appearance: int = 0
 var _resources: Dictionary = {}
 var _flags: Dictionary = {}
 var _npc_flags: Dictionary = {}  # { npc_id: [flag1, flag2, ...] }
+var _register_history: Dictionary = {}
 
 const BACKGROUND_BONUSES = {
 	"engineer": { "parts": 3 },
@@ -25,6 +26,7 @@ func reset() -> void:
 	_resources = { "rations": 0, "parts": 0, "energy_cells": 0, "scrap": 0 }
 	_flags = {}
 	_npc_flags = {}
+	_register_history = {}
 
 func _ready() -> void:
 	reset()
@@ -69,3 +71,9 @@ func record_npc_choice(npc_id: String, flag: String) -> void:
 
 func has_npc_flag(npc_id: String, flag: String) -> bool:
 	return _npc_flags.get(npc_id, []).has(flag)
+
+func record_register(register: String) -> void:
+	_register_history[register] = _register_history.get(register, 0) + 1
+
+func get_register_history() -> Dictionary:
+	return _register_history.duplicate()
