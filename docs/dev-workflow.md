@@ -82,7 +82,7 @@ Invoked automatically by `executing-plans` (or standalone). It:
 2. Runs all GUT tests headlessly — must pass before continuing
 3. Launches the game for a visual smoketest:
    ```bash
-   godot scenes/main.tscn &
+   godot scenes/character_creation.tscn &
    ```
    Waits for explicit user confirmation before proceeding.
 4. Checks if any `.claude/skills/`, `.claude/agents/`, or `CLAUDE.md` files changed — if so, updates this document (`docs/dev-workflow.md`) to stay in sync
