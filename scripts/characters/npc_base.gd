@@ -65,6 +65,7 @@ func interact() -> void:
 	if not _commands_registered:
 		runner.AddCommandHandlerCallable("register", Callable(GameState, "record_register"))
 		runner.AddCommandHandlerCallable("beat", Callable(DayManager, "complete_beat"))
+		runner.AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
 		_commands_registered = true
 	var boxes := get_tree().get_nodes_in_group("dialogue_box")
 	if not boxes.is_empty():

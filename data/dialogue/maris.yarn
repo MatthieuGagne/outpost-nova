@@ -1,6 +1,10 @@
 title: Maris
 ---
-<<jump Maris_FirstMeeting>>
+<<if get_flag("met_maris")>>
+    <<jump Maris_Casual>>
+<<else>>
+    <<jump Maris_FirstMeeting>>
+<<endif>>
 ===
 
 title: Maris_FirstMeeting
@@ -17,4 +21,16 @@ Maris: Don't let the name fool you, it actually makes real food. Mostly.
     <<register detached>>
     Maris: ...okay then.
 <<beat meet_maris>>
+<<flag met_maris>>
+===
+
+title: Maris_Casual
+---
+Maris: The printer's running. That's about as good as it gets today.
+-> How are you holding up? #register:warm
+    <<register warm>>
+    Maris: Honestly? I've had better weeks. But I'm here.
+-> Good to know. #register:detached
+    <<register detached>>
+    Maris: Yeah.
 ===
