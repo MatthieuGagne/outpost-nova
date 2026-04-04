@@ -68,7 +68,6 @@ position = Vector2(240, 128)
 [node name="DialogueRunner" type="Node" parent="." groups=["dialogue_runner"] node_paths=PackedStringArray("dialoguePresenters")]
 process_mode = 3
 script = ExtResource("8")
-yarn_project = ExtResource("9")
 auto_start = false
 dialoguePresenters = [NodePath("../DialogueBox")]
 
