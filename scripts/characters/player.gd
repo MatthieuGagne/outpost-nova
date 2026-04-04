@@ -43,21 +43,23 @@ func _get_facing(direction: Vector2) -> String:
 		return "right" if direction.x > 0 else "left"
 	return "down" if direction.y > 0 else "up"
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		_try_interact()
+		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("attack"):
 		_do_attack()
+		get_viewport().set_input_as_handled()
 
 func _try_interact() -> void:
 	var bodies = interaction_zone.get_overlapping_bodies()
 	var areas = interaction_zone.get_overlapping_areas()
 	for body in bodies:
-		if body.is_in_group("interactable"):
+		if body.is_in_group("interactable") and body.visible:
 			body.interact()
 			return
 	for area in areas:
-		if area.is_in_group("interactable"):
+		if area.is_in_group("interactable") and area.visible:
 			area.interact()
 			return
 
