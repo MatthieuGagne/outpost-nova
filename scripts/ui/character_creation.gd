@@ -13,6 +13,7 @@ var _selected_background: String = "drifter"
 
 func _ready() -> void:
 	start_btn.pressed.connect(_on_start)
+	name_input.text_submitted.connect(_on_start.unbind(1))
 	for i in appearance_picker.get_child_count():
 		appearance_picker.get_child(i).pressed.connect(_set_appearance.bind(i))
 	for i in background_picker.get_child_count():
