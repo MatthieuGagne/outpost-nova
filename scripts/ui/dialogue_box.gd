@@ -83,6 +83,7 @@ func on_dialogue_start_async() -> void:
 
 func run_line_async(line: Dictionary) -> void:
 	_choices_container.visible = false
+	get_viewport().gui_release_focus()
 	var localized_line := YarnSpinner.LocalizedLine.from_dictionary(line)
 	_speaker_label.text = localized_line.character_name
 	_update_portrait(localized_line.character_name)
@@ -90,9 +91,16 @@ func run_line_async(line: Dictionary) -> void:
 	await _line_advance_requested
 
 func run_options_async(options: Array, on_option_selected: Callable) -> void:
+	push_warning("run_options_async called, options count: %d" % options.size())
+	_dialogue_text.visible = false
+	_speaker_label.visible = false
 	_build_choices(options, on_option_selected)
 	_choices_container.visible = true
+	push_warning("choices_container children: %d, visible: %s" % [_choices_container.get_child_count(), _choices_container.visible])
+	_state = _State.CHOOSING
 	await _option_chosen
+	_dialogue_text.visible = true
+	_speaker_label.visible = true
 
 func on_dialogue_complete_async() -> void:
 	_choices_container.visible = false
@@ -122,14 +130,20 @@ func _make_atlas(index: int) -> AtlasTexture:
 	return atlas
 
 func _build_choices(options: Array, on_option_selected: Callable) -> void:
+	push_warning("_build_choices called, options: %d" % options.size())
 	for child in _choices_container.get_children():
 		child.queue_free()
 	for i in range(options.size()):
+		push_warning("option[%d] keys: %s" % [i, str(options[i].keys())])
 		var option := YarnSpinner.DialogueOption.from_dictionary(options[i])
+		if option == null:
+			push_warning("option %d is null!" % i)
+			continue
+		push_warning("option %d text: %s" % [i, option.line.text_without_character_name.text])
 		var btn := Button.new()
 		btn.text = "[%d] %s" % [i + 1, option.line.text_without_character_name.text]
-		btn.theme_override_fonts["font"] = load("res://data/fonts/m5x7.tres")
-		btn.theme_override_font_sizes["font_size"] = 13
+		btn.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
+		btn.add_theme_font_size_override("font_size", 13)
 		btn.disabled = not option.is_available
 		btn.pressed.connect(_on_choice_pressed.bind(option.dialogue_option_id, on_option_selected))
 		_choices_container.add_child(btn)
