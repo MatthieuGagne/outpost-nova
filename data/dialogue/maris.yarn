@@ -1,0 +1,20 @@
+title: Maris
+---
+<<jump Maris_FirstMeeting>>
+===
+
+title: Maris_FirstMeeting
+---
+Maris: Hey, you must be new. I'm Maris — I run the food printer.
+Maris: Don't let the name fool you, it actually makes real food. Mostly.
+-> Good to meet you. #register:warm
+    <<register warm>>
+    Maris: Likewise. Come find me if you need anything — or if you're hungry.
+-> What's the yield rate on something like that? #register:curious
+    <<register curious>>
+    Maris: Ha. An engineer question. Fifty percent on a good day. Better with decent inputs.
+-> ...right. #register:detached
+    <<register detached>>
+    Maris: ...okay then.
+<<beat meet_maris>>
+===
