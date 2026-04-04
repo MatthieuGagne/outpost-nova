@@ -37,10 +37,6 @@ func _ready() -> void:
 	add_to_group("dialogue_box")
 	_player_portrait.texture = _make_atlas(PLAYER_PORTRAIT_INDEX)
 	hide()
-	# Register self as a dialogue presenter with the runner
-	var runners := get_tree().get_nodes_in_group("dialogue_runner")
-	if not runners.is_empty():
-		runners[0].dialogue_presenters.append(self)
 
 func _process(delta: float) -> void:
 	if _state != _State.TYPEWRITING:
