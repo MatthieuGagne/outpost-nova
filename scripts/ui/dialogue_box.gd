@@ -2,9 +2,10 @@ extends CanvasLayer
 
 signal conversation_ended
 
-const PORTRAIT_SHEET := preload("res://assets/portraits/portraits.png")
+const PORTRAIT_SHEET := preload("res://art/placeholder/portraits/IMG_5371.png")
 const PORTRAIT_WIDTH := 64
 const PORTRAIT_HEIGHT := 64
+const PORTRAIT_COLS := 5
 
 const NPC_PORTRAIT_INDEX: Dictionary = {
 	"Maris": 0,
@@ -126,7 +127,9 @@ func _update_portrait(speaker: String) -> void:
 func _make_atlas(index: int) -> AtlasTexture:
 	var atlas := AtlasTexture.new()
 	atlas.atlas = PORTRAIT_SHEET
-	atlas.region = Rect2(index * PORTRAIT_WIDTH, 0, PORTRAIT_WIDTH, PORTRAIT_HEIGHT)
+	var col := index % PORTRAIT_COLS
+	var row := index / PORTRAIT_COLS
+	atlas.region = Rect2(col * PORTRAIT_WIDTH, row * PORTRAIT_HEIGHT, PORTRAIT_WIDTH, PORTRAIT_HEIGHT)
 	return atlas
 
 func _build_choices(options: Array, on_option_selected: Callable) -> void:
