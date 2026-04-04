@@ -19,6 +19,8 @@ Load plan, review critically, execute tasks in batches, report for review betwee
 
 Before reading the plan or touching any file, check whether you are already inside a worktree:
 
+> **Note:** The `writing-plans` skill creates the worktree before saving the plan file. If this plan was written in a separate session using `writing-plans`, you may already be inside the correct worktree. The check below handles both cases — skip to Step 2 if already inside.
+
 ```bash
 pwd
 git worktree list
@@ -120,7 +122,7 @@ Do not push or open the PR until you have received an explicit answer to this qu
 **Don't force through blockers** — stop and ask.
 
 ## Remember
-- Enter worktree FIRST before any other action (use `EnterWorktree` tool if not already under `/home/mathdaman/code/worktrees/`)
+- Enter worktree FIRST before any other action — writing-plans may have already created it; use `EnterWorktree` only if not already inside one
 - Review plan critically before starting
 - Follow plan steps exactly
 - Don't skip verifications
