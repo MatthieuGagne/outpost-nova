@@ -74,15 +74,6 @@ REGIONS = {
             (795, 268), (658, 255),
         ],
     },
-    "hegemony": {
-        "label": "Hegemony Sphere",
-        "color": "#7a3a08",
-        "opacity": 0.65,
-        "points": [
-            (515, 438), (588, 408), (668, 424), (692, 502),
-            (658, 578), (585, 598), (512, 578), (492, 506),
-        ],
-    },
     "fracture_zone": {
         "label": "Fracture Zone",
         "color": "#5a2a2a",
@@ -126,6 +117,11 @@ WORLDS = {
     "vaedra":           {"label": "Vaedra",            "x": 440,  "y": 510, "symbol": "circle",   "region": "inner_frontier",   "r": 4},
     "ashfeld":          {"label": "Ashfeld",           "x": 510,  "y": 440, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
     "carnach_station":  {"label": "Carnach Station",   "x": 600,  "y": 515, "symbol": "station",  "region": "hegemony",         "r": 5},
+    "heg_relay_corriv": {"label": "Relay Corriv",      "x": 490,  "y": 418, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_outpost_vael": {"label": "Outpost Vael",      "x": 474,  "y": 342, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_depot_ashkell":{"label": "Depot Ashkell",     "x": 385,  "y": 572, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_node_marek":   {"label": "Node Marek",        "x": 540,  "y": 594, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_platform_dunn":{"label": "Platform Dunn",     "x": 694,  "y": 568, "symbol": "station",  "region": "hegemony",         "r": 4},
     "sundra":           {"label": "Sundra",            "x": 830,  "y": 515, "symbol": "circle",   "region": "border_zone",      "r": 5},
     "outpost_nova":     {"label": "Outpost Nova",      "x": 700,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
     "thessara":         {"label": "Thessara",          "x": 820,  "y": 430, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
@@ -167,12 +163,41 @@ TRADE_LANES = [
         "width": 2,
         "points": [(668, 425), (685, 492), (700, 460)],
     },
+    # Hegemony Extraction Web — multiple branches radiating from Carnach Station
     {
         "label": "Hegemony Extraction Web",
         "style": "dotted",
         "color": "#c8860a",
         "width": 1.5,
-        "points": [(600, 515), (580, 490), (560, 600), (490, 560), (440, 510)],
+        "points": [(600, 515), (490, 418), (474, 342)],          # north arm
+    },
+    {
+        "label": "",
+        "style": "dotted",
+        "color": "#c8860a",
+        "width": 1.5,
+        "points": [(600, 515), (540, 594), (385, 572)],          # southwest arm
+    },
+    {
+        "label": "",
+        "style": "dotted",
+        "color": "#c8860a",
+        "width": 1.5,
+        "points": [(600, 515), (694, 568)],                      # east arm
+    },
+    {
+        "label": "",
+        "style": "dotted",
+        "color": "#c8860a",
+        "width": 1.5,
+        "points": [(490, 418), (440, 490), (385, 572)],          # cross-link
+    },
+    {
+        "label": "",
+        "style": "dotted",
+        "color": "#c8860a",
+        "width": 1.5,
+        "points": [(385, 572), (305, 548), (250, 510)],          # far western reach
     },
     {
         "label": "Unaligned Passage Routes",
@@ -369,13 +394,12 @@ def svg_legend(lines):
 
     # Faction / region colors — second box to the right
     rx, ry = 370, 730
-    lines.append(f"  <rect x='{rx-8}' y='{ry-18}' width='265' height='140' "
+    lines.append(f"  <rect x='{rx-8}' y='{ry-18}' width='265' height='122' "
                  f"fill='#0d0d1a' opacity='0.8' rx='4'/>")
     lines.append(f"  <text x='{rx}' y='{ry}' {TITLE_FONT} font-size='16'>Factions</text>")
     faction_entries = [
         ("#2a4a7f", 0.55, "Federation Core"),
         ("#3a3a5c", 0.55, "Inner Frontier"),
-        ("#7a3a08", 0.65, "Hegemony Combine"),
         ("#4a3a2a", 0.55, "Border Zone (Unaligned)"),
         ("#5a2a2a", 0.70, "Fracture Zone (contested frontier)"),
         ("#2a5a3a", 0.55, "Keth Space"),
