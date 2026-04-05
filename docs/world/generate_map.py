@@ -369,7 +369,7 @@ def svg_worlds(lines):
                 f"stroke='{col}' stroke-width='2'/>"
             )
 
-        # Label — offset slightly so it doesn't overlap the symbol
+        # Label — two lines: world name + star name (smaller, dimmer)
         lx = x + r + 4
         ly = y + 4
         fw = "font-weight='bold'" if sym == "hex_ring" else ""
@@ -378,6 +378,12 @@ def svg_worlds(lines):
             f"  <text x='{lx}' y='{ly}' {LABEL_FONT} "
             f"fill='{fc}' {fw}>{w['label']}</text>"
         )
+        star = w.get("star", "")
+        if star:
+            lines.append(
+                f"  <text x='{lx}' y='{ly + 13}' font-family='monospace' font-size='9' "
+                f"fill='{fc}' opacity='0.55'>({star})</text>"
+            )
 
 
 def svg_legend(lines):
