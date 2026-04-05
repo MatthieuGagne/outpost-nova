@@ -104,6 +104,28 @@ Zone boundary, technically in Unaligned space — Hegemony's legal team designed
 way. The hub of Hegemony's Extraction Web trade lanes. Every debt in the Frontier has
 a line that eventually leads here.
 
+*Hegemony Extraction Web nodes (◉ orange, Inner Frontier):*
+
+**Relay Corriv** — Northern relay station in the Inner Frontier. Routes extraction
+traffic from the northern reaches down toward Carnach. The Ishari on Auren tolerate
+its presence because Hegemony pays transit fees; they don't tolerate much else.
+
+**Outpost Vael** — The furthest north Hegemony has permanent infrastructure in the
+Frontier. Positioned to monitor the emerging Keth trade lane before Hegemony had
+official access to it. Still does.
+
+**Depot Ashkell** — Western logistics depot. Processes raw extraction output from
+the outer Inner Frontier before forwarding to Carnach. Sits uncomfortably close to
+Federation space — which is, again, by Hegemony's legal team's design.
+
+**Node Marek** — Southern distribution node. Coordinates outbound debt-shipments
+to Surev Prime and Breck. The workers here know where the goods go; they stopped
+asking where they came from years ago.
+
+**Platform Dunn** — Eastern platform at the Inner Frontier / Border Zone edge.
+The closest Hegemony infrastructure to Outpost Nova outside Carnach Station itself.
+Its existence is one reason the station's "neutral" status is contested.
+
 ### Border Zone
 
 **Sundra** — Unaligned Alliance core anchor world. Sable's adopted home — blockaded
