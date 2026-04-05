@@ -43,9 +43,9 @@ REGIONS = {
         "color": "#2a5a3a",
         "opacity": 0.55,
         "points": [
-            (630, 130), (410, 140), (270, 215), (255, 330),
-            (390, 425), (595, 455), (790, 435), (920, 355),
-            (925, 200), (810, 130),
+            (840, 115), (570, 110), (370, 155), (275, 245),
+            (285, 355), (440, 445), (660, 475), (910, 460),
+            (1110, 385), (1140, 225), (1050, 120),
         ],
     },
     "border_zone": {
@@ -53,9 +53,9 @@ REGIONS = {
         "color": "#4a3a2a",
         "opacity": 0.55,
         "points": [
-            (580, 345), (730, 540), (680, 650), (880, 680),
-            (1050, 640), (1100, 500), (1020, 375), (885, 295),
-            (750, 270), (640, 255),
+            (590, 345), (730, 550), (680, 650), (880, 680),
+            (1100, 640), (1160, 505), (1060, 365), (930, 290),
+            (770, 268), (650, 255),
         ],
     },
     "fracture_zone": {
@@ -63,8 +63,8 @@ REGIONS = {
         "color": "#5a2a2a",
         "opacity": 0.65,
         "points": [
-            (595, 445), (790, 425), (920, 345), (975, 430),
-            (930, 520), (810, 535), (650, 490),
+            (720, 385), (900, 365), (1060, 300), (1090, 395),
+            (1040, 480), (870, 495), (720, 455),
         ],
     },
     "unmapped": {
@@ -99,20 +99,20 @@ WORLDS = {
     "surev_prime":      {"label": "Surev Prime",       "x": 560,  "y": 600, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
     "vaedra":           {"label": "Vaedra",            "x": 440,  "y": 510, "symbol": "circle",   "region": "inner_frontier",   "r": 4},
     "ashfeld":          {"label": "Ashfeld",           "x": 510,  "y": 440, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
-    "carnach_station":  {"label": "Carnach Station",   "x": 730,  "y": 510, "symbol": "station",  "region": "border_zone",      "r": 5},
-    "sundra":           {"label": "Sundra",            "x": 900,  "y": 500, "symbol": "circle",   "region": "border_zone",      "r": 5},
-    "outpost_nova":     {"label": "Outpost Nova",      "x": 970,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
-    "thessara":         {"label": "Thessara",          "x": 780,  "y": 480, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
-    "vaethos":          {"label": "Vaethos",           "x": 630,  "y": 200, "symbol": "circle",   "region": "keth_space",       "r": 6},
-    "korath":           {"label": "Korath",            "x": 510,  "y": 300, "symbol": "circle",   "region": "keth_space",       "r": 5},
+    "carnach_station":  {"label": "Carnach Station",   "x": 600,  "y": 515, "symbol": "station",  "region": "border_zone",      "r": 5},
+    "sundra":           {"label": "Sundra",            "x": 830,  "y": 515, "symbol": "circle",   "region": "border_zone",      "r": 5},
+    "outpost_nova":     {"label": "Outpost Nova",      "x": 700,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
+    "thessara":         {"label": "Thessara",          "x": 820,  "y": 430, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
+    "vaethos":          {"label": "Vaethos",           "x": 720,  "y": 200, "symbol": "circle",   "region": "keth_space",       "r": 6},
+    "korath":           {"label": "Korath",            "x": 640,  "y": 295, "symbol": "circle",   "region": "keth_space",       "r": 5},
 }
 
 # Builder secondary sites — no labels, diamond symbol, approximate positions
 BUILDER_SECONDARY = [
-    (680, 530),
-    (760, 460),
-    (650, 430),
-    (810, 360),
+    (720, 510),
+    (790, 450),
+    (830, 395),
+    (960, 435),
 ]
 
 # ---------------------------------------------------------------------------
@@ -125,35 +125,35 @@ TRADE_LANES = [
         "style": "solid",
         "color": "#8ab4f8",
         "width": 2,
-        "points": [(160, 490), (300, 490), (440, 490), (610, 490), (730, 510)],
+        "points": [(160, 490), (300, 490), (440, 490), (580, 490), (600, 515)],
     },
     {
         "label": "Keth Internal Routes",
         "style": "solid",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(630, 200), (510, 300), (470, 375), (540, 430)],
+        "points": [(720, 200), (640, 295), (590, 380), (640, 440)],
     },
     {
         "label": "Emerging Keth Trade Lane",
         "style": "dashed",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(540, 430), (580, 470), (610, 490), (730, 510), (870, 470), (970, 460)],
+        "points": [(640, 440), (610, 490), (600, 515), (700, 460)],
     },
     {
         "label": "Hegemony Extraction Web",
         "style": "dotted",
         "color": "#c8860a",
         "width": 1.5,
-        "points": [(730, 510), (610, 490), (560, 600), (490, 560), (440, 510)],
+        "points": [(600, 515), (580, 490), (560, 600), (490, 560), (440, 510)],
     },
     {
         "label": "Unaligned Passage Routes",
         "style": "dotted",
         "color": "#4a8a7a",
         "width": 1.5,
-        "points": [(900, 500), (970, 460), (1050, 480), (1080, 560)],
+        "points": [(830, 515), (700, 460), (800, 490), (870, 570)],
     },
 ]
 
