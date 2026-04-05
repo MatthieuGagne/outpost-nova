@@ -190,6 +190,13 @@ TRADE_LANES = [
         "style": "dotted",
         "color": "#c8860a",
         "width": 1.5,
+        "points": [(600, 515), (700, 460)],                      # to Outpost Nova
+    },
+    {
+        "label": "",
+        "style": "dotted",
+        "color": "#c8860a",
+        "width": 1.5,
         "points": [(490, 418), (440, 490), (385, 572)],          # cross-link
     },
     {
