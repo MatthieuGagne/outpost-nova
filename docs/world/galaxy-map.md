@@ -68,71 +68,73 @@ inward, not outward.
 
 ### Federation Core
 
-**Earth (Sol)** — Federation capital. The political and symbolic center of human
+**Earth (Sol)** *(Sol — G2V)* — Federation capital. The political and symbolic center of human
 authority. Most characters in the game have never been here and never will be.
 
-**Harrow** — Military-industrial world. Dex's birth world. Commander (Engineer track)
+**Harrow** *(Sirius — A1V + white dwarf)* — Military-industrial world. Dex's birth world. Commander (Engineer track)
 birth world. The Federation's war machine drew heavily on Harrow's manufacturing base.
 
-**Velan** — Administrative and cultural capital. Nadia's birth world. Commander (Medic
+**Velan** *(Tau Ceti — G8V)* — Administrative and cultural capital. Nadia's birth world. Commander (Medic
 track) birth world. Produces the Federation's bureaucrats, journalists, and diplomats.
 
 ### Inner Frontier
 
-**Breck** — Rough extraction colony. Maris and Harlan's birth world — a coincidence
+**Breck** *(Fomalhaut — A3V)* — Rough extraction colony. Maris and Harlan's birth world — a coincidence
 neither of them knows yet. Exactly the kind of place that ended up on the wrong side
 of a Hegemony debt.
 
-**Auren** — Ishari Compact territory. Strategic trade junction between human space and
+**Auren** *(Castor — sextuple system)* — Ishari Compact territory. Strategic trade junction between human space and
 the emerging Keth lane. The Ishari Compact has been quietly building leverage here for
 fifteen years; post-truce, it's paying off.
 
-**Surev Prime** — Capital of the Surev Reaches. Holds the only intact pre-Keth-contact
+> The Ishari city-states do not occupy seven separate planets — they span moons, Lagrange habitats, and rocky inner-zone bodies distributed across the Castor AB binary pair's inner system. Castor itself is a sextuple system (three gravitationally bound binary pairs). The seven city-states emerged from the practical reality of building habitats rather than waiting for planets.
+
+**Surev Prime** *(Capella — G/G binary)* — Capital of the Surev Reaches. Holds the only intact pre-Keth-contact
 astronomical charts predating human arrival in the Frontier by 200+ years. The
 Federation, Keth Merchants, and Hegemony are all courting the Directorate simultaneously.
 
-**Vaedra** — Drueth homeworld. Largely abandoned. Hegemony's extraction operations
+**Vaedra** *(Vega — A0V)* — Drueth homeworld. Largely abandoned. Hegemony's extraction operations
 disrupted the land systems the Drueth kinship networks depended on — not in a single
 dramatic event, but slowly, before anyone was paying attention. The displacement was
 finished before the Fracture started.
 
-**Ashfeld** — Drueth refugee settlement. Commander (Drifter track) birth world. What
+**Ashfeld** *(61 Cygni — K5V+K7V binary)* — Drueth refugee settlement. Commander (Drifter track) birth world. What
 passes for community when the original structure is gone.
 
-**Carnach Station** — Hegemony Combine HQ orbital. Sits at the Inner Frontier / Border
+**Carnach Station** *(Pollux — K0III)* — Hegemony Combine HQ orbital. Sits at the Inner Frontier / Border
 Zone boundary, technically in Unaligned space — Hegemony's legal team designed it that
 way. The hub of Hegemony's Extraction Web trade lanes. Every debt in the Frontier has
 a line that eventually leads here.
 
 *Hegemony Extraction Web nodes (◉ orange, Inner Frontier):*
 
-**Relay Corriv** — Northern relay station in the Inner Frontier. Routes extraction
+**Relay Corriv** *(Rho Coronae Borealis — G2V)* — Northern relay station in the Inner Frontier. Routes extraction
 traffic from the northern reaches down toward Carnach. The Ishari on Auren tolerate
 its presence because Hegemony pays transit fees; they don't tolerate much else.
 
-**Outpost Vael** — The furthest north Hegemony has permanent infrastructure in the
+**Outpost Vael** *(Iota Draconis — K2III)* — The furthest north Hegemony has permanent infrastructure in the
 Frontier. Positioned to monitor the emerging Keth trade lane before Hegemony had
 official access to it. Still does.
 
-**Depot Ashkell** — Western logistics depot. Processes raw extraction output from
+**Depot Ashkell** *(Mu Arae — G3IV)* — Western logistics depot. Processes raw extraction output from
 the outer Inner Frontier before forwarding to Carnach. Sits uncomfortably close to
 Federation space — which is, again, by Hegemony's legal team's design.
 
-**Node Marek** — Southern distribution node. Coordinates outbound debt-shipments
+**Node Marek** *(Upsilon Andromedae — F8V)* — Southern distribution node. Coordinates outbound debt-shipments
 to Surev Prime and Breck. The workers here know where the goods go; they stopped
 asking where they came from years ago.
 
-**Platform Dunn** — Eastern platform at the Inner Frontier / Border Zone edge.
+**Platform Dunn** *(HD 189733 — K2V)* — Eastern platform at the Inner Frontier / Border Zone edge.
 The closest Hegemony infrastructure to Outpost Nova outside Carnach Station itself.
 Its existence is one reason the station's "neutral" status is contested.
 
 ### Border Zone
 
-**Sundra** — Unaligned Alliance core anchor world. Sable's adopted home — blockaded
+**Sundra** *(Denebola — A3V)* — Unaligned Alliance core anchor world. Sable's adopted home — blockaded
 during the Fracture. The Alliance considers its survival vindication. Sundra is where
 "not our war" was held longest and at greatest cost.
 
-**Outpost Nova** *(ring/hex, amber)* — The game location. A Hegemony-operated waypoint
+**Outpost Nova** *(ring/hex, amber · Gliese 667 — K3V triple)* — The game location. A Hegemony-operated waypoint
 station built on top of a buried Builder primary node. The weapon inside the station is
 aimed at Vaethos. The station's legal ambiguity, Keth trade lane proximity, and
 extraordinary underlying structure make it the intersection point for every faction's
@@ -140,19 +142,21 @@ agenda. See `docs/story/year1.md`.
 
 ### Fracture Zone
 
-**Thessara** *(× symbol)* — Soriel's birth world. Destroyed in the early years of
+**Thessara** *(× symbol · Gamma Velorum — Wolf-Rayet + O binary)* — Soriel's birth world. Destroyed in the early years of
 human-Keth first contact — not a target, just in the way. Neither side claimed it.
 Neither side has been asked to. The cross symbol marks a world that no longer exists.
 Soriel is one of the last fluent speakers of the language all Thessari names draw from.
 
 ### Keth Space
 
-**Vaethos** — Keth homeworld. Where the weapon at Outpost Nova points. The Others'
+**Vaethos** *(Kepler-452 — G2V)* — Keth homeworld. Where the weapon at Outpost Nova points. The Others'
 ruins are buried under living Keth civilization — the ruling coalition suspects this;
 the lower castes do not. The weapon has been aimed here since before the Keth existed
 as a civilization.
 
-**Korath** — Keth Merchant caste hub. Vaen's birth world. The commercial face the
+> The star Kepler-452 is a near-twin of Sol — G2V, 1,400 light-years distant, with a super-Earth in the habitable zone. The weapon at Outpost Nova has been aimed at this system since before the Keth existed as a civilization. No one has noticed that the star it targets looks almost identical to the star humanity came from.
+
+**Korath** *(55 Cancri — K0V+M4V)* — Keth Merchant caste hub. Vaen's birth world. The commercial face the
 Keth show to other species. Inner leadership here knows significantly more than it
 discloses.
 
