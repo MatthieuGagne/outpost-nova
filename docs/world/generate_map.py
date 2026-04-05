@@ -23,9 +23,11 @@ REGIONS = {
         "label": "Federation Core",
         "color": "#2a4a7f",
         "opacity": 0.55,
+        # Coreward arm extends northeast into Keth territory — explains the Fracture Zone
         "points": [
-            (50, 350), (50, 600), (280, 640), (400, 580),
-            (420, 460), (350, 380), (200, 340),
+            (50, 360), (50, 630), (300, 670), (510, 615),
+            (615, 495), (630, 345), (550, 235), (400, 210),
+            (255, 240), (150, 295),
         ],
     },
     "inner_frontier": {
@@ -33,18 +35,19 @@ REGIONS = {
         "color": "#3a3a5c",
         "opacity": 0.55,
         "points": [
-            (350, 380), (420, 460), (400, 580), (280, 640),
-            (500, 680), (680, 650), (740, 560), (720, 430),
-            (620, 340), (480, 320),
+            (550, 235), (630, 345), (615, 495), (510, 615),
+            (650, 665), (770, 635), (760, 510), (700, 375),
+            (625, 268),
         ],
     },
     "keth_space": {
         "label": "Keth Space",
         "color": "#2a5a3a",
         "opacity": 0.55,
+        # Rimward arm extends southwest — overlaps Federation coreward arm, creating conflict zone
         "points": [
-            (840, 115), (570, 110), (370, 155), (275, 245),
-            (285, 355), (440, 445), (660, 475), (910, 460),
+            (840, 115), (570, 110), (380, 155), (285, 250),
+            (400, 340), (545, 415), (700, 455), (920, 450),
             (1110, 385), (1140, 225), (1050, 120),
         ],
     },
@@ -53,18 +56,19 @@ REGIONS = {
         "color": "#4a3a2a",
         "opacity": 0.55,
         "points": [
-            (590, 345), (730, 550), (680, 650), (880, 680),
-            (1100, 640), (1160, 505), (1060, 365), (930, 290),
-            (770, 268), (650, 255),
+            (580, 290), (720, 555), (675, 665), (875, 695),
+            (1100, 655), (1160, 510), (1060, 372), (935, 295),
+            (795, 268), (658, 255),
         ],
     },
     "fracture_zone": {
         "label": "Fracture Zone",
         "color": "#5a2a2a",
-        "opacity": 0.65,
+        "opacity": 0.70,
+        # Sits at the overlap of Federation and Keth arms — the war epicenter
         "points": [
-            (720, 385), (900, 365), (1060, 300), (1090, 395),
-            (1040, 480), (870, 495), (720, 455),
+            (535, 308), (668, 270), (808, 316), (828, 422),
+            (722, 452), (572, 442), (508, 382),
         ],
     },
     "unmapped": {
@@ -109,10 +113,10 @@ WORLDS = {
 
 # Builder secondary sites — no labels, diamond symbol, approximate positions
 BUILDER_SECONDARY = [
-    (720, 510),
-    (790, 450),
-    (830, 395),
-    (960, 435),
+    (680, 490),
+    (760, 420),
+    (740, 348),
+    (820, 362),
 ]
 
 # ---------------------------------------------------------------------------
@@ -132,14 +136,14 @@ TRADE_LANES = [
         "style": "solid",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(720, 200), (640, 295), (590, 380), (640, 440)],
+        "points": [(720, 200), (640, 295), (580, 375), (575, 415)],
     },
     {
         "label": "Emerging Keth Trade Lane",
         "style": "dashed",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(640, 440), (610, 490), (600, 515), (700, 460)],
+        "points": [(575, 415), (610, 490), (600, 515), (700, 460)],
     },
     {
         "label": "Hegemony Extraction Web",
@@ -339,6 +343,26 @@ def svg_legend(lines):
         lines.append(f"  <line x1='{lx}' y1='{ey}' x2='{lx+22}' y2='{ey}' "
                      f"stroke='{col}' stroke-width='2' {da}/>")
         lines.append(f"  <text x='{lx+28}' y='{ey+4}' {LABEL_FONT} fill='#cccccc'>{label}</text>")
+
+    # Faction / region colors — second box to the right
+    rx, ry = 370, 730
+    lines.append(f"  <rect x='{rx-8}' y='{ry-18}' width='265' height='122' "
+                 f"fill='#0d0d1a' opacity='0.8' rx='4'/>")
+    lines.append(f"  <text x='{rx}' y='{ry}' {TITLE_FONT} font-size='16'>Factions</text>")
+    faction_entries = [
+        ("#2a4a7f", 0.55, "Federation Core"),
+        ("#3a3a5c", 0.55, "Inner Frontier"),
+        ("#4a3a2a", 0.55, "Border Zone (Unaligned)"),
+        ("#5a2a2a", 0.70, "Fracture Zone (contested frontier)"),
+        ("#2a5a3a", 0.55, "Keth Space"),
+        ("#1a1a2a", 0.70, "The Unmapped"),
+    ]
+    for i, (col, op, label) in enumerate(faction_entries):
+        ey = ry + 16 + i * 17
+        ex = rx + 8
+        lines.append(f"  <rect x='{ex-6}' y='{ey-10}' width='14' height='12' "
+                     f"fill='{col}' opacity='{op}' stroke='#555566' stroke-width='0.5'/>")
+        lines.append(f"  <text x='{ex+13}' y='{ey}' {LABEL_FONT} fill='#cccccc'>{label}</text>")
 
 
 def svg_inset(lines):
