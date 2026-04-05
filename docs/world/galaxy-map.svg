@@ -53,7 +53,7 @@
   <circle cx='510' cy='300' r='5' fill='#6abf8a' stroke='none' stroke-width='0'/>
   <text x='519' y='304' font-family='monospace' font-size='11' fill='#cccccc' >Korath</text>
   <rect x='22' y='712' width='320' height='155' fill='#0d0d1a' opacity='0.8' rx='4'/>
-  <text x='30' y='730' font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold'>Legend</text>
+  <text x='30' y='730' font-family='monospace' fill='#ffb347' font-weight='bold' font-size='16'>Legend</text>
   <circle cx='40' cy='746' r='5' fill='#8ab4f8'/>
   <text x='54' y='750' font-family='monospace' font-size='11' fill='#cccccc'>World / Station</text>
   <circle cx='40' cy='764' r='5' fill='#d4a060' stroke='#ffffff' stroke-width='1.5'/>
@@ -82,6 +82,6 @@
   <circle cx='1322' cy='78' r='8' fill='none' stroke='#ffb347' stroke-width='1' opacity='0.8'/>
   <circle cx='1322' cy='78' r='2' fill='#ffb347' opacity='0.9'/>
   <text x='1332' y='82' font-family='monospace' font-size='9' fill='#ffb347' opacity='0.9'>known space</text>
-  <text x='30' y='36' font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold' font-size='20'>Outpost Nova — Known Space</text>
+  <text x='30' y='36' font-family='monospace' fill='#ffb347' font-weight='bold' font-size='20'>Outpost Nova — Known Space</text>
   <text x='30' y='54' font-family='monospace' font-size='10' fill='#555577'>~2,000 ly radius · Orion Arm · canonical lore reference</text>
 </svg>

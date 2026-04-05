@@ -173,7 +173,7 @@ BUILDER_COLOR      = "#bbbbff"
 
 LABEL_FONT  = "font-family='monospace' font-size='11'"
 REGION_FONT = "font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'"
-TITLE_FONT  = "font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold'"
+TITLE_FONT  = "font-family='monospace' fill='#ffb347' font-weight='bold'"
 
 
 def pts(points):
@@ -290,7 +290,7 @@ def svg_legend(lines):
     lx, ly = 30, 730
     lines.append(f"  <rect x='{lx-8}' y='{ly-18}' width='320' height='155' "
                  f"fill='#0d0d1a' opacity='0.8' rx='4'/>")
-    lines.append(f"  <text x='{lx}' y='{ly}' {TITLE_FONT}>Legend</text>")
+    lines.append(f"  <text x='{lx}' y='{ly}' {TITLE_FONT} font-size='16'>Legend</text>")
 
     entries = [
         ("circle",    "#8ab4f8",     "World / Station"),
