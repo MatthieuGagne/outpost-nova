@@ -170,7 +170,7 @@ OUTPOST_NOVA_COLOR = "#ffb347"
 DESTROYED_COLOR    = "#888888"
 BUILDER_COLOR      = "#bbbbff"
 
-LABEL_FONT  = "font-family='monospace' font-size='11' fill='#cccccc'"
+LABEL_FONT  = "font-family='monospace' font-size='11'"
 REGION_FONT = "font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'"
 TITLE_FONT  = "font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold'"
 
@@ -323,7 +323,7 @@ def svg_legend(lines):
             lines.append(f"  <polygon points='{ex},{ey-10} {ex+s},{ey-4} "
                          f"{ex},{ey+2} {ex-s},{ey-4}' fill='none' "
                          f"stroke='{col}' stroke-width='1.2'/>")
-        lines.append(f"  <text x='{ex+14}' y='{ey}' {LABEL_FONT}>{label}</text>")
+        lines.append(f"  <text x='{ex+14}' y='{ey}' {LABEL_FONT} fill='#cccccc'>{label}</text>")
 
     # Trade lane styles
     lane_entries = [
@@ -337,7 +337,7 @@ def svg_legend(lines):
         da = polyline_dasharray(style)
         lines.append(f"  <line x1='{lx}' y1='{ey}' x2='{lx+22}' y2='{ey}' "
                      f"stroke='{col}' stroke-width='2' {da}/>")
-        lines.append(f"  <text x='{lx+28}' y='{ey+4}' {LABEL_FONT}>{label}</text>")
+        lines.append(f"  <text x='{lx+28}' y='{ey+4}' {LABEL_FONT} fill='#cccccc'>{label}</text>")
 
 
 def svg_inset(lines):

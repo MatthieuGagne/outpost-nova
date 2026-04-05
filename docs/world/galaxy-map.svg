@@ -23,35 +23,35 @@
   <polygon points='650,423 657,430 650,437 643,430' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
   <polygon points='810,353 817,360 810,367 803,360' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
   <circle cx='160' cy='490' r='6' fill='#8ab4f8' stroke='none' stroke-width='0'/>
-  <text x='170' y='494' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Earth (Sol)</text>
+  <text x='170' y='494' font-family='monospace' font-size='11' fill='#cccccc' >Earth (Sol)</text>
   <circle cx='250' cy='420' r='5' fill='#8ab4f8' stroke='none' stroke-width='0'/>
-  <text x='259' y='424' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Harrow</text>
+  <text x='259' y='424' font-family='monospace' font-size='11' fill='#cccccc' >Harrow</text>
   <circle cx='300' cy='530' r='5' fill='#8ab4f8' stroke='none' stroke-width='0'/>
-  <text x='309' y='534' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Velan</text>
+  <text x='309' y='534' font-family='monospace' font-size='11' fill='#cccccc' >Velan</text>
   <circle cx='490' cy='560' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
-  <text x='499' y='564' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Breck</text>
+  <text x='499' y='564' font-family='monospace' font-size='11' fill='#cccccc' >Breck</text>
   <circle cx='610' cy='490' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
-  <text x='619' y='494' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Auren</text>
+  <text x='619' y='494' font-family='monospace' font-size='11' fill='#cccccc' >Auren</text>
   <circle cx='560' cy='600' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
-  <text x='569' y='604' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Surev Prime</text>
+  <text x='569' y='604' font-family='monospace' font-size='11' fill='#cccccc' >Surev Prime</text>
   <circle cx='440' cy='510' r='4' fill='#a0a0cc' stroke='none' stroke-width='0'/>
-  <text x='448' y='514' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Vaedra</text>
+  <text x='448' y='514' font-family='monospace' font-size='11' fill='#cccccc' >Vaedra</text>
   <circle cx='510' cy='440' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
-  <text x='519' y='444' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Ashfeld</text>
+  <text x='519' y='444' font-family='monospace' font-size='11' fill='#cccccc' >Ashfeld</text>
   <circle cx='730' cy='510' r='5' fill='#d4a060' stroke='#ffffff' stroke-width='1.5'/>
-  <text x='739' y='514' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Carnach Station</text>
+  <text x='739' y='514' font-family='monospace' font-size='11' fill='#cccccc' >Carnach Station</text>
   <circle cx='900' cy='500' r='5' fill='#d4a060' stroke='none' stroke-width='0'/>
-  <text x='909' y='504' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Sundra</text>
+  <text x='909' y='504' font-family='monospace' font-size='11' fill='#cccccc' >Sundra</text>
   <polygon points='976.9282032302755,456.0 976.9282032302755,464.0 970.0,468.0 963.0717967697245,464.0 963.0717967697245,456.0 970.0,452.0' fill='none' stroke='#ffb347' stroke-width='2'/>
   <circle cx='970' cy='460' r='3' fill='#ffb347'/>
-  <text x='982' y='464' font-family='monospace' font-size='11' fill='#cccccc' fill='#ffb347' font-weight='bold'>Outpost Nova</text>
+  <text x='982' y='464' font-family='monospace' font-size='11' fill='#ffb347' font-weight='bold'>Outpost Nova</text>
   <line x1='864' y1='464' x2='876' y2='476' stroke='#888888' stroke-width='2'/>
   <line x1='876' y1='464' x2='864' y2='476' stroke='#888888' stroke-width='2'/>
-  <text x='880' y='474' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Thessara</text>
+  <text x='880' y='474' font-family='monospace' font-size='11' fill='#cccccc' >Thessara</text>
   <circle cx='590' cy='190' r='6' fill='#6abf8a' stroke='none' stroke-width='0'/>
-  <text x='600' y='194' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Vaethos</text>
+  <text x='600' y='194' font-family='monospace' font-size='11' fill='#cccccc' >Vaethos</text>
   <circle cx='520' cy='260' r='5' fill='#6abf8a' stroke='none' stroke-width='0'/>
-  <text x='529' y='264' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Korath</text>
+  <text x='529' y='264' font-family='monospace' font-size='11' fill='#cccccc' >Korath</text>
   <rect x='22' y='712' width='320' height='155' fill='#0d0d1a' opacity='0.8' rx='4'/>
   <text x='30' y='730' font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold'>Legend</text>
   <circle cx='40' cy='746' r='5' fill='#8ab4f8'/>
