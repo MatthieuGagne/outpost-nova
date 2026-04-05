@@ -43,8 +43,9 @@ REGIONS = {
         "color": "#2a5a3a",
         "opacity": 0.55,
         "points": [
-            (480, 120), (380, 180), (340, 280), (480, 320),
-            (620, 340), (680, 260), (640, 150),
+            (630, 130), (410, 140), (270, 215), (255, 330),
+            (390, 425), (595, 455), (790, 435), (920, 355),
+            (925, 200), (810, 130),
         ],
     },
     "border_zone": {
@@ -52,9 +53,9 @@ REGIONS = {
         "color": "#4a3a2a",
         "opacity": 0.55,
         "points": [
-            (620, 340), (740, 560), (680, 650), (880, 680),
-            (1050, 640), (1100, 500), (1020, 380), (860, 300),
-            (720, 280), (680, 260),
+            (580, 345), (730, 540), (680, 650), (880, 680),
+            (1050, 640), (1100, 500), (1020, 375), (885, 295),
+            (750, 270), (640, 255),
         ],
     },
     "fracture_zone": {
@@ -62,8 +63,8 @@ REGIONS = {
         "color": "#5a2a2a",
         "opacity": 0.65,
         "points": [
-            (820, 420), (780, 500), (840, 580), (950, 600),
-            (1000, 520), (980, 430), (900, 380),
+            (595, 445), (790, 425), (920, 345), (975, 430),
+            (930, 520), (810, 535), (650, 490),
         ],
     },
     "unmapped": {
@@ -101,9 +102,9 @@ WORLDS = {
     "carnach_station":  {"label": "Carnach Station",   "x": 730,  "y": 510, "symbol": "station",  "region": "border_zone",      "r": 5},
     "sundra":           {"label": "Sundra",            "x": 900,  "y": 500, "symbol": "circle",   "region": "border_zone",      "r": 5},
     "outpost_nova":     {"label": "Outpost Nova",      "x": 970,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
-    "thessara":         {"label": "Thessara",          "x": 870,  "y": 470, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
-    "vaethos":          {"label": "Vaethos",           "x": 590,  "y": 190, "symbol": "circle",   "region": "keth_space",       "r": 6},
-    "korath":           {"label": "Korath",            "x": 520,  "y": 260, "symbol": "circle",   "region": "keth_space",       "r": 5},
+    "thessara":         {"label": "Thessara",          "x": 780,  "y": 480, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
+    "vaethos":          {"label": "Vaethos",           "x": 630,  "y": 200, "symbol": "circle",   "region": "keth_space",       "r": 6},
+    "korath":           {"label": "Korath",            "x": 510,  "y": 300, "symbol": "circle",   "region": "keth_space",       "r": 5},
 }
 
 # Builder secondary sites — no labels, diamond symbol, approximate positions
@@ -131,14 +132,14 @@ TRADE_LANES = [
         "style": "solid",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(590, 190), (520, 260), (480, 320), (510, 380)],
+        "points": [(630, 200), (510, 300), (470, 375), (540, 430)],
     },
     {
         "label": "Emerging Keth Trade Lane",
         "style": "dashed",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(510, 380), (560, 430), (610, 490), (730, 510), (870, 470), (970, 460)],
+        "points": [(540, 430), (580, 470), (610, 490), (730, 510), (870, 470), (970, 460)],
     },
     {
         "label": "Hegemony Extraction Web",

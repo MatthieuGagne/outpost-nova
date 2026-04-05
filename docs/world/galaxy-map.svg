@@ -2,20 +2,20 @@
   <rect width='1400' height='900' fill='#0d0d1a'/>
   <polygon points='50,350 50,600 280,640 400,580 420,460 350,380 200,340' fill='#2a4a7f' opacity='0.55' stroke='none'/>
   <polygon points='350,380 420,460 400,580 280,640 500,680 680,650 740,560 720,430 620,340 480,320' fill='#3a3a5c' opacity='0.55' stroke='none'/>
-  <polygon points='480,120 380,180 340,280 480,320 620,340 680,260 640,150' fill='#2a5a3a' opacity='0.55' stroke='none'/>
-  <polygon points='620,340 740,560 680,650 880,680 1050,640 1100,500 1020,380 860,300 720,280 680,260' fill='#4a3a2a' opacity='0.55' stroke='none'/>
-  <polygon points='820,420 780,500 840,580 950,600 1000,520 980,430 900,380' fill='#5a2a2a' opacity='0.65' stroke='none'/>
+  <polygon points='630,130 410,140 270,215 255,330 390,425 595,455 790,435 920,355 925,200 810,130' fill='#2a5a3a' opacity='0.55' stroke='none'/>
+  <polygon points='580,345 730,540 680,650 880,680 1050,640 1100,500 1020,375 885,295 750,270 640,255' fill='#4a3a2a' opacity='0.55' stroke='none'/>
+  <polygon points='595,445 790,425 920,345 975,430 930,520 810,535 650,490' fill='#5a2a2a' opacity='0.65' stroke='none'/>
   <polygon points='0,0 1400,0 1400,200 1050,150 640,100 340,140 0,200' fill='#1a1a2a' opacity='0.7' stroke='none'/>
   <polygon points='0,720 1400,720 1400,900 0,900' fill='#1a1a2a' opacity='0.7' stroke='none'/>
   <text x='250' y='479' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Federation Core</text>
   <text x='519' y='504' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Inner Frontier</text>
-  <text x='517' y='236' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Keth Space</text>
-  <text x='835' y='459' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Border Zone</text>
-  <text x='896' y='490' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Fracture Zone</text>
+  <text x='600' y='282' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Keth Space</text>
+  <text x='832' y='455' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Border Zone</text>
+  <text x='810' y='456' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Fracture Zone</text>
   <text x='690' y='113' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>The Unmapped</text>
   <polyline points='160,490 300,490 440,490 610,490 730,510' fill='none' stroke='#8ab4f8' stroke-width='2'  opacity='0.7'/>
-  <polyline points='590,190 520,260 480,320 510,380' fill='none' stroke='#6abf8a' stroke-width='2'  opacity='0.7'/>
-  <polyline points='510,380 560,430 610,490 730,510 870,470 970,460' fill='none' stroke='#6abf8a' stroke-width='2' stroke-dasharray='8,5' opacity='0.7'/>
+  <polyline points='630,200 510,300 470,375 540,430' fill='none' stroke='#6abf8a' stroke-width='2'  opacity='0.7'/>
+  <polyline points='540,430 580,470 610,490 730,510 870,470 970,460' fill='none' stroke='#6abf8a' stroke-width='2' stroke-dasharray='8,5' opacity='0.7'/>
   <polyline points='730,510 610,490 560,600 490,560 440,510' fill='none' stroke='#c8860a' stroke-width='1.5' stroke-dasharray='2,4' opacity='0.7'/>
   <polyline points='900,500 970,460 1050,480 1080,560' fill='none' stroke='#4a8a7a' stroke-width='1.5' stroke-dasharray='2,4' opacity='0.7'/>
   <polygon points='680,523 687,530 680,537 673,530' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
@@ -45,13 +45,13 @@
   <polygon points='976.9282032302755,456.0 976.9282032302755,464.0 970.0,468.0 963.0717967697245,464.0 963.0717967697245,456.0 970.0,452.0' fill='none' stroke='#ffb347' stroke-width='2'/>
   <circle cx='970' cy='460' r='3' fill='#ffb347'/>
   <text x='982' y='464' font-family='monospace' font-size='11' fill='#ffb347' font-weight='bold'>Outpost Nova</text>
-  <line x1='864' y1='464' x2='876' y2='476' stroke='#888888' stroke-width='2'/>
-  <line x1='876' y1='464' x2='864' y2='476' stroke='#888888' stroke-width='2'/>
-  <text x='880' y='474' font-family='monospace' font-size='11' fill='#cccccc' >Thessara</text>
-  <circle cx='590' cy='190' r='6' fill='#6abf8a' stroke='none' stroke-width='0'/>
-  <text x='600' y='194' font-family='monospace' font-size='11' fill='#cccccc' >Vaethos</text>
-  <circle cx='520' cy='260' r='5' fill='#6abf8a' stroke='none' stroke-width='0'/>
-  <text x='529' y='264' font-family='monospace' font-size='11' fill='#cccccc' >Korath</text>
+  <line x1='774' y1='474' x2='786' y2='486' stroke='#888888' stroke-width='2'/>
+  <line x1='786' y1='474' x2='774' y2='486' stroke='#888888' stroke-width='2'/>
+  <text x='790' y='484' font-family='monospace' font-size='11' fill='#cccccc' >Thessara</text>
+  <circle cx='630' cy='200' r='6' fill='#6abf8a' stroke='none' stroke-width='0'/>
+  <text x='640' y='204' font-family='monospace' font-size='11' fill='#cccccc' >Vaethos</text>
+  <circle cx='510' cy='300' r='5' fill='#6abf8a' stroke='none' stroke-width='0'/>
+  <text x='519' y='304' font-family='monospace' font-size='11' fill='#cccccc' >Korath</text>
   <rect x='22' y='712' width='320' height='155' fill='#0d0d1a' opacity='0.8' rx='4'/>
   <text x='30' y='730' font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold'>Legend</text>
   <circle cx='40' cy='746' r='5' fill='#8ab4f8'/>
