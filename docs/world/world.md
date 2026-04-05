@@ -6,6 +6,14 @@
 
 ---
 
+## Map Reference
+
+A canonical visual reference for all regions, worlds, and trade lanes described in this document:
+
+- **SVG map:** `docs/world/galaxy-map.svg` (view in browser or on GitHub)
+- **Lore companion:** `docs/world/galaxy-map.md` (narrative context for every element)
+- **Generator:** `python3 docs/world/generate_map.py` (stdlib only, rewrites the SVG)
+
 ## Chapter 1: History
 
 ### 1.1 The Ancient Civilizations
