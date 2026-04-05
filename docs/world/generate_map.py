@@ -149,14 +149,14 @@ TRADE_LANES = [
         "style": "solid",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(720, 200), (640, 295), (580, 375), (575, 415)],
+        "points": [(720, 200), (640, 295), (665, 375), (668, 425)],
     },
     {
         "label": "Emerging Keth Trade Lane",
         "style": "dashed",
         "color": "#6abf8a",
         "width": 2,
-        "points": [(575, 415), (610, 490), (600, 515), (700, 460)],
+        "points": [(668, 425), (685, 492), (700, 460)],
     },
     {
         "label": "Hegemony Extraction Web",

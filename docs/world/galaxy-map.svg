@@ -14,8 +14,8 @@
   <text x='663' y='370' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Fracture Zone</text>
   <text x='690' y='113' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>The Unmapped</text>
   <polyline points='160,490 300,490 440,490 580,490 600,515' fill='none' stroke='#8ab4f8' stroke-width='2'  opacity='0.7'/>
-  <polyline points='720,200 640,295 580,375 575,415' fill='none' stroke='#6abf8a' stroke-width='2'  opacity='0.7'/>
-  <polyline points='575,415 610,490 600,515 700,460' fill='none' stroke='#6abf8a' stroke-width='2' stroke-dasharray='8,5' opacity='0.7'/>
+  <polyline points='720,200 640,295 665,375 668,425' fill='none' stroke='#6abf8a' stroke-width='2'  opacity='0.7'/>
+  <polyline points='668,425 685,492 700,460' fill='none' stroke='#6abf8a' stroke-width='2' stroke-dasharray='8,5' opacity='0.7'/>
   <polyline points='600,515 580,490 560,600 490,560 440,510' fill='none' stroke='#c8860a' stroke-width='1.5' stroke-dasharray='2,4' opacity='0.7'/>
   <polyline points='830,515 700,460 800,490 870,570' fill='none' stroke='#4a8a7a' stroke-width='1.5' stroke-dasharray='2,4' opacity='0.7'/>
   <polygon points='680,483 687,490 680,497 673,490' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
