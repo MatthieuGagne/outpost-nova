@@ -47,6 +47,8 @@ REGIONS = {
             (740, 625),   # southeast arm returns
             (640, 660),   # body lower
             (510, 615),   # lower-left body
+            (350, 520),   # WEST ARM — reaches into Federation Core
+            (430, 460),   # west arm returns
             (615, 495),   # left side mid
             (630, 345),   # upper-left side
         ],
