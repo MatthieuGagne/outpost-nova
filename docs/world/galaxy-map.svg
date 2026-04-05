@@ -1,14 +1,14 @@
 <svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900' viewBox='0 0 1400 900'>
   <rect width='1400' height='900' fill='#0d0d1a'/>
   <polygon points='50,360 50,630 300,670 510,615 615,495 630,345 550,235 400,210 255,240 150,295' fill='#2a4a7f' opacity='0.55' stroke='none'/>
-  <polygon points='550,235 630,345 615,495 510,615 650,665 770,635 760,510 700,375 625,268' fill='#3a3a5c' opacity='0.55' stroke='none'/>
+  <polygon points='548,242 575,170 645,195 650,295 815,350 775,440 760,515 820,575 740,625 640,660 510,615 615,495 630,345' fill='#3a3a5c' opacity='0.55' stroke='none'/>
   <polygon points='840,115 570,110 380,155 285,250 400,340 545,415 700,455 920,450 1110,385 1140,225 1050,120' fill='#2a5a3a' opacity='0.55' stroke='none'/>
   <polygon points='580,290 720,555 675,665 875,695 1100,655 1160,510 1060,372 935,295 795,268 658,255' fill='#4a3a2a' opacity='0.55' stroke='none'/>
   <polygon points='535,308 668,270 808,316 828,422 722,452 572,442 508,382' fill='#5a2a2a' opacity='0.7' stroke='none'/>
   <polygon points='0,0 1400,0 1400,200 1050,150 640,100 340,140 0,200' fill='#1a1a2a' opacity='0.7' stroke='none'/>
   <polygon points='0,720 1400,720 1400,900 0,900' fill='#1a1a2a' opacity='0.7' stroke='none'/>
   <text x='351' y='410' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Federation Core</text>
-  <text x='646' y='460' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Inner Frontier</text>
+  <text x='671' y='425' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Inner Frontier</text>
   <text x='722' y='275' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Keth Space</text>
   <text x='856' y='456' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Border Zone</text>
   <text x='663' y='370' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Fracture Zone</text>

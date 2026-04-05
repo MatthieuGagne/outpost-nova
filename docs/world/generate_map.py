@@ -34,10 +34,21 @@ REGIONS = {
         "label": "Inner Frontier",
         "color": "#3a3a5c",
         "opacity": 0.55,
+        # Tentacular — arms reach into Keth Space (north), Fracture Zone (east), Border Zone (southeast)
         "points": [
-            (550, 235), (630, 345), (615, 495), (510, 615),
-            (650, 665), (770, 635), (760, 510), (700, 375),
-            (625, 268),
+            (548, 242),   # upper-left, shares boundary with Fed Core coreward arm
+            (575, 170),   # NORTH ARM — reaches into Keth Space
+            (645, 195),   # north arm, right side
+            (650, 295),   # back to body
+            (815, 350),   # EAST ARM — reaches into Fracture Zone
+            (775, 440),   # east arm returns
+            (760, 515),   # body lower-right
+            (820, 575),   # SOUTHEAST ARM — reaches into Border Zone
+            (740, 625),   # southeast arm returns
+            (640, 660),   # body lower
+            (510, 615),   # lower-left body
+            (615, 495),   # left side mid
+            (630, 345),   # upper-left side
         ],
     },
     "keth_space": {
