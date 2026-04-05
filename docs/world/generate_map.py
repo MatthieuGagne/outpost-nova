@@ -74,6 +74,15 @@ REGIONS = {
             (795, 268), (658, 255),
         ],
     },
+    "hegemony": {
+        "label": "Hegemony Sphere",
+        "color": "#7a3a08",
+        "opacity": 0.65,
+        "points": [
+            (515, 438), (588, 408), (668, 424), (692, 502),
+            (658, 578), (585, 598), (512, 578), (492, 506),
+        ],
+    },
     "fracture_zone": {
         "label": "Fracture Zone",
         "color": "#5a2a2a",
@@ -116,7 +125,7 @@ WORLDS = {
     "surev_prime":      {"label": "Surev Prime",       "x": 560,  "y": 600, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
     "vaedra":           {"label": "Vaedra",            "x": 440,  "y": 510, "symbol": "circle",   "region": "inner_frontier",   "r": 4},
     "ashfeld":          {"label": "Ashfeld",           "x": 510,  "y": 440, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
-    "carnach_station":  {"label": "Carnach Station",   "x": 600,  "y": 515, "symbol": "station",  "region": "border_zone",      "r": 5},
+    "carnach_station":  {"label": "Carnach Station",   "x": 600,  "y": 515, "symbol": "station",  "region": "hegemony",         "r": 5},
     "sundra":           {"label": "Sundra",            "x": 830,  "y": 515, "symbol": "circle",   "region": "border_zone",      "r": 5},
     "outpost_nova":     {"label": "Outpost Nova",      "x": 700,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
     "thessara":         {"label": "Thessara",          "x": 820,  "y": 430, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
@@ -183,6 +192,7 @@ WORLD_COLORS = {
     "keth_space":      "#6abf8a",
     "border_zone":     "#d4a060",
     "fracture_zone":   "#d06060",
+    "hegemony":        "#e07820",
 }
 OUTPOST_NOVA_COLOR = "#ffb347"
 DESTROYED_COLOR    = "#888888"
@@ -359,12 +369,13 @@ def svg_legend(lines):
 
     # Faction / region colors — second box to the right
     rx, ry = 370, 730
-    lines.append(f"  <rect x='{rx-8}' y='{ry-18}' width='265' height='122' "
+    lines.append(f"  <rect x='{rx-8}' y='{ry-18}' width='265' height='140' "
                  f"fill='#0d0d1a' opacity='0.8' rx='4'/>")
     lines.append(f"  <text x='{rx}' y='{ry}' {TITLE_FONT} font-size='16'>Factions</text>")
     faction_entries = [
         ("#2a4a7f", 0.55, "Federation Core"),
         ("#3a3a5c", 0.55, "Inner Frontier"),
+        ("#7a3a08", 0.65, "Hegemony Combine"),
         ("#4a3a2a", 0.55, "Border Zone (Unaligned)"),
         ("#5a2a2a", 0.70, "Fracture Zone (contested frontier)"),
         ("#2a5a3a", 0.55, "Keth Space"),

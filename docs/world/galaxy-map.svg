@@ -4,6 +4,7 @@
   <polygon points='548,242 575,170 645,195 650,295 815,350 775,440 760,515 820,575 740,625 640,660 510,615 350,520 430,460 615,495 630,345' fill='#3a3a5c' opacity='0.55' stroke='none'/>
   <polygon points='840,115 620,110 500,145 490,252 545,342 655,422 750,455 930,450 1110,385 1140,225 1050,120' fill='#2a5a3a' opacity='0.55' stroke='none'/>
   <polygon points='580,290 720,555 675,665 875,695 1100,655 1160,510 1060,372 935,295 795,268 658,255' fill='#4a3a2a' opacity='0.55' stroke='none'/>
+  <polygon points='515,438 588,408 668,424 692,502 658,578 585,598 512,578 492,506' fill='#7a3a08' opacity='0.65' stroke='none'/>
   <polygon points='535,308 668,270 808,316 828,422 722,452 572,442 508,382' fill='#5a2a2a' opacity='0.7' stroke='none'/>
   <polygon points='0,0 1400,0 1400,200 1050,150 640,100 340,140 0,200' fill='#1a1a2a' opacity='0.7' stroke='none'/>
   <polygon points='0,720 1400,720 1400,900 0,900' fill='#1a1a2a' opacity='0.7' stroke='none'/>
@@ -11,6 +12,7 @@
   <text x='634' y='433' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Inner Frontier</text>
   <text x='785' y='275' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Keth Space</text>
   <text x='856' y='456' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Border Zone</text>
+  <text x='589' y='504' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Hegemony Sphere</text>
   <text x='663' y='370' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Fracture Zone</text>
   <text x='690' y='113' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>The Unmapped</text>
   <polyline points='160,490 300,490 440,490 580,490 600,515' fill='none' stroke='#8ab4f8' stroke-width='2'  opacity='0.7'/>
@@ -38,7 +40,7 @@
   <text x='448' y='514' font-family='monospace' font-size='11' fill='#cccccc' >Vaedra</text>
   <circle cx='510' cy='440' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
   <text x='519' y='444' font-family='monospace' font-size='11' fill='#cccccc' >Ashfeld</text>
-  <circle cx='600' cy='515' r='5' fill='#d4a060' stroke='#ffffff' stroke-width='1.5'/>
+  <circle cx='600' cy='515' r='5' fill='#e07820' stroke='#ffffff' stroke-width='1.5'/>
   <text x='609' y='519' font-family='monospace' font-size='11' fill='#cccccc' >Carnach Station</text>
   <circle cx='830' cy='515' r='5' fill='#d4a060' stroke='none' stroke-width='0'/>
   <text x='839' y='519' font-family='monospace' font-size='11' fill='#cccccc' >Sundra</text>
@@ -74,20 +76,22 @@
   <text x='58' y='880' font-family='monospace' font-size='11' fill='#cccccc'>Hegemony Extraction Web</text>
   <line x1='30' y1='890' x2='52' y2='890' stroke='#4a8a7a' stroke-width='2' stroke-dasharray='2,4'/>
   <text x='58' y='894' font-family='monospace' font-size='11' fill='#cccccc'>Unaligned Passage Routes</text>
-  <rect x='362' y='712' width='265' height='122' fill='#0d0d1a' opacity='0.8' rx='4'/>
+  <rect x='362' y='712' width='265' height='140' fill='#0d0d1a' opacity='0.8' rx='4'/>
   <text x='370' y='730' font-family='monospace' fill='#ffb347' font-weight='bold' font-size='16'>Factions</text>
   <rect x='372' y='736' width='14' height='12' fill='#2a4a7f' opacity='0.55' stroke='#555566' stroke-width='0.5'/>
   <text x='391' y='746' font-family='monospace' font-size='11' fill='#cccccc'>Federation Core</text>
   <rect x='372' y='753' width='14' height='12' fill='#3a3a5c' opacity='0.55' stroke='#555566' stroke-width='0.5'/>
   <text x='391' y='763' font-family='monospace' font-size='11' fill='#cccccc'>Inner Frontier</text>
-  <rect x='372' y='770' width='14' height='12' fill='#4a3a2a' opacity='0.55' stroke='#555566' stroke-width='0.5'/>
-  <text x='391' y='780' font-family='monospace' font-size='11' fill='#cccccc'>Border Zone (Unaligned)</text>
-  <rect x='372' y='787' width='14' height='12' fill='#5a2a2a' opacity='0.7' stroke='#555566' stroke-width='0.5'/>
-  <text x='391' y='797' font-family='monospace' font-size='11' fill='#cccccc'>Fracture Zone (contested frontier)</text>
-  <rect x='372' y='804' width='14' height='12' fill='#2a5a3a' opacity='0.55' stroke='#555566' stroke-width='0.5'/>
-  <text x='391' y='814' font-family='monospace' font-size='11' fill='#cccccc'>Keth Space</text>
-  <rect x='372' y='821' width='14' height='12' fill='#1a1a2a' opacity='0.7' stroke='#555566' stroke-width='0.5'/>
-  <text x='391' y='831' font-family='monospace' font-size='11' fill='#cccccc'>The Unmapped</text>
+  <rect x='372' y='770' width='14' height='12' fill='#7a3a08' opacity='0.65' stroke='#555566' stroke-width='0.5'/>
+  <text x='391' y='780' font-family='monospace' font-size='11' fill='#cccccc'>Hegemony Combine</text>
+  <rect x='372' y='787' width='14' height='12' fill='#4a3a2a' opacity='0.55' stroke='#555566' stroke-width='0.5'/>
+  <text x='391' y='797' font-family='monospace' font-size='11' fill='#cccccc'>Border Zone (Unaligned)</text>
+  <rect x='372' y='804' width='14' height='12' fill='#5a2a2a' opacity='0.7' stroke='#555566' stroke-width='0.5'/>
+  <text x='391' y='814' font-family='monospace' font-size='11' fill='#cccccc'>Fracture Zone (contested frontier)</text>
+  <rect x='372' y='821' width='14' height='12' fill='#2a5a3a' opacity='0.55' stroke='#555566' stroke-width='0.5'/>
+  <text x='391' y='831' font-family='monospace' font-size='11' fill='#cccccc'>Keth Space</text>
+  <rect x='372' y='838' width='14' height='12' fill='#1a1a2a' opacity='0.7' stroke='#555566' stroke-width='0.5'/>
+  <text x='391' y='848' font-family='monospace' font-size='11' fill='#cccccc'>The Unmapped</text>
   <rect x='1220' y='20' width='160' height='120' fill='#050510' rx='4' stroke='#333355' stroke-width='1'/>
   <text x='1300' y='34' text-anchor='middle' font-family='monospace' font-size='10' fill='#666688'>Milky Way — Orion Arm</text>
   <path d='M 1300 88 C 1330,68 1350,98 1360,118' fill='none' stroke='#334466' stroke-width='6' opacity='0.7'/>
