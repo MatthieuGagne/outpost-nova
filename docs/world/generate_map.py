@@ -57,10 +57,10 @@ REGIONS = {
         "label": "Keth Space",
         "color": "#2a5a3a",
         "opacity": 0.55,
-        # Rimward arm extends southwest — overlaps Federation coreward arm, creating conflict zone
+        # Stays upper-right; only grazes the Fracture Zone at its southwest corner
         "points": [
-            (840, 115), (570, 110), (380, 155), (285, 250),
-            (400, 340), (545, 415), (700, 455), (920, 450),
+            (840, 115), (620, 110), (500, 145), (490, 252),
+            (545, 342), (655, 422), (750, 455), (930, 450),
             (1110, 385), (1140, 225), (1050, 120),
         ],
     },
