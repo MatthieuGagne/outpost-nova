@@ -230,6 +230,20 @@ OUTPOST_NOVA_COLOR = "#ffb347"
 DESTROYED_COLOR    = "#888888"
 BUILDER_COLOR      = "#bbbbff"
 
+# Spectral-type glow colors — low-opacity radial gradient behind each world marker
+SPECTRAL_GLOW_COLORS = {
+    "WR": "#aac8ff",  # Wolf-Rayet: blue-white (Gamma Velorum)
+    "O":  "#aac8ff",  # O-type: blue-white
+    "B":  "#c8d8ff",  # B-type: pale blue
+    "A":  "#ddeeff",  # A-type: pale blue-white (Sirius, Fomalhaut, Vega, Denebola, Castor)
+    "F":  "#fff8e8",  # F-type: warm white (Upsilon Andromedae)
+    "G":  "#ffe890",  # G-type: yellow (Sol, Tau Ceti, Capella, Rho CrB, Kepler-452)
+    "K":  "#ffaa50",  # K-type: orange (Pollux, 61 Cygni, Gliese 667, 55 Cancri, etc.)
+    "M":  "#ff6630",  # M-type: deep orange-red
+}
+GLOW_OPACITY = 0.15
+GLOW_RADIUS = 22
+
 LABEL_FONT  = "font-family='monospace' font-size='11'"
 REGION_FONT = "font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'"
 TITLE_FONT  = "font-family='monospace' fill='#ffb347' font-weight='bold'"
@@ -294,6 +308,27 @@ def svg_builder_secondary(lines):
         lines.append(
             f"  <polygon points='{x},{y-s} {x+s},{y} {x},{y+s} {x-s},{y}' "
             f"fill='none' stroke='{BUILDER_COLOR}' stroke-width='1.2' opacity='0.6'/>"
+        )
+
+
+def svg_star_glows(lines):
+    """Render spectral-type glow radial gradients + halo circles behind world markers."""
+    lines.append("  <defs>")
+    for key, w in WORLDS.items():
+        color = SPECTRAL_GLOW_COLORS.get(w["star_type"], "#ffffff")
+        lines.append(f"    <radialGradient id='glow_{key}' cx='50%' cy='50%' r='50%'>")
+        lines.append(
+            f"      <stop offset='0%' stop-color='{color}' stop-opacity='{GLOW_OPACITY}'/>"
+        )
+        lines.append(
+            f"      <stop offset='100%' stop-color='{color}' stop-opacity='0'/>"
+        )
+        lines.append(f"    </radialGradient>")
+    lines.append("  </defs>")
+    for key, w in WORLDS.items():
+        x, y = w["x"], w["y"]
+        lines.append(
+            f"  <circle cx='{x}' cy='{y}' r='{GLOW_RADIUS}' fill='url(#glow_{key})'/>"
         )
 
 
@@ -475,6 +510,7 @@ def generate():
     svg_regions(lines)
     svg_trade_lanes(lines)
     svg_builder_secondary(lines)
+    svg_star_glows(lines)    # ← add this line
     svg_worlds(lines)
     svg_legend(lines)
     svg_inset(lines)
