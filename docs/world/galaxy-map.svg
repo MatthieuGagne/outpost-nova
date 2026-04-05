@@ -1,0 +1,87 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900' viewBox='0 0 1400 900'>
+  <rect width='1400' height='900' fill='#0d0d1a'/>
+  <polygon points='50,350 50,600 280,640 400,580 420,460 350,380 200,340' fill='#2a4a7f' opacity='0.55' stroke='none'/>
+  <polygon points='350,380 420,460 400,580 280,640 500,680 680,650 740,560 720,430 620,340 480,320' fill='#3a3a5c' opacity='0.55' stroke='none'/>
+  <polygon points='480,120 380,180 340,280 480,320 620,340 680,260 640,150' fill='#2a5a3a' opacity='0.55' stroke='none'/>
+  <polygon points='620,340 740,560 680,650 880,680 1050,640 1100,500 1020,380 860,300 720,280 680,260' fill='#4a3a2a' opacity='0.55' stroke='none'/>
+  <polygon points='820,420 780,500 840,580 950,600 1000,520 980,430 900,380' fill='#5a2a2a' opacity='0.65' stroke='none'/>
+  <polygon points='0,0 1400,0 1400,200 1050,150 640,100 340,140 0,200' fill='#1a1a2a' opacity='0.7' stroke='none'/>
+  <polygon points='0,720 1400,720 1400,900 0,900' fill='#1a1a2a' opacity='0.7' stroke='none'/>
+  <text x='250' y='479' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Federation Core</text>
+  <text x='519' y='504' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Inner Frontier</text>
+  <text x='517' y='236' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Keth Space</text>
+  <text x='835' y='459' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Border Zone</text>
+  <text x='896' y='490' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>Fracture Zone</text>
+  <text x='690' y='113' text-anchor='middle' font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'>The Unmapped</text>
+  <polyline points='160,490 300,490 440,490 610,490 730,510' fill='none' stroke='#8ab4f8' stroke-width='2'  opacity='0.7'/>
+  <polyline points='590,190 520,260 480,320 510,380' fill='none' stroke='#6abf8a' stroke-width='2'  opacity='0.7'/>
+  <polyline points='510,380 560,430 610,490 730,510 870,470 970,460' fill='none' stroke='#6abf8a' stroke-width='2' stroke-dasharray='8,5' opacity='0.7'/>
+  <polyline points='730,510 610,490 560,600 490,560 440,510' fill='none' stroke='#c8860a' stroke-width='1.5' stroke-dasharray='2,4' opacity='0.7'/>
+  <polyline points='900,500 970,460 1050,480 1080,560' fill='none' stroke='#4a8a7a' stroke-width='1.5' stroke-dasharray='2,4' opacity='0.7'/>
+  <polygon points='680,523 687,530 680,537 673,530' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
+  <polygon points='760,453 767,460 760,467 753,460' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
+  <polygon points='650,423 657,430 650,437 643,430' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
+  <polygon points='810,353 817,360 810,367 803,360' fill='none' stroke='#bbbbff' stroke-width='1.2' opacity='0.6'/>
+  <circle cx='160' cy='490' r='6' fill='#8ab4f8' stroke='none' stroke-width='0'/>
+  <text x='170' y='494' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Earth (Sol)</text>
+  <circle cx='250' cy='420' r='5' fill='#8ab4f8' stroke='none' stroke-width='0'/>
+  <text x='259' y='424' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Harrow</text>
+  <circle cx='300' cy='530' r='5' fill='#8ab4f8' stroke='none' stroke-width='0'/>
+  <text x='309' y='534' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Velan</text>
+  <circle cx='490' cy='560' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
+  <text x='499' y='564' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Breck</text>
+  <circle cx='610' cy='490' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
+  <text x='619' y='494' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Auren</text>
+  <circle cx='560' cy='600' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
+  <text x='569' y='604' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Surev Prime</text>
+  <circle cx='440' cy='510' r='4' fill='#a0a0cc' stroke='none' stroke-width='0'/>
+  <text x='448' y='514' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Vaedra</text>
+  <circle cx='510' cy='440' r='5' fill='#a0a0cc' stroke='none' stroke-width='0'/>
+  <text x='519' y='444' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Ashfeld</text>
+  <circle cx='730' cy='510' r='5' fill='#d4a060' stroke='#ffffff' stroke-width='1.5'/>
+  <text x='739' y='514' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Carnach Station</text>
+  <circle cx='900' cy='500' r='5' fill='#d4a060' stroke='none' stroke-width='0'/>
+  <text x='909' y='504' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Sundra</text>
+  <polygon points='976.9282032302755,456.0 976.9282032302755,464.0 970.0,468.0 963.0717967697245,464.0 963.0717967697245,456.0 970.0,452.0' fill='none' stroke='#ffb347' stroke-width='2'/>
+  <circle cx='970' cy='460' r='3' fill='#ffb347'/>
+  <text x='982' y='464' font-family='monospace' font-size='11' fill='#cccccc' fill='#ffb347' font-weight='bold'>Outpost Nova</text>
+  <line x1='864' y1='464' x2='876' y2='476' stroke='#888888' stroke-width='2'/>
+  <line x1='876' y1='464' x2='864' y2='476' stroke='#888888' stroke-width='2'/>
+  <text x='880' y='474' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Thessara</text>
+  <circle cx='590' cy='190' r='6' fill='#6abf8a' stroke='none' stroke-width='0'/>
+  <text x='600' y='194' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Vaethos</text>
+  <circle cx='520' cy='260' r='5' fill='#6abf8a' stroke='none' stroke-width='0'/>
+  <text x='529' y='264' font-family='monospace' font-size='11' fill='#cccccc' fill='#cccccc' >Korath</text>
+  <rect x='22' y='712' width='320' height='155' fill='#0d0d1a' opacity='0.8' rx='4'/>
+  <text x='30' y='730' font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold'>Legend</text>
+  <circle cx='40' cy='746' r='5' fill='#8ab4f8'/>
+  <text x='54' y='750' font-family='monospace' font-size='11' fill='#cccccc'>World / Station</text>
+  <circle cx='40' cy='764' r='5' fill='#d4a060' stroke='#ffffff' stroke-width='1.5'/>
+  <text x='54' y='768' font-family='monospace' font-size='11' fill='#cccccc'>Orbital Station (ring)</text>
+  <polygon points='45.19615242270663,779.0 45.19615242270663,785.0 40.0,788.0 34.80384757729337,785.0 34.80384757729337,779.0 40.0,776.0' fill='none' stroke='#ffb347' stroke-width='2'/>
+  <circle cx='40' cy='782' r='2' fill='#ffb347'/>
+  <text x='54' y='786' font-family='monospace' font-size='11' fill='#cccccc'>Outpost Nova (Builder primary node)</text>
+  <line x1='35' y1='795' x2='45' y2='805' stroke='#888888' stroke-width='2'/>
+  <line x1='45' y1='795' x2='35' y2='805' stroke='#888888' stroke-width='2'/>
+  <text x='54' y='804' font-family='monospace' font-size='11' fill='#cccccc'>Destroyed world (×)</text>
+  <polygon points='40,812 46,818 40,824 34,818' fill='none' stroke='#bbbbff' stroke-width='1.2'/>
+  <text x='54' y='822' font-family='monospace' font-size='11' fill='#cccccc'>Builder secondary site (◇)</text>
+  <line x1='30' y1='848' x2='52' y2='848' stroke='#8ab4f8' stroke-width='2' />
+  <text x='58' y='852' font-family='monospace' font-size='11' fill='#cccccc'>Federation Spine</text>
+  <line x1='30' y1='862' x2='52' y2='862' stroke='#6abf8a' stroke-width='2' />
+  <text x='58' y='866' font-family='monospace' font-size='11' fill='#cccccc'>Keth Internal / Emerging Lane</text>
+  <line x1='30' y1='876' x2='52' y2='876' stroke='#c8860a' stroke-width='2' stroke-dasharray='2,4'/>
+  <text x='58' y='880' font-family='monospace' font-size='11' fill='#cccccc'>Hegemony Extraction Web</text>
+  <line x1='30' y1='890' x2='52' y2='890' stroke='#4a8a7a' stroke-width='2' stroke-dasharray='2,4'/>
+  <text x='58' y='894' font-family='monospace' font-size='11' fill='#cccccc'>Unaligned Passage Routes</text>
+  <rect x='1220' y='20' width='160' height='120' fill='#050510' rx='4' stroke='#333355' stroke-width='1'/>
+  <text x='1300' y='34' text-anchor='middle' font-family='monospace' font-size='10' fill='#666688'>Milky Way — Orion Arm</text>
+  <path d='M 1300 88 C 1330,68 1350,98 1360,118' fill='none' stroke='#334466' stroke-width='6' opacity='0.7'/>
+  <path d='M 1300 88 C 1270,108 1250,78 1240,58' fill='none' stroke='#334466' stroke-width='6' opacity='0.7'/>
+  <circle cx='1300' cy='88' r='6' fill='#aaaadd' opacity='0.6'/>
+  <circle cx='1322' cy='78' r='8' fill='none' stroke='#ffb347' stroke-width='1' opacity='0.8'/>
+  <circle cx='1322' cy='78' r='2' fill='#ffb347' opacity='0.9'/>
+  <text x='1332' y='82' font-family='monospace' font-size='9' fill='#ffb347' opacity='0.9'>known space</text>
+  <text x='30' y='36' font-family='monospace' font-size='16' fill='#ffb347' font-weight='bold' font-size='20'>Outpost Nova — Known Space</text>
+  <text x='30' y='54' font-family='monospace' font-size='10' fill='#555577'>~2,000 ly radius · Orion Arm · canonical lore reference</text>
+</svg>
