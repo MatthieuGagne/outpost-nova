@@ -77,14 +77,14 @@ func go_to_area(area_id: String) -> void:
 		_current_area.queue_free()
 		_current_area = null
 
+	var positions = AREA_ENTRY_POSITIONS.get(area_id, {})
+	player.position = positions.get(prev, positions.get("default", Vector2(240, 128)))
+
 	var scene = load(AREA_SCENES[area_id])
 	_current_area = scene.instantiate()
 	area_container.add_child(_current_area)
 	area_container.move_child(_current_area, 0)  # TileMap renders behind player + NPCs
 	_current_area_id = area_id
-
-	var positions = AREA_ENTRY_POSITIONS.get(area_id, {})
-	player.position = positions.get(prev, positions.get("default", Vector2(240, 128)))
 
 	for npc_id in _npc_instances:
 		var npc = _npc_instances[npc_id]
