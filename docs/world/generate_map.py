@@ -108,25 +108,25 @@ REGIONS = {
 # ---------------------------------------------------------------------------
 # symbol: "circle" | "cross" | "hex_ring" | "station"
 WORLDS = {
-    "earth":            {"label": "Earth (Sol)",      "x": 160,  "y": 490, "symbol": "circle",   "region": "federation_core",  "r": 6},
-    "harrow":           {"label": "Harrow",            "x": 250,  "y": 420, "symbol": "circle",   "region": "federation_core",  "r": 5},
-    "velan":            {"label": "Velan",             "x": 300,  "y": 530, "symbol": "circle",   "region": "federation_core",  "r": 5},
-    "breck":            {"label": "Breck",             "x": 490,  "y": 560, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
-    "auren":            {"label": "Auren",             "x": 610,  "y": 490, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
-    "surev_prime":      {"label": "Surev Prime",       "x": 560,  "y": 600, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
-    "vaedra":           {"label": "Vaedra",            "x": 440,  "y": 510, "symbol": "circle",   "region": "inner_frontier",   "r": 4},
-    "ashfeld":          {"label": "Ashfeld",           "x": 510,  "y": 440, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
-    "carnach_station":  {"label": "Carnach Station",   "x": 600,  "y": 515, "symbol": "station",  "region": "hegemony",         "r": 5},
-    "heg_relay_corriv": {"label": "Relay Corriv",      "x": 490,  "y": 418, "symbol": "station",  "region": "hegemony",         "r": 4},
-    "heg_outpost_vael": {"label": "Outpost Vael",      "x": 474,  "y": 342, "symbol": "station",  "region": "hegemony",         "r": 4},
-    "heg_depot_ashkell":{"label": "Depot Ashkell",     "x": 385,  "y": 572, "symbol": "station",  "region": "hegemony",         "r": 4},
-    "heg_node_marek":   {"label": "Node Marek",        "x": 540,  "y": 594, "symbol": "station",  "region": "hegemony",         "r": 4},
-    "heg_platform_dunn":{"label": "Platform Dunn",     "x": 694,  "y": 568, "symbol": "station",  "region": "hegemony",         "r": 4},
-    "sundra":           {"label": "Sundra",            "x": 830,  "y": 515, "symbol": "circle",   "region": "border_zone",      "r": 5},
-    "outpost_nova":     {"label": "Outpost Nova",      "x": 700,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
-    "thessara":         {"label": "Thessara",          "x": 820,  "y": 430, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
-    "vaethos":          {"label": "Vaethos",           "x": 720,  "y": 200, "symbol": "circle",   "region": "keth_space",       "r": 6},
-    "korath":           {"label": "Korath",            "x": 640,  "y": 295, "symbol": "circle",   "region": "keth_space",       "r": 5},
+    "earth":             {"label": "Earth",           "star": "Sol",                  "star_type": "G", "x": 160,  "y": 490, "symbol": "circle",   "region": "federation_core",  "r": 6},
+    "harrow":            {"label": "Harrow",           "star": "Sirius",               "star_type": "A", "x": 250,  "y": 420, "symbol": "circle",   "region": "federation_core",  "r": 5},
+    "velan":             {"label": "Velan",            "star": "Tau Ceti",             "star_type": "G", "x": 300,  "y": 530, "symbol": "circle",   "region": "federation_core",  "r": 5},
+    "breck":             {"label": "Breck",            "star": "Fomalhaut",            "star_type": "A", "x": 490,  "y": 560, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
+    "auren":             {"label": "Auren",            "star": "Castor",               "star_type": "A", "x": 610,  "y": 490, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
+    "surev_prime":       {"label": "Surev Prime",      "star": "Capella",              "star_type": "G", "x": 560,  "y": 600, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
+    "vaedra":            {"label": "Vaedra",           "star": "Vega",                 "star_type": "A", "x": 440,  "y": 510, "symbol": "circle",   "region": "inner_frontier",   "r": 4},
+    "ashfeld":           {"label": "Ashfeld",          "star": "61 Cygni",             "star_type": "K", "x": 510,  "y": 440, "symbol": "circle",   "region": "inner_frontier",   "r": 5},
+    "carnach_station":   {"label": "Carnach Station",  "star": "Pollux",               "star_type": "K", "x": 600,  "y": 515, "symbol": "station",  "region": "hegemony",         "r": 5},
+    "heg_relay_corriv":  {"label": "Relay Corriv",     "star": "Rho Coronae Borealis", "star_type": "G", "x": 490,  "y": 418, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_outpost_vael":  {"label": "Outpost Vael",     "star": "Iota Draconis",        "star_type": "K", "x": 474,  "y": 342, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_depot_ashkell": {"label": "Depot Ashkell",    "star": "Mu Arae",              "star_type": "G", "x": 385,  "y": 572, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_node_marek":    {"label": "Node Marek",       "star": "Upsilon Andromedae",   "star_type": "F", "x": 540,  "y": 594, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "heg_platform_dunn": {"label": "Platform Dunn",    "star": "HD 189733",            "star_type": "K", "x": 694,  "y": 568, "symbol": "station",  "region": "hegemony",         "r": 4},
+    "sundra":            {"label": "Sundra",           "star": "Denebola",             "star_type": "A", "x": 830,  "y": 515, "symbol": "circle",   "region": "border_zone",      "r": 5},
+    "outpost_nova":      {"label": "Outpost Nova",     "star": "Gliese 667",           "star_type": "K", "x": 700,  "y": 460, "symbol": "hex_ring", "region": "border_zone",      "r": 8},
+    "thessara":          {"label": "Thessara",         "star": "Gamma Velorum",        "star_type": "WR","x": 820,  "y": 430, "symbol": "cross",    "region": "fracture_zone",    "r": 6},
+    "vaethos":           {"label": "Vaethos",          "star": "Kepler-452",           "star_type": "G", "x": 720,  "y": 200, "symbol": "circle",   "region": "keth_space",       "r": 6},
+    "korath":            {"label": "Korath",           "star": "55 Cancri",            "star_type": "K", "x": 640,  "y": 295, "symbol": "circle",   "region": "keth_space",       "r": 5},
 }
 
 # Builder secondary sites — no labels, diamond symbol, approximate positions
@@ -230,6 +230,20 @@ OUTPOST_NOVA_COLOR = "#ffb347"
 DESTROYED_COLOR    = "#888888"
 BUILDER_COLOR      = "#bbbbff"
 
+# Spectral-type glow colors — low-opacity radial gradient behind each world marker
+SPECTRAL_GLOW_COLORS = {
+    "WR": "#aac8ff",  # Wolf-Rayet: blue-white (Gamma Velorum)
+    "O":  "#aac8ff",  # O-type: blue-white
+    "B":  "#c8d8ff",  # B-type: pale blue
+    "A":  "#ddeeff",  # A-type: pale blue-white (Sirius, Fomalhaut, Vega, Denebola, Castor)
+    "F":  "#fff8e8",  # F-type: warm white (Upsilon Andromedae)
+    "G":  "#ffe890",  # G-type: yellow (Sol, Tau Ceti, Capella, Rho CrB, Kepler-452)
+    "K":  "#ffaa50",  # K-type: orange (Pollux, 61 Cygni, Gliese 667, 55 Cancri, etc.)
+    "M":  "#ff6630",  # M-type: deep orange-red
+}
+GLOW_OPACITY = 0.15
+GLOW_RADIUS = 22
+
 LABEL_FONT  = "font-family='monospace' font-size='11'"
 REGION_FONT = "font-family='monospace' font-size='13' fill='#ffffff' opacity='0.5'"
 TITLE_FONT  = "font-family='monospace' fill='#ffb347' font-weight='bold'"
@@ -297,6 +311,27 @@ def svg_builder_secondary(lines):
         )
 
 
+def svg_star_glows(lines):
+    """Render spectral-type glow radial gradients + halo circles behind world markers."""
+    lines.append("  <defs>")
+    for key, w in WORLDS.items():
+        color = SPECTRAL_GLOW_COLORS.get(w["star_type"], "#ffffff")
+        lines.append(f"    <radialGradient id='glow_{key}' cx='50%' cy='50%' r='50%'>")
+        lines.append(
+            f"      <stop offset='0%' stop-color='{color}' stop-opacity='{GLOW_OPACITY}'/>"
+        )
+        lines.append(
+            f"      <stop offset='100%' stop-color='{color}' stop-opacity='0'/>"
+        )
+        lines.append(f"    </radialGradient>")
+    lines.append("  </defs>")
+    for key, w in WORLDS.items():
+        x, y = w["x"], w["y"]
+        lines.append(
+            f"  <circle cx='{x}' cy='{y}' r='{GLOW_RADIUS}' fill='url(#glow_{key})'/>"
+        )
+
+
 def svg_worlds(lines):
     for key, w in WORLDS.items():
         x, y, r = w["x"], w["y"], w["r"]
@@ -334,7 +369,7 @@ def svg_worlds(lines):
                 f"stroke='{col}' stroke-width='2'/>"
             )
 
-        # Label — offset slightly so it doesn't overlap the symbol
+        # Label — two lines: world name + star name (smaller, dimmer)
         lx = x + r + 4
         ly = y + 4
         fw = "font-weight='bold'" if sym == "hex_ring" else ""
@@ -343,6 +378,12 @@ def svg_worlds(lines):
             f"  <text x='{lx}' y='{ly}' {LABEL_FONT} "
             f"fill='{fc}' {fw}>{w['label']}</text>"
         )
+        star = w.get("star", "")
+        if star:
+            lines.append(
+                f"  <text x='{lx}' y='{ly + 13}' font-family='monospace' font-size='9' "
+                f"fill='{fc}' opacity='0.55'>({star})</text>"
+            )
 
 
 def svg_legend(lines):
@@ -475,6 +516,7 @@ def generate():
     svg_regions(lines)
     svg_trade_lanes(lines)
     svg_builder_secondary(lines)
+    svg_star_glows(lines)    # ← add this line
     svg_worlds(lines)
     svg_legend(lines)
     svg_inset(lines)
