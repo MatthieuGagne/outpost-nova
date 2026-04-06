@@ -98,6 +98,7 @@ func go_to_area(area_id: String) -> void:
 				npc._pick_wander_target()
 
 	fade_anim.play("fade_in")
+	await fade_anim.animation_finished
 	_is_transitioning = false
 	get_viewport().gui_release_focus()
 
