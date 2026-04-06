@@ -17,7 +17,8 @@ public static class YarnGameState
     [YarnFunction("get_flag")]
     public static bool GetFlag(string flagId)
     {
-        var gameState = Engine.GetSingleton("GameState");
+        var sceneTree = (SceneTree)Engine.GetMainLoop();
+        var gameState = sceneTree.Root.GetNode("GameState");
         return gameState.Call("get_flag", flagId).AsBool();
     }
 }
