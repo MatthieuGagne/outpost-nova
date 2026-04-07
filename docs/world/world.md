@@ -182,9 +182,9 @@ What scattered Drueth carry is the shape of a structure that no longer exists. T
 
 #### Thessari
 
-*Soriel's species.*
+*Velreth's species.*
 
-**Physical:** Feline. Digitigrade legs, fur in muted earth tones with grey edging. The grey is age-related — older Thessari are more fully grey, and it reads at a distance. Soriel, mid-40s equivalent, has just begun to show it at the edges. Large, warm eyes that catch light differently than mammalian eyes — warm in a way that's immediately readable even at low resolution. Move quietly, not deliberately, just naturally.
+**Physical:** Feline. Digitigrade legs, fur in muted earth tones with grey edging. The grey is age-related — older Thessari are more fully grey, and it reads at a distance. Velreth, mid-40s equivalent, has just begun to show it at the edges. Large, warm eyes that catch light differently than mammalian eyes — warm in a way that's immediately readable even at low resolution. Move quietly, not deliberately, just naturally.
 
 **Culture:** Thessari culture was built around communal warmth — not abstractly, but structurally. Their architecture, social organization, and art were organized around shared physical and emotional closeness. They had elaborate hospitality traditions, complex systems for integrating strangers into community over time, rituals for maintaining bonds across distance.
 
@@ -192,7 +192,7 @@ The warmth was chosen and practiced, not assumed. It was a technology as much as
 
 **What they lost:** Their world was caught in the early years of human-Keth first contact — not a target, just in the way of two frightened species with weapons. Neither side claimed what happened. Neither side has been asked to.
 
-The culture is gone. The language Thessari names draw from is effectively dead — Soriel is one of the last fluent speakers, and there is no one left to speak it with. The name "Soriel" and the species name "Thessari" share phonological roots — both carry the ghost of a lost linguistic system that no longer has a living community to sustain it.
+The culture is gone. The language Thessari names draw from is effectively dead — Velreth is one of the last fluent speakers, and there is no one left to speak it with.
 
 **How they navigate the Frontier:** There are very few Thessari left. Each one carries the culture alone, with no community to reflect it back. The hospitality traditions, the warmth structures, the integration rituals — these were collective technologies, and the collective is gone.
 
@@ -200,7 +200,7 @@ What remains is a choice: whether to keep making the warmth anyway. Without back
 
 This is what makes Thessari warmth-as-resistance specific and costly: it is a moral choice made against a concrete wound, sustained entirely by the decision to keep making it. Not pragmatism. Not instinct. Not the natural expression of a culture still intact. A decision, remade continuously.
 
-**Timeline note:** Thessari displacement happened in the early years of human-Keth first contact, roughly 16+ years before the game's present. Soriel, at mid-40s equivalent, was in their mid-to-late 20s when their world was lost — old enough to remember the culture fully, young enough that most of their adult life has been built in the aftermath. The warmth Soriel carries is not a nostalgic remnant of an intact culture. It is a practice chosen and rebuilt after the loss.
+**Timeline note:** Thessari displacement happened in the early years of human-Keth first contact, roughly 16+ years before the game's present. Velreth, at mid-40s equivalent, was in their mid-to-late 20s when their world was lost — old enough to remember the culture fully, young enough that most of their adult life has been built in the aftermath. The warmth Velreth carries is not a nostalgic remnant of an intact culture. It is a practice chosen and rebuilt after the loss.
 
 ---
 

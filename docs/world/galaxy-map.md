@@ -142,10 +142,10 @@ agenda. See `docs/story/year1.md`.
 
 ### Fracture Zone
 
-**Thessara** *(× symbol · Gamma Velorum — Wolf-Rayet + O binary)* — Soriel's birth world. Destroyed in the early years of
+**Thessara** *(× symbol · Gamma Velorum — Wolf-Rayet + O binary)* — Velreth's birth world. Destroyed in the early years of
 human-Keth first contact — not a target, just in the way. Neither side claimed it.
 Neither side has been asked to. The cross symbol marks a world that no longer exists.
-Soriel is one of the last fluent speakers of the language all Thessari names draw from.
+Velreth is one of the last fluent speakers of the language all Thessari names draw from.
 
 ### Keth Space
 

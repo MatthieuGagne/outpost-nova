@@ -103,7 +103,7 @@ The quieter arc: she is fond of Sable and has rationed the investment because sh
 
 ## Relationships
 
-**Soriel:** The most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Soriel is Cynical/Curious. They have been each other's counterweight for years before the commander arrives. Maris keeps the future open when Soriel can't; Soriel keeps asking questions when Maris doesn't want to know. Neither needs the other to be different.
+**Velreth:** The most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Velreth is Cynical/Curious. They have been each other's counterweight for years before the commander arrives. Maris keeps the future open when Velreth can't; Velreth keeps asking questions when Maris doesn't want to know. Neither needs the other to be different.
 
 **Dex:** Philosophical tension, not personal. She believes in the station as something worth building; he believes in it as something worth maintaining. They respect each other. They disagree about what respect requires. Neither is wrong, which is why it hasn't resolved in seven years. When she told him about the reassignment threat, she told him directly and left the room. That was respect.
 

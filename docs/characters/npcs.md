@@ -40,114 +40,41 @@ The ruins are a genuine discovery. The commander did not know about the buried s
 
 ### Maris — The Cook
 
-**Age:** 42
-**Species:** Human
-**Emotional profile:** Hopeful / Warm / Bitter
-**On station:** 7-8 years
+**Age:** 42 | **Species:** Human | **Profile:** Hopeful / Warm / Bitter | **On station:** 7–8 years
 
-**Appearance:** See `docs/characters/maris.md` for full physical description.
+The station's social gravity. Chose to face forward after losing her partner to Hegemony bureaucratic failure; the bitterness is precise and the hope is deliberate.
 
-**Background:** The station's social gravity. She kept the cantina running when everything else was falling apart — she will tell you this was just practical, people need to eat, but she means something larger by it. She arrived during the war, before it ended, when the station was far enough from everything to feel like survival. The fresh start happened by accident: people kept arriving and needing to eat.
-
-She lost her partner during the Fracture — not to enemy action, but to Hegemony bureaucratic failure. A supply convoy, a jurisdiction dispute, a form that didn't get filed. The way it happened was senseless and avoidable and she knows it. She has no one to aim the anger at. She has made a deliberate choice to face forward anyway. She is not naive. She is disciplined.
-
-**Arc:** Not about becoming hopeful — she already is. About whether she can let go of bitterness about the past while keeping everything else intact.
-
-**Relationships:**
-- *Soriel:* Most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Soriel is Cynical/Curious. They have been each other's counterweight for years before the commander arrives.
-- *Dex:* Philosophical tension, not personal. She believes in the station as something worth building; he believes in it as something worth maintaining. They respect each other. They disagree about what respect requires. Neither is wrong, which is why it hasn't resolved in seven years.
-- *Sable:* Fond, but Maris has learned to hold it at a slight distance. She's watched Sable leave before. The warmth is real; the investment is rationed. For Sable, Maris is the closest thing to a home she's had — which is exactly why she hasn't left yet this time.
-
-**What she knows about the Derelict (Act 1):** Knows the lower decks are sealed, knows *something* happened. Has deliberately not asked. She's been here seven years and made a choice not to pull that thread.
+→ Full reference: `docs/characters/maris.md`
 
 ---
 
 ### Dex — The Engineer
 
-**Age:** 37-38
-**Species:** Human
-**Emotional profile:** Cynical / Detached / Curious
-**On station:** ~4 years
+**Age:** 37–38 | **Species:** Human | **Profile:** Cynical / Detached / Curious | **On station:** ~4 years
 
-**Appearance:** Lean and angular. Federation posture he hasn't fully shaken — he stands like someone who was drilled to stand straight, even in a stained work jacket. Close-cropped hair, beard that gets maintained just enough. Hands always look like he just finished something. Face hard to read at rest; readable when he's engaged with a problem — which is the only time he forgets to keep it neutral.
+Federation-trained engineer, discharged after telling the wrong truth to the wrong person. Hothead who tells it like it is and doesn't manage how you receive it. The orange jacket is not sentiment.
 
-**Signature:** Federation-issue work jacket, orange, heavily modified over the years — patches, added pockets, repaired tears. It's not sentiment that kept it; it's that it's a good jacket and replacing it would be wasteful.
-
-**Background:** The Federation trained him, deployed his skills during the Consolidation, and had no further use for him when the war ended. He was infrastructure, not a person, and he learned that lesson completely. He keeps people at a functional distance — not cruelty, just efficiency. After discharge he drifted without direction until Maris offered him a reason to get off the ship: the station needed an engineer badly enough. He told himself it was temporary. That was four years ago. He's never formally decided to stay; he's just never had a better reason to leave.
-
-He never stopped wanting to understand how things work. He will spend forty minutes explaining why a particular conduit repair is elegant, unselfconsciously, and not notice he just talked to you like a person. That's the crack in the armor.
-
-**Arc:** About whether curiosity about systems can become curiosity about people.
-
-**Relationships:**
-- *Soriel:* Drinking buddies — the station's strangest and most genuine friendship. Two people who can sit together and be honest about how bad things are without it becoming a spiral. Clicked fast, which surprised them both. Neither needs the other to perform. Both will say the true thing out loud.
-- *Sable:* Mutual recognition without closeness. Two cynics who've assessed each other and arrived at: *you're not going to be a problem.* Direct and brief when they do talk — somehow more honest than most conversations on the station.
-- *Maris:* See Maris entry.
-
-**What he knows about the Derelict (Act 1):** The power systems in the lower decks don't map to the station's schematics. Filed it as a structural anomaly. Has not investigated because it's sealed and not currently failing. He is the first person who *could* understand what the weapon is — and Act 2-3 is about him doing exactly that.
+→ Full reference: `docs/characters/dex.md`
 
 ---
 
 ### Sable — The Trader
 
-**Age:** Late 20s
-**Species:** Drueth (Displaced)
-**Emotional profile:** Cynical / Warm / Curious
-**On station:** ~1 year
+**Age:** Late 20s | **Species:** Drueth (Displaced) | **Profile:** Cynical / Warm / Curious | **On station:** ~1 year
 
-**Appearance:** Red skin. Compound eyes that catch light strangely and see more than expected. Antennae that carry expression the way human eyebrows do — readable, expressive, harder to control than she'd like. Humanoid silhouette, slight build, built for movement. Wears layers she can move in, nothing precious — a worn jacket with inside pockets, boots that have covered real distance. Nothing matches exactly because her wardrobe assembled itself from five different places. One visually distinctive item (TBD).
+Informal trader and information broker. Connects easily, leaves before it gets complicated. "Sable" is a go-by.
 
-**Name note:** "Sable" is a go-by she picked up early in her travels and kept. Her actual Drueth name is harder to pronounce in human languages. She doesn't offer it easily. If the commander earns enough trust, she tells them.
-
-**Background:** The Drueth were Displaced — their world was caught in the early years of human-Keth first contact, not a target, just in the way of two frightened species with weapons. She grew up on an Unaligned world that said *not our war* and got blockaded and sanctioned for it anyway. Watching her home do everything right and get punished for it taught her that commitment to a place is a liability. The place suffers for it. She left. She has been everywhere and stayed nowhere since.
-
-**Cause ordering:** Drueth displacement was not primarily caused by the Fracture. Hegemony's extraction operations disrupted the land systems the kinship networks depended on before the war started — by the time the Fracture began, displacement was already a generation old. The war finished what corporate extraction started. There was no enemy to point at, no moment of defeat. This is specific to Sable's cynicism: she doesn't distrust people, she distrusts systems that erase you without noticing.
-
-She connects easily — genuinely interested in people, genuinely warm — and leaves before it gets complicated. She's watched too many fresh starts collapse to believe in destinations. She is not closed to the universe: still curious, still watching, still willing to be surprised. What she has given up on is the future as a place you can get to. She lives entirely in the present tense.
-
-**Role:** Informal trader and information broker. No official title, but she knows everyone passing through, remembers everything, and has contacts across three factions from years of moving between them. The station runs better with her in it.
-
-**Arc:** About whether she can commit to a place — whether she can treat warmth as something you give with cost and stay for.
-
-**Mirror function:** Sable delivers the mirror moment for a fully-armored (Cynical/Detached/Bitter) commander. She lives the same way and would recognize it immediately.
-
-**Relationships:**
-- *Maris:* See Maris entry.
-- *Dex:* See Dex entry.
-- *Soriel:* Genuine warmth, asymmetric. Soriel has quietly decided not to take Sable's warmth personally when she eventually goes. Sable finds Soriel one of the easiest people on the station to be around — no demands, no hope she'll stay. She doesn't realize that's exactly why it'll hurt when she does.
-- *Quen:* TBD — two characters who move through spaces without fully belonging, possible quiet recognition.
-
-**Drueth/Thessari note:** Sable and Soriel are both Displaced species who lost their worlds to the same historical moment — early human-Keth first contact. Neither side claimed responsibility for either loss. This is known to both of them. What they do with that knowledge is a relationship detail for writers.
-
-**What she knows about the Derelict (Act 1):** Has heard rumors from ships passing through. Knows the station has a reputation among certain crews. Has not shared this with anyone.
+→ Full reference: `docs/characters/sable.md`
 
 ---
 
-### Soriel — The Medic
+### Velreth — The Medic
 
-**Age:** Mid-40s (Thessari equivalent)
-**Species:** Thessari (Displaced)
-**Emotional profile:** Warm / Cynical / Curious
-**On station:** Longer than Dex, shorter than Quen
+**Age:** Mid-40s (Thessari equivalent) | **Species:** Thessari (Displaced) | **Pronouns:** They/them | **Profile:** Cynical / Warm / Curious | **On station:** Longer than Dex, shorter than Quen
 
-**Appearance:** Feline — digitigrade legs, fur in muted earth tones going slightly grey at the edges. Moves quietly, not deliberately, just naturally. Appears in a room without you noticing them arrive. Large eyes that catch light differently than mammalian eyes — warm in a way that's immediately readable even at low resolution. The rest of Soriel is muted and quiet; the eyes are what you notice first, and what you remember. Medical coat over practical clothes underneath. Three syllables, used in full.
+One of the last Thessari. Rebuilt warmth from scratch after displacement, with no culture to back it. Intellectual, cultured, oblique.
 
-**Background:** One of the last Thessari on the station, possibly one of the last anywhere. Their world was caught in the early years of human-Keth first contact — not a target, just in the way. Neither side claimed what happened. Soriel doesn't ask them to.
-
-**Timeline:** Thessari displacement happened roughly 16+ years before the game's present, in the early years of human-Keth first contact. Soriel, at mid-40s equivalent, was in their mid-to-late 20s when their world was lost. The warmth they carry is not a remnant of an intact culture — it is a practice rebuilt from scratch after the loss, sustained entirely by the decision to keep making it.
-
-What they've built since is theirs: a warmth with no cultural backing, no community to reflect it, assembled from choice and sustained by nothing but the decision to keep making it. They are the station's medic because everyone needs one eventually, and because knowing what's wrong with people — specifically, physically — turns out to be the closest thing they've found to understanding them.
-
-Their curiosity is the same: there is nothing left to protect, so the universe becomes interesting again. Their cynicism is quieter than Dex's or Sable's. It lives in the future — they've stopped expecting things to get better in any systemic sense. What they believe in is smaller and more durable: this person, this wound, this moment.
-
-**Arc:** Not about becoming warm — the warmth is already there and already costing more than it looks. About whether it runs out. The commander is Hegemony-sent, representing the human half of something Soriel has spent years deciding not to be bitter about. The Keth trader's arrival in Act 2 is harder — the other half of that same decision, arriving in person. Soriel thought they'd resolved it. They hadn't.
-
-**Relationships:**
-- *Maris:* See Maris entry.
-- *Dex:* See Dex entry.
-- *Sable:* See Sable entry.
-
-**What they know about the Derelict (Act 1):** Has treated crew members who came back from the lower decks before they were sealed. Never asked what happened to them.
+→ Full reference: `docs/characters/velreth.md`
 
 ---
 
@@ -197,7 +124,7 @@ She grew up on a Federation world at the end of the Fracture. Old enough to reme
 
 **Relationships:**
 - *Dex:* Friction — instinctive. Dex's Federation-bred posture reads immediately to Nadia as someone the institution shaped, and to Dex as someone the institution hasn't broken yet. He distrusts her presence not because she's a journalist but because he recognizes the specific kind of Federation person she is: the idealist before the lesson. He was that person. He knows where it ends.
-- *Soriel:* Unexpected anchor. Soriel's warmth doesn't require Nadia to perform or justify — it's available regardless of whether she's earned it. For someone whose relationships are all transactional (the journalism, the intel), that's unfamiliar. She doesn't know what to do with it, which means she keeps coming back.
+- *Velreth:* Unexpected anchor. Velreth's warmth doesn't require Nadia to perform or justify — it's available regardless of whether she's earned it. For someone whose relationships are all transactional (the journalism, the intel), that's unfamiliar. She doesn't know what to do with it, which means she keeps coming back.
 
 **What she knows about the Derelict (Act 1):** Nothing specific. She's heard the station has an unusual lower deck situation from informal channels — the same networks that made it a useful assignment. Filed as a curiosity, not an assignment.
 
@@ -273,15 +200,15 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 
 ## Relationship Web
 
-| | Maris | Dex | Sable | Soriel | Quen | Nadia | Vaen |
+| | Maris | Dex | Sable | Velreth | Quen | Nadia | Vaen |
 |---|---|---|---|---|---|---|---|
 | **Maris** | — | Philosophical tension | Fond, rationed investment | Most lived-in friendship | Shared silence about the Derelict became trust | Genuine warmth, small unnamed reserve | Cautious welcome becoming genuine; bond over institutional failure |
 | **Dex** | Philosophical tension | — | Mutual recognition, no friction | Drinking buddies | Professional respect; Quen quietly marks Dex as the one who could understand the lower decks | Friction, instinctive | Federation distrust first; reluctant intellectual partnership |
 | **Sable** | Fond, holds back | Mutual recognition | — | Genuine warmth, asymmetric | Quiet recognition; no performance for each other | Cordial surface; one moment of Sable reading too accurately, neither addresses it | Bridge on Curious; opposites on Hope and Warmth |
-| **Soriel** | Counterweights | Drinking buddies | Asymmetric warmth | — | Wary warmth; one medical moment where both chose not to ask | Unexpected anchor | The decision Soriel thought they'd resolved, arriving in person; arc deferred to future years |
+| **Velreth** | Counterweights | Drinking buddies | Asymmetric warmth | — | Wary warmth; one medical moment where both chose not to ask | Unexpected anchor | The decision Velreth thought they'd resolved, arriving in person; arc deferred to future years |
 | **Quen** | Shared silence about the Derelict became trust | Professional respect; Quen quietly marks Dex as the one who could understand the lower decks | Quiet recognition; no performance for each other | Wary warmth; one medical moment where both chose not to ask | — | Functional obstruction; professional not hostile, quiet respect for her persistence | Mutual wariness; one overture, one clean shutdown, both keep watching |
 | **Nadia** | Genuine warmth, small unnamed reserve | Friction, instinctive | Cordial surface; one moment of Sable reading too accurately, neither addresses it | Unexpected anchor | Functional obstruction; professional not hostile, quiet respect for her persistence | — | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 |
-| **Vaen** | Cautious welcome becoming genuine; bond over institutional failure | Federation distrust first; reluctant intellectual partnership | Bridge on Curious; opposites on Hope and Warmth | The decision Soriel thought they'd resolved, arriving in person; arc deferred to future years | Mutual wariness; one overture, one clean shutdown, both keep watching | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 | — |
+| **Vaen** | Cautious welcome becoming genuine; bond over institutional failure | Federation distrust first; reluctant intellectual partnership | Bridge on Curious; opposites on Hope and Warmth | The decision Velreth thought they'd resolved, arriving in person; arc deferred to future years | Mutual wariness; one overture, one clean shutdown, both keep watching | Uncanny mirror in Year 1; specific collision scene deferred to Year 2 | — |
 
 ---
 
@@ -292,7 +219,7 @@ Sending him personally was not routine. Someone at Hegemony decided this require
 | Maris | Knows the lower decks are sealed. Knows *something* happened. Has chosen not to ask. |
 | Dex | Power systems don't map to schematics. Filed as anomaly. Not investigated. |
 | Sable | Has heard rumors from passing ships. Knows the station has a reputation. Hasn't shared it. |
-| Soriel | Treated crew who came back from the lower decks before sealing. Never asked what happened to them. |
+| Velreth | Treated crew who came back from the lower decks before sealing. Never asked what happened to them. |
 | Quen | Was there. Sealed the door. Knows the most. Says the least. |
 | Nadia | Nothing specific. Has heard the station has an unusual lower deck situation from informal channels. Filed as a curiosity, not an assignment. |
 
