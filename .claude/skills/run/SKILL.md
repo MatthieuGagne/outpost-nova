@@ -3,7 +3,30 @@ name: run
 description: Launch the current build of the Outpost Nova game in the Godot editor
 ---
 
-Run the game by executing:
+Determine whether you are running inside a git worktree or the main repo:
+
+```sh
+pwd
+```
+
+**If inside a worktree** (path contains `.claude/worktrees/`):
+
+1. Kill any running Godot instance
+2. Rebuild C# assemblies from the worktree directory:
+   ```sh
+   dotnet build "Outpost Nova.csproj"
+   ```
+3. Sync `.import` sidecar files from the main repo (required for YarnSpinner dialogue and other C#-imported assets):
+   ```sh
+   rsync -a /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
+   rsync -a /home/mathdaman/code/outpost-nova/.godot/imported/ ./.godot/imported/
+   ```
+4. Launch the game from the worktree:
+   ```sh
+   godot --path <worktree_path> &
+   ```
+
+**If in the main repo**:
 
 ```sh
 cd /home/mathdaman/code/outpost-nova && godot &
