@@ -45,7 +45,7 @@ The ruins are a genuine discovery. The commander did not know about the buried s
 **Emotional profile:** Hopeful / Warm / Bitter
 **On station:** 7-8 years
 
-**Appearance:** Black, curly hair. Ripley build — practical, capable, weathered but unbroken. Worn workwear with an apron, sleeves rolled up. One personal touch (TBD) that signals she chose this life rather than just ended up in it.
+**Appearance:** See `docs/characters/maris.md` for full physical description.
 
 **Background:** The station's social gravity. She kept the cantina running when everything else was falling apart — she will tell you this was just practical, people need to eat, but she means something larger by it. She arrived during the war, before it ended, when the station was far enough from everything to feel like survival. The fresh start happened by accident: people kept arriving and needing to eat.
 
