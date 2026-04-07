@@ -2,7 +2,7 @@
 
 **Status:** Living document — sections fill in as story decisions lock.
 **Last updated:** 2026-04-04
-**Cross-references:** `docs/characters/npcs.md` (NPC reference), `docs/story/year1.md` (Year 1 narrative + endings), `docs/story/years2-5.md` (long-game arc)
+**Cross-references:** `docs/vision.md` (influences + design pillars), `docs/characters/npcs.md` (NPC reference), `docs/story/year1.md` (Year 1 narrative + endings), `docs/story/years2-5.md` (long-game arc)
 
 ---
 
