@@ -130,8 +130,8 @@ The ruling coalition's attempt to contain the discovery is failing from inside. 
 
 This is the pressure that makes Year 4's homeworld access possible: not a military or diplomatic victory, but the ruling coalition's internal authority cracking under questions it cannot answer.
 
-### Soriel ↔ Vaen Arc
-Vaen learns what happened to the Thessari — that their people's war caught Soriel's world in the crossfire, that neither side claimed it, that Soriel has been rebuilding warmth from scratch ever since. This is the Year 3 beat for that relationship. What Vaen does with that knowledge, and whether it changes anything between them, is the arc.
+### Velreth ↔ Vaen Arc
+Vaen learns what happened to the Thessari — that their people's war caught Velreth's world in the crossfire, that neither side claimed it, that Velreth has been rebuilding warmth from scratch ever since. This is the Year 3 beat for that relationship. What Vaen does with that knowledge, and whether it changes anything between them, is the arc.
 
 ---
 

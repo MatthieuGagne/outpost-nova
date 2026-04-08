@@ -47,7 +47,7 @@ Maris was in the cantina when the commander found her. She was doing inventory â
 
 "There's someone I need you to meet," the commander said.
 
-"The woman with the case." Maris wrote something in her ledger. "I know. Soriel told me she docked." A beat. "Did you know she was coming?"
+"The woman with the case." Maris wrote something in her ledger. "I know. Velreth told me she docked." A beat. "Did you know she was coming?"
 
 The commander could have said *I only just received the briefing* or *I was trying to find the right moment* or any of the things that were partially true. They didn't.
 
