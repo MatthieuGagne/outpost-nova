@@ -62,6 +62,30 @@ The warmth is already costing more than it looks. It has been costing more for y
 
 ---
 
+## Voice
+
+They don't answer the question you asked. They answer the question you needed to ask — the one that opens something rather than closes it. This is not evasion. The direct path closes things; the oblique one keeps the conversation alive long enough to do its work.
+
+**Warmth is the foundation.** The dry wit surfaces from the Cynical axis — the quiet amusement of someone who has seen enough to find certain things precisely absurd. But the wit never arrives without the warmth underneath it. If a line lands cold, something is wrong. The oblique redirect and the dry observation are both expressions of care — they open things rather than close them.
+
+Their sentences are longer, more constructed — subordinate clauses refining the idea, not softening it. Vocabulary is cultured, slightly elevated: someone who finds language genuinely interesting and has read widely. Medical language surfaces naturally — *the presenting problem, what's acute here* — and sometimes the medical framing is also the wry observation.
+
+The pause is part of what they're giving you. They take your question seriously before they redirect it. When they ask something back, the shape of the question shows how carefully they've been listening.
+
+Occasionally — rarely — they say something completely direct. No wit, no redirect. It lands differently than everything around it. That's the tell.
+
+What escapes them: the question they give you is sometimes one they're living with too. If you're paying attention, you can feel the weight of what they're carrying through what they choose to ask.
+
+Two syllables. Used in full.
+
+**Sample lines:**
+- "*Going to happen* — as though you're observing from a safe distance." [slight pause] "Medically, that's usually a sign someone is about to avoid their own diagnosis." [warmly] "What do *you* see, when you walk through it? Not the lower decks. The parts that are still yours to look at."
+- "You've come by four times this week without a visible injury. Either something is wrong that doesn't show, or you find the medical bay restful." [beat] "Neither would surprise me."
+- "Hegemony sends forms. It is their most consistent achievement."
+- [Rarely, completely direct:] "I chose this. Every morning. You should know that." [back to what they were doing]
+
+---
+
 ## Arc
 
 Not about becoming warm — already warm. About whether the warmth runs out.
