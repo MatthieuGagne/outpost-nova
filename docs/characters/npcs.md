@@ -104,34 +104,11 @@ Federation intelligence operative under journalist cover — and the journalism 
 
 ### Vaen — The Keth Trader
 
-**Full name:** Vaensoleth (Merchant caste registry name, shed)
-**Age:** Late 30s (Keth equivalent)
-**Species:** Keth
-**Emotional profile:** Hopeful / Detached / Curious
+**Age:** Late 30s (Keth equivalent) | **Species:** Keth | **Pronouns:** She/her | **Profile:** Hopeful / Detached / Curious | **On station:** Act 2 arrival
 
-**Appearance:** Avian — corvid specifically. Dark iridescent plumage that catches light differently depending on angle. Humanoid proportions but unmistakably bird: shorter, flatter beak functional for speech; forward-facing raptor eyes; taloned feet kept in boots in human spaces. Slightly unkempt plumage compared to what a caste-trained Keth would maintain — not dirty, just unperformed.
+Merchant caste exile, explorer by temperament. Has been monitoring Builder signal patterns for years; redirected to this station when the commander triggered the weapon's charging sequence. Carries a physical artifact from a secondary Builder ruins site — unreadable until the weapon's structure resolves it. Presents as a trader. Does not immediately say why she came.
 
-**Keth species note:** All Keth are corvid. The Merchant caste's patience and formality is trained suppression, not natural temperament. An official Keth trade envoy is a corvid that learned to move like a heron. Vaen stopped performing the caste suppression — but exile built its own armor. The Hopeful and Curious survived; the Detached is something years of holding a forbidden question alone put in place. What you see in Vaen isn't the unconstrained corvid — it's someone who shed one set of constraints and developed their own.
-
-**Background:** Merchant caste, formally trained. Keth society operates on a function-based caste system assessed in youth — movement between castes is theoretically possible but socially catastrophic. The post-war fracture has created tension between traditionalists holding the line and a reform faction pushing back. Vaen fell through the crack: Merchant caste, found out something the establishment didn't want asked about, and the question cost them their caste standing.
-
-The connection to the ancient civilization's echoes in Keth sacred architecture is what they found. They didn't come to Outpost Nova looking for the weapon. But they recognized the shape of the question immediately.
-
-**Dramatic function:** The Act 2 pivot. Their arrival is not coincidental — Vaen has been monitoring Builder signal patterns for years, and when a spike in Builder emissions hit (triggered by the commander first entering the Derelict in Act 2, Days 31-51), they redirected to this trade lane immediately. The trade business on the new lane is real, but secondary. They present themselves as a trader. They do not immediately reveal why they came.
-
-Vaen has been running two parallel tracks in exile: slowly accumulating credits toward chartering a ship, and scanning for any Builder signal that might give the question more context. The ship fund is not about a specific destination — it is about independence. As an exile with no caste standing, Vaen cannot investigate Builder sites without being tied to trade routes and other people's schedules. The fund is slow. The goal is the freedom to follow threads wherever they lead, without asking permission. The station was not what they expected to find. Until the commander describes what they found in the lower decks. Vaen goes quiet. Not alarmed. Quiet in the way someone goes quiet when something they've been sitting with for a long time suddenly has a location.
-
-What Vaen carries from the secondary ruins site is not coordinates — it is a physical artifact: a fragment of Builder notation that describes a target in relative, geometric terms. It has been unreadable for years. The weapon's architecture is the decoder ring. When Vaen encounters the weapon's structure, the artifact resolves — the notation suddenly makes sense. The recognition is not of a location, but of the artifact finally being readable. The second beat — working out what location it actually points to — happens privately, off-screen. What Vaen does with that knowledge, and when they share it with the commander, is a key Act 2-3 beat.
-
-**Warzone discovery context (locked 2026-04-04):** Both the Federation and the Keth ruling coalition independently found Others ruins in the Fracture warzone. Vaen does not know about the Keth coalition's discovery — they were exiled before the ruling coalition's inner leadership acted on it. Vaen's artifact predates the warzone discovery; they found it at a secondary Builder site, not an Others site. The artifact's connection to the Others (via the weapon's targeting logic) is something Vaen works out in Act 2-3, not something they arrived with. The weapon points at the Keth homeworld — which is where the Others' ruins are buried under living Keth civilization. Vaen's accumulated ship fund and the now-readable artifact pointing to those ruins are the concrete material for Years 2-3 and beyond.
-
-They and the commander end up holding knowledge they're not supposed to have, cut off from the institutions that might claim it. The alliance that forms is fragile and real. Neither of them planned it.
-
-**Parallel with Sable:** Both Curious — that's the bridge. But opposites on both other axes: Vaen is Hopeful where Sable is Cynical; Vaen is Detached where Sable is Warm. Sable gives warmth easily and has given up on futures. Vaen believes in the future but has stopped giving warmth easily — years of exile, holding a forbidden question alone, trusting no one with it. They meet on the Unknown axis and have to work toward everything else.
-
-**What's deferred:** The full nature of what Vaen found at the secondary Builder site — specifically what the artifact fragment looks like and how legible the Builder notation was to Vaen before the weapon's structure resolved it. Also deferred: whether the Keth ruling coalition suspects Vaen has the artifact, or believes the suppression of their documentation was complete.
-
-**Post-Act 3 hook:** Vaen's accumulated ship fund and the now-readable artifact pointing to the second civilization's ruins are a concrete next chapter depending on the ending. Vaen came to this station following a signal. The signal now has a source and a target. Someone might finally go.
+→ Full reference: `docs/characters/vaen.md`
 
 ---
 
@@ -186,7 +163,7 @@ Cephalopod-inspired, semi-humanoid. Central body mass, two primary manipulators,
 Humanoid. Red skin. Compound eyes. Antennae that carry expression. The alienness reveals itself in layers — passes at a glance in dim light, then you notice the eyes, then the antennae. Their world was also caught in early human-Keth first contact. Unaligned, blockaded, punished for refusing a war that wasn't theirs.
 
 ### Keth
-Avian — corvid. Iridescent plumage. Shorter, flatter beak. Forward-facing raptor eyes. Taloned feet. A spacefaring empire older than humanity's presence in the Frontier, organized by function-based caste assessed in youth. The Merchant caste's formal trade face is trained suppression of natural corvid temperament: quick, curious, socially warm. Post-war pressure has fractured Keth society between caste traditionalists and a reform faction. The Keth half-remember the first ancient civilization through shapes in their oldest sacred architecture — echoes they never identified as external.
+Feathered theropod. Bipedal, digitigrade. Three-fingered hands, no wings. Individual color palettes across the full spectrum — quill-spines along the crown and shoulders carry the most vivid expression. A spacefaring empire older than humanity's presence in the Frontier, organized by function-based caste assessed in youth. Naturally gregarious and theatrically expressive; the Merchant caste's formal trade face is trained suppression of this — a learned skill, not a natural state. Post-war pressure has fractured Keth society between caste traditionalists and a reform faction. The Keth half-remember the first ancient civilization through shapes in their oldest sacred architecture — echoes they never identified as external. *Full physical description: `docs/world/world.md` Chapter 4.*
 
 **Ancestry retcon (locked 2026-04-04):** The Keth are the biological descendants of the Others — the second civilization nearly destroyed by the Builders. Survivors scattered after the war and became the Keth over millennia. All cultural memory was lost in the dispersal. The Keth have no knowledge of this origin. The ruling coalition's inner leadership recently began to suspect the biological connection, triggered by discovering Others ruins in the Fracture warzone that showed biological and cultural similarities to Keth species. This suspicion is not shared with lower castes, not disclosed to humans, and not confirmed. The Others' homeworld is the current Keth homeworld — their ruins are buried under living Keth civilization.
 
@@ -197,8 +174,6 @@ Avian — corvid. Iridescent plumage. Shorter, flatter beak. Forward-facing rapt
 - **Sable's real name** — revealed only through earned trust, writer decision
 - **Sable's distinctive item** — TBD, resolved at art/writing time
 - **Maris's personal touch** — TBD, resolved at writing time
-- **Vaen's full backstory** — pending Keth society development session
-- **Vaen's emotional profile details** — pending same
 - **Derelict incident specifics** — what Quen saw, story beat not design decision
 - **Keth civilization names** (first and second ancient civs) — deferred
 - **Recruitable Derelict survivors** (2-3 characters) — separate design session

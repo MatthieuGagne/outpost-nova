@@ -294,6 +294,20 @@ The Sovereign are species organized into their own independent empires, confeder
 
 ## Chapter 4: Keth Deep-Dive
 
+### 4.0 Physical Description
+
+Bipedal, digitigrade — they stand and move on the forward part of the foot, like a theropod. Roughly human height. No wings; forelimbs evolved fully into arms over millennia of tool use. Three long fingers plus a dewclaw, dexterous enough for fine manipulation. A short feathered tail, structural not decorative — a counterweight that shifts when they move.
+
+**Face.** Forward-facing eyes with a heavy expressive brow ridge. A strong short beak — built for cracking and tearing before it was built for speech, adapted over millennia for language but visibly not a human mouth.
+
+**Quill-spines.** A crest of modified display feathers runs from crown to nape, with secondary clusters at the shoulders. These respond to emotional state: curiosity lifts them slightly, excitement fans them, fear or aggression flares them fully. Keth caste training — Merchant and Keeper especially — teaches deliberate stillness of the quill-spines. It is a learned skill. It is effortful. A trained Keth in formal mode holds them flat regardless of what they're feeling.
+
+**Color.** Individual and fixed — no two Keth have the same palette, and the range across the species is extraordinary. The quill-spines carry the most saturated expression of the individual's palette; the body feathering runs the same color family at slightly lower intensity. A Keth whose quill-spines are held flat still has their color. They're just not showing the brightest part of themselves.
+
+**Temperament.** Naturally gregarious, quick, physically expressive, comfortable in close quarters. The quill-spine display evolved for a highly social species — a continuous social broadcast. A Keth in natural expression is large: kinetic, immediate, emotionally visible. The Merchant caste trains this down into controlled stillness. What breaks through when the training slips is genuinely surprising in scale.
+
+---
+
 ### 4.1 The Lie
 
 The entire foundation of Keth society is a fabrication maintained by the ruling coalition.
