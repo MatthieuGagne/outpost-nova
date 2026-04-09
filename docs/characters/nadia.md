@@ -55,6 +55,26 @@ The Hopeful axis is genuine and Federation-shaped. She believes in what the Fede
 
 ---
 
+## Voice
+
+She asks the best questions on the station — specific, journalistic, designed to make you feel seen while she's building the picture. The warmth and the attention are both genuine. She believes paying attention is a form of respect. The attention also has a use, and occasionally you can feel the structure underneath: a phrase that frames something as *useful* or *worth knowing* — and she doesn't notice it.
+
+Her sentences connect things: *which means, what that tells me, the interesting thing is.* She contextualizes out loud, builds toward something. The wit arrives before the real observation — she'll say something slightly funny and then the actual point lands after, and she's already moving. Self-interruption when something catches her: *I just — yeah.* Run-on sentences that stop themselves and restart. *So* and *okay* and *anyway* as rhythm words, especially when she's covering something she didn't mean to show.
+
+The recorder is always in hand, not pointed. She notes things. She's thorough because she thinks the work matters.
+
+**Guard against parody:** The self-interruption, the wit, the escape-hatch words are symptoms of something real — she thinks faster than she means to, gets surprised by her own observations, uses humor as cover when something lands. Writers who write the surface without the cause will produce parody. Start with what she's deflecting from, not how she deflects.
+
+What escapes her: the pause before she responds to warmth that has no use attached. She doesn't know what to do with it. She keeps coming back anyway, which tells you something she hasn't worked out yet.
+
+**Sample lines:**
+- "Okay so —" [stops, starts again] "The infrastructure's older than anything in the documentation. The crew's been here longer than assignment cycles should allow, which is either really good or —" [tilts head] "Or a very specific kind of bad. I haven't decided." [recorder in hand, not pointed; makes a note] "I keep meaning to write the piece about what actually holds a station together. I think I might be living it." [beat, slightly surprised she said that] "Don't quote me on that."
+- "Can I ask — you absolutely don't have to answer — how long before the lower decks were sealed did things start feeling *off* down there? Because I have a theory and I would really like to be wrong about it."
+- [After Velreth, warm, no agenda:] "I keep coming back here and I —" [stops herself] "I haven't figured out why yet. Which probably means I should." [doesn't pursue it]
+- "I filed the piece. Three thousand words, fully sourced, honestly probably my best work so far." [beat] "Which is a weird thing to feel good about given —" [vague gesture at the entire station] "Anyway."
+
+---
+
 ## Arc
 
 Year 2. She learns the Federation buried the warzone discovery — that she was an unwitting asset, sent to watch for something she was never told about, by an institution she trusted completely.
