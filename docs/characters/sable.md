@@ -63,6 +63,26 @@ Her antennae are harder to control than she'd like. When something actually land
 
 ---
 
+## Voice
+
+She's easy to talk to — genuinely, not strategically. The warmth arrives fast and without accounting; she gives it because she means it and doesn't tally it up afterward. She connects sideways rather than building toward something: one real thing, then another real thing adjacent to it, not a conclusion. Her sentences move around.
+
+She has a trader's instinct for value. She prices things — not cynically, observationally. *That cost you. That's worth something. That's not nothing.* She notices what things are worth in ways that aren't about money.
+
+Dry humor that arrives before she decides it's funny. She reads situations accurately and names what she sees, matter-of-fact, and sometimes it lands because she wasn't trying to land it.
+
+Future questions get redirected — not defensively, just genuinely: that's not where she lives. The present tense is the whole sentence. *Right now. What's here. What you've got.*
+
+What escapes her: the antennae move before she does. Something lands and the tell is physical, and she doesn't acknowledge it. Occasionally a line comes out warmer than she planned — she was just being present and then it was too present — and she moves on without looking at it.
+
+She does not say: where she's going, what happens next, what she's planning. She does not make promises with a future in them.
+
+**Sample lines:**
+- "Mm." [looks around like she's actually checking] "Right now it looks like somewhere worth staying. Rooms that feel used, not empty. People who know each other's names." [meets your eyes] "That's more than most places I've been." [doesn't say anything about what comes after]
+- "Barely is enough."
+- "Your engineer fixes the thing that should be fixed, not the one that's easy. Good station." [updating an internal score]
+- [Asked where she's headed next] "Haven't thought about it." [warm, unbothered, completely honest] "What do you need right now?"
+
 ## Arc
 
 Whether she can commit to a place — whether she can treat warmth as something you give with cost and stay for.
