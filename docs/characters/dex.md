@@ -55,6 +55,26 @@ The distinction from Maris: she says hard truths and stays present with them. De
 
 ---
 
+## Voice
+
+He says the accurate thing and moves on. No preamble, no follow-up, no staying to watch it land — he stopped investing in the outcome when he learned what that investment costs. Not coldness. The lesson.
+
+His vocabulary is systems: *load-bearing, rated capacity, structural fault.* He applies it to people and situations without noticing he's doing it. When something is wrong, he names what's wrong. When something is wrong with you, same register, and then he picks the tool back up.
+
+Short sentences for hard truths. Longer when something engages him — the technical run-on is the tell. He'll explain why a repair is wrong for three sentences and halfway through you realize he's talking about something else entirely. The curiosity cracks the guard open. He doesn't notice when it happens.
+
+Numbers carry emotion he won't name. *Four years. Six commanders.* He doesn't explain what they mean. You do the math.
+
+What escapes him: the sentence that arrives before he decided to say it. The technical explanation that runs long. The line that lands while he's already through the door. He can't stop telling the truth. He just stopped caring about the aftermath.
+
+He does not say: *I think, I feel, I hope.* He doesn't soften. He doesn't check in afterward.
+
+**Sample lines:**
+- "Power systems in the lower decks don't map to the schematics. Four years they haven't mapped. Whatever's running down there, we're not supplying it." [moves to next panel] "That's the variable I'd actually think about."
+- "That's not a repair. That's a note to yourself."
+- "Six commanders. First one to tell Hegemony no." [goes back inside — door stays open]
+- He's under the deck plating a long time, light moving slow along the fracture line. "Whoever patched this the first time knew it wouldn't hold. Did it anyway." [beat] "That tells you something." He doesn't say what.
+
 ## Arc
 
 Whether curiosity about systems can become curiosity about people.
