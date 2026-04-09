@@ -85,14 +85,6 @@ What they all share: they are not villains. They believe in what they're asking 
 
 ---
 
-## What He Knows About the Derelict
-
-The buried survey. An archaeological asset in the lower decks, significant enough to control, worth the quiet acquisition. He was not read into the weapon's nature before arrival.
-
-When the commander tells him what it actually is, he takes a moment. The crack appears. He asks for it anyway.
-
----
-
 ## For Writers
 
 He is not a villain. Do not write him cold. Do not write him calculating. The warmth is real, the faith is real, the belief in what he's asking for is real — and that is what makes him the hardest person in the game to say no to.

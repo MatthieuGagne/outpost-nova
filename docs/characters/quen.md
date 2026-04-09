@@ -48,8 +48,6 @@ Why it chose to stay is not something it has ever explained in full. What the cr
 
 The Maevet keep the long memory by telling it. Quen saw something and chose not to tell it. For a species whose entire identity is carrying and transmitting what others forget — that silence is not discretion. It is a wound it chose to live with.
 
-The Bitter/Unknown axis is load-bearing: it had its answer and decided to stop. The warmth underneath surfaces rarely and means something when it does.
-
 ---
 
 ## Psychological Profile
