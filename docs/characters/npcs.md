@@ -80,24 +80,11 @@ One of the last Thessari. Rebuilt warmth from scratch after displacement, with n
 
 ### Quen — Security
 
-**Age:** Unknown — has been on Outpost Nova at least 15 years, possibly more
-**Species:** Maevet (Unbound)
-**Pronouns:** It/its
-**Emotional profile:** Detached / Warm / Bitter
+**Age:** Unknown (15+ years on station) | **Species:** Maevet (Unbound) | **Pronouns:** It/its | **Profile:** Detached / Warm / Bitter | **On station:** 15+ years
 
-**Appearance:** Semi-humanoid — a central body mass that orients vertically, two primary manipulator arms, several smaller tentacle-like appendages for fine work and expression. Moves through corridors fluidly rather than walking. Dark chromatophore-rich skin that shifts subtly with emotional state; the crew has learned to read it the way they'd read a human expression. When the chromatophores go flat and grey — that's when something is wrong. In a confrontation it would be deeply unsettling to face. At rest, almost preternaturally still.
+The station's oldest presence. Chose to stay when Maevet don't stay; sealed the Derelict door and stopped asking questions. Speaks in grand lyrical registers. The silence is the wound.
 
-**Background:** The Maevet are Unbound — a wandering collective that has been passing through Outpost Nova since before Hegemony bought the debt. Quen chose to stay, which for a Maevet is significant. It was here when the Derelict incident happened. It sealed the door on Hegemony's instruction — but had already decided to seal it before the order came. What it saw wasn't danger it could guard against. It was something it couldn't protect people from, which is the only thing that genuinely frightens it.
-
-It stopped asking questions after that. The Bitter/Unknown axis is load-bearing: it had its answer and chose to stop. The warmth underneath surfaces rarely and means something when it does.
-
-**Role:** Station security. Manages access to all areas including the sealed Derelict. Every restricted corridor, every sensitive docking. It knows this station the way you know something you've watched almost die and decided to keep alive anyway — it predates Maris by almost a decade, and predates everyone else by more.
-
-**Dramatic function:** Natural friction point in Act 1 when the commander begins investigating the Derelict. Its authority is station-native; the commander's is Hegemony-issued. In Act 2-3, it must decide where its loyalty lies.
-
-**What it knows about the Derelict (Act 1):** It was there. It sealed the door. The specific nature of the incident is TBD — a story beat, not a design decision.
-
-**Timeline clarification:** Quen sealed the Derelict door after a partial activation event years before the commander's arrival — something stirred in the lower decks, Quen saw enough to be frightened, sealed the door, and the weapon went dormant again. The commander's investigation reopens what Quen closed, triggering full activation. What Quen saw during that partial activation is the specific thing it stopped asking questions about.
+→ Full reference: `docs/characters/quen.md`
 
 ---
 
@@ -105,28 +92,11 @@ It stopped asking questions after that. The Bitter/Unknown axis is load-bearing:
 
 ### Nadia — The Journalist
 
-**Age:** Mid-20s
-**Species:** Human
-**Emotional profile:** Hopeful / Detached / Curious
-**On station:** Year 1 Act 1 arrival
+**Age:** Mid-20s | **Species:** Human | **Profile:** Hopeful / Detached / Curious | **On station:** Year 1 Act 1 arrival
 
-**Appearance:** TBD — deferred.
+Federation intelligence operative under journalist cover — and the journalism is genuinely good. Sent to watch for something she was never told about. The gap between those two facts is her Year 2 arc.
 
-**Background:** Federation intelligence operative under journalist cover — officially filing a story on the emerging Keth trade lanes near the Frontier's edge. The cover is not entirely false: she files actual journalism alongside her intelligence reports, and she believes both jobs matter. She was recruited in her early 20s by a Federation handler who recognized her talent for reading people and situations quickly. She accepted because she believed in the Federation's mission — stability, open trade, protection of civilian populations. She still does.
-
-She grew up on a Federation world at the end of the Fracture. Old enough to remember the war's final years; young enough that the Federation's victory felt like relief rather than consolidation. She is an idealist who believes in what the Federation says it is. The gap between what the Federation says and what it does is something she has not yet been forced to look at directly.
-
-**What she does not know:** Nadia was not read into the Federation's warzone intelligence — the discovery of Others ruins in the Fracture warzone, the decoded Builder technology, the suspected Keth/Others biological connection. She was sent to Outpost Nova to monitor the station and its traffic and report back. She was not told what to look for. She is doing her job exactly as she understands it, and her understanding is incomplete by design.
-
-**Role:** Freelance journalist on assignment for a Federation-affiliated media outlet. She covers trade lane development, interviews travelers and crew, and files thorough, genuinely good work. The intelligence reports run on a separate channel. She keeps both tracks clean.
-
-**Arc:** Year 2. She learns the Federation buried the warzone discovery — that she was an unwitting asset, sent to watch for something she was never told about, by an institution she trusted completely. The Detached axis cracks. The woman who filed real journalism alongside her intel reports has to reckon with what it means that she was useful in a way she never consented to.
-
-**Relationships:**
-- *Dex:* Friction — instinctive. Dex's Federation-bred posture reads immediately to Nadia as someone the institution shaped, and to Dex as someone the institution hasn't broken yet. He distrusts her presence not because she's a journalist but because he recognizes the specific kind of Federation person she is: the idealist before the lesson. He was that person. He knows where it ends.
-- *Velreth:* Unexpected anchor. Velreth's warmth doesn't require Nadia to perform or justify — it's available regardless of whether she's earned it. For someone whose relationships are all transactional (the journalism, the intel), that's unfamiliar. She doesn't know what to do with it, which means she keeps coming back.
-
-**What she knows about the Derelict (Act 1):** Nothing specific. She's heard the station has an unusual lower deck situation from informal channels — the same networks that made it a useful assignment. Filed as a curiosity, not an assignment.
+→ Full reference: `docs/characters/nadia.md`
 
 ---
 
@@ -169,32 +139,11 @@ They and the commander end up holding knowledge they're not supposed to have, cu
 
 ### Harlan — The Hegemony Emissary
 
-**Age:** 50s
-**Species:** Human
-**Emotional profile:** Hopeful / Warm / Bitter
-**Title:** Senior Operations Director, Frontier Acquisitions
+**Age:** 50s | **Species:** Human | **Profile:** Hopeful / Warm / Bitter | **Title:** Senior Operations Director, Frontier Acquisitions | **On station:** Act 3 arrival
 
-**Appearance:** Silver-haired, impeccably composed. The kind of person who has learned to take up exactly the right amount of space — not imposing, not diminished. Clothes that are good quality without announcing it. The face of someone who has delivered difficult news many times and learned how to make it land gently. He looks like someone you trust. That's not a performance. It's just who he is, which is the whole problem.
+Not a fixer — someone the commander genuinely respects and trusts. Holds the only known weapon shutdown mechanism. Believes in what he's asking for. That's what makes the scene work.
 
-**Visual reference:** John Slattery.
-
-**Background:** Harlan is not a fixer. He is someone the commander genuinely respects — a mentor or former colleague who believes in Hegemony's mission and means it. The threat he represents is not institutional pressure. It is the cost of choosing against someone you care about.
-
-Sending him personally was not routine. Someone at Hegemony decided this required a face the commander trusts. Harlan came because he chose to. He could have sent someone else. That fact is the closest thing he'll offer to *I still believe in you*.
-
-**What he knows:** He knows about the buried survey — a significant archaeological asset in the lower decks worth controlling, worth the quiet acquisition. He does not know the station is a weapon. When the commander tells him the full truth, he takes a moment. Then he asks for it anyway. He believes Hegemony is the right hands for something this dangerous. That belief is sincere. It is also the thing that makes him impossible to reach.
-
-**The crack:** Somewhere in the Act 3 conversation, he sees it the way the commander sees it — the scale of it, what it means. The crack appears and heals in the same scene. He doesn't change. But the player saw that he could have.
-
-**The bargaining chip:** Harlan does not arrive empty-handed. Hegemony's buried survey found a shutdown mechanism — a control interface for the weapon, documented but not understood at the time. Hegemony has spent years quietly studying it. By Act 3, they understand it well enough to use it. Harlan holds the only known way to stop a weapon that will otherwise destroy the station and everyone on it. He didn't come to negotiate. He came knowing he held the only card that mattered — and genuinely believing that using it saves the people he cares about, including the commander. He is not wrong about that. He is also getting everything Hegemony sent him for. Both things are true.
-
-**By background:**
-
-- **Engineer:** A senior Hegemony surveyor who recognized the commander's technical ability early and brought them into increasingly significant assessments. Their arrival is the hardest version: someone who taught the commander to see clearly, now asking them to look away.
-- **Medic:** A Hegemony operations coordinator who ran the humanitarian framing. They believe in it sincerely — they have seen Hegemony's support do genuine good, and they have learned not to look too closely at the cost. Not cynical. Practiced.
-- **Drifter:** Someone who offered stability at a moment when stability felt impossible. The arrangement was transactional — a report in exchange for a footing — but the relationship became real. They kept their end. They are here to collect the commander's.
-
-**What they all share:** They are not villains. They believe in what they're asking for. That is what makes the scene work.
+→ Full reference: `docs/characters/harlan.md`
 
 ---
 
@@ -245,7 +194,6 @@ Avian — corvid. Iridescent plumage. Shorter, flatter beak. Forward-facing rapt
 
 ## Deferred
 
-- **Quen's relationships** with main crew — TBD
 - **Sable's real name** — revealed only through earned trust, writer decision
 - **Sable's distinctive item** — TBD, resolved at art/writing time
 - **Maris's personal touch** — TBD, resolved at writing time
