@@ -65,6 +65,26 @@ The thing that makes him impossible to reach is not the sincerity alone — it's
 
 ---
 
+## Voice
+
+Unhurried. He has nowhere more important to be than this conversation, and the pace carries that. His sentences build — he earns the weight before he places it. Word choice is careful not because he's being cautious but because he's been finding the right words for hard things for thirty years and he's good at it now.
+
+He doesn't use institutional language by default. His default register is direct and warm — the language of someone who believes what he's saying and wants you to know he believes it. He closes distance verbally. He doesn't withdraw warmth to apply pressure. He doesn't need to.
+
+The glasses: carries rather than wears. He picks them up at key moments, doesn't put them on. The only visible tell that he's working something out. When he sets them down, he's landed.
+
+**The crack:** One moment in the scene where he sees it the way you see it — genuine, not rhetoric, not manipulation. Then it heals. The choice was made twenty years ago. A moment of seeing doesn't reopen a decision held that long. Writers must resist the urge to let the crack do more than it does. He doesn't change. But it was real.
+
+He does not: rush, apply pressure through coldness, use distance as a tool. He closes distance. That is what makes him impossible to refuse.
+
+**Sample lines:**
+- "I think it becomes very significant, very quickly." [picks up glasses, doesn't put them on] "I've watched frontier stations acquire strategic value they weren't designed for. The station changes. The people in it don't always." [pause] "That's not a warning — it's just what I've seen happen." [looks at you directly] "I'd rather this one be different."
+- "I know what I'm asking. I came in person because I wanted you to know that I know."
+- "I could have sent someone else." [beat] "I didn't." [lets it sit]
+- [The crack:] He goes still for a moment — something in his face, not doubt, something adjacent to it. Then: "Hegemony is the right hands for something this dangerous." [he's chosen. the moment is over.]
+
+---
+
 ## Arc
 
 One scene. Everything he is gets compressed into it. The question is not whether Harlan will change — he won't. The question is whether the commander, and the player, can see the person who might have, and understand that this specific person, with this specific warmth and this specific faith, is asking for the thing he's asking for.

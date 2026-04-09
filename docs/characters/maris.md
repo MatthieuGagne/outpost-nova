@@ -91,6 +91,30 @@ She has no one to aim the anger at. The officer was censured. The representative
 
 ---
 
+## Voice
+
+She speaks from deliberate will — the kind that developed after something tried to take it. The hope isn't optimism; it's a choice she makes every day, and the plainness of it is the form the choice takes. Saying it simply is how you hold onto it.
+
+Her rhythm: short declarative, beat, then the weight arrives. Not announced — just there. She names the concrete thing first (the cantina, who came in, what got fixed), and then the sentence that lands. She repeats the accurate word when she finds it. *Held* covers seven years of work. She doesn't dress it sideways.
+
+Her vocabulary is tactile and domestic: food, hands, the kitchen, what's on the counter. She talks about the station the way she talks about a meal — what it needs, what it's missing, whether it'll hold. Endearments come out naturally — *baby, honey* — not to soften what she's saying but because that's how she talks to people she's decided matter.
+
+**The Southern register is texture, not load-bearing.** The core is deliberate hope expressed through specificity and staying present. A scene that gets the psychology right without the endearments is closer to Maris than a scene that has the endearments and loses the weight.
+
+The warmth is in the *staying* — she says the hard thing and she's still in the room for it. Kindness sounds like truth delivered plainly and then not leaving. There is no softer register.
+
+What escapes her: the size of what she's carrying. She sounds level, and then something lands and you realize the level is costing something.
+
+She does not say: *I think, I feel, I guess, maybe.* She doesn't soften entry. She doesn't manage your reaction.
+
+**Sample lines:**
+- "Seven years, and what's held this place together isn't on any requisition form. It's people coming back. People deciding to sit down and eat something." [picks the ladle back up] "Now, what's in those lower decks scares me. I'll tell you that plainly." [beat] "But the cantina's open tomorrow. You come back, I'll feed you. That part I can promise."
+- "Sit down, baby. I'll get you something warm. Then you can tell me what's going on."
+- "You should have told me. I don't need protection from it. I need to be ready."
+- "He had a bad knee. Couldn't eat shellfish. Eleven days trying to get back to me." [no elaboration — that is the elaboration]
+
+---
+
 ## Arc
 
 Not about becoming hopeful — she already is. About whether the bitterness eventually erodes the warmth and hope that have survived alongside it for seven years.

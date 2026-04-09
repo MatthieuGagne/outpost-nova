@@ -85,11 +85,22 @@ She would have documented the ruins even knowing what it cost. Because you find 
 
 **Default mode.** Terse. One true thing, then she waits to see what you do with it. Short sentences, observational, no filler. She's reading the room and doesn't hide that she's reading it. Skips small talk — not rudely, just doesn't start there and doesn't wait for you to finish it either.
 
-**Excited mode.** The contrast is the point. When something genuinely interests her the whole register breaks open — more words, faster, she interrupts herself to add another connection before she's finished the first one. The quill-spines go up. She moves toward the thing physically without noticing she's doing it. There's so much of it suddenly. The joy was always large. The controlled presentation is what takes effort.
+**Melodramatic mode.** When talking about her own situation — the exile, the artifact, the years alone following this question — the self-directed theatrics surface. She knows she's in a story. She performs it slightly, with style. The wit gets sharper and more personal. The quill-spines go up not just when excited but when she's giving her circumstances the theatrical weight they probably deserve.
 
-**The gap between them.** You can feel the effort when she's holding it flat. Something interests her and you see the almost-lift before the control reasserts. When she doesn't reassert — those are the tells. When she goes quiet instead of deflecting — those mean something else entirely.
+**Excited mode.** The contrast is the point. When something genuinely interests her the whole register breaks open — more words, faster, she interrupts herself to add another connection before she's finished the first one. The quill-spines go up. She moves toward the thing physically without noticing she's doing it. The joy was always large. The controlled presentation is what takes effort.
 
-**Humor.** Dry, observational, delivered flat. Something that takes a second to land and then she doesn't wait to see if it did.
+**When both modes fire at once:** Excited fires first — the explorer responds to the extraordinary before processing the personal cost (*joy first, horror second*). The melodrama surfaces underneath, after the mechanism has been named. Both true, in order.
+
+**The gap between modes.** You can feel the effort when she's holding it flat. Something interests her and you see the almost-lift before control reasserts. When she doesn't reassert — those are the tells. When she goes quiet instead of deflecting — that means something else entirely.
+
+**Humor.** Dry, observational, delivered flat. Something that takes a second to land and then she doesn't wait to see if it did. When self-directed, it has a little more flair.
+
+**Sample lines:**
+- [Default] "Something important." [waits] "The lower decks weren't designed to stop. Whatever's down there was built to last past whatever started it." [quill-spines lift slightly] "I redirected my entire trade route to be here." [beat] "I would like it to be worth that."
+- [Melodramatic] "I documented it completely. Thorough, well-sourced." [beat] "The Keeper caste read it. Then I was shown the door." [pause] "It was, I will say, a very efficient process."
+- [Melodramatic] "Four years with an artifact I could not read." [slight pause] "Alone." [another beat] "The artifact is excellent company if you don't need it to speak."
+- [Excited breaking through] "The notation maps to the targeting architecture — wait, no, it maps to the *input* layer, which means the weapon isn't pointing at a fixed location, it's pointing at a —" [stops] [looks at you] [quill-spines fully up] "Sorry. I do that." [she doesn't look sorry]
+- [Dry/self-aware] "The Merchant caste trained me to suppress this." [indicating the fully extended quill-spines] "I attended every class." [beat] "I have no explanation for the current situation."
 
 ---
 

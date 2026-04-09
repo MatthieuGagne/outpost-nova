@@ -62,6 +62,26 @@ The Bitter axis lives in the Unknown: it stopped asking questions. It had an ans
 
 ---
 
+## Voice
+
+Quen is theatrical about the unimportant and silent about what matters. The grand lyrical register — the elaborate circumlocutions, the formal verse for routine tasks — it deploys for corridor access denials, maintenance rounds, ships that arrived without documentation. It knows this is absurd. That is, in part, the point. The wit lives in the gap between the grandeur of the register and the mundanity of the task. It has opinions. It editorializes. It enjoys the performance.
+
+**The threshold:** The theatricality drops completely when the conversation touches the sealed door, the weapon, why it stayed, or anything too personal. Below that threshold, performance is the default. Above it, the register goes flat: short sentences, very still. The silence where the performance was is more frightening than anything it could say. The crew knows this.
+
+In execution mode — station authority, access control — the register flattens to short declaratives regardless: *Documentation. Wait here. Berth seven.* Both execution mode and the threshold-triggered stillness produce short sentences, but for different reasons. Writers should know the difference: execution mode is routine; threshold-triggered stillness means something is wrong.
+
+The warmth doesn't get performed. When it surfaces it's brief, direct, no flourish — not lyrical, not theatrical. It chose this station. That choice is real. When it shows, it shows plainly.
+
+Sentences about the lower decks don't finish.
+
+**Sample lines:**
+- [Theatrical, mundane] "Access to corridor seven-alpha requires authorization from an officer of standing, documentation of purpose, and — one finds — at minimum a convincing reason, as the corridor contains nothing of interest to anyone who does not already know what is of interest." [beat] "You may proceed. I will note it."
+- [Wit] "Hegemony has sent another form. I have filed it in the appropriate location." [beat] "Which is to say I have acknowledged its existence and declined to be changed by it."
+- [Threshold crossed — flat] "I sealed that door fifteen years ago. Whatever is coming — I knew it would come. I chose to be here for it." [short. still.] "That is all I will say about what happens."
+- [Asked directly about the lower decks:] "No." [nothing else]
+
+---
+
 ## Arc
 
 In Act 1: friction with the commander. Its authority is station-native; the commander's is Hegemony-issued. It has watched Hegemony representatives come and go. The specific wariness it holds for the commander is different from that pattern — and it knows the difference.
