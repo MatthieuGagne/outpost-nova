@@ -35,6 +35,7 @@ var _typewriter_target: int = 0
 var _full_text: String = ""
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("dialogue_box")
 	_player_portrait.texture = _make_atlas(PLAYER_PORTRAIT_INDEX)
 	hide()
