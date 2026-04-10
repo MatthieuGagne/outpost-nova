@@ -51,6 +51,17 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		match _state:
+			_State.TYPEWRITING:
+				_dialogue_text.visible_characters = -1
+				_typewriter_timer = 9999.0
+				_state = _State.COMPLETE
+			_State.COMPLETE:
+				_state = _State.IDLE
+				_line_advance_requested.emit()
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_select"):
 		match _state:
 			_State.TYPEWRITING:
