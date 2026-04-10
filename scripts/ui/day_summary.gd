@@ -6,7 +6,6 @@ extends CanvasLayer
 @onready var rest_btn: Button = $Panel/VBox/RestButton
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 	rest_btn.pressed.connect(_on_rest)
 

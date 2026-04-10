@@ -5,7 +5,6 @@ extends CanvasLayer
 @onready var close_btn: Button = $PanelContainer/VBoxContainer/CloseButton
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 	close_btn.pressed.connect(hide)
 
