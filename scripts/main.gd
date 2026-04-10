@@ -10,7 +10,7 @@ const AREA_SCENES = {
 
 const NPC_SPAWN_AREAS = {
 	"maris": "cantina",
-	"sable": "cantina",
+	"quen": "cantina",
 	"dex": "engineering",
 }
 
@@ -55,7 +55,7 @@ func _setup_dialogue_runner() -> void:
 func _spawn_npcs() -> void:
 	var npc_scripts = {
 		"maris": "res://scripts/characters/maris.gd",
-		"sable": "res://scripts/characters/sable.gd",
+		"quen": "res://scripts/characters/quen.gd",
 		"dex": "res://scripts/characters/dex.gd",
 	}
 	for npc_id in npc_scripts:
