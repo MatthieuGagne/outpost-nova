@@ -10,7 +10,7 @@ const AREA_SCENES = {
 
 const NPC_SPAWN_AREAS = {
 	"maris": "cantina",
-	"sable": "cantina",
+	"quen": "cantina",
 	"dex": "engineering",
 }
 
@@ -44,6 +44,10 @@ func _ready() -> void:
 	go_to_area("cantina")
 	get_viewport().gui_release_focus()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
+
 func _setup_dialogue_runner() -> void:
 	var runners := get_tree().get_nodes_in_group("dialogue_runner")
 	if runners.is_empty():
@@ -55,7 +59,7 @@ func _setup_dialogue_runner() -> void:
 func _spawn_npcs() -> void:
 	var npc_scripts = {
 		"maris": "res://scripts/characters/maris.gd",
-		"sable": "res://scripts/characters/sable.gd",
+		"quen": "res://scripts/characters/quen.gd",
 		"dex": "res://scripts/characters/dex.gd",
 	}
 	for npc_id in npc_scripts:
@@ -117,6 +121,8 @@ func _on_day_ended(day: int) -> void:
 	else:
 		if DayManager.current_day == 7:
 			arc_events.trigger_final_choice()
+		else:
+			show_hud_message("Day %d begins." % DayManager.current_day)
 
 func _on_all_beats_done() -> void:
 	show_hud_message("All story beats complete. Rest at your bunk in Quarters.")

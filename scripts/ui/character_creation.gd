@@ -19,8 +19,15 @@ func _ready() -> void:
 		appearance_picker.get_child(i).pressed.connect(_set_appearance.bind(i))
 	for i in background_picker.get_child_count():
 		background_picker.get_child(i).pressed.connect(_set_background.bind(i))
+	# Pre-select defaults so only a name is required
+	_set_appearance(0)
+	_set_background(0)
 	name_input.grab_focus()
 	_update_start_btn()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
 
 func _set_appearance(idx: int) -> void:
 	_selected_appearance = idx

@@ -49,17 +49,25 @@ func test_set_player_identity():
 func test_engineer_background_starts_with_parts():
 	GameState.reset()
 	GameState.apply_background_bonus("engineer")
-	assert_eq(GameState.get_resource("parts"), 3)
+	assert_eq(GameState.get_resource("parts"), 4)
 
 func test_medic_background_starts_with_rations():
 	GameState.reset()
 	GameState.apply_background_bonus("medic")
-	assert_eq(GameState.get_resource("rations"), 3)
+	assert_eq(GameState.get_resource("rations"), 4)
 
 func test_drifter_background_starts_with_energy_cells():
 	GameState.reset()
 	GameState.apply_background_bonus("drifter")
-	assert_eq(GameState.get_resource("energy_cells"), 3)
+	assert_eq(GameState.get_resource("energy_cells"), 4)
+
+func test_arrival_kit_applied():
+	for background in ["engineer", "medic", "drifter"]:
+		GameState.reset()
+		GameState.apply_background_bonus(background)
+		assert_gte(GameState.get_resource("rations"), 1, "rations >= 1 for %s" % background)
+		assert_gte(GameState.get_resource("parts"), 1, "parts >= 1 for %s" % background)
+		assert_gte(GameState.get_resource("energy_cells"), 1, "energy_cells >= 1 for %s" % background)
 
 func test_npc_flag_history():
 	GameState.reset()

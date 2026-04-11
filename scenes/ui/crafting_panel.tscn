@@ -12,6 +12,7 @@ border_width_bottom = 1
 border_color = Color(0.4, 0.4, 0.6, 1)
 
 [node name="CraftingPanel" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]

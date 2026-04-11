@@ -1,6 +1,10 @@
 title: Dex
 ---
-<<jump Dex_FirstMeeting>>
+<<if get_flag("met_dex")>>
+    <<jump Dex_Casual>>
+<<else>>
+    <<jump Dex_FirstMeeting>>
+<<endif>>
 ===
 
 title: Dex_FirstMeeting
@@ -17,4 +21,9 @@ Dex: I'm Dex. I keep the systems from eating themselves. So far, so good.
     <<register sharp>>
     Dex: Long enough to know where the bodies are buried. Metaphorically. Probably.
 <<beat check_engineering>>
+===
+
+title: Dex_Casual
+---
+Dex: Back again. Nothing's exploded since you left, if that's what you're checking.
 ===
