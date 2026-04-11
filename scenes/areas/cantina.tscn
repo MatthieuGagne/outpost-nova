@@ -27,6 +27,9 @@ position = Vector2(120, 128)
 [node name="SableSpawn" type="Node2D" parent="." unique_id=1056703630]
 position = Vector2(240, 128)
 
+[node name="QuenSpawn" type="Node2D" parent="." unique_id=3174826059]
+position = Vector2(380, 128)
+
 [node name="EngineeringDoor" type="Area2D" parent="." unique_id=332849579]
 position = Vector2(472, 128)
 

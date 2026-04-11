@@ -19,6 +19,12 @@ const BACKGROUND_BONUSES = {
 	"drifter": { "energy_cells": 3 }
 }
 
+const ARRIVAL_KIT: Dictionary = {
+	"rations": 1,
+	"parts": 1,
+	"energy_cells": 1,
+}
+
 func reset() -> void:
 	player_name = ""
 	player_background = ""
@@ -37,6 +43,8 @@ func set_player_identity(name: String, background: String, appearance: int) -> v
 	player_appearance = appearance
 
 func apply_background_bonus(background: String) -> void:
+	for resource_id in ARRIVAL_KIT:
+		add_resource(resource_id, ARRIVAL_KIT[resource_id])
 	if not BACKGROUND_BONUSES.has(background):
 		return
 	for resource_id in BACKGROUND_BONUSES[background]:
