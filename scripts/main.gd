@@ -44,6 +44,10 @@ func _ready() -> void:
 	go_to_area("cantina")
 	get_viewport().gui_release_focus()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
+
 func _setup_dialogue_runner() -> void:
 	var runners := get_tree().get_nodes_in_group("dialogue_runner")
 	if runners.is_empty():
