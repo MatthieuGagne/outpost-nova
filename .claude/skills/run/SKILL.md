@@ -21,7 +21,12 @@ pwd
    rsync -a /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
    rsync -a /home/mathdaman/code/outpost-nova/.godot/imported/ ./.godot/imported/
    ```
-4. Launch the game from the worktree:
+4. Reimport the YarnProject — the rsync overwrites `outpost-nova.yarnproject.import` with the main repo's version, which breaks any `.yarn` files added in the worktree:
+   ```sh
+   rm -f data/dialogue/outpost-nova.yarnproject.import
+   godot --headless --import --path <worktree_path>
+   ```
+5. Launch the game from the worktree:
    ```sh
    godot --path <worktree_path> &
    ```
