@@ -117,6 +117,8 @@ func _on_day_ended(day: int) -> void:
 	else:
 		if DayManager.current_day == 7:
 			arc_events.trigger_final_choice()
+		else:
+			show_hud_message("Day %d begins." % DayManager.current_day)
 
 func _on_all_beats_done() -> void:
 	show_hud_message("All story beats complete. Rest at your bunk in Quarters.")

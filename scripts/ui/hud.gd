@@ -38,6 +38,7 @@ func _refresh_beats(_beat_id) -> void:
 
 func _on_day_ended(_day) -> void:
 	day_lbl.text = "Day %d" % DayManager.current_day
+	_refresh_beats("")
 
 func show_message(text: String) -> void:
 	message_lbl.text = text
