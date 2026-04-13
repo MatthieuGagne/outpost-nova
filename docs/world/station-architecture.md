@@ -28,7 +28,7 @@ The dominant structural element — a massive vertical column built by the Build
 | Section | Notes |
 |---------|-------|
 | **Sensor Cap** | Top of spine, above the arc. Navigation equipment and sensor arrays installed by Hegemony. Maintained by Dex. Unknown to him: this is the weapon's targeting and firing mechanism. On activation, it reconfigures into the gun chamber — pointed at its target. |
-| **Arc Junction** | Midpoint. Where the habitat arc meets the spine. Contains the pressurized transition collar (see below) and the Trade Dock. |
+| **Bearing Collar** | Midpoint. Clamped around the spine — the static mechanical interface that the C-arc rotates around. Docking berths extend from the collar on the open side. The Trade Dock connects laterally from the collar into the C-arc — the only passage between the two. |
 | **Power Core** | First Builder room below the junction. Ancient power generation infrastructure. The station has been running off its residual output for years. Restoring active operation unlocks Energy Cell production. Zero gravity. |
 | **Lower Decks** | Sealed Builder sections below the Power Core. Debris, old infrastructure, unexplored space. Salvage actions pull resources from Builder wreckage. Quen's sealed door is here — the threshold to the Deep Core. Zero gravity. |
 | **Deep Core** | Bottom of the spine. Fully unmodified Builder structure. Zero gravity. The weapon's mechanism. Does not obviously read as a weapon — the geometry is massive, precise, and intentional, but its purpose is not legible until context (logs, Vaen's artifact) reveals it. The Act 3 chambers branch laterally from here. |
@@ -45,22 +45,22 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 
 **The arc rotates** around the static spine to generate artificial gravity. It is the only part of the station with gravity.
 
-**The C-shape:** The arc wraps around the spine on three sides. The fourth side — the open mouth of the C — faces the trade lane. Ships approach from this direction, fly into the mouth, and dock at the spine's berths at the junction point.
+**The C-shape:** The arc wraps around the spine on three sides. The fourth side — the open mouth of the C — faces the trade lane. Ships approach from this direction and dock at the bearing collar's berths. From the collar, the only way into the arc is through a single connecting module: the Trade Dock.
 
 ### Arc Layout
 
 ```
-     [Cantina] — [Workshop]
-           \       /
-        [SPINE JUNCTION]
-        [  Trade Dock  ]
-           /       \
-       [Med Bay]  [Security Post]
-         |               |
-      (scaffolding)  (scaffolding)
+                    [Cantina] — [Workshop]
+                   /
+[COLLAR] — [Trade Dock]
+                   \
+                    [Med Bay]   [Security Post]
+                       |              |
+                  (scaffolding)  (scaffolding)
 ```
 
-- **Core Wing** (Cantina + Workshop): At the top of the arc, closest to the spine junction. The oldest Hegemony modules. The social and operational heart of the station.
+- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc.
+- **Core Wing** (Cantina + Workshop): At the top of the arc, first rooms after the Trade Dock. The oldest Hegemony modules. The social and operational heart of the station.
 - **Outreach arm**: Med Bay partway along, scaffolding beyond.
 - **Infrastructure arm**: Security Post partway along, scaffolding beyond.
 
@@ -74,11 +74,11 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 
 ## The Junction — Trade Dock
 
-The transition point between the human station and the Builder spine. The Trade Dock sits here — the first room visitors enter after docking. Sable's domain.
+The sole passage between the bearing collar and the C-arc. Sable's domain. Every visitor passes through it.
 
-A pressurized transition collar handles the interface between the spinning arc and the static spine — a short deceleration sleeve. The crew barely notices it. New arrivals find it disorienting.
+The sequence on arrival: ship docks at the collar's berths (zero-g, static) → airlock into the collar → step into the Trade Dock, which spins with the arc → gravity returns as you cross the threshold → you are now inside the station.
 
-Gravity fades at the Trade Dock. The arc side has full spin gravity. Step through toward the spine and it drops away.
+The Trade Dock is the only way in and the only way out of the arc. From here you can move deeper into the arc, or cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
 
 ---
 
