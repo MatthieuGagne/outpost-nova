@@ -137,10 +137,22 @@ These chambers contain what the weapon was built *for* — the records, the logi
 >
 > Rotation arrows shown on the arc, Trade Dock, and collar — they all spin together around the static spine circle.
 >
+> Arc room layout for reference:
+> ```
+> [Workshop] — [Cantina] — [door] — [Security] — [Med Bay]
+>                      \           /
+>                       [Trade Dock]
+>                            |
+>                         [COLLAR]
+> ```
+>
 > Label the C-arc sections:
-> - Top-left end of the C-tube: "CANTINA / WORKSHOP"
-> - Upper-left curve of the C-tube: "MED BAY"
+> - Top-left end of the C-tube (top tip): "WORKSHOP (dead end)"
+> - Upper-left curve of the C-tube: "CANTINA"
+> - Left-center of the C-tube (Trade Dock connection point): "TRADE DOCK (Sable) — sole entry point between collar and arc"
 > - Lower-left curve of the C-tube: "SECURITY POST"
+> - Bottom-left end of the C-tube (bottom tip): "MED BAY (dead end)"
+> - Between CANTINA and SECURITY POST, draw a dashed cross-connection labeled "CLOSEABLE DOOR"
 > - Top-right open end (pointing right): skeletal scaffolding, labeled "FUTURE CONSTRUCTION"
 > - Bottom-right open end (pointing right): skeletal scaffolding, labeled "FUTURE CONSTRUCTION"
 >
