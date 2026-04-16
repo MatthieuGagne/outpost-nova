@@ -50,19 +50,17 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 ### Arc Layout
 
 ```
-                    [Cantina] — [Workshop]
-                   /
-[COLLAR] — [Trade Dock]
-                   \
-                    [Med Bay]   [Security Post]
-                       |              |
-                  (scaffolding)  (scaffolding)
+[Workshop] — [Cantina] — [door] — [Security Post] — [Med Bay]
+                     \                /
+                      [Trade Dock]
+                           |
+                        [COLLAR]
 ```
 
-- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc.
-- **Core Wing** (Cantina + Workshop): At the top of the arc, first rooms after the Trade Dock. The oldest Hegemony modules. The social and operational heart of the station.
-- **Outreach arm**: Med Bay partway along, scaffolding beyond.
-- **Infrastructure arm**: Security Post partway along, scaffolding beyond.
+- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc. Two exits branch from the Trade Dock into the arc — left to the Cantina, right to Security Post. Sable has sightlines to both from her post.
+- **Center triangle** (Trade Dock + Cantina + Security Post): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security Post share a direct closeable door.
+- **Workshop** (dead end): Only reachable through the Cantina. Left tip of the arc.
+- **Med Bay** (dead end): Only reachable through Security Post. Right tip of the arc.
 
 **Arm tips:** The arms extend beyond the current rooms. At the current edge of each pressurized section: a sealed airlock. From outside, skeletal scaffolding marks where the next modules will go. Building a new room means constructing and pressurizing the next section — filling in the skeleton. The station genuinely grows; it doesn't just reveal what was already there.
 
@@ -78,7 +76,7 @@ The sole passage between the bearing collar and the C-arc. Sable's domain. Every
 
 The sequence on arrival: ship docks at the collar's berths (zero-g, static) → airlock into the collar → step into the Trade Dock, which spins with the arc → gravity returns as you cross the threshold → you are now inside the station.
 
-The Trade Dock is the only way in and the only way out of the arc. From here you can move deeper into the arc, or cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
+The Trade Dock is the only way in and the only way out of the arc. From here, two exits branch into the arc — left to the Cantina, right to Security Post. Sable has sightlines to both from her post. You can also cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
 
 ---
 
@@ -108,7 +106,7 @@ These chambers contain what the weapon was built *for* — the records, the logi
 >
 > The dominant element is an ancient alien structure forming the central vertical spine — built by a long-extinct AI civilization that had no biological members, only machines optimizing for resource extraction and power generation at civilizational scale. The spine is tall, narrow, and elongated — thin relative to its length, like a needle or obelisk, extending well above and below the human construction clamped to its midsection. It does not look manufactured. It looks grown — crystalline or rock-like forms, with surfaces that resemble dark mineral or obsidian fused with geometric lattices. The geometry is wrong in a way that is hard to articulate: angles that almost follow a pattern, structures that suggest purpose without revealing it. Vivid green light glows from within the cracks and seams of the spine — intense, unnatural, deeply wrong in color and quality. Not soft, not ambient: it pulses with the logic of something still active, still running, after millennia. The green casts harsh shadows on the human modules clamped nearby. It does not look like a power indicator or a status light. It looks like the structure itself is alive. The overall effect is geological and alien: less like a machine, more like a spire that was built. It extends far beyond the C-arc in both directions — the human construction occupies only the middle third of its total length. It predates human spaceflight by millennia.
 >
-> Wrapped around the spine's midsection is a single C-shaped habitat arm — NOT a full ring, NOT two rings. One continuous tube of human prefab modules that curves around three sides of the spine and leaves the fourth side open. Think of the letter C: two arms curving toward each other but not meeting. Built by Hegemony Combine — a powerful interstellar corporation, not a government. Their aesthetic is contractor-grade industrial: grey and off-white metal panels, visible seams and bolts, modular prefab sections assembled over time. Functional lighting strips. Corporate markings, faded. This single C-shaped tube connects to a bearing collar clamped around the spine's midsection — the sole mechanical interface between the rotating arc and the static spine. The ONLY connection between the collar and the C-arc is a single short module: the Trade Dock, Sable's room, the threshold every visitor passes through. No other bridge or tube connects them. A pressurized rotating bearing allows the entire C-arm and Trade Dock to spin slowly around the static spine and collar, generating artificial gravity. The rotation is visible: the arc turns, the spine does not. Docking berths extend from the collar on the open side, facing incoming ships. A sensor array cap at the top of the spine. Scaffolding extensions at the arm tips where future modules will be built.
+> Wrapped around the spine's midsection is a single C-shaped habitat arm — NOT a full ring, NOT two rings. One continuous tube of human prefab modules that curves around three sides of the spine and leaves the fourth side open. Think of the letter C: two arms curving toward each other but not meeting. Built by Hegemony Combine — a powerful interstellar corporation, not a government. Their aesthetic is contractor-grade industrial: grey and off-white metal panels, visible seams and bolts, modular prefab sections assembled over time. Functional lighting strips. Corporate markings, faded. This single C-shaped tube connects to a bearing collar clamped around the spine's midsection — the sole mechanical interface between the rotating arc and the static spine. The ONLY connection between the collar and the C-arc is a single short module: the Trade Dock, Sable's room, the threshold every visitor passes through. No other bridge or tube connects them. The Trade Dock arm is visually distinct from the arc's curve — a short straight perpendicular tube jutting inward from the midpoint of the C toward the collar, clearly visible as a separate structural element against the arc and the spine behind it. A pressurized rotating bearing allows the entire C-arm and Trade Dock to spin slowly around the static spine and collar, generating artificial gravity. The rotation is visible: the arc turns, the spine does not. Docking berths extend from the collar on the open side, facing incoming ships. A sensor array cap at the top of the spine. Scaffolding extensions at the arm tips where future modules will be built.
 >
 > The overall impression: a campsite bolted onto something ancient and not entirely understood. The alien spine blazes vivid green from within — wrong, alive, unsettling. The human construction is functional and improvised, clinging to something far older than it. Hard sci-fi, cinematic lighting, deep space. Awe-inspiring, eerie, lonely, beautiful.
 
@@ -139,10 +137,22 @@ These chambers contain what the weapon was built *for* — the records, the logi
 >
 > Rotation arrows shown on the arc, Trade Dock, and collar — they all spin together around the static spine circle.
 >
+> Arc room layout for reference:
+> ```
+> [Workshop] — [Cantina] — [door] — [Security Post] — [Med Bay]
+>                      \                /
+>                       [Trade Dock]
+>                            |
+>                         [COLLAR]
+> ```
+>
 > Label the C-arc sections:
-> - Top-left end of the C-tube: "CANTINA / WORKSHOP"
-> - Upper-left curve of the C-tube: "MED BAY"
+> - Top-left end of the C-tube (top tip): "WORKSHOP (dead end)"
+> - Upper-left curve of the C-tube: "CANTINA"
+> - Left-center of the C-tube (Trade Dock connection point): "TRADE DOCK (Sable) — sole entry point between collar and arc"
 > - Lower-left curve of the C-tube: "SECURITY POST"
+> - Bottom-left end of the C-tube (bottom tip): "MED BAY (dead end)"
+> - Between CANTINA and SECURITY POST, draw a dashed cross-connection labeled "CLOSEABLE DOOR"
 > - Top-right open end (pointing right): skeletal scaffolding, labeled "FUTURE CONSTRUCTION"
 > - Bottom-right open end (pointing right): skeletal scaffolding, labeled "FUTURE CONSTRUCTION"
 >
