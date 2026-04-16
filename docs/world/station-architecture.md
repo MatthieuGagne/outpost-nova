@@ -50,19 +50,17 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 ### Arc Layout
 
 ```
-                    [Cantina] — [Workshop]
-                   /
-[COLLAR] — [Trade Dock]
-                   \
-                    [Med Bay]   [Security Post]
-                       |              |
-                  (scaffolding)  (scaffolding)
+[Workshop] — [Cantina] — [door] — [Security] — [Med Bay]
+                     \           /
+                      [Trade Dock]
+                           |
+                        [COLLAR]
 ```
 
-- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc.
-- **Core Wing** (Cantina + Workshop): At the top of the arc, first rooms after the Trade Dock. The oldest Hegemony modules. The social and operational heart of the station.
-- **Outreach arm**: Med Bay partway along, scaffolding beyond.
-- **Infrastructure arm**: Security Post partway along, scaffolding beyond.
+- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc. Two exits branch from the Trade Dock into the arc — left to the Cantina, right to Security. Sable has sightlines to both from her post.
+- **Center triangle** (Trade Dock + Cantina + Security): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security share a direct closeable door.
+- **Workshop** (dead end): Only reachable through the Cantina. Left tip of the arc.
+- **Med Bay** (dead end): Only reachable through Security. Right tip of the arc.
 
 **Arm tips:** The arms extend beyond the current rooms. At the current edge of each pressurized section: a sealed airlock. From outside, skeletal scaffolding marks where the next modules will go. Building a new room means constructing and pressurizing the next section — filling in the skeleton. The station genuinely grows; it doesn't just reveal what was already there.
 
