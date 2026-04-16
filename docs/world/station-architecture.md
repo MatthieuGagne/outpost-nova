@@ -50,15 +50,15 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 ### Arc Layout
 
 ```
-[Workshop] — [Cantina] — [door] — [Security] — [Med Bay]
-                     \           /
+[Workshop] — [Cantina] — [door] — [Security Post] — [Med Bay]
+                     \                /
                       [Trade Dock]
                            |
                         [COLLAR]
 ```
 
-- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc. Two exits branch from the Trade Dock into the arc — left to the Cantina, right to Security. Sable has sightlines to both from her post.
-- **Center triangle** (Trade Dock + Cantina + Security): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security share a direct closeable door.
+- **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc. Two exits branch from the Trade Dock into the arc — left to the Cantina, right to Security Post. Sable has sightlines to both from her post.
+- **Center triangle** (Trade Dock + Cantina + Security Post): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security Post share a direct closeable door.
 - **Workshop** (dead end): Only reachable through the Cantina. Left tip of the arc.
 - **Med Bay** (dead end): Only reachable through Security. Right tip of the arc.
 
@@ -76,7 +76,7 @@ The sole passage between the bearing collar and the C-arc. Sable's domain. Every
 
 The sequence on arrival: ship docks at the collar's berths (zero-g, static) → airlock into the collar → step into the Trade Dock, which spins with the arc → gravity returns as you cross the threshold → you are now inside the station.
 
-The Trade Dock is the only way in and the only way out of the arc. From here, two exits branch into the arc — left to the Cantina, right to Security. Sable has sightlines to both from her post. You can also cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
+The Trade Dock is the only way in and the only way out of the arc. From here, two exits branch into the arc — left to the Cantina, right to Security Post. Sable has sightlines to both from her post. You can also cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
 
 ---
 
@@ -139,8 +139,8 @@ These chambers contain what the weapon was built *for* — the records, the logi
 >
 > Arc room layout for reference:
 > ```
-> [Workshop] — [Cantina] — [door] — [Security] — [Med Bay]
->                      \           /
+> [Workshop] — [Cantina] — [door] — [Security Post] — [Med Bay]
+>                      \                /
 >                       [Trade Dock]
 >                            |
 >                         [COLLAR]
