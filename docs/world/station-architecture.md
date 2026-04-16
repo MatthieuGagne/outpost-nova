@@ -76,7 +76,7 @@ The sole passage between the bearing collar and the C-arc. Sable's domain. Every
 
 The sequence on arrival: ship docks at the collar's berths (zero-g, static) → airlock into the collar → step into the Trade Dock, which spins with the arc → gravity returns as you cross the threshold → you are now inside the station.
 
-The Trade Dock is the only way in and the only way out of the arc. From here you can move deeper into the arc, or cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
+The Trade Dock is the only way in and the only way out of the arc. From here, two exits branch into the arc — left to the Cantina, right to Security. Sable has sightlines to both from her post. You can also cross back through the collar and descend the spine into zero-g. The crew barely notices the gravity transition anymore. New arrivals find it disorienting — gravity arriving all at once as you step through.
 
 ---
 
