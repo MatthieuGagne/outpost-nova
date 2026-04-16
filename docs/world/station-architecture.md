@@ -60,7 +60,7 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 - **Trade Dock** (Sable): The sole connecting module between the bearing collar and the C-arc. Every visitor passes through it. Gravity starts here — the collar is zero-g; the Trade Dock spins with the arc. Two exits branch from the Trade Dock into the arc — left to the Cantina, right to Security Post. Sable has sightlines to both from her post.
 - **Center triangle** (Trade Dock + Cantina + Security Post): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security Post share a direct closeable door.
 - **Workshop** (dead end): Only reachable through the Cantina. Left tip of the arc.
-- **Med Bay** (dead end): Only reachable through Security. Right tip of the arc.
+- **Med Bay** (dead end): Only reachable through Security Post. Right tip of the arc.
 
 **Arm tips:** The arms extend beyond the current rooms. At the current edge of each pressurized section: a sealed airlock. From outside, skeletal scaffolding marks where the next modules will go. Building a new room means constructing and pressurizing the next section — filling in the skeleton. The station genuinely grows; it doesn't just reveal what was already there.
 
