@@ -6,5 +6,5 @@ extends Node2D
 func _ready() -> void:
 	engineering_door.body_entered.connect(func(body):
 		if body.is_in_group("player"):
-			get_tree().get_root().get_node("Main").go_to_area("engineering")
+			get_tree().get_root().get_node("Main").go_to_area("workshop")
 	)
