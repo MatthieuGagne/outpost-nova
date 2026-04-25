@@ -1,4 +1,4 @@
-# scripts/areas/engineering.gd
+# scripts/areas/workshop.gd
 extends Node2D
 
 @onready var cantina_door: Area2D = $CantinaDoor

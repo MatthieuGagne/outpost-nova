@@ -3,7 +3,7 @@ extends Node2D
 
 const AREA_SCENES = {
 	"cantina": "res://scenes/areas/cantina.tscn",
-	"engineering": "res://scenes/areas/engineering.tscn",
+	"workshop": "res://scenes/areas/workshop.tscn",
 	"quarters": "res://scenes/areas/quarters.tscn",
 	"derelict_entrance": "res://scenes/areas/derelict_entrance.tscn",
 }
@@ -11,16 +11,16 @@ const AREA_SCENES = {
 const NPC_SPAWN_AREAS = {
 	"maris": "cantina",
 	"quen": "cantina",
-	"dex": "engineering",
+	"dex": "workshop",
 }
 
 # Updated for 480×256 room size (30×16 tiles × 16px)
 # Left wall door → spawn at x=32; right wall door → spawn at x=448
 const AREA_ENTRY_POSITIONS = {
-	"cantina": { "engineering": Vector2(448, 128), "default": Vector2(240, 128) },
-	"engineering": { "cantina": Vector2(32, 128), "quarters": Vector2(448, 128), "default": Vector2(240, 128) },
-	"quarters": { "engineering": Vector2(32, 128), "default": Vector2(240, 128) },
-	"derelict_entrance": { "engineering": Vector2(32, 128), "default": Vector2(240, 128) },
+	"cantina": { "workshop": Vector2(448, 128), "default": Vector2(240, 128) },
+	"workshop": { "cantina": Vector2(32, 128), "quarters": Vector2(448, 128), "default": Vector2(240, 128) },
+	"quarters": { "workshop": Vector2(32, 128), "default": Vector2(240, 128) },
+	"derelict_entrance": { "workshop": Vector2(32, 128), "default": Vector2(240, 128) },
 }
 
 @onready var area_container: Node2D = $AreaContainer

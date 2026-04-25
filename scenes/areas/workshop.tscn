@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://odsn1x68b4a8"]
 
-[ext_resource type="Script" uid="uid://ckgfyj86gsb6w" path="res://scripts/areas/engineering.gd" id="1"]
+[ext_resource type="Script" uid="uid://ckgfyj86gsb6w" path="res://scripts/areas/workshop.gd" id="1"]
 [ext_resource type="Script" uid="uid://bmc2ry37heq4v" path="res://scripts/workbench.gd" id="2"]
 [ext_resource type="TileSet" uid="uid://djyq0exhut65y" path="res://data/tilesets/station.tres" id="2_iedxk"]
 [ext_resource type="PackedScene" path="res://scenes/resource_node.tscn" id="3"]
