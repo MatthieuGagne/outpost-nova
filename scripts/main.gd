@@ -2,25 +2,61 @@
 extends Node2D
 
 const AREA_SCENES = {
-	"cantina": "res://scenes/areas/cantina.tscn",
-	"engineering": "res://scenes/areas/engineering.tscn",
-	"quarters": "res://scenes/areas/quarters.tscn",
+	"trade_dock":        "res://scenes/areas/trade_dock.tscn",
+	"cantina":           "res://scenes/areas/cantina.tscn",
+	"workshop":          "res://scenes/areas/workshop.tscn",
+	"quarters":          "res://scenes/areas/quarters.tscn",
+	"security_post":     "res://scenes/areas/security_post.tscn",
+	"med_bay":           "res://scenes/areas/med_bay.tscn",
 	"derelict_entrance": "res://scenes/areas/derelict_entrance.tscn",
 }
 
 const NPC_SPAWN_AREAS = {
-	"maris": "cantina",
-	"quen": "cantina",
-	"dex": "engineering",
+	"maris":   "cantina",
+	"quen":    "cantina",
+	"dex":     "workshop",
+	"velreth": "med_bay",
+	"sable":   "trade_dock",
 }
 
-# Updated for 480×256 room size (30×16 tiles × 16px)
-# Left wall door → spawn at x=32; right wall door → spawn at x=448
+# Entry spawn positions per area, keyed by the previous area.
+# Left wall entry: x=32, right wall entry: x=448, top wall entry: y=32, bottom wall entry: y=224
 const AREA_ENTRY_POSITIONS = {
-	"cantina": { "engineering": Vector2(448, 128), "default": Vector2(240, 128) },
-	"engineering": { "cantina": Vector2(32, 128), "quarters": Vector2(448, 128), "default": Vector2(240, 128) },
-	"quarters": { "engineering": Vector2(32, 128), "default": Vector2(240, 128) },
-	"derelict_entrance": { "engineering": Vector2(32, 128), "default": Vector2(240, 128) },
+	"trade_dock": {
+		"cantina":           Vector2(32, 128),   # cantina bottom → trade_dock left
+		"security_post":     Vector2(448, 128),  # security_post bottom → trade_dock right
+		"derelict_entrance": Vector2(240, 200),
+		"default":           Vector2(240, 128),
+	},
+	"cantina": {
+		"workshop":      Vector2(32, 128),   # workshop right → cantina left
+		"security_post": Vector2(448, 128),  # security_post left → cantina right
+		"quarters":      Vector2(240, 32),   # quarters bottom → cantina top
+		"trade_dock":    Vector2(240, 224),  # trade_dock left → cantina bottom
+		"default":       Vector2(240, 128),
+	},
+	"workshop": {
+		"cantina": Vector2(448, 128),
+		"default": Vector2(240, 128),
+	},
+	"quarters": {
+		"cantina": Vector2(240, 224),
+		"default": Vector2(240, 128),
+	},
+	"security_post": {
+		"cantina":    Vector2(32, 128),   # cantina right → security_post left
+		"med_bay":    Vector2(448, 128),  # med_bay left → security_post right
+		"trade_dock": Vector2(240, 224),  # trade_dock right → security_post bottom
+		"default":    Vector2(240, 128),
+	},
+	"med_bay": {
+		"security_post": Vector2(32, 128),
+		"default":       Vector2(240, 128),
+	},
+	"derelict_entrance": {
+		"trade_dock": Vector2(32, 128),
+		"default":    Vector2(240, 128),
+	},
 }
 
 @onready var area_container: Node2D = $AreaContainer
@@ -41,7 +77,7 @@ func _ready() -> void:
 	DayManager.all_beats_done.connect(_on_all_beats_done)
 	_setup_dialogue_runner()
 	_spawn_npcs()
-	go_to_area("cantina")
+	go_to_area("trade_dock")
 	get_viewport().gui_release_focus()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -58,9 +94,11 @@ func _setup_dialogue_runner() -> void:
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {
-		"maris": "res://scripts/characters/maris.gd",
-		"quen": "res://scripts/characters/quen.gd",
-		"dex": "res://scripts/characters/dex.gd",
+		"maris":   "res://scripts/characters/maris.gd",
+		"quen":    "res://scripts/characters/quen.gd",
+		"dex":     "res://scripts/characters/dex.gd",
+		"velreth": "res://scripts/characters/velreth.gd",
+		"sable":   "res://scripts/characters/sable.gd",
 	}
 	for npc_id in npc_scripts:
 		var base = load("res://scenes/characters/npc_base.tscn").instantiate()
@@ -87,14 +125,18 @@ func go_to_area(area_id: String) -> void:
 	var scene = load(AREA_SCENES[area_id])
 	_current_area = scene.instantiate()
 	area_container.add_child(_current_area)
-	area_container.move_child(_current_area, 0)  # TileMap renders behind player + NPCs
+	area_container.move_child(_current_area, 0)
 	_current_area_id = area_id
 
 	for npc_id in _npc_instances:
 		var npc = _npc_instances[npc_id]
 		var spawn_area = NPC_SPAWN_AREAS.get(npc_id, "cantina")
-		npc.visible = (spawn_area == area_id)
-		if spawn_area == area_id:
+		var in_area = (spawn_area == area_id)
+		if npc_id == "sable":
+			npc.visible = in_area and GameState.get_flag("sable_arrived")
+		else:
+			npc.visible = in_area
+		if npc.visible:
 			var spawn = _current_area.get_node_or_null("%sSpawn" % npc_id.capitalize())
 			if spawn:
 				npc.position = spawn.global_position

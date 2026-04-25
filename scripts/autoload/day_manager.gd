@@ -15,7 +15,7 @@ var _all_beats_emitted: bool = false
 const ARC_BEATS: Dictionary = {
 	1: [
 		{ "id": "meet_maris", "required": true, "npc": "maris", "flag_to_set": "met_maris" },
-		{ "id": "check_engineering", "required": true, "npc": "dex", "flag_to_set": "met_dex" },
+		{ "id": "check_workshop", "required": true, "npc": "dex", "flag_to_set": "met_dex" },
 		{ "id": "quen_arrives", "required": false, "npc": "quen", "flag_to_set": "met_quen" },
 	],
 	2: [

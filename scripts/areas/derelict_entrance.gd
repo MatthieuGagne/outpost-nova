@@ -3,7 +3,7 @@ extends Node2D
 
 @onready var door_trigger: Area2D = $EntranceTrigger
 @onready var door_sprite: Sprite2D = $DoorSprite
-@onready var engineering_door: Area2D = $EngineeringDoor
+@onready var trade_dock_door: Area2D = $TradeDockDoor
 
 func _ready() -> void:
 	_refresh_door()
@@ -15,9 +15,9 @@ func _ready() -> void:
 		if body.is_in_group("player") and GameState.get_flag("derelict_mentioned"):
 			_enter_derelict()
 	)
-	engineering_door.body_entered.connect(func(body):
+	trade_dock_door.body_entered.connect(func(body):
 		if body.is_in_group("player"):
-			get_tree().get_root().get_node("Main").go_to_area("engineering")
+			get_tree().get_root().get_node("Main").go_to_area("trade_dock")
 	)
 
 func _refresh_door() -> void:
