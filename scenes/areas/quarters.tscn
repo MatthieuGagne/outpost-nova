@@ -8,7 +8,7 @@
 size = Vector2(32, 20)
 
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(32, 48)
+size = Vector2(48, 32)
 
 [node name="Quarters" type="Node2D" unique_id=832162551]
 script = ExtResource("1")
@@ -28,8 +28,8 @@ shape = SubResource("3")
 color = Color(0.3, 0.3, 0.6, 1)
 polygon = PackedVector2Array(-16, -10, 16, -10, 16, 10, -16, 10)
 
-[node name="EngineeringDoor" type="Area2D" parent="." unique_id=1484452331]
-position = Vector2(8, 128)
+[node name="CantinaBottomDoor" type="Area2D" parent="."]
+position = Vector2(240, 248)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EngineeringDoor" unique_id=1566605541]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CantinaBottomDoor"]
 shape = SubResource("2")
