@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://djyq0exhut65y"]
 
-[ext_resource type="Texture2D" uid="uid://cukcpka5kn7s" path="res://art/placeholder/tiles/roguelikeSheet_transparent.png" id="1_vqloc"]
+[ext_resource type="Texture2D" uid="uid://cukcpka5kn7s" path="res://assets/sprites/tiles/roguelikeSheet_transparent.png" id="1_vqloc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_clk4h"]
 texture = ExtResource("1_vqloc")
