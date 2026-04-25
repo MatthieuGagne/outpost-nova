@@ -34,8 +34,8 @@ position = Vector2(240, 128)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceTrigger" unique_id=877975027]
 shape = SubResource("1")
 
-[node name="EngineeringDoor" type="Area2D" parent="." unique_id=225070889]
+[node name="TradeDockDoor" type="Area2D" parent="." unique_id=225070889]
 position = Vector2(8, 128)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EngineeringDoor" unique_id=874409304]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TradeDockDoor" unique_id=874409304]
 shape = SubResource("2")
