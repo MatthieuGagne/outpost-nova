@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d1egurn6jhlow"]
 
-[ext_resource type="Script" uid="uid://cnm3hfp72i82p" path="res://scripts/ui/character_creation.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/ui/character_creation.gd" id="1"]
 [ext_resource type="Theme" path="res://data/themes/character_creation_theme.tres" id="2"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_1"]

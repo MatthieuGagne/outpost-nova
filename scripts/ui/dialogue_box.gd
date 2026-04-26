@@ -2,7 +2,7 @@ extends CanvasLayer
 
 signal conversation_ended
 
-const PORTRAIT_SHEET := preload("res://art/placeholder/portraits/IMG_5371.png")
+const PORTRAIT_SHEET := preload("res://assets/portraits/portrait_sheet.png")
 const PORTRAIT_WIDTH := 64
 const PORTRAIT_HEIGHT := 64
 const PORTRAIT_COLS := 5

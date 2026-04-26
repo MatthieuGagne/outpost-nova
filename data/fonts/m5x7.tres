@@ -1,6 +1,6 @@
 [gd_resource type="FontFile" load_steps=2 format=3]
 
-[ext_resource type="FontData" path="res://art/placeholder/fonts/m5x7.ttf" id="1"]
+[ext_resource type="FontData" path="res://assets/fonts/m5x7.ttf" id="1"]
 
 [resource]
 antialiasing = 0
