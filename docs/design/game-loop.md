@@ -2,7 +2,7 @@
 
 **Status:** Design locked 2026-04-25
 **Supersedes:** PRD #43 (daily slot system), PRD #45 (production loop) where they conflict.
-**Cross-references:** `docs/design/station-expansion.md` (room layout, upgrade costs), `docs/characters/npcs.md` (NPC roster), `docs/story/year1.md` (arc episode schedule)
+**Cross-references:** `docs/design/station-expansion.md` (room layout, upgrade costs), `docs/design/resources.md` (sub-resource catalog, seed selection, barter), `docs/characters/npcs.md` (NPC roster), `docs/story/year1.md` (arc episode schedule)
 
 ---
 
@@ -49,6 +49,7 @@ Start → Tend → Collect
 ```
 
 - **Missing a Tend pauses the cycle** (PAUSED state). The cycle resumes the next time the player tends — yield is never lost.
+- At **Start**, the player chooses which sub-resource to produce from a menu of unlocked options for that room — see `docs/design/resources.md` for the full catalog and unlock gates.
 - Outputs are **fully predictable** in the slot menu before committing.
 
 ### Cohesion Penalty

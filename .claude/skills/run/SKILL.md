@@ -26,7 +26,12 @@ pwd
    rm -f data/dialogue/outpost-nova.yarnproject.import
    godot --headless --import --path <worktree_path>
    ```
-5. Launch the game from the worktree:
+5. Restore the compiled YarnProject — the headless import regenerates the compiled `.tres` without the `CompiledYarnProgramBase64` field, breaking dialogue. Copy the main repo's compiled resource back:
+   ```sh
+   cp /home/mathdaman/code/outpost-nova/.godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres \
+      <worktree_path>/.godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres
+   ```
+6. Launch the game from the worktree:
    ```sh
    godot --path <worktree_path> &
    ```
