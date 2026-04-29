@@ -13,7 +13,7 @@
 **Role:** Informal trader and information broker
 **On station:** ~1 year
 
-**Name note:** "Sable" is a go-by she picked up early in her travels and kept. Her actual Drueth name is harder to pronounce in human languages. She doesn't offer it easily. If the commander earns enough trust, she tells them.
+**Name note:** "Sable" is a go-by she picked up early in her travels and kept. Her actual Drueth name is harder to pronounce in human languages. She doesn't offer it easily. If the superintendent earns enough trust, she tells them.
 
 ---
 
@@ -89,7 +89,7 @@ Whether she can commit to a place — whether she can treat warmth as something 
 
 The station is the first place in years she hasn't already half-left. Maris is the reason. She hasn't named that yet.
 
-**Mirror function:** Sable delivers the mirror moment for a fully-armored (Cynical/Detached/Bitter) commander. She lives the same way and would recognize it immediately.
+**Mirror function:** Sable delivers the mirror moment for a fully-armored (Cynical/Detached/Bitter) superintendent. She lives the same way and would recognize it immediately.
 
 ---
 
@@ -101,7 +101,7 @@ The station is the first place in years she hasn't already half-left. Maris is t
 
 **Velreth:** Genuine warmth, asymmetric. Velreth has quietly decided not to take Sable's warmth personally when she eventually goes. Sable finds Velreth one of the easiest people on the station to be around — no demands, no hope she'll stay. She doesn't realize that's exactly why it'll hurt when she does.
 
-**The commander:** She'll recognize a fully-armored commander before they recognize themselves. The mirror scene is theirs.
+**The superintendent:** She'll recognize a fully-armored superintendent before they recognize themselves. The mirror scene is theirs.
 
 ---
 

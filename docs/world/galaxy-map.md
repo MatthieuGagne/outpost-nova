@@ -71,10 +71,10 @@ inward, not outward.
 **Earth (Sol)** *(Sol — G2V)* — Federation capital. The political and symbolic center of human
 authority. Most characters in the game have never been here and never will be.
 
-**Harrow** *(Sirius — A1V + white dwarf)* — Military-industrial world. Dex's birth world. Commander (Engineer track)
+**Harrow** *(Sirius — A1V + white dwarf)* — Military-industrial world. Dex's birth world. Superintendent (Engineer track)
 birth world. The Federation's war machine drew heavily on Harrow's manufacturing base.
 
-**Velan** *(Tau Ceti — G8V)* — Administrative and cultural capital. Nadia's birth world. Commander (Medic
+**Velan** *(Tau Ceti — G8V)* — Administrative and cultural capital. Nadia's birth world. Superintendent (Medic
 track) birth world. Produces the Federation's bureaucrats, journalists, and diplomats.
 
 ### Inner Frontier
@@ -98,7 +98,7 @@ disrupted the land systems the Drueth kinship networks depended on — not in a 
 dramatic event, but slowly, before anyone was paying attention. The displacement was
 finished before the Fracture started.
 
-**Ashfeld** *(61 Cygni — K5V+K7V binary)* — Drueth refugee settlement. Commander (Drifter track) birth world. What
+**Ashfeld** *(61 Cygni — K5V+K7V binary)* — Drueth refugee settlement. Superintendent (Drifter track) birth world. What
 passes for community when the original structure is gone.
 
 **Carnach Station** *(Pollux — K0III)* — Hegemony Combine HQ orbital. Sits at the Inner Frontier / Border

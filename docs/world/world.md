@@ -140,13 +140,13 @@ A spacefaring empire older than humanity's presence in the Frontier. Not a monol
 
 Serves no flag. Has shareholders. Built half the infrastructure in the Frontier and holds the debt on the other half. Operated on all sides during the war and profits from the peace. Doesn't take sides — profits from the sides existing.
 
-**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified an extraordinary alien structure of unknown origin and massive scale — clearly pre-dating any known civilization, clearly worth controlling. The weapon's functionality was dormant or beyond the survey team's ability to interpret. Hegemony knew they were sitting on something extraordinary. They didn't know it still worked. Hegemony said nothing. They built a waypoint on top of it and waited. The commander's posting is not coincidental.
+**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified an extraordinary alien structure of unknown origin and massive scale — clearly pre-dating any known civilization, clearly worth controlling. The weapon's functionality was dormant or beyond the survey team's ability to interpret. Hegemony knew they were sitting on something extraordinary. They didn't know it still worked. Hegemony said nothing. They built a waypoint on top of it and waited. The superintendent's posting is not coincidental.
 
 **Publicly want:** Operational stability, debt repayment, access to the new Keth trade lanes.
 
 **Actually want:** Quiet ownership of the ancient site under the station. Whatever is down there — they want to own it, not understand it. More specifically: Hegemony's buried survey found not just the structure, but a shutdown mechanism — a control interface the survey team documented but couldn't interpret. Hegemony has spent years quietly studying it. By Act 3, they understand it well enough to use it. This is Harlan's bargaining chip: not a threat, not institutional pressure — the only known way to stop a weapon that will otherwise destroy the station and everyone on it.
 
-**Posture toward the station:** Hegemony already has monitoring equipment on the station, watching for activation events. The commander's reports are being read very carefully. Communications from Hegemony to the commander are friendly but slightly too specific to be routine.
+**Posture toward the station:** Hegemony already has monitoring equipment on the station, watching for activation events. The superintendent's reports are being read very carefully. Communications from Hegemony to the superintendent are friendly but slightly too specific to be routine.
 
 ---
 
@@ -224,7 +224,7 @@ The Unbound are species that were never organized into empires or governments: c
 
 **How they navigate the Frontier:** Wherever the big powers don't bother to look. Information brokerage, access facilitation, transit through complicated jurisdictions. A Maevet collective that has been through a region knows it better than any government map.
 
-**Note on Quen:** Has been on Outpost Nova 15+ years — longer than any other current crew member. Chose to stay, which for a Maevet is significant. What Quen saw when it sealed the Derelict door is the reason it stopped asking questions. Its arc is whether the commander's investigation reopens that question.
+**Note on Quen:** Has been on Outpost Nova 15+ years — longer than any other current crew member. Chose to stay, which for a Maevet is significant. What Quen saw when it sealed the Derelict door is the reason it stopped asking questions. Its arc is whether the superintendent's investigation reopens that question.
 
 ---
 
@@ -368,7 +368,7 @@ The Keeper caste's response was to refer the matter to the Merchant caste leader
 
 Vaen departed. "Here" is away from Keth society. But departure was not passivity.
 
-What drew Vaen to this specific trade lane: a spike in Builder emissions, detectable when the commander first goes deep into the Derelict and triggers the weapon's charging sequence. Vaen has been monitoring Builder signal patterns for years. When the spike hit, they redirected immediately. They arrived presenting themselves as a trader on the new lane — they do not immediately reveal why they came.
+What drew Vaen to this specific trade lane: a spike in Builder emissions, detectable when the superintendent first goes deep into the Derelict and triggers the weapon's charging sequence. Vaen has been monitoring Builder signal patterns for years. When the spike hit, they redirected immediately. They arrived presenting themselves as a trader on the new lane — they do not immediately reveal why they came.
 
 What Vaen carries: a physical artifact found at the secondary Builder ruins site. Unlike coordinates, the artifact is unreadable without context — it is a fragment of Builder notation that describes a target in relative, geometric terms. The weapon's architecture is the decoder ring. When Vaen encounters the weapon's structure, the artifact resolves. The recognition is not of coordinates — it is of the artifact suddenly making sense. The second beat, working out what location it resolves to, happens privately.
 
