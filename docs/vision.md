@@ -22,7 +22,7 @@ These are the north stars. When a design decision is unclear, ask which of these
 | Title | What we take from it |
 |---|---|
 | **Citizen Sleeper** | Closest genre ancestor. Station-based, displaced characters, resource economy that feels personal, moral weight without villains. The feeling of a place that barely holds together but matters to the people in it. |
-| **Mass Effect** | Ensemble crew on a vessel/station. Relationship-driven narrative where every character has a specific wound. Commander as moral center. Faction politics with no clean answers. |
+| **Mass Effect** | Ensemble crew on a vessel/station. Relationship-driven narrative where every character has a specific wound. Protagonist as moral center. Faction politics with no clean answers. |
 | **Disco Elysium** | Hidden alignment system. Morally complex factions. Bittersweet endings. No heroes or villains — everyone is operating with logic that makes sense from inside their position. |
 | **Planescape: Torment** | Identity as the central dramatic question. Dense worldbuilding delivered through NPC conversations, not exposition. Philosophy embedded in character voice. |
 | **Cult of the Lamb** | Station/base building loop intertwined with character relationships. Community growth as both mechanical spine and narrative stakes. |
@@ -35,6 +35,7 @@ These are the north stars. When a design decision is unclear, ask which of these
 | **Babylon 5** | Standalone bottle episodes. A/B plot structure. Mythology as backdrop texture, not plot. Every character has a distinct voice that sounds like themselves under pressure. |
 | **The Expanse** | Hard political realism. Displaced peoples with competing legitimate interests. No clean villains — factions act logically within their own constraints. Consequences accumulate. |
 | **Deep Space Nine** | A cast of displaced peoples stranded together on a station that is sitting on something far larger than any of them understand. The station as community, not just setting. |
+| **Deadwood** | Frontier community formation; authority derived from practical necessity rather than formal structure. The Doc Cochrane model: no contract, no payroll — the community provides a berth and the practitioner provides care, and neither party formalizes it. |
 
 ---
 
