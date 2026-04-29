@@ -36,6 +36,8 @@ Thessari displacement happened roughly 16+ years before the game's present. Velr
 
 The warmth they carry is not a remnant of an intact culture. There is no community to sustain it. It is a practice chosen and rebuilt after the loss, assembled from nothing but the decision to keep making it.
 
+**Employment model:** Velreth holds no station contract and receives no payroll. The arrangement is informal and unspoken: the station provides a berth and meals; Velreth provides medical care. Neither party has formalized it. (Reference: Doc Cochrane in *Deadwood*.)
+
 ---
 
 ## What Was Lost
@@ -90,7 +92,7 @@ Two syllables. Used in full.
 
 Not about becoming warm — already warm. About whether the warmth runs out.
 
-The commander is Hegemony-sent, representing the human half of something Velreth has spent years deciding not to be bitter about. They chose to be warm anyway, on principle, the way they make every other warmth-adjacent choice: from scratch, without cultural permission.
+The superintendent is Hegemony-sent, representing the human half of something Velreth has spent years deciding not to be bitter about. They chose to be warm anyway, on principle, the way they make every other warmth-adjacent choice: from scratch, without cultural permission.
 
 The Keth trader's arrival in Act 2 is harder. The other half of that same decision, arriving in person. Velreth thought they'd resolved it. They hadn't.
 
@@ -98,7 +100,7 @@ The Keth trader's arrival in Act 2 is harder. The other half of that same decisi
 
 ## Relationships
 
-**Maris:** The most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Velreth is Cynical/Curious. They have been each other's counterweight for years before the commander arrives. Maris keeps the future open when Velreth can't; Velreth keeps asking questions when Maris doesn't want to know. Neither needs the other to be different.
+**Maris:** The most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Velreth is Cynical/Curious. They have been each other's counterweight for years before the superintendent arrives. Maris keeps the future open when Velreth can't; Velreth keeps asking questions when Maris doesn't want to know. Neither needs the other to be different.
 
 **Dex:** Drinking buddies — the station's strangest and most genuine friendship. Two people who can sit together and be honest about how bad things are without it becoming a spiral. Clicked fast, which surprised them both. Neither needs the other to perform. Both will say the true thing out loud, in different registers.
 

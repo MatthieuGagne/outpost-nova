@@ -8,7 +8,7 @@
 
 ## Overview
 
-Year 1 is a 58-day compressed arc set entirely on Outpost Nova. The commander arrives as Hegemony's appointed station manager, discovers the weapon in the lower decks, and must decide what kind of person they want to be before the weapon finishes charging. The station is home. The decision is what home is worth.
+Year 1 is a 58-day compressed arc set entirely on Outpost Nova. The superintendent arrives as Hegemony's appointed station manager, discovers the weapon in the lower decks, and must decide what kind of person they want to be before the weapon finishes charging. The station is home. The decision is what home is worth.
 
 ---
 
@@ -16,7 +16,7 @@ Year 1 is a 58-day compressed arc set entirely on Outpost Nova. The commander ar
 
 | Act | Days | Summary |
 |-----|------|---------|
-| Act 1 | Days 1–30 | Before the weapon activates. The commander settles in, meets the crew, discovers the sealed lower decks. |
+| Act 1 | Days 1–30 | Before the weapon activates. The superintendent settles in, meets the crew, discovers the sealed lower decks. |
 | Act 2 | Days 31–51 | Weapon activates. The broadcast goes out. Every faction notices. Vaen arrives. |
 | Act 3 | Days 52–58 | Weapon charging. Harlan arrives. The crew decides. |
 
@@ -26,9 +26,9 @@ Year 1 is a 58-day compressed arc set entirely on Outpost Nova. The commander ar
 
 ### Act 1 — Before the weapon activates (Days 1–30)
 
-**Hegemony Combine:** Running a quiet acquisition play years in preparation. The commander's posting is not coincidental — Hegemony's buried survey identified the lower decks as extraordinary, and a live station manager is a necessary part of turning quiet access into documented control. Monitoring equipment already embedded in the station's systems is watching for activation events. The commander's routine reports are being read at a level above their stated supervisor.
+**Hegemony Combine:** Running a quiet acquisition play years in preparation. The superintendent's posting is not coincidental — Hegemony's buried survey identified the lower decks as extraordinary, and a live station manager is a necessary part of turning quiet access into documented control. Monitoring equipment already embedded in the station's systems is watching for activation events. The superintendent's routine reports are being read at a level above their stated supervisor.
 
-**The Federation:** Has noticed Hegemony's unusual interest in a forgotten waypoint station. A patrol passes near Outpost Nova carrying questions slightly too specific for routine transit checks — the patrol commander's briefing referenced the station by designation, not by location, which is not standard protocol. The Federation doesn't yet know what Hegemony is watching for. They're trying to find out without revealing that they're watching Hegemony.
+**The Federation:** Has noticed Hegemony's unusual interest in a forgotten waypoint station. A patrol passes near Outpost Nova carrying questions slightly too specific for routine transit checks — the patrol officer's briefing referenced the station by designation, not by location, which is not standard protocol. The Federation doesn't yet know what Hegemony is watching for. They're trying to find out without revealing that they're watching Hegemony.
 
 **Keth ruling coalition:** The trade lane opening near Outpost Nova runs too close to old Builder signal patterns for comfort. The coalition is monitoring through channels they don't publicly acknowledge — ancient-tech detection systems that are themselves part of what they've hidden. When Vaen arrives at the station, the ruling coalition notes it. Vaen has no official Keth standing anymore, and the station is outside Keth jurisdiction. They watch and wait.
 
@@ -38,7 +38,7 @@ Year 1 is a 58-day compressed arc set entirely on Outpost Nova. The commander ar
 
 ### Act 2 — Weapon activates, anomalies build (Days 31–51)
 
-**Hegemony Combine:** Detects the broadcast first. Their monitoring equipment was designed for exactly this. Internal communications escalate immediately. The patient acquisition play shifts to urgent — years of quiet positioning are suddenly on a clock the corporation didn't set. The commander's reports become pointed requests. "Assessment" is replaced by "confirmation."
+**Hegemony Combine:** Detects the broadcast first. Their monitoring equipment was designed for exactly this. Internal communications escalate immediately. The patient acquisition play shifts to urgent — years of quiet positioning are suddenly on a clock the corporation didn't set. The superintendent's reports become pointed requests. "Assessment" is replaced by "confirmation."
 
 **Keth ruling coalition:** Detects the broadcast second, through the same ancient-tech detection systems they don't publicly acknowledge. This is precisely the scenario those systems were built to flag. An internal emergency session is called. Vaen's presence at the station — previously noted as an irritant — is now a serious operational concern. They cannot contact Vaen through official channels because Vaen has no official standing. This is the trap they set by exiling them.
 
@@ -50,7 +50,7 @@ Year 1 is a 58-day compressed arc set entirely on Outpost Nova. The commander ar
 
 ### Act 3 — Weapon charging, Harlan arrives (Days 52–58)
 
-**Hegemony Combine:** Harlan's arrival is the acquisition play going overt. Hegemony is done waiting. They believe they can still close this quietly — one person the commander respects, a reasonable ask, a situation that doesn't have to become a crisis if everyone acts professionally. What Hegemony cannot yet see is that the commander they sent is no longer the situation's passive element.
+**Hegemony Combine:** Harlan's arrival is the acquisition play going overt. Hegemony is done waiting. They believe they can still close this quietly — one person the superintendent respects, a reasonable ask, a situation that doesn't have to become a crisis if everyone acts professionally. What Hegemony cannot yet see is that the superintendent they sent is no longer the situation's passive element.
 
 **The Federation:** Has identified Outpost Nova as the source of an anomalous signal and confirmed that Hegemony sent a senior director in person — not normal behavior for a waypoint assessment. They do not yet know about the ruins. They know they are behind. Their internal hawks are becoming harder to manage.
 
@@ -72,7 +72,7 @@ Hegemony loses its acquisition play. Harlan's bargaining chip goes unused.
 
 The Federation and Unaligned Alliance are watching a station that just refused the only known shutdown option — with a charging weapon inside.
 
-The Keth ruling coalition is in crisis: their homeworld is the target, they cannot publicly object without exposing what they know, and the commander has just refused the one person who could stop it.
+The Keth ruling coalition is in crisis: their homeworld is the target, they cannot publicly object without exposing what they know, and the superintendent has just refused the one person who could stop it.
 
 The Frontier holds its breath. The station — and the crew — are on a weapon that is still charging.
 

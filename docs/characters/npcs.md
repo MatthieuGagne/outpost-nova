@@ -15,16 +15,18 @@ This is the canonical reference for all named characters in Outpost Nova. It cov
 
 ---
 
-## The Commander (Player Character)
+## The Superintendent (Player Character)
 
 **Age:** 31
 **Species:** Human
 **Gender:** Player-selectable
 **Appearance:** TBD — resolved at character creation (sprite selection)
 
+The crew's informal address for the Superintendent is **Chief** — earned over time, not given on arrival. Maris is the first crew member to make the switch; Quen is the last.
+
 **Background:** Arrived as Hegemony Combine's appointed station manager. Carries general institutional distrust of Hegemony — earned through experience during and after the war, not specific intelligence about the ruins. Saw real action in the final years of the Fracture, likely at 18-20 years old. Five years of post-war Hegemony work before this assignment.
 
-The ruins are a genuine discovery. The commander did not know about the buried survey before arrival.
+The ruins are a genuine discovery. The superintendent did not know about the buried survey before arrival.
 
 **Backgrounds (player choice):**
 
@@ -74,6 +76,8 @@ Informal trader and information broker. Connects easily, leaves before it gets c
 
 One of the last Thessari. Rebuilt warmth from scratch after displacement, with no culture to back it. Intellectual, cultured, oblique.
 
+**Employment model:** Velreth holds no station contract and receives no payroll. The arrangement is informal and unspoken: the station provides a berth and meals; Velreth provides medical care. Neither party has formalized it. (Reference: Doc Cochrane in *Deadwood*.)
+
 → Full reference: `docs/characters/velreth.md`
 
 ---
@@ -83,6 +87,8 @@ One of the last Thessari. Rebuilt warmth from scratch after displacement, with n
 **Age:** Unknown (15+ years on station) | **Species:** Maevet (Unbound) | **Pronouns:** It/its | **Profile:** Detached / Warm / Bitter | **On station:** 15+ years
 
 The station's oldest presence. Chose to stay when Maevet don't stay; sealed the Derelict door and stopped asking questions. Speaks in grand lyrical registers. The silence is the wound.
+
+**Contract:** Quen's arrangement is with the station (a legacy contract), not with Hegemony Combine directly. In Act 3, Harlan has no employment lever over Quen — the relationship between Quen and Hegemony runs through the station, not through him.
 
 → Full reference: `docs/characters/quen.md`
 
@@ -106,7 +112,7 @@ Federation intelligence operative under journalist cover — and the journalism 
 
 **Age:** Late 30s (Keth equivalent) | **Species:** Keth | **Pronouns:** She/her | **Profile:** Hopeful / Detached / Curious | **On station:** Act 2 arrival
 
-Merchant caste exile, explorer by temperament. Has been monitoring Builder signal patterns for years; redirected to this station when the commander triggered the weapon's charging sequence. Carries a physical artifact from a secondary Builder ruins site — unreadable until the weapon's structure resolves it. Presents as a trader. Does not immediately say why she came.
+Merchant caste exile, explorer by temperament. Has been monitoring Builder signal patterns for years; redirected to this station when the superintendent triggered the weapon's charging sequence. Carries a physical artifact from a secondary Builder ruins site — unreadable until the weapon's structure resolves it. Presents as a trader. Does not immediately say why she came.
 
 → Full reference: `docs/characters/vaen.md`
 
@@ -118,7 +124,7 @@ Merchant caste exile, explorer by temperament. Has been monitoring Builder signa
 
 **Age:** 50s | **Species:** Human | **Profile:** Hopeful / Warm / Bitter | **Title:** Senior Operations Director, Frontier Acquisitions | **On station:** Act 3 arrival
 
-Not a fixer — someone the commander genuinely respects and trusts. Holds the only known weapon shutdown mechanism. Believes in what he's asking for. That's what makes the scene work.
+Not a fixer — someone the superintendent genuinely respects and trusts. Holds the only known weapon shutdown mechanism. Believes in what he's asking for. That's what makes the scene work.
 
 → Full reference: `docs/characters/harlan.md`
 
@@ -177,4 +183,4 @@ Feathered theropod. Bipedal, digitigrade. Three-fingered hands, no wings. Indivi
 - **Derelict incident specifics** — what Quen saw, story beat not design decision
 - **Keth civilization names** (first and second ancient civs) — deferred
 - **Recruitable Derelict survivors** (2-3 characters) — separate design session
-- **Commander appearance options** — resolved at character creation art time
+- **Superintendent appearance options** — resolved at character creation art time
