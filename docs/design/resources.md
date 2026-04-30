@@ -114,3 +114,47 @@ Recipe and upgrade ingredients support two forms:
 - Barter stock: authored offers vs. procedurally generated from a pool?
 - Ship arrival event: authored schedule or randomized within a range?
 - Builder Alloy unlock: does Lower Decks access require a story beat or just a resource gate?
+
+---
+
+## Vril (4th Resource Category)
+
+> **Status:** Lore and economy design locked (issue #76). GDScript implementation out of scope for this pass — no GameState changes, no CraftingSystem changes, no GUT tests.
+
+### Sub-Resources
+
+| Sub-Resource | Cycle | Unlock |
+|---|---|---|
+| Surface Extract *(placeholder name)* | 3d | Drone Bay built |
+| Mid-layer Extract *(placeholder name)* | 6d | Drone Bay Level 1 |
+| Deep Extract *(placeholder name)* | 10d | Story gate: weapon revelation arc |
+
+### Outputs
+
+| Output | Recipe | Description |
+|---|---|---|
+| Lattice *(placeholder name)* | Vril + Parts | Structural components beyond normal engineering limits; Builder-compatible interface material |
+| Compound *(placeholder name)* | Vril + Rations | Biological synthesis with accelerated healing and unexplained cognitive effects |
+| Charged Cells *(placeholder name)* | Vril + Energy Cells | Power output an order of magnitude above baseline; Builder infrastructure responds to charged cells differently |
+
+### HUD Behavior
+
+Vril appears as a 4th HUD category **only after Drone Bay is built**. Zero HUD presence before that point.
+
+### Prerequisite Chain
+
+Power Core restored → Drone Bay buildable → Vril production begins
+
+### No Quota Mechanic
+
+Vril has no extraction quota or cap. Production is gated by cycle length and unlock tier only.
+
+### Out of Scope (this pass)
+
+- GDScript implementation (GameState, CraftingSystem)
+- Drone Bay scene / room
+- Crafting recipe implementation (Lattice, Compound, Charged Cells)
+- GUT tests for Vril logic
+- Drone Bay NPC / character anchor
+- Exact yield amounts (balancing pass)
+- Sub-resource and output naming pass (all names marked as placeholders)
