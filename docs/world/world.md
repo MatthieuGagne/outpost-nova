@@ -140,11 +140,11 @@ A spacefaring empire older than humanity's presence in the Frontier. Not a monol
 
 Serves no flag. Has shareholders. Built half the infrastructure in the Frontier and holds the debt on the other half. Operated on all sides during the war and profits from the peace. Doesn't take sides — profits from the sides existing.
 
-**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified an extraordinary alien structure of unknown origin and massive scale — clearly pre-dating any known civilization, clearly worth controlling. The weapon's functionality was dormant or beyond the survey team's ability to interpret. Hegemony knew they were sitting on something extraordinary. They didn't know it still worked. Hegemony said nothing. They built a waypoint on top of it and waited. The superintendent's posting is not coincidental.
+**Current internal state:** Running a quiet acquisition play on Outpost Nova. The buried survey from the original extraction operation identified an extraordinary alien structure of unknown origin and massive scale — clearly pre-dating any known civilization, clearly worth controlling. The same survey identified Vril — a biological colonial organism drifting in the atmosphere of the gas giant Dis below the station — as a commercially valuable universal catalyst. Hegemony filed Vril extraction rights under Frontier Resource Charter §7 and used this as the public rationale for the station. The weapon's functionality was dormant or beyond the survey team's ability to interpret. Hegemony knew they were sitting on something extraordinary. They didn't know it still worked. Hegemony said nothing. They built a waypoint on top of it and waited. The superintendent's posting is not coincidental.
 
-**Publicly want:** Operational stability, debt repayment, access to the new Keth trade lanes.
+**Publicly want:** Vril extraction monopoly. The superintendent's posting is publicly framed as Resource Operations Manager for the GL-667 Vril extraction site — extraction rights filed under Frontier Resource Charter §7, public record. Other factions can see that Hegemony found something worth extracting at Outpost Nova. They don't know what Vril does at full scale, or that it's connected to the Builder node.
 
-**Actually want:** Quiet ownership of the ancient site under the station. Whatever is down there — they want to own it, not understand it. More specifically: Hegemony's buried survey found not just the structure, but a shutdown mechanism — a control interface the survey team documented but couldn't interpret. Hegemony has spent years quietly studying it. By Act 3, they understand it well enough to use it. This is Harlan's bargaining chip: not a threat, not institutional pressure — the only known way to stop a weapon that will otherwise destroy the station and everyone on it.
+**Actually want:** Control of the Builder weapon's power source. Vril's pulse frequency matches the Builder node's energy draw exactly — controlled extraction reduces the weapon's available power; full-scale extraction would starve it entirely. Hegemony's buried survey also found a shutdown mechanism — a control interface the survey team documented but couldn't interpret. They have spent years quietly studying it. By Act 3, they understand it well enough to use it. Harlan arrives in Act 3 with two levers: the shutdown mechanism (shown) and the Vril extraction throttle (held in reserve). The shutdown mechanism remains Harlan's bargaining chip: not a threat, not institutional pressure — the only known way to stop a weapon that will otherwise destroy the station and everyone on it.
 
 **Posture toward the station:** Hegemony already has monitoring equipment on the station, watching for activation events. The superintendent's reports are being read very carefully. Communications from Hegemony to the superintendent are friendly but slightly too specific to be routine.
 
@@ -381,3 +381,39 @@ What Vaen carries: a physical artifact found at the secondary Builder ruins site
 ## Chapter 5: Year 1 Story Narrative
 
 *Moved to `docs/story/year1.md`. See that document for: 3-act structure, per-act faction postures, and Year 1 endings.*
+
+---
+
+## Chapter 6: Dis and Vril
+
+### 6.1 Dis — The Gas Giant
+
+A gas giant in the outer zone of the Gliese 667 system. Named after Dante's buried city of the damned.
+
+**Physical:** Predominantly deep purple — rich violet and dark purple cloud bands. Vivid electric argon lightning bolts crackle across the upper atmosphere, bright and intense. A spectacular spiral aurora at the magnetic pole: bright magenta vortex with long purple-pink curtains rising into space.
+
+Scattered across the mid-atmosphere cloud band: small isolated patches of pale green bioluminescence — sparse, localized, organic light in the wrong color against the purple atmosphere. This is Vril.
+
+*For image prompt, see `docs/world/station-architecture.md` — Image Generation Prompts: Dis.*
+
+---
+
+### 6.2 Vril
+
+A colonial organism drifting in Dis's mid-atmosphere pressure bands — between the deep cloud layers below and the argon lightning layer above.
+
+**Physical:** Translucent filaments, tens of kilometres in length. At rest: nearly invisible. When pulsing: pale green bioluminescence visible from orbit as small isolated clusters.
+
+**Biology:** Vril evolved to bridge the Builder node's energy output with Dis's planetary core — that gradient was the most stable energy source available in the system. Its biology adapted to make that energy compatible with any substrate. When refined, this property manifests as a universal catalyst.
+
+**Catalytic properties:** Combines with any of the three primary resource categories (Rations, Parts, Energy Cells) to produce outputs beyond normal engineering limits. *See `docs/design/resources.md` for the full economy design.*
+
+---
+
+### 6.3 Hegemony's Hidden Knowledge
+
+Vril's pulse frequency matches the Builder node's energy draw exactly. This is not coincidence — Vril evolved on this gradient. The connection is ancient and structural.
+
+Controlled extraction reduces the weapon's available power. Full-scale extraction would starve it entirely. This is Hegemony's second lever in Act 3, held in reserve behind the shutdown mechanism. Harlan arrives with both: the shutdown mechanism as the shown bargaining chip, and the Vril extraction throttle as the threat behind the threat.
+
+Other factions can see that Hegemony filed extraction rights and found something worth harvesting at Outpost Nova. They do not know Vril is connected to the Builder node. They do not know controlled extraction is a weapon-throttle.
