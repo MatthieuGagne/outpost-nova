@@ -1,24 +1,48 @@
 # scripts/resource_node.gd
 extends Area2D
 
+enum PlotState { EMPTY, GROWING }
+
+signal plot_state_changed(new_state: PlotState)
+
 @export var resource_id: String = "rations"
-@export var amount: int = 1
-@export var cooldown: float = 8.0
+@export var yield_amount: int = 1
 
-@onready var timer: Timer = $Timer
+@onready var _visual: ColorRect = $ColorRect
 
-var _ready_to_collect: bool = true
+var _state: PlotState = PlotState.EMPTY
+
+const COLOR_EMPTY: Color = Color(0.2, 0.7, 0.2)
+const COLOR_GROWING: Color = Color(0.8, 0.6, 0.1)
 
 func _ready() -> void:
 	add_to_group("interactable")
-	timer.wait_time = cooldown
-	timer.one_shot = true
-	timer.timeout.connect(func(): _ready_to_collect = true; modulate = Color.WHITE)
+	if GameState.get_flag("plot_%s_growing" % resource_id):
+		_state = PlotState.GROWING
+		_visual.color = COLOR_GROWING
+	else:
+		_visual.color = COLOR_EMPTY
 
 func interact() -> void:
-	if not _ready_to_collect:
+	if _state == PlotState.GROWING:
+		var main := get_tree().get_root().get_node_or_null("Main")
+		if main:
+			main.show_hud_message("Plot is already growing.")
 		return
-	_ready_to_collect = false
-	GameState.add_resource(resource_id, amount)
-	modulate = Color(0.5, 0.5, 0.5)
-	timer.start()
+	var menus := get_tree().get_nodes_in_group("action_menu")
+	if menus.is_empty():
+		return
+	menus[0].show_for_plot(self)
+
+func start_plot() -> void:
+	if _state != PlotState.EMPTY:
+		return
+	_state = PlotState.GROWING
+	_visual.color = COLOR_GROWING
+	GameState.set_flag("plot_%s_growing" % resource_id, true)
+	ClockManager.commit_action(90)
+	ClockManager.log_action("Started %s plot" % resource_id)
+	plot_state_changed.emit(_state)
+
+func get_plot_state() -> PlotState:
+	return _state

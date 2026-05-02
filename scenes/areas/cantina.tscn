@@ -23,12 +23,10 @@ position = Vector2(80, 80)
 
 [node name="ResourceNode" type="Area2D" parent="RationsNode" unique_id=240848598 instance=ExtResource("2")]
 script = ExtResource("4_gv2i0")
+yield_amount = 2
 
 [node name="MarisSpawn" type="Node2D" parent="." unique_id=684968964]
 position = Vector2(120, 128)
-
-[node name="QuenSpawn" type="Node2D" parent="." unique_id=-1120141237]
-position = Vector2(360, 128)
 
 [node name="WorkshopDoor" type="Area2D" parent="." unique_id=1434318161]
 position = Vector2(8, 128)

@@ -5,7 +5,7 @@ signal time_advanced(new_time: int)
 signal day_ended(day_number: int)
 
 const START_TIME: int = 360   # 06:00
-const END_TIME: int = 960     # 22:00
+const END_TIME: int = 1320    # 22:00
 const SECS_PER_MINUTE: float = 2.0
 
 var current_time: int = START_TIME

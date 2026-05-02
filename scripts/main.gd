@@ -13,7 +13,7 @@ const AREA_SCENES = {
 
 const NPC_SPAWN_AREAS = {
 	"maris":   "cantina",
-	"quen":    "cantina",
+	"quen":    "security_post",
 	"dex":     "workshop",
 	"velreth": "med_bay",
 	"sable":   "trade_dock",
