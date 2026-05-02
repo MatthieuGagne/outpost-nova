@@ -5,15 +5,15 @@
 
 The file arrived three days before Sela Renn did.
 
-The commander read it twice, then set it aside, then read it again. *Fracture-era casualty review, administrative closure series. Affected party: Maris, station designation Outpost Nova. Nature of incident: jurisdictional processing delay, Convoy Harlan-4. Settlement category: acknowledged error, compensatory resolution.* There was a number at the bottom — a credit figure, generous by the standard of these things — and a signature line.
+The superintendent read it twice, then set it aside, then read it again. *Fracture-era casualty review, administrative closure series. Affected party: Maris, station designation Outpost Nova. Nature of incident: jurisdictional processing delay, Convoy Harlan-4. Settlement category: acknowledged error, compensatory resolution.* There was a number at the bottom — a credit figure, generous by the standard of these things — and a signature line.
 
-Three days. The commander had spent them trying to find a way to soften it, to route it through a different channel, to make it arrive as something other than what it was. They hadn't found one. They hadn't told Maris.
+Three days. The superintendent had spent them trying to find a way to soften it, to route it through a different channel, to make it arrive as something other than what it was. They hadn't found one. They hadn't told Maris.
 
-Renn docked on a Tuesday, mid-morning. She was silver-haired and composed, carried a case rather than a tablet, and shook the commander's hand with the warmth of someone who had done difficult things for a long time and learned to make them feel like gifts.
+Renn docked on a Tuesday, mid-morning. She was silver-haired and composed, carried a case rather than a tablet, and shook the superintendent's hand with the warmth of someone who had done difficult things for a long time and learned to make them feel like gifts.
 
 "I appreciate the cooperation," she said. "These reviews are never easy. But closure matters — for the record, and for the people affected. I've found that most people, when it's handled well, feel genuine relief."
 
-"Right," the commander said.
+"Right," the superintendent said.
 
 ---
 
@@ -43,13 +43,13 @@ Quen was quiet. It looked at the Maevet — at the careful packet of useless pap
 
 ---
 
-Maris was in the cantina when the commander found her. She was doing inventory — methodical, focused, the way she did tasks she could manage with her hands. She didn't look up.
+Maris was in the cantina when the superintendent found her. She was doing inventory — methodical, focused, the way she did tasks she could manage with her hands. She didn't look up.
 
-"There's someone I need you to meet," the commander said.
+"There's someone I need you to meet," the superintendent said.
 
 "The woman with the case." Maris wrote something in her ledger. "I know. Velreth told me she docked." A beat. "Did you know she was coming?"
 
-The commander could have said *I only just received the briefing* or *I was trying to find the right moment* or any of the things that were partially true. They didn't.
+The superintendent could have said *I only just received the briefing* or *I was trying to find the right moment* or any of the things that were partially true. They didn't.
 
 "Yes," they said.
 
@@ -59,7 +59,7 @@ Maris wrote another entry. Her handwriting was very neat.
 
 "Three days."
 
-She nodded, once, and kept writing. The commander waited to be told to leave. Maris didn't tell them to leave. After a moment she set down the pen and looked up, and her face was the face of someone who had decided to get through the next part before they felt anything about it.
+She nodded, once, and kept writing. The superintendent waited to be told to leave. Maris didn't tell them to leave. After a moment she set down the pen and looked up, and her face was the face of someone who had decided to get through the next part before they felt anything about it.
 
 "Send her in after the lunch shift," she said. "I'll have the counter clean."
 
@@ -89,7 +89,7 @@ She pushed the sheet back across the counter and went to refill the kettle.
 
 ---
 
-Renn waited. She had time; she was professional; she had done this before. She left the sheet on the counter and told the commander she would check back in the morning, and the commander walked her to the guest quarters and stood outside the door for a moment afterward, in the corridor, not going anywhere.
+Renn waited. She had time; she was professional; she had done this before. She left the sheet on the counter and told the superintendent she would check back in the morning, and the superintendent walked her to the guest quarters and stood outside the door for a moment afterward, in the corridor, not going anywhere.
 
 ---
 
@@ -127,9 +127,9 @@ It left the Maevet there and walked toward the cantina.
 
 ---
 
-The commander was at the counter when Quen came in. Maris was in the kitchen. The settlement sheet was still on the counter, pushed to the side, the credit figure visible.
+The superintendent was at the counter when Quen came in. Maris was in the kitchen. The settlement sheet was still on the counter, pushed to the side, the credit figure visible.
 
-Quen stood in the doorway. It looked at the sheet. It looked at the commander.
+Quen stood in the doorway. It looked at the sheet. It looked at the superintendent.
 
 "You knew," it said. Not an accusation. A fact, being located.
 
@@ -137,7 +137,7 @@ Quen stood in the doorway. It looked at the sheet. It looked at the commander.
 
 "And you said nothing to her."
 
-The commander didn't answer. There was no answer that helped.
+The superintendent didn't answer. There was no answer that helped.
 
 Quen moved to the end of the counter and stood there, and it was clear it was not leaving. It had the quality of something load-bearing — the stillness of a being that had decided to occupy a space and would continue to do so regardless of what happened next.
 
@@ -151,7 +151,7 @@ They looked at each other. Seven years of that particular silence, and all of wh
 
 ---
 
-Renn came back at the ninth hour, case in hand, sheet re-printed, warm and prepared. The commander was there. Quen was there. Maris was behind the counter, hands flat on the surface.
+Renn came back at the ninth hour, case in hand, sheet re-printed, warm and prepared. The superintendent was there. Quen was there. Maris was behind the counter, hands flat on the surface.
 
 "I understand this is difficult," Renn said, sitting. "But I want you to know that this settlement isn't about making the record convenient for Hegemony. It's about acknowledging what happened to you. What you lost. The figure—"
 
@@ -175,9 +175,9 @@ She set the sheet back down and looked at it once more, and then at Quen at the 
 
 ---
 
-Renn left that afternoon. The commander walked her to the courier and she shook their hand and said the file would be flagged for annual review, that the offer remained open, that Hegemony appreciated the station's cooperation. She meant all of it. The courier departed clean.
+Renn left that afternoon. The superintendent walked her to the courier and she shook their hand and said the file would be flagged for annual review, that the offer remained open, that Hegemony appreciated the station's cooperation. She meant all of it. The courier departed clean.
 
-The commander stood at the observation port for a while. Then walked to the cantina.
+The superintendent stood at the observation port for a while. Then walked to the cantina.
 
 Maris was behind the counter, doing the dinner prep. She didn't look up.
 
@@ -187,9 +187,9 @@ Maris was behind the counter, doing the dinner prep. She didn't look up.
 
 "Three days is long enough to decide to tell someone something." She chopped something, efficient, focused. "Next time you're carrying something like that — you tell me. I don't need protection from it. I need to be ready."
 
-"Yes," the commander said.
+"Yes," the superintendent said.
 
-"Good." She didn't say anything else, and the commander understood this was what was available right now, which was more than nothing, and stayed to help with the prep.
+"Good." She didn't say anything else, and the superintendent understood this was what was available right now, which was more than nothing, and stayed to help with the prep.
 
 ---
 
@@ -213,7 +213,7 @@ The record knew what it had done. It would keep knowing.
 
 The station ran on anyway, on the things the forms couldn't measure — on the seven years of Maris's hands, on the fifteen years of Quen's watching, on the small decision of a Maevet who wanted to stop moving and had found a place that would let them, for a while, without asking for papers that didn't exist.
 
-The commander took a table in the corner and ordered something warm and didn't say anything, because there was nothing to say that the room wasn't already saying.
+The superintendent took a table in the corner and ordered something warm and didn't say anything, because there was nothing to say that the room wasn't already saying.
 
 ---
 

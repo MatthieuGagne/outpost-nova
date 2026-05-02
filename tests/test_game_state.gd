@@ -1,6 +1,9 @@
 # tests/test_game_state.gd
 extends GutTest
 
+func before_each():
+	GameState.reset()
+
 func test_resources_start_at_zero():
 	GameState.reset()
 	assert_eq(GameState.get_resource("rations"), 0)

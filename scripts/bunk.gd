@@ -6,7 +6,4 @@ func _ready() -> void:
 
 func interact() -> void:
 	var main = get_tree().get_root().get_node("Main")
-	if DayManager.is_day_complete():
-		main.advance_day()
-	else:
-		main.show_hud_message("You're not ready to rest yet.")
+	main.advance_day()

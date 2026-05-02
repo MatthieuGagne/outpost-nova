@@ -13,7 +13,7 @@ He poured a second cup of something and went to work.
 
 ---
 
-The authorization came through at 0900. Commander's stamp, routine maintenance order: ventilation routing check, lower corridor section 7-C. Quen listed as security oversight. Scheduled for 1100.
+The authorization came through at 0900. Superintendent's stamp, routine maintenance order: ventilation routing check, lower corridor section 7-C. Quen listed as security oversight. Scheduled for 1100.
 
 Dex read it on his board while he was running a diagnostic on the secondary coupling array. He had the anomaly file open in another window. He looked at the authorization, then at the file, then at the authorization again.
 
@@ -75,15 +75,15 @@ Velreth administered the flush and they waited out the twenty minutes, and the s
 
 ---
 
-The commander found Dex at end of shift, doing the walkthrough.
+The superintendent found Dex at end of shift, doing the walkthrough.
 
-"Lower corridor check came back clean," the commander said. "Anything unusual on your end today?"
+"Lower corridor check came back clean," the superintendent said. "Anything unusual on your end today?"
 
 Dex had the anomaly file on his tablet. Both entries. The shape of the second one, which was different from the first in a way that meant something he didn't have a name for.
 
 "Nothing to report," he said.
 
-The commander nodded and moved on.
+The superintendent nodded and moved on.
 
 ---
 
@@ -117,7 +117,7 @@ Neither of them said anything else.
 
 ---
 
-*Commander's Log — End of Day*
+*Superintendent's Log — End of Day*
 
 *Lower corridor ventilation check completed, section 7-C. No anomalies found. Station systems nominal. Maintenance backlog reduced by one item. Day rated non-critical.*
 

@@ -35,5 +35,5 @@ func _build_choice_overlay() -> CanvasLayer:
 
 func _on_final_choice(flag: String, layer: CanvasLayer) -> void:
 	GameState.set_flag(flag, true)
-	DayManager.complete_beat("the_choice")
+	ClockManager.log_action("Made final choice")
 	layer.queue_free()

@@ -9,9 +9,9 @@ title: Quen
 
 title: Quen_FirstMeeting
 ---
-Quen: So. The station has been assigned a commander.
+Quen: So. The station has been assigned a superintendent.
 Quen: I have stood at this post through three such appointments. Each arrived with a mandate, a certainty, and a thorough unfamiliarity with what this place actually is.
-Quen: What Hegemony has given you, Commander, is a report. What I carry is fifteen years of what the report did not include.
+Quen: What Hegemony has given you, Superintendent, is a report. What I carry is fifteen years of what the report did not include.
 -> Tell me more. #register:curious
     <<register curious>>
     Quen: In time. There is an order to these things. You are not ready for more — I say that with neither condescension nor comfort. Simply fact.
@@ -21,7 +21,7 @@ Quen: What Hegemony has given you, Commander, is a report. What I carry is fifte
 -> Fine. #register:detached
     <<register detached>>
     Quen: [beat] Yes. That is often how it begins.
-<<beat quen_arrives>>
+<<log_action "Spoke with Quen">>
 ===
 
 title: Quen_Casual

@@ -84,9 +84,11 @@ Sentences about the lower decks don't finish.
 
 ## Arc
 
-In Act 1: friction with the commander. Its authority is station-native; the commander's is Hegemony-issued. It has watched Hegemony representatives come and go. The specific wariness it holds for the commander is different from that pattern — and it knows the difference.
+In Act 1: friction with the superintendent. Its authority is station-native; the superintendent's is Hegemony-issued. It has watched Hegemony representatives come and go. The specific wariness it holds for the superintendent is different from that pattern — and it knows the difference.
 
 In Acts 2–3: it must decide where its loyalty lies. The station it stayed for. The crew it chose. The long memory it wounded to protect them. When the weapon activates and what Quen sealed begins to come apart, the question is whether the choice to stay meant the choice to stay for this too.
+
+Quen's contract is with the station (a legacy arrangement predating the current superintendent), not with Hegemony Combine directly. In Act 3, Harlan has no employment lever over Quen — the relationship between Quen and Hegemony runs through the station, not through him.
 
 ---
 
@@ -100,7 +102,7 @@ In Acts 2–3: it must decide where its loyalty lies. The station it stayed for.
 
 **Velreth:** Wary warmth. Velreth treated crew who came back from the lower decks before the sealing. There was one moment — a medical consultation that touched close to what Quen knows — where both of them chose not to ask the question that was right there. They have never spoken of it. The relationship lives in that shared not-asking.
 
-**The commander:** Friction in Act 1. Its authority over restricted access is station-native and absolute; the commander's Hegemony mandate is precisely the kind of institutional claim it has watched override everything else its entire life. The wariness is structural, not personal. In Acts 2–3, as the weapon comes alive, the question becomes: is the commander someone it stayed for, or the newest face of the thing that put it here?
+**The Superintendent:** Friction in Act 1. Its authority over restricted access is station-native and absolute; the superintendent's Hegemony mandate is precisely the kind of institutional claim it has watched override everything else its entire life. The wariness is structural, not personal. In Acts 2–3, as the weapon comes alive, the question becomes: is the superintendent someone it stayed for, or the newest face of the thing that put it here?
 
 ---
 
@@ -108,11 +110,11 @@ In Acts 2–3: it must decide where its loyalty lies. The station it stayed for.
 
 It was there. It sealed the door. It sealed it on Hegemony's instruction — but had already decided to seal it before the order came.
 
-There was a partial activation event years before the commander's arrival. Something stirred in the lower decks. Quen saw enough to be frightened. It sealed the door. The weapon went dormant.
+There was a partial activation event years before the superintendent's arrival. Something stirred in the lower decks. Quen saw enough to be frightened. It sealed the door. The weapon went dormant.
 
 What it saw during that partial activation is the specific thing it stopped asking questions about.
 
-The commander's investigation reopens what Quen closed.
+The superintendent's investigation reopens what Quen closed.
 
 ---
 

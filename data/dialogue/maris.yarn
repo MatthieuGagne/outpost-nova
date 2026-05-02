@@ -20,7 +20,7 @@ Maris: Don't let the name fool you, it actually makes real food. Mostly.
 -> ...right. #register:detached
     <<register detached>>
     Maris: ...okay then.
-<<beat meet_maris>>
+<<log_action "Met Maris">>
 <<flag met_maris>>
 ===
 
