@@ -21,6 +21,7 @@ Dex: I'm Dex. I keep the systems from eating themselves. So far, so good.
     <<register sharp>>
     Dex: Long enough to know where the bodies are buried. Metaphorically. Probably.
 <<log_action "Checked in with Dex">>
+<<flag met_dex>>
 ===
 
 title: Dex_Casual

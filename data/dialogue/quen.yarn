@@ -22,6 +22,7 @@ Quen: What Hegemony has given you, Superintendent, is a report. What I carry is 
     <<register detached>>
     Quen: [beat] Yes. That is often how it begins.
 <<log_action "Spoke with Quen">>
+<<flag met_quen>>
 ===
 
 title: Quen_Casual
