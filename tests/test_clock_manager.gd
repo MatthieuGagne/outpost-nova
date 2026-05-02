@@ -22,12 +22,12 @@ func test_can_act_true_when_time_available():
 	assert_true(ClockManager.can_act(30))
 
 func test_can_act_false_when_cost_exceeds_end_time():
-	ClockManager.current_time = 940
+	ClockManager.current_time = 1300
 	assert_false(ClockManager.can_act(30))
 
 func test_can_act_true_at_exact_boundary():
-	ClockManager.current_time = 930
-	assert_true(ClockManager.can_act(30))  # 930+30=960 exactly
+	ClockManager.current_time = 1290
+	assert_true(ClockManager.can_act(30))  # 1290+30=1320 exactly
 
 func test_commit_action_emits_time_advanced():
 	var emitted := [false]
@@ -38,18 +38,18 @@ func test_commit_action_emits_time_advanced():
 	assert_true(emitted[0])
 
 func test_overflow_emits_day_ended():
-	ClockManager.current_time = 940
+	ClockManager.current_time = 1300
 	var day_num := [0]
 	var cb := func(d: int): day_num[0] = d
 	ClockManager.day_ended.connect(cb)
-	ClockManager.commit_action(30)  # 940+30=970 > 960
+	ClockManager.commit_action(30)  # 1300+30=1330 > 1320
 	ClockManager.day_ended.disconnect(cb)
 	assert_eq(day_num[0], 1)
 
 func test_overflow_does_not_error():
-	ClockManager.current_time = 950
-	ClockManager.commit_action(30)  # 950+30=980 > 960
-	assert_eq(ClockManager.current_time, 980)
+	ClockManager.current_time = 1300
+	ClockManager.commit_action(30)  # 1300+30=1330 > 1320
+	assert_eq(ClockManager.current_time, 1330)
 
 func test_end_day_manually_emits_day_ended():
 	var day_num := [0]
