@@ -24,6 +24,7 @@ func _refresh_door() -> void:
 	door_sprite.modulate = Color.GREEN if GameState.get_flag("derelict_mentioned") else Color.RED
 
 func _enter_derelict() -> void:
-	if not DayManager.is_beat_complete("first_derelict_run"):
-		DayManager.complete_beat("first_derelict_run")
+	if not GameState.get_flag("first_derelict_run"):
+		ClockManager.log_action("Entered derelict")
+		GameState.set_flag("first_derelict_run", true)
 	get_tree().change_scene_to_file("res://scenes/derelict/run.tscn")

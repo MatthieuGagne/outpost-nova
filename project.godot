@@ -19,7 +19,6 @@ config/features=PackedStringArray("4.6", "C#", "Mobile")
 GameState="*res://scripts/autoload/game_state.gd"
 CraftingSystem="*res://scripts/autoload/crafting_system.gd"
 ClockManager="*res://scripts/autoload/clock_manager.gd"
-DayManager="*res://scripts/autoload/day_manager.gd"
 RoomGenerator="*res://scripts/derelict/room_generator.gd"
 
 [display]
