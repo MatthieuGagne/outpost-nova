@@ -16,18 +16,17 @@ pwd
    ```sh
    dotnet build "Outpost Nova.csproj"
    ```
-3. Sync non-Yarn `.import` sidecar files from the main repo (required for textures and other C#-imported assets — but NOT the YarnProject, which must always be compiled fresh from source):
+3. Sync all `.import` sidecar files and the `.godot/imported/` cache from the main repo:
    ```sh
-   rsync -a --exclude='outpost-nova.yarnproject*' /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
+   rsync -a /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
    rsync -a /home/mathdaman/code/outpost-nova/.godot/imported/ ./.godot/imported/
    ```
-4. Always compile the YarnProject fresh from this worktree's `.yarn` source files — never copy the compiled resource from the main repo, as it may be stale:
+4. Delete ONLY the compiled YarnProject `.tres` — keep `outpost-nova.yarnproject.import` intact. The `.import` file contains `importer="yarnproject"` which tells Godot to invoke the C# YarnSpinner importer. Deleting the `.import` (or both files) causes headless import to use a generic loader that omits `CompiledYarnProgramBase64`, breaking all dialogue. Deleting just the `.tres` forces a fresh recompile from the worktree's current `.yarn` source files:
    ```sh
-   rm -f data/dialogue/outpost-nova.yarnproject.import
    rm -f .godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres
    godot --headless --import --path <worktree_path>
    ```
-   The `CompiledYarnProgramBase64` field is populated by the C# YarnSpinner importer when dotnet assemblies are built first (step 2).
+   This works whether or not `.yarn` files were modified in the worktree.
 5. Launch the game from the worktree:
    ```sh
    godot --path <worktree_path> &
