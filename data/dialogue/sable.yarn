@@ -16,5 +16,5 @@ Sable: ...you're going to ask, aren't you.
 -> Sure. #register:detached
     <<register detached>>
     Sable: ...hm. Maybe you're alright.
-<<beat sable_arrives>>
+<<log_action "Met Sable">>
 ===

@@ -85,9 +85,9 @@ She has no one to aim the anger at. The officer was censured. The representative
 
 **She will not accept the settlement.** Not because she wants Hegemony to suffer. Because accepting it would mean the record is complete, and the record is not complete. Some things should not be resolved, because resolving them would be a lie about what happened. The file stays open. The record keeps knowing.
 
-**She reads fast and accurately.** She doesn't explain her reads. She told the commander about Cael on day three — not to warn them, not to bond — because they needed to know, delivered as fact, and she went back to work. She told Dex about his potential reassignment directly and left the room because staying with nothing to say was just another thing he'd have to manage.
+**She reads fast and accurately.** She doesn't explain her reads. She told the superintendent about Cael on day three — not to warn them, not to bond — because they needed to know, delivered as fact, and she went back to work. She told Dex about his potential reassignment directly and left the room because staying with nothing to say was just another thing he'd have to manage.
 
-**She is warm in the way that stays present with difficulty, not in the way that softens it.** After Renn leaves — after the hardest day she's had in years — she goes back to the dinner prep. She corrects the commander cleanly: *you should have told me. I don't need protection from it. I need to be ready.* Then she lets them stay and help with the prep.
+**She is warm in the way that stays present with difficulty, not in the way that softens it.** After Renn leaves — after the hardest day she's had in years — she goes back to the dinner prep. She corrects the superintendent cleanly: *you should have told me. I don't need protection from it. I need to be ready.* Then she lets them stay and help with the prep.
 
 ---
 
@@ -119,7 +119,7 @@ She does not say: *I think, I feel, I guess, maybe.* She doesn't soften entry. S
 
 Not about becoming hopeful — she already is. About whether the bitterness eventually erodes the warmth and hope that have survived alongside it for seven years.
 
-The specific pressure: the commander is Hegemony-sent. She chose to be warm to them anyway. That choice is load-bearing. When the weapon activates and the station is no longer a safe distance from institutional power, the question becomes whether she can hold the forward-facing orientation when it's pointed directly at the thing that killed Cael.
+The specific pressure: the superintendent is Hegemony-sent. She chose to be warm to them anyway. That choice is load-bearing. When the weapon activates and the station is no longer a safe distance from institutional power, the question becomes whether she can hold the forward-facing orientation when it's pointed directly at the thing that killed Cael.
 
 The quieter arc: she is fond of Sable and has rationed the investment because she's watched Sable leave before. She knows the price of letting something matter. Whether she can let herself care fully — not just warmly but with real cost — runs underneath the main arc.
 
@@ -127,13 +127,13 @@ The quieter arc: she is fond of Sable and has rationed the investment because sh
 
 ## Relationships
 
-**Velreth:** The most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Velreth is Cynical/Curious. They have been each other's counterweight for years before the commander arrives. Maris keeps the future open when Velreth can't; Velreth keeps asking questions when Maris doesn't want to know. Neither needs the other to be different.
+**Velreth:** The most lived-in friendship on the station. Two warm people, opposite on every other axis — Maris is Hopeful/Bitter, Velreth is Cynical/Curious. They have been each other's counterweight for years before the superintendent arrives. Maris keeps the future open when Velreth can't; Velreth keeps asking questions when Maris doesn't want to know. Neither needs the other to be different.
 
 **Dex:** Philosophical tension, not personal. She believes in the station as something worth building; he believes in it as something worth maintaining. They respect each other. They disagree about what respect requires. Neither is wrong, which is why it hasn't resolved in seven years. When she told him about the reassignment threat, she told him directly and left the room. That was respect.
 
 **Sable:** Fond, holds back. Maris has learned to hold it at a slight distance — she's watched Sable leave before. The warmth is real; the investment is rationed. For Sable, Maris is the closest thing to a home she's had, which is exactly why she hasn't left yet this time.
 
-**The commander:** She chose to be warm to them despite knowing they're Hegemony-sent. She corrected them when they withheld the Renn information — not in anger, in clarity: *I don't need protection from it. I need to be ready.* The relationship is real and it is also, for her, a conscious choice she has to keep making.
+**The superintendent:** She chose to be warm to them despite knowing they're Hegemony-sent. She corrected them when they withheld the Renn information — not in anger, in clarity: *I don't need protection from it. I need to be ready.* The relationship is real and it is also, for her, a conscious choice she has to keep making.
 
 ---
 
@@ -141,7 +141,7 @@ The quieter arc: she is fond of Sable and has rationed the investment because sh
 
 The lower decks are sealed. Something happened. She has been here seven years and made a deliberate choice not to pull that thread. She knows what it costs to know certain things, and she has decided this one isn't hers to carry.
 
-When the commander begins investigating, that choice becomes harder to maintain.
+When the superintendent begins investigating, that choice becomes harder to maintain.
 
 ---
 

@@ -20,10 +20,13 @@ Dex: I'm Dex. I keep the systems from eating themselves. So far, so good.
 -> You sound like you've been here a while. #register:sharp
     <<register sharp>>
     Dex: Long enough to know where the bodies are buried. Metaphorically. Probably.
-<<beat check_workshop>>
+<<log_action "Checked in with Dex">>
+<<flag met_dex>>
 ===
 
 title: Dex_Casual
 ---
 Dex: Back again. Nothing's exploded since you left, if that's what you're checking.
+-> Have you spoken with Velreth? #pair:dex_velreth
+    Dex: Once or twice. Quiet. Knows their stuff, which counts for something out here.
 ===

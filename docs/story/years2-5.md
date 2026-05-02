@@ -58,7 +58,7 @@ The Others were the second civilization nearly destroyed by the Builders. Their 
 | Year | Ancestor Track Status |
 |------|----------------------|
 | Year 1 | Weapon aimed at Keth homeworld; Others documented the Builders; ruling coalition suspects biological connection |
-| Year 2 | Vaen's artifact resolved (pointing to the Keth homeworld); the connection is suspected by Vaen and the commander but not confirmed |
+| Year 2 | Vaen's artifact resolved (pointing to the Keth homeworld); the connection is suspected by Vaen and the superintendent but not confirmed |
 | Year 3 | Expedition to secondary Others sites + Vaen's artifact knowledge; biological similarities undeniable at secondary sites |
 | Year 4 | Homeworld access after the ruling coalition's authority cracks; Others' ruins excavated under living Keth civilization; connection confirmed |
 | Year 5 | [Deferred] |
@@ -108,7 +108,7 @@ The Curious axis stays intact — it's what drives her to investigate what she m
 **Nadia ↔ Vaen collision (Year 2):** Nadia realizes what Vaen is carrying and understands retroactively what she was sent to watch for. The uncanny mirror of Year 1 cracks — she's on one side of something Vaen is on the other side of, and neither of them chose it cleanly. Specific scene, to be written in Year 2 design.
 
 ### Weapon Critical (Defend Ending Only)
-If the commander chose Ending 1 (Defend), the weapon reaches critical charge in Year 2 Act 3. What "critical" means — for the station, for the Keth homeworld, for the factions watching — is the Year 2 climax beat for that track.
+If the superintendent chose Ending 1 (Defend), the weapon reaches critical charge in Year 2 Act 3. What "critical" means — for the station, for the Keth homeworld, for the factions watching — is the Year 2 climax beat for that track.
 
 ### Vaen's Next Step
 Depending on Year 1's ending, Vaen holds coordinates pointing to the Keth homeworld. The ship fund is not enough yet. Year 2 is about what Vaen does with knowledge they cannot act on alone, in a situation where everyone around them has reasons to want the knowledge contained.
@@ -118,7 +118,7 @@ Depending on Year 1's ending, Vaen holds coordinates pointing to the Keth homewo
 ## Year 3 Beats (Detailed)
 
 ### Unaligned Alliance Engages
-The Alliance has been watching. By Year 3, the cost of staying silent outweighs the cost of engagement. They make formal contact — with the station, with the commander (depending on Year 1 outcome), and with the other factions. Their stated interest: ensuring no single faction controls the Builder discovery. Their actual interest: their own access to whatever leverage the discovery represents.
+The Alliance has been watching. By Year 3, the cost of staying silent outweighs the cost of engagement. They make formal contact — with the station, with the superintendent (depending on Year 1 outcome), and with the other factions. Their stated interest: ensuring no single faction controls the Builder discovery. Their actual interest: their own access to whatever leverage the discovery represents.
 
 ### Discovery Expedition
 Secondary Others sites — accessible without Keth homeworld access — become the Year 3 expedition arc. Vaen's artifact serves as a partial guide. The Others' documentation at secondary sites begins to make the biological connection undeniable, even if the homeworld evidence is still locked.

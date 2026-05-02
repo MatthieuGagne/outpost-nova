@@ -12,14 +12,14 @@ title: Velreth_FirstMeeting
 Velreth: You are not injured. That is, statistically speaking, the least common reason people find their way here on a first day.
 -> I wanted to introduce myself. #register:warm
     <<register warm>>
-    Velreth: A reasonable instinct. [beat] Most commanders wait until something breaks before they remember the med bay exists.
+    Velreth: A reasonable instinct. [beat] Most superintendents wait until something breaks before they remember the med bay exists.
 -> Just getting my bearings. #register:curious
     <<register curious>>
     Velreth: A useful exercise. The station has a way of disorienting people — not just physically. I find it helps to know where the medical bay is. In case the bearings don't hold.
 -> I'll come back when I need something. #register:detached
     <<register detached>>
     Velreth: [beat] That is what most people say. I will be here.
-<<beat met_velreth>>
+<<log_action "Met Velreth">>
 <<flag met_velreth>>
 ===
 
@@ -32,4 +32,6 @@ Velreth: The presenting problem today is the same as yesterday. [beat] Not yours
 -> Noted. #register:detached
     <<register detached>>
     Velreth: [beat] Yes.
+-> Have you met Maris properly? #pair:maris_velreth
+    Velreth: We have spoken. She appears to manage her frustrations constructively. I find that admirable.
 ===

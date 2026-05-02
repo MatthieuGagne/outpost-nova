@@ -29,7 +29,8 @@ The dominant structural element — a massive vertical column built by the Build
 |---------|-------|
 | **Sensor Cap** | Top of spine, above the arc. Navigation equipment and sensor arrays installed by Hegemony. Maintained by Dex. Unknown to him: this is the weapon's targeting and firing mechanism. On activation, it reconfigures into the gun chamber — pointed at its target. |
 | **Bearing Collar** | Midpoint. Clamped around the spine — the static mechanical interface that the C-arc rotates around. Purely mechanical; no pressurized space or berths. The Trade Dock connects laterally from the collar into the C-arc — the only passage between the two. |
-| **Power Core** | First Builder room below the junction. Ancient power generation infrastructure. The station has been running off its residual output for years. Restoring active operation unlocks Energy Cell production. Zero gravity. |
+| **Power Core** | First Builder room below the junction. Ancient power generation infrastructure. The station has been running off its residual output for years. Restoring active operation unlocks Energy Cell production. Zero gravity. *Production: Energy Cell plots (out of scope for MVP) — see `docs/design/production-plots.md`.* |
+| **Drone Bay** *(lateral attachment, Power Core level)* | Zero-g. Mag-boots required. A lateral arm off the spine at Power Core level. Drone launch bays and telemetry equipment bolted directly onto Builder infrastructure — Hegemony's extraction equipment mounted on the very structure it unknowingly drains. Prerequisite chain: Power Core restored → Drone Bay buildable → Vril production begins. No character anchor (deferred). *Production: Vril extraction cradles (out of scope for MVP) — see `docs/design/production-plots.md`.* |
 | **Lower Decks** | Sealed Builder sections below the Power Core. Debris, old infrastructure, unexplored space. Salvage actions pull resources from Builder wreckage. Quen's sealed door is here — the threshold to the Deep Core. Zero gravity. |
 | **Deep Core** | Bottom of the spine. Fully unmodified Builder structure. Zero gravity. The weapon's mechanism. Does not obviously read as a weapon — the geometry is massive, precise, and intentional, but its purpose is not legible until context (logs, Vaen's artifact) reveals it. The Act 3 chambers branch laterally from here. |
 
@@ -58,8 +59,8 @@ A C-shaped rotating ring assembled by Hegemony Combine — a powerful interstell
 ```
 
 - **Trade Dock** (Sable): A single integrated module — berth face, Sable's space, arc face. Two docking berths on the outward face receive arriving ships. The outer ring of each berth is static; the inner ring is on rails and spins with the station — the airlock waits for alignment before opening. Gravity hits the moment you step through. Two exits branch into the arc — left to the Cantina, right to Security Post. Sable has sightlines to both from her post.
-- **Center triangle** (Trade Dock + Cantina + Security Post): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security Post share a direct closeable door.
-- **Workshop** (dead end): Only reachable through the Cantina. Left tip of the arc.
+- **Center triangle** (Trade Dock + Cantina + Security Post): The oldest Hegemony modules. The operational and social heart of the station. Cantina and Security Post share a direct closeable door. *Cantina production: 2 Rations plots at Day 1 — see `docs/design/production-plots.md`.*
+- **Workshop** (dead end): Only reachable through the Cantina. Left tip of the arc. *Production: 2 Parts plots at Day 1 — see `docs/design/production-plots.md`.*
 - **Med Bay** (dead end): Only reachable through Security Post. Right tip of the arc.
 
 **Arm tips:** The arms extend beyond the current rooms. At the current edge of each pressurized section: a sealed airlock. From outside, skeletal scaffolding marks where the next modules will go. Building a new room means constructing and pressurizing the next section — filling in the skeleton. The station genuinely grows; it doesn't just reveal what was already there.
@@ -165,3 +166,7 @@ These chambers contain what the weapon was built *for* — the records, the logi
 > - Top-right open end (pointing right): skeletal scaffolding, labeled "FUTURE CONSTRUCTION"
 > - Bottom-right open end (pointing right): skeletal scaffolding, labeled "FUTURE CONSTRUCTION"
 >
+
+### Dis — The Gas Giant
+
+> Generate an image of an Argon Lightning / Auroras giant gas planet. The planet is predominantly deep purple — rich violet and dark purple cloud bands across its surface. Vivid electric lightning bolts crackle and branch dramatically across the planet, bright and intense. A cold blue-white star is visible in the upper-right of the frame — small and sharp, like a distant stellar remnant. Scattered across the planet's mid-atmosphere cloud band, small isolated patches of pale green bioluminescence — sparse and localized, each patch clearly visible but contained, as if something organic is glowing in clusters beneath the cloud layer. The green patches are a noticeable secondary detail but the planet remains predominantly purple.

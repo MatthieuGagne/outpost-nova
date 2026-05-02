@@ -2,7 +2,7 @@
 
 **Status:** Design locked 2026-04-25
 **Supersedes:** PRD #43 (daily slot system), PRD #45 (production loop) where they conflict.
-**Cross-references:** `docs/design/station-expansion.md` (room layout, upgrade costs), `docs/design/resources.md` (sub-resource catalog, seed selection, barter), `docs/characters/npcs.md` (NPC roster), `docs/story/year1.md` (arc episode schedule)
+**Cross-references:** `docs/design/station-expansion.md` (room layout, upgrade costs), `docs/design/resources.md` (sub-resource catalog, seed selection, barter), `docs/design/production-plots.md` (plot count, visual states, per-room design), `docs/characters/npcs.md` (NPC roster), `docs/story/year1.md` (arc episode schedule)
 
 ---
 

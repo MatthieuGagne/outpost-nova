@@ -64,7 +64,6 @@ const AREA_ENTRY_POSITIONS = {
 @onready var hud = $HUD
 @onready var day_summary = $DaySummary
 @onready var crafting_panel = $CraftingPanel
-@onready var arc_events = $ArcEvents
 @onready var fade_anim: AnimationPlayer = $FadeLayer/AnimationPlayer
 
 var _current_area_id: String = ""
@@ -73,8 +72,7 @@ var _npc_instances: Dictionary = {}
 var _is_transitioning: bool = false
 
 func _ready() -> void:
-	DayManager.day_ended.connect(_on_day_ended)
-	DayManager.all_beats_done.connect(_on_all_beats_done)
+	ClockManager.day_ended.connect(_on_day_ended)
 	_setup_dialogue_runner()
 	_spawn_npcs()
 	go_to_area("trade_dock")
@@ -157,22 +155,5 @@ func advance_day() -> void:
 func show_hud_message(text: String) -> void:
 	hud.show_message(text)
 
-func _on_day_ended(day: int) -> void:
-	if day == 7:
-		_show_ending()
-	else:
-		if DayManager.current_day == 7:
-			arc_events.trigger_final_choice()
-		else:
-			show_hud_message("Day %d begins." % DayManager.current_day)
-
-func _on_all_beats_done() -> void:
-	show_hud_message("All story beats complete. Rest at your bunk in Quarters.")
-
-func _show_ending() -> void:
-	if GameState.get_flag("ending_pragmatic"):
-		get_tree().change_scene_to_file("res://scenes/ui/ending_pragmatic.tscn")
-	elif GameState.get_flag("ending_hopeful"):
-		get_tree().change_scene_to_file("res://scenes/ui/ending_hopeful.tscn")
-	else:
-		get_tree().change_scene_to_file("res://scenes/ui/ending_deferred.tscn")
+func _on_day_ended(_day: int) -> void:
+	day_summary.show_summary()

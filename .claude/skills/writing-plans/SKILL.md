@@ -239,6 +239,8 @@ Before offering the execution handoff, run this checklist. Fix any failures befo
 | 3 | **Parallel annotations justified** | Every task has `**Depends on:**` and `**Parallelizable with:**` filled in. Any `**Parallelizable with:** none` MUST be followed by a one-sentence justification. An unjustified `none` is a plan defect. |
 | 4 | **Parallel Execution Groups tables present** | Every batch that precedes a Smoketest Checkpoint has a `#### Parallel Execution Groups` table |
 | 5 | **No implementation details leaked from brainstorming** | Plan contains file paths and task steps, not design narrative or requirement rationale (those belong in the GitHub issue) |
+| 6 | **Removal tasks grepped first** | If any task deletes an autoload, global, or system, run `grep -rn OldName scripts/ tests/ data/` before writing the task list. Every file referencing the old name must appear as an explicit task in the plan. |
+| 7 | **UI design intent confirmed** | If any task adds a UI control (button, panel, label), confirm with the user whether the interaction is UI-driven (button) or world-driven (NPC/object interaction) — they are not equivalent in feel. |
 
 **Failure handling:**
 - Checks #1, #2, #4, #5 fail → fix the plan now and re-run the checklist from the top.

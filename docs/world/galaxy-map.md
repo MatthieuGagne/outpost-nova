@@ -71,10 +71,10 @@ inward, not outward.
 **Earth (Sol)** *(Sol — G2V)* — Federation capital. The political and symbolic center of human
 authority. Most characters in the game have never been here and never will be.
 
-**Harrow** *(Sirius — A1V + white dwarf)* — Military-industrial world. Dex's birth world. Commander (Engineer track)
+**Harrow** *(Sirius — A1V + white dwarf)* — Military-industrial world. Dex's birth world. Superintendent (Engineer track)
 birth world. The Federation's war machine drew heavily on Harrow's manufacturing base.
 
-**Velan** *(Tau Ceti — G8V)* — Administrative and cultural capital. Nadia's birth world. Commander (Medic
+**Velan** *(Tau Ceti — G8V)* — Administrative and cultural capital. Nadia's birth world. Superintendent (Medic
 track) birth world. Produces the Federation's bureaucrats, journalists, and diplomats.
 
 ### Inner Frontier
@@ -98,7 +98,7 @@ disrupted the land systems the Drueth kinship networks depended on — not in a 
 dramatic event, but slowly, before anyone was paying attention. The displacement was
 finished before the Fracture started.
 
-**Ashfeld** *(61 Cygni — K5V+K7V binary)* — Drueth refugee settlement. Commander (Drifter track) birth world. What
+**Ashfeld** *(61 Cygni — K5V+K7V binary)* — Drueth refugee settlement. Superintendent (Drifter track) birth world. What
 passes for community when the original structure is gone.
 
 **Carnach Station** *(Pollux — K0III)* — Hegemony Combine HQ orbital. Sits at the Inner Frontier / Border
@@ -134,11 +134,11 @@ Its existence is one reason the station's "neutral" status is contested.
 during the Fracture. The Alliance considers its survival vindication. Sundra is where
 "not our war" was held longest and at greatest cost.
 
-**Outpost Nova** *(ring/hex, amber · Gliese 667 — K3V triple)* — The game location. A Hegemony-operated waypoint
-station built on top of a buried Builder primary node. The weapon inside the station is
-aimed at Vaethos. The station's legal ambiguity, Keth trade lane proximity, and
-extraordinary underlying structure make it the intersection point for every faction's
-agenda. See `docs/story/year1.md`.
+**Outpost Nova** *(ring/hex, amber · Gliese 667 — K3V triple)* — The game location. A Hegemony-operated waypoint station built on top of a buried Builder primary node. The weapon inside the station is aimed at Vaethos. The station's legal ambiguity, Keth trade lane proximity, and extraordinary underlying structure make it the intersection point for every faction's agenda. See `docs/story/year1.md`.
+
+The system's outer zone contains **Dis** — a gas giant and the source of Vril, a biological colonial organism refined into the game's fourth resource category. See `docs/design/resources.md` and `docs/world/world.md` §6.
+
+**Gliese 667's third stellar component** is a hot subdwarf B (sdB) — a post-red-giant remnant burning helium at ~30,000K. Blue-white, roughly Earth-sized, far less luminous than a true blue giant. From Dis's wide orbit it appears small, sharp, and cold. Its UV output drives the argon lightning in Dis's upper atmosphere. *(The system entry lists `K3V triple`; the third component is the sdB, not a third main-sequence star.)*
 
 ### Fracture Zone
 

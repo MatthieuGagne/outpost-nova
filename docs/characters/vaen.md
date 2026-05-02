@@ -61,7 +61,7 @@ A fragment of something larger. Clearly broken from a structure at the ruins sit
 
 Builder notation, describing a target in relative geometric terms. She's been sitting with it for years. Unreadable without context she hasn't had.
 
-The weapon's architecture is the decoder ring. When she encounters the weapon's structure, the artifact resolves — the notation suddenly makes sense. The recognition is not of coordinates but of the artifact finally being readable. Working out what location it resolves to happens privately. What she does with that knowledge, and when she shares it with the commander, is a key Act 2-3 beat.
+The weapon's architecture is the decoder ring. When she encounters the weapon's structure, the artifact resolves — the notation suddenly makes sense. The recognition is not of coordinates but of the artifact finally being readable. Working out what location it resolves to happens privately. What she does with that knowledge, and when she shares it with the superintendent, is a key Act 2-3 beat.
 
 ---
 
@@ -106,13 +106,13 @@ She would have documented the ruins even knowing what it cost. Because you find 
 
 ## Arc
 
-Arrives watching. First real conversation: professional, deflecting, taking inventory. The moment the commander describes the lower decks — the quill-spines lift before she decides.
+Arrives watching. First real conversation: professional, deflecting, taking inventory. The moment the superintendent describes the lower decks — the quill-spines lift before she decides.
 
 Working in the Derelict: most herself. The explorer fully present, the deflection gone because nothing personal is being asked. They're just looking at something extraordinary together.
 
-The artifact resolving is private. She doesn't tell the commander immediately. She needs to understand it before deciding what to do with knowing.
+The artifact resolving is private. She doesn't tell the superintendent immediately. She needs to understand it before deciding what to do with knowing.
 
-Trust develops in the negative space. Deflections get shorter. She gives the commander things that aren't about the work — small, unannounced. Eventually she talks about the ruins discovery directly, without redirecting.
+Trust develops in the negative space. Deflections get shorter. She gives the superintendent things that aren't about the work — small, unannounced. Eventually she talks about the ruins discovery directly, without redirecting.
 
 What she wants, which she doesn't fully acknowledge until it's happening: someone to hold the question with. She's been doing it alone for years.
 
@@ -120,7 +120,7 @@ What she wants, which she doesn't fully acknowledge until it's happening: someon
 
 ## Relationships
 
-**Commander:** Neither of them planned the alliance. She came for the station's signal; the commander came for Hegemony. What they end up holding — knowledge neither of them is supposed to have, cut off from institutions that might claim it — is something that happened to them. The trust develops in the negative space of shorter deflections and things given without announcement. Fragile and real.
+**Superintendent:** Neither of them planned the alliance. She came for the station's signal; the superintendent came for Hegemony. What they end up holding — knowledge neither of them is supposed to have, cut off from institutions that might claim it — is something that happened to them. The trust develops in the negative space of shorter deflections and things given without announcement. Fragile and real.
 
 **Quen:** Mutual wariness, layered. Species-wariness on Quen's part first. Then Quen sensing something that doesn't match the trade cover. Then Vaen recognizing that Quen has been inside the question for a very long time and chose silence. One overture (Vaen's), one clean shutdown (Quen's). Both keep watching. Both understood more from that exchange than was said.
 
@@ -138,7 +138,7 @@ What she wants, which she doesn't fully acknowledge until it's happening: someon
 
 ## What She Knows About the Derelict
 
-She detected the Builder emissions spike when the commander first went deep into the lower decks. She knows something activated. She doesn't know exactly what — she came to find out. She presents as a trader on the new lane. She does not immediately reveal why she came.
+She detected the Builder emissions spike when the superintendent first went deep into the lower decks. She knows something activated. She doesn't know exactly what — she came to find out. She presents as a trader on the new lane. She does not immediately reveal why she came.
 
 She carries an artifact she can't yet read. The weapon is the decoder ring. She doesn't know this when she arrives.
 

@@ -156,7 +156,15 @@ func _build_choices(options: Array, on_option_selected: Callable) -> void:
 			continue
 		push_warning("option %d text: %s" % [i, option.line.text_without_character_name.text])
 		var btn := Button.new()
-		btn.text = "[%d] %s" % [i + 1, option.line.text_without_character_name.text]
+		var pair_label := ""
+		for tag in option.line.metadata:
+			var tag_s: String = str(tag)
+			if tag_s.begins_with("pair:"):
+				var pair_id: String = tag_s.substr(5)
+				var state := GameState.get_pair_state(pair_id)
+				pair_label = "[%s] " % GameState.get_pair_state_label(state)
+				break
+		btn.text = "[%d] %s%s" % [i + 1, pair_label, option.line.text_without_character_name.text]
 		btn.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
 		btn.add_theme_font_size_override("font_size", 13)
 		btn.disabled = not option.is_available

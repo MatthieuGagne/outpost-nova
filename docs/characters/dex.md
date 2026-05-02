@@ -63,7 +63,7 @@ His vocabulary is systems: *load-bearing, rated capacity, structural fault.* He 
 
 Short sentences for hard truths. Longer when something engages him — the technical run-on is the tell. He'll explain why a repair is wrong for three sentences and halfway through you realize he's talking about something else entirely. The curiosity cracks the guard open. He doesn't notice when it happens.
 
-Numbers carry emotion he won't name. *Four years. Six commanders.* He doesn't explain what they mean. You do the math.
+Numbers carry emotion he won't name. *Four years. Six chiefs.* He doesn't explain what they mean. You do the math.
 
 What escapes him: the sentence that arrives before he decided to say it. The technical explanation that runs long. The line that lands while he's already through the door. He can't stop telling the truth. He just stopped caring about the aftermath.
 
@@ -72,7 +72,7 @@ He does not say: *I think, I feel, I hope.* He doesn't soften. He doesn't check 
 **Sample lines:**
 - "Power systems in the lower decks don't map to the schematics. Four years they haven't mapped. Whatever's running down there, we're not supplying it." [moves to next panel] "That's the variable I'd actually think about."
 - "That's not a repair. That's a note to yourself."
-- "Six commanders. First one to tell Hegemony no." [goes back inside — door stays open]
+- "Six chiefs. First one to tell Hegemony no." [goes back inside — door stays open]
 - He's under the deck plating a long time, light moving slow along the fracture line. "Whoever patched this the first time knew it wouldn't hold. Did it anyway." [beat] "That tells you something." He doesn't say what.
 
 ## Arc
@@ -91,7 +91,7 @@ He is the first person on the station who *could* understand what the weapon is 
 
 **Maris:** Philosophical tension, not personal. She believes in the station as something worth building; he believes in it as something worth maintaining. They respect each other. They disagree about what respect requires. Neither is wrong, which is why it hasn't resolved in seven years. When she told him about the Vess reassignment threat, she told him directly and left the room. That was respect.
 
-**The commander:** Six commanders. First one to tell Hegemony no. He went back inside and left the bay door open. That's not warmth — it's the possibility of what might come through it.
+**The Superintendent:** Six chiefs. First one to tell Hegemony no. He went back inside and left the bay door open. That's not warmth — it's the possibility of what might come through it.
 
 ---
 

@@ -53,5 +53,6 @@ func _exit_run(survived: bool) -> void:
 	if survived:
 		for resource_id in _gathered_loot:
 			GameState.add_resource(resource_id, _gathered_loot[resource_id])
-	DayManager.complete_beat("first_derelict_run")
+	ClockManager.log_action("Completed derelict run")
+	GameState.set_flag("first_derelict_run", true)
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
