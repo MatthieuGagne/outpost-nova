@@ -9,7 +9,6 @@ var _current_plot: Node = null
 
 func _ready() -> void:
 	add_to_group("action_menu")
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	_start_btn.pressed.connect(_on_start_pressed)
 	hide()
 
