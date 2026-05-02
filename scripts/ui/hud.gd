@@ -6,13 +6,11 @@ extends CanvasLayer
 @onready var scrap_lbl: Label = $HBoxContainer/ScrapLabel
 @onready var day_lbl: Label = $HBoxContainer/DayLabel
 @onready var clock_lbl: Label = $HBoxContainer/ClockLabel
-@onready var end_day_btn: Button = $HBoxContainer/EndDayButton
 @onready var message_lbl: Label = $MessageLabel
 
 func _ready() -> void:
 	GameState.resource_changed.connect(_refresh_resources)
 	ClockManager.time_advanced.connect(_on_time_advanced)
-	end_day_btn.pressed.connect(ClockManager.end_day_manually)
 	message_lbl.hide()
 	_refresh_resources("", 0)
 	_on_time_advanced(ClockManager.current_time)
