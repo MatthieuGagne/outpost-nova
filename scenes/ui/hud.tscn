@@ -42,10 +42,15 @@ theme_override_fonts/font = ExtResource("2")
 theme_override_font_sizes/font_size = 16
 text = "Day 1"
 
-[node name="BeatsLabel" type="Label" parent="HBoxContainer"]
+[node name="ClockLabel" type="Label" parent="HBoxContainer"]
 theme_override_fonts/font = ExtResource("2")
 theme_override_font_sizes/font_size = 16
-text = ""
+text = "06:00"
+
+[node name="EndDayButton" type="Button" parent="HBoxContainer"]
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 16
+text = "End Day"
 
 [node name="MessageLabel" type="Label" parent="."]
 layout_mode = 1
