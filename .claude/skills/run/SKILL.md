@@ -16,22 +16,19 @@ pwd
    ```sh
    dotnet build "Outpost Nova.csproj"
    ```
-3. Sync `.import` sidecar files from the main repo (required for YarnSpinner dialogue and other C#-imported assets):
+3. Sync non-Yarn `.import` sidecar files from the main repo (required for textures and other C#-imported assets — but NOT the YarnProject, which must always be compiled fresh from source):
    ```sh
-   rsync -a /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
+   rsync -a --exclude='outpost-nova.yarnproject*' /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
    rsync -a /home/mathdaman/code/outpost-nova/.godot/imported/ ./.godot/imported/
    ```
-4. Reimport the YarnProject — the rsync overwrites `outpost-nova.yarnproject.import` with the main repo's version, which breaks any `.yarn` files added in the worktree:
+4. Always compile the YarnProject fresh from this worktree's `.yarn` source files — never copy the compiled resource from the main repo, as it may be stale:
    ```sh
    rm -f data/dialogue/outpost-nova.yarnproject.import
+   rm -f .godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres
    godot --headless --import --path <worktree_path>
    ```
-5. Restore the compiled YarnProject — the headless import regenerates the compiled `.tres` without the `CompiledYarnProgramBase64` field, breaking dialogue. Copy the main repo's compiled resource back:
-   ```sh
-   cp /home/mathdaman/code/outpost-nova/.godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres \
-      <worktree_path>/.godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres
-   ```
-6. Launch the game from the worktree:
+   The `CompiledYarnProgramBase64` field is populated by the C# YarnSpinner importer when dotnet assemblies are built first (step 2).
+5. Launch the game from the worktree:
    ```sh
    godot --path <worktree_path> &
    ```
