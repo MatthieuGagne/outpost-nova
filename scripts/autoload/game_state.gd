@@ -3,6 +3,23 @@ extends Node
 
 signal resource_changed(resource_id: String, new_amount: int)
 signal flag_changed(flag_id: String, value: bool)
+signal pair_state_changed(pair_id: String, new_state: int)
+
+enum PairState { TENSION = 0, NEUTRAL = 1, COLLEGIAL = 2, BONDED = 3 }
+
+const _PAIR_STATE_LABELS: Dictionary = {
+	PairState.TENSION:   "Tension",
+	PairState.NEUTRAL:   "Neutral",
+	PairState.COLLEGIAL: "Collegial",
+	PairState.BONDED:    "Bonded",
+}
+
+const DEFAULT_PAIR_STATES: Dictionary = {
+	"maris_velreth": PairState.COLLEGIAL,
+	"dex_velreth":   PairState.COLLEGIAL,
+}
+
+var _pair_states: Dictionary = {}
 
 var player_name: String = ""
 var player_background: String = ""  # "engineer", "medic", "drifter"
@@ -33,6 +50,7 @@ func reset() -> void:
 	_flags = {}
 	_npc_flags = {}
 	_register_history = {}
+	_pair_states = DEFAULT_PAIR_STATES.duplicate()
 
 func _ready() -> void:
 	reset()
@@ -88,3 +106,26 @@ func get_register_history() -> Dictionary:
 
 func set_flag_on(flag_id: String) -> void:
 	set_flag(flag_id, true)
+
+func _normalize_pair_id(pair_id: String) -> String:
+	var parts := pair_id.split("_")
+	parts.sort()
+	return "_".join(parts)
+
+func get_pair_state(pair_id: String) -> PairState:
+	return _pair_states.get(_normalize_pair_id(pair_id), PairState.NEUTRAL)
+
+func set_pair_state(pair_id: String, state: PairState) -> void:
+	var normalized := _normalize_pair_id(pair_id)
+	_pair_states[normalized] = state
+	pair_state_changed.emit(normalized, state)
+
+func get_pairs_for_npc(npc_id: String) -> Dictionary:
+	var result: Dictionary = {}
+	for pair_id in _pair_states:
+		if pair_id.split("_").has(npc_id):
+			result[pair_id] = _pair_states[pair_id]
+	return result
+
+func get_pair_state_label(state: PairState) -> String:
+	return _PAIR_STATE_LABELS.get(state, "Unknown")
