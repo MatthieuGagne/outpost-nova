@@ -71,7 +71,7 @@ func interact() -> void:
 	if not boxes.is_empty():
 		var box := boxes[0]
 		if not box.conversation_ended.is_connected(_on_conversation_ended):
-			box.conversation_ended.connect(_on_conversation_ended)
+			box.conversation_ended.connect(_on_conversation_ended, CONNECT_ONE_SHOT)
 	_is_talking = true
 	runner.StartDialogueForget(get_dialogue_node())
 
