@@ -2,7 +2,7 @@
 
 **Status:** Design locked 2026-04-26
 **Supersedes:** PRD #45 (production loop) resource definitions
-**Cross-references:** `docs/design/game-loop.md` (production cycle steps, cohesion penalty), `docs/world/station-architecture.md` (room layout), `docs/characters/sable.md` (barter narrative)
+**Cross-references:** `docs/design/game-loop.md` (production cycle steps, cohesion penalty), `docs/design/production-plots.md` (plot count, visual states, per-room design), `docs/world/station-architecture.md` (room layout), `docs/characters/sable.md` (barter narrative)
 
 ---
 
