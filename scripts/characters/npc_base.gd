@@ -64,7 +64,7 @@ func interact() -> void:
 	var runner := runners[0]
 	if not _commands_registered:
 		runner.AddCommandHandlerCallable("register", Callable(GameState, "record_register"))
-		runner.AddCommandHandlerCallable("beat", Callable(DayManager, "complete_beat"))
+		runner.AddCommandHandlerCallable("log_action", Callable(ClockManager, "log_action"))
 		runner.AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
 		_commands_registered = true
 	var boxes := get_tree().get_nodes_in_group("dialogue_box")
@@ -77,6 +77,7 @@ func interact() -> void:
 
 func _on_conversation_ended() -> void:
 	_is_talking = false
+	ClockManager.commit_action(30)
 
 ## Override in subclass to return the Yarn node title for this NPC.
 func get_dialogue_node() -> String:
