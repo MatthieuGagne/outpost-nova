@@ -158,8 +158,9 @@ func _build_choices(options: Array, on_option_selected: Callable) -> void:
 		var btn := Button.new()
 		var pair_label := ""
 		for tag in option.line.metadata:
-			if tag.begins_with("pair:"):
-				var pair_id := tag.substr(5)
+			var tag_s: String = str(tag)
+			if tag_s.begins_with("pair:"):
+				var pair_id: String = tag_s.substr(5)
 				var state := GameState.get_pair_state(pair_id)
 				pair_label = "[%s] " % GameState.get_pair_state_label(state)
 				break
