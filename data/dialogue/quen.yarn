@@ -21,7 +21,7 @@ Quen: What Hegemony has given you, Superintendent, is a report. What I carry is 
 -> Fine. #register:detached
     <<register detached>>
     Quen: [beat] Yes. That is often how it begins.
-<<beat quen_arrives>>
+<<log_action "Spoke with Quen">>
 ===
 
 title: Quen_Casual
