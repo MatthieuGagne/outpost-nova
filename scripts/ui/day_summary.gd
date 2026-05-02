@@ -1,4 +1,3 @@
-# scripts/ui/day_summary.gd
 extends CanvasLayer
 
 @onready var day_lbl: Label = $Panel/VBox/DayLabel
@@ -17,19 +16,30 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func show_summary() -> void:
-	day_lbl.text = "End of Day %d" % DayManager.current_day
+	day_lbl.text = "End of Day %d" % ClockManager.current_day
 	for child in events_container.get_children():
 		child.queue_free()
-	for beat in DayManager.get_todays_beats():
-		if DayManager.is_beat_complete(beat["id"]):
-			var lbl = Label.new()
-			lbl.text = "✓ %s" % beat["id"].replace("_", " ").capitalize()
-			lbl.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
-			lbl.add_theme_font_size_override("font_size", 13)
-			events_container.add_child(lbl)
+	var font = load("res://data/fonts/m5x7.tres")
+	for entry in ClockManager._actions_log:
+		var lbl := Label.new()
+		lbl.text = "• %s" % entry
+		lbl.add_theme_font_override("font", font)
+		lbl.add_theme_font_size_override("font_size", 13)
+		events_container.add_child(lbl)
+	var sep := Label.new()
+	sep.text = "—"
+	sep.add_theme_font_override("font", font)
+	sep.add_theme_font_size_override("font_size", 13)
+	events_container.add_child(sep)
+	for res_id in ["rations", "parts", "energy_cells"]:
+		var lbl := Label.new()
+		lbl.text = "%s: %d" % [res_id.replace("_", " ").capitalize(), GameState.get_resource(res_id)]
+		lbl.add_theme_font_override("font", font)
+		lbl.add_theme_font_size_override("font_size", 13)
+		events_container.add_child(lbl)
 	show()
 	rest_btn.grab_focus()
 
 func _on_rest() -> void:
 	hide()
-	DayManager.advance_day()
+	ClockManager.advance_day()

@@ -20,7 +20,7 @@ Dex: I'm Dex. I keep the systems from eating themselves. So far, so good.
 -> You sound like you've been here a while. #register:sharp
     <<register sharp>>
     Dex: Long enough to know where the bodies are buried. Metaphorically. Probably.
-<<beat check_workshop>>
+<<log_action "Checked in with Dex">>
 ===
 
 title: Dex_Casual

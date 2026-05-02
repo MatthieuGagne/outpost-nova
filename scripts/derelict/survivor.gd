@@ -43,5 +43,5 @@ func _get_dialogue_tree() -> Dictionary:
 func _on_conversation_ended() -> void:
 	GameState.set_flag("survivor_%s_recruited" % survivor_id, true)
 	GameState.record_npc_choice("station", "recruited_%s" % survivor_id)
-	DayManager.complete_beat("survivor_found")
+	ClockManager.log_action("Found survivor")
 	queue_free()
