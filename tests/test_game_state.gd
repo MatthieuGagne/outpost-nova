@@ -101,3 +101,61 @@ func test_set_flag_on_cleared_on_reset():
 	GameState.set_flag_on("met_maris")
 	GameState.reset()
 	assert_false(GameState.get_flag("met_maris"))
+
+# --- PairState tests ---
+
+func test_pair_state_defaults_neutral_for_unknown_pair():
+	GameState.reset()
+	assert_eq(GameState.get_pair_state("no_such_pair"), GameState.PairState.NEUTRAL)
+
+func test_set_pair_state_stores_value():
+	GameState.reset()
+	GameState.set_pair_state("maris_dex", GameState.PairState.COLLEGIAL)
+	assert_eq(GameState.get_pair_state("maris_dex"), GameState.PairState.COLLEGIAL)
+
+func test_set_pair_state_emits_signal():
+	GameState.reset()
+	watch_signals(GameState)
+	GameState.set_pair_state("maris_dex", GameState.PairState.COLLEGIAL)
+	assert_signal_emitted(GameState, "pair_state_changed")
+
+func test_authored_default_maris_velreth_is_collegial():
+	GameState.reset()
+	assert_eq(GameState.get_pair_state("maris_velreth"), GameState.PairState.COLLEGIAL)
+
+func test_authored_default_dex_velreth_is_collegial():
+	GameState.reset()
+	assert_eq(GameState.get_pair_state("dex_velreth"), GameState.PairState.COLLEGIAL)
+
+func test_authored_default_maris_dex_is_neutral():
+	GameState.reset()
+	assert_eq(GameState.get_pair_state("maris_dex"), GameState.PairState.NEUTRAL)
+
+func test_reset_restores_authored_defaults():
+	GameState.reset()
+	GameState.set_pair_state("maris_velreth", GameState.PairState.TENSION)
+	GameState.reset()
+	assert_eq(GameState.get_pair_state("maris_velreth"), GameState.PairState.COLLEGIAL)
+
+func test_get_pairs_for_npc_returns_only_pairs_involving_npc():
+	GameState.reset()
+	var pairs := GameState.get_pairs_for_npc("maris")
+	assert_true(pairs.has("maris_velreth"))
+	assert_false(pairs.has("dex_velreth"))
+
+func test_get_pair_state_label_neutral():
+	assert_eq(GameState.get_pair_state_label(GameState.PairState.NEUTRAL), "Neutral")
+
+func test_get_pair_state_label_collegial():
+	assert_eq(GameState.get_pair_state_label(GameState.PairState.COLLEGIAL), "Collegial")
+
+func test_get_pair_state_label_tension():
+	assert_eq(GameState.get_pair_state_label(GameState.PairState.TENSION), "Tension")
+
+func test_get_pair_state_label_bonded():
+	assert_eq(GameState.get_pair_state_label(GameState.PairState.BONDED), "Bonded")
+
+func test_pair_state_normalizes_order():
+	GameState.reset()
+	GameState.set_pair_state("velreth_maris", GameState.PairState.TENSION)
+	assert_eq(GameState.get_pair_state("maris_velreth"), GameState.PairState.TENSION)

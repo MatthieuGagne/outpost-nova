@@ -22,9 +22,12 @@ Quen: What Hegemony has given you, Superintendent, is a report. What I carry is 
     <<register detached>>
     Quen: [beat] Yes. That is often how it begins.
 <<log_action "Spoke with Quen">>
+<<flag met_quen>>
 ===
 
 title: Quen_Casual
 ---
 Quen: The corridors remain as I left them.
+-> What do you think of Dex? #pair:dex_quen
+    Quen: The engineer. Competent. Cautious. Whether that caution is wisdom or fear, I have not yet determined.
 ===
