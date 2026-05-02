@@ -67,9 +67,8 @@ func test_reset_restores_authored_defaults():
 func test_get_pairs_for_npc_returns_only_pairs_involving_npc():
 	GameState.reset()
 	var pairs := GameState.get_pairs_for_npc("maris")
-	assert_true(pairs.has("maris_velreth"))
-	assert_true(pairs.has("maris_dex"))
-	assert_false(pairs.has("dex_velreth"))
+	assert_true(pairs.has("maris_velreth"))   # seeded default
+	assert_false(pairs.has("dex_velreth"))    # doesn't involve maris
 
 func test_get_pair_state_label_neutral():
 	assert_eq(GameState.get_pair_state_label(GameState.PairState.NEUTRAL), "Neutral")
@@ -82,6 +81,11 @@ func test_get_pair_state_label_tension():
 
 func test_get_pair_state_label_bonded():
 	assert_eq(GameState.get_pair_state_label(GameState.PairState.BONDED), "Bonded")
+
+func test_pair_state_normalizes_order():
+	GameState.reset()
+	GameState.set_pair_state("velreth_maris", GameState.PairState.TENSION)
+	assert_eq(GameState.get_pair_state("maris_velreth"), GameState.PairState.TENSION)
 ```
 
 **Step 2: Run test to verify it fails**
@@ -128,10 +132,6 @@ const _PAIR_STATE_LABELS: Dictionary = {
 const DEFAULT_PAIR_STATES: Dictionary = {
 	"maris_velreth": PairState.COLLEGIAL,
 	"dex_velreth":   PairState.COLLEGIAL,
-	"maris_dex":     PairState.NEUTRAL,
-	"maris_quen":    PairState.NEUTRAL,
-	"dex_quen":      PairState.NEUTRAL,
-	"velreth_quen":  PairState.NEUTRAL,
 }
 
 var _pair_states: Dictionary = {}
@@ -154,12 +154,18 @@ func reset() -> void:
 Add the new methods at the bottom of the file:
 
 ```gdscript
+func _normalize_pair_id(pair_id: String) -> String:
+	var parts := pair_id.split("_")
+	parts.sort()
+	return "_".join(parts)
+
 func get_pair_state(pair_id: String) -> PairState:
-	return _pair_states.get(pair_id, PairState.NEUTRAL)
+	return _pair_states.get(_normalize_pair_id(pair_id), PairState.NEUTRAL)
 
 func set_pair_state(pair_id: String, state: PairState) -> void:
-	_pair_states[pair_id] = state
-	pair_state_changed.emit(pair_id, state)
+	var normalized := _normalize_pair_id(pair_id)
+	_pair_states[normalized] = state
+	pair_state_changed.emit(normalized, state)
 
 func get_pairs_for_npc(npc_id: String) -> Dictionary:
 	var result: Dictionary = {}
@@ -234,24 +240,17 @@ Confirm all tests pass and game launches before proceeding to Batch 2.
 
 ---
 
-### Task 3: Wire talk cost in npc_base.gd
+### Task 3: Verify talk cost already wired in npc_base.gd
 
 **Files:**
-- Modify: `scripts/characters/npc_base.gd`
+- Read-only: `scripts/characters/npc_base.gd`
 
 **Depends on:** Smoketest Checkpoint 1
-**Parallelizable with:** Task 4 — different output files, no shared state.
+**Parallelizable with:** Task 4 — read-only check, no shared state.
 
-**Step 1: Update _on_conversation_ended in npc_base.gd**
+**Step 1: Verify `commit_action(30)` is present**
 
-In `scripts/characters/npc_base.gd`, replace:
-
-```gdscript
-func _on_conversation_ended() -> void:
-	_is_talking = false
-```
-
-With:
+Confirm `scripts/characters/npc_base.gd` already contains the following in `_on_conversation_ended`:
 
 ```gdscript
 func _on_conversation_ended() -> void:
@@ -259,16 +258,15 @@ func _on_conversation_ended() -> void:
 	ClockManager.commit_action(30)
 ```
 
-**Step 2: Verify**
-
-No GUT test required — this is a timing side-effect wired to a signal. Verified visually at Smoketest Checkpoint 2: clock advances 30 min after each conversation ends.
-
-**Step 3: Commit**
+Run:
 
 ```bash
-git add scripts/characters/npc_base.gd
-git commit -m "feat: commit 30-min talk cost to ClockManager after each conversation"
+grep -n "commit_action" scripts/characters/npc_base.gd
 ```
+
+Expected output: a line showing `ClockManager.commit_action(30)`.
+
+**Step 2: No commit needed** — this was implemented in Plan A (#71). If the line is missing, add it before proceeding.
 
 ---
 
@@ -291,14 +289,14 @@ btn.text = "[%d] %s" % [i + 1, option.line.text_without_character_name.text]
 Replace with:
 
 ```gdscript
-var btn_text := "[%d] %s" % [i + 1, option.line.text_without_character_name.text]
+var pair_label := ""
 for tag in option.line.metadata:
     if tag.begins_with("pair:"):
         var pair_id := tag.substr(5)  # strip "pair:" prefix (5 chars)
         var state := GameState.get_pair_state(pair_id)
-        btn_text += " [%s]" % GameState.get_pair_state_label(state)
+        pair_label = "[%s] " % GameState.get_pair_state_label(state)
         break
-btn.text = btn_text
+btn.text = "[%d] %s%s" % [i + 1, pair_label, option.line.text_without_character_name.text]
 ```
 
 **Note:** `option.line.metadata` is a `PackedStringArray` of the hashtag strings on the Yarn option line (without the leading `#`). For `#pair:maris_dex`, the metadata entry is `"pair:maris_dex"`. The `#register:warm` tag also appears in metadata but starts with `"register:"` — the `begins_with("pair:")` guard ensures we only process pair tags.
@@ -363,15 +361,15 @@ Verify all of the following before proceeding:
 **Depends on:** Smoketest Checkpoint 2
 **Parallelizable with:** none — single task touching 4 files; all 4 must be done together so the smoketest covers them all.
 
-**Pair ID reference** (use these exact strings as tag values):
-| Pair | ID | Default State |
-|------|----|---------------|
+**Pair ID reference** — tag value order doesn't matter; `get_pair_state` normalizes alphabetically at runtime:
+| Pair | Canonical ID | Default State |
+|------|-------------|---------------|
 | Maris ↔ Velreth | `maris_velreth` | Collegial |
 | Dex ↔ Velreth | `dex_velreth` | Collegial |
-| Maris ↔ Dex | `maris_dex` | Neutral |
+| Dex ↔ Maris | `dex_maris` | Neutral |
 | Maris ↔ Quen | `maris_quen` | Neutral |
 | Dex ↔ Quen | `dex_quen` | Neutral |
-| Velreth ↔ Quen | `velreth_quen` | Neutral |
+| Quen ↔ Velreth | `quen_velreth` | Neutral |
 
 **Step 1: Update maris.yarn**
 
@@ -484,9 +482,9 @@ godot
 
 **Step 4: Confirm with user**
 Verify all of the following:
-- Talk to Maris — in `Maris_Casual` dialogue, the option `"How's Velreth settling in?"` shows `[Collegial]` appended: `"[3] How's Velreth settling in? [Collegial]"`
-- Talk to Dex — `"Have you spoken with Velreth?"` shows `[Collegial]`
-- Talk to Velreth — `"Have you met Maris properly?"` shows `[Collegial]`
-- Talk to Quen — `"What do you think of Dex?"` shows `[Neutral]`
+- Talk to Maris — in `Maris_Casual` dialogue, the option `"How's Velreth settling in?"` shows: `"[3] [Collegial] How's Velreth settling in?"`
+- Talk to Dex — `"Have you spoken with Velreth?"` shows: `"[1] [Collegial] Have you spoken with Velreth?"`
+- Talk to Velreth — `"Have you met Maris properly?"` shows: `"[3] [Collegial] Have you met Maris properly?"`
+- Talk to Quen — `"What do you think of Dex?"` shows: `"[1] [Neutral] What do you think of Dex?"`
 - Clock advances 30 min after each conversation (talk cost still firing)
 - No errors in Godot output log
