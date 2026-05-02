@@ -2,13 +2,13 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Rewrite `resource_node.gd` as a `ResourcePlot` state machine (EMPTY→GROWING), build a dismissable `ActionMenu` popup wired to `ClockManager`, move Quen to the Security Post, and add a ResourcePlot to the Cantina (issue #73, part of #65).
+**Goal:** Rewrite `resource_node.gd` as a `ResourcePlot` state machine (EMPTY→GROWING), build a dismissable `ActionMenu` popup wired to `ClockManager`, move Quen to the Security Post, and add a visible ResourcePlot to the Cantina (issue #73, part of #65).
 
-**Architecture:** `resource_node.gd` becomes a state machine; `interact()` delegates to `ActionMenu` via group lookup. `ActionMenu` is a CanvasLayer added to `main.tscn` and found via group `"action_menu"`. NPC_SPAWN_AREAS in `main.gd` is updated to move Quen; scene files get the matching spawn node change.
+**Architecture:** `resource_node.gd` becomes a state machine with a `ColorRect` visual that changes color on state transition (green = EMPTY, amber = GROWING). `interact()` delegates to `ActionMenu` via group lookup. `ActionMenu` is a CanvasLayer added to `main.tscn` and found via group `"action_menu"`. `start_plot()` owns the clock commit and action log — `ActionMenu` only calls `start_plot()` and hides. `NPC_SPAWN_AREAS` in `main.gd` updated to move Quen; scene files get matching spawn node changes.
 
 **Tech Stack:** Godot 4.6 / GDScript, GUT test framework.
 
-**Prerequisite:** Plan A (#71) must be merged first — `ClockManager.can_act()` and `ClockManager.commit_action()` must exist.
+**Prerequisite:** Plan A (#71) merged — `ClockManager.can_act()` and `ClockManager.commit_action()` already exist ✓.
 
 ## Open questions (must resolve before starting)
 
@@ -22,7 +22,7 @@
 - Create: `tests/test_resource_plot.gd`
 
 **Depends on:** none
-**Parallelizable with:** none — must fail before Task 2 implements the code.
+**Parallelizable with:** Task 3 — Task 3 updates the scene file; different output files, no shared state.
 
 **Step 1: Write the failing GUT test**
 
@@ -35,6 +35,7 @@ extends GutTest
 var _plot: Node = null
 
 func before_each():
+	ClockManager.reset()
 	_plot = load("res://scenes/resource_node.tscn").instantiate()
 	add_child_autofree(_plot)
 
@@ -59,6 +60,15 @@ func test_interact_when_growing_does_not_change_state():
 	_plot.start_plot()
 	_plot.interact()
 	assert_eq(_plot.get_plot_state(), _plot.PlotState.GROWING)
+
+func test_start_plot_advances_clock_90_minutes():
+	_plot.start_plot()
+	assert_eq(ClockManager.current_time, 360 + 90)
+
+func test_start_plot_logs_action():
+	_plot.start_plot()
+	assert_eq(ClockManager._actions_log.size(), 1)
+	assert_eq(ClockManager._actions_log[0], "Started rations plot")
 ```
 
 **Step 2: Run test to verify it fails**
@@ -83,8 +93,8 @@ git commit -m "test: add failing ResourcePlot state machine tests"
 **Files:**
 - Modify: `scripts/resource_node.gd`
 
-**Depends on:** Task 1
-**Parallelizable with:** Task 3 — Task 3 modifies the scene file; they share no GDScript state.
+**Depends on:** Task 1 and Task 3 — Task 3 must add the `ColorRect` node to the scene before `@onready` resolves.
+**Parallelizable with:** none — depends on both Task 1 (tests) and Task 3 (scene structure).
 
 **Step 1: Replace resource_node.gd entirely**
 
@@ -99,13 +109,22 @@ signal plot_state_changed(new_state: PlotState)
 @export var resource_id: String = "rations"
 @export var yield_amount: int = 1
 
+@onready var _visual: ColorRect = $ColorRect
+
 var _state: PlotState = PlotState.EMPTY
+
+const COLOR_EMPTY: Color = Color(0.2, 0.7, 0.2)
+const COLOR_GROWING: Color = Color(0.8, 0.6, 0.1)
 
 func _ready() -> void:
 	add_to_group("interactable")
+	_visual.color = COLOR_EMPTY
 
 func interact() -> void:
 	if _state == PlotState.GROWING:
+		var main := get_tree().get_root().get_node_or_null("Main")
+		if main:
+			main.show_hud_message("Plot is already growing.")
 		return
 	var menus := get_tree().get_nodes_in_group("action_menu")
 	if menus.is_empty():
@@ -116,6 +135,9 @@ func start_plot() -> void:
 	if _state != PlotState.EMPTY:
 		return
 	_state = PlotState.GROWING
+	_visual.color = COLOR_GROWING
+	ClockManager.commit_action(90)
+	ClockManager.log_action("Started %s plot" % resource_id)
 	plot_state_changed.emit(_state)
 
 func get_plot_state() -> PlotState:
@@ -130,7 +152,7 @@ godot --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_resource_plo
 
 Expected: All ResourcePlot tests PASS.
 
-Run full suite:
+Then full suite:
 
 ```bash
 godot --headless -s addons/gut/gut_cmdln.gd
@@ -140,7 +162,7 @@ Expected: All tests pass. Zero failures.
 
 **Step 3: Refactor checkpoint**
 
-`start_plot()` guards on `_state != PlotState.EMPTY` — correct, idempotent when called twice. State machine will extend to PAUSED/COLLECTING in a future plan; enum and signal are already the right shape.
+`start_plot()` owns the clock commit and log — `ActionMenu` just calls it and hides, no duplication. Guard on `_state != PlotState.EMPTY` ensures idempotency. State machine will extend to PAUSED/COLLECTING in a future plan; enum and signal are already the right shape.
 
 **Step 4: Commit**
 
@@ -151,17 +173,17 @@ git commit -m "feat: rewrite resource_node.gd as ResourcePlot state machine (EMP
 
 ---
 
-### Task 3: Remove Timer node from resource_node.tscn
+### Task 3: Update resource_node.tscn — ColorRect visual, remove Timer
 
 **Files:**
 - Modify: `scenes/resource_node.tscn`
 
 **Depends on:** none
-**Parallelizable with:** Task 2 — different output file; the scene change is independent of the script.
+**Parallelizable with:** Task 1 — different output file; tests can be written before the scene is updated.
 
-**Step 1: Update resource_node.tscn**
+**Step 1: Replace resource_node.tscn entirely**
 
-Replace the entire contents of `scenes/resource_node.tscn`. Remove the `Timer` node — the new state machine does not use a cooldown timer:
+The existing scene has a `Sprite2D` with no texture (invisible at runtime) and an unused `Timer`. Replace with a `ColorRect` (always visible, no texture needed) sized to one tile (16×16):
 
 ```
 [gd_scene load_steps=2 format=3]
@@ -174,8 +196,12 @@ size = Vector2(16, 16)
 [node name="ResourceNode" type="Area2D"]
 script = ExtResource("1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.2, 0.9, 0.3, 1)
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+color = Color(0.2, 0.7, 0.2, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
@@ -183,13 +209,13 @@ shape = SubResource("1")
 
 **Step 2: Verify**
 
-Open Godot editor: `godot`. Confirm `scenes/resource_node.tscn` opens without errors and has no Timer node.
+Open Godot editor. Confirm `scenes/resource_node.tscn` shows a green `ColorRect` square with no Timer node. No errors.
 
 **Step 3: Commit**
 
 ```bash
 git add scenes/resource_node.tscn
-git commit -m "chore: remove unused Timer node from resource_node scene"
+git commit -m "feat: replace resource_node Sprite2D with visible ColorRect, remove Timer"
 ```
 
 ---
@@ -198,12 +224,10 @@ git commit -m "chore: remove unused Timer node from resource_node scene"
 
 | Group | Tasks | Notes |
 |-------|-------|-------|
-| A (sequential) | Task 1 → Task 2 | Task 2 implements what Task 1 tests |
-| B (parallel with A) | Task 3 | Different output file (tscn vs gd); no dependency on Tasks 1 or 2 |
+| A (parallel) | Task 1, Task 3 | Task 1 writes tests; Task 3 updates scene — different output files, no shared state |
+| B (sequential) | Task 2 | Depends on Group A — script needs tests to exist and scene to have ColorRect |
 
----
-
-### Smoketest Checkpoint 1 — ResourcePlot tests pass, scene updated
+### Smoketest Checkpoint 1 — ResourcePlot tests pass, green square visible in Cantina
 
 **Step 1: Fetch and merge latest master**
 ```bash
@@ -214,16 +238,13 @@ git fetch origin && git merge origin/master
 ```bash
 godot --headless -s addons/gut/gut_cmdln.gd
 ```
-Expected: All tests pass including new `test_resource_plot.gd`. Zero failures.
+Expected: All tests pass including `test_resource_plot.gd`. Zero failures.
 
 **Step 3: Launch game and verify visually**
-```bash
-godot
-```
-Expected: Game launches. The Cantina ResourceNode (green sprite) is visible and no longer has a cooldown timer. Interacting with it does nothing visible yet (no ActionMenu exists). Game does not crash.
 
-**Step 4: Confirm with user**
-Confirm tests pass and game launches before proceeding to Batch 2.
+Use the `/run` skill to launch the game. Go to Cantina — a green square (16×16) is visible at position (80, 80). Interacting with it does nothing visible yet (no ActionMenu in main.tscn yet). Game does not crash.
+
+**Step 4: Confirm with user before proceeding.**
 
 ---
 
@@ -238,8 +259,6 @@ Confirm tests pass and game launches before proceeding to Batch 2.
 
 **Step 1: Create action_menu.gd**
 
-Create `scripts/ui/action_menu.gd`:
-
 ```gdscript
 # scripts/ui/action_menu.gd
 extends CanvasLayer
@@ -253,6 +272,7 @@ var _current_plot: Node = null
 
 func _ready() -> void:
 	add_to_group("action_menu")
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_start_btn.pressed.connect(_on_start_pressed)
 	hide()
 
@@ -280,15 +300,11 @@ func _on_start_pressed() -> void:
 	if _current_plot == null:
 		return
 	_current_plot.start_plot()
-	ClockManager.commit_action(START_COST_MINUTES)
-	ClockManager._actions_log.append("Started %s plot" % _current_plot.resource_id)
 	hide()
 	_current_plot = null
 ```
 
 **Step 2: Create action_menu.tscn**
-
-Create `scenes/ui/action_menu.tscn`:
 
 ```
 [gd_scene load_steps=2 format=3]
@@ -325,7 +341,7 @@ text = "Start (1.5 hr)"
 
 **Step 3: Verify**
 
-Open `scenes/ui/action_menu.tscn` in the Godot editor. Confirm it shows a PanelContainer with PreviewLabel and StartButton. No errors in the scene.
+Open `scenes/ui/action_menu.tscn` in the Godot editor. Confirm PanelContainer with PreviewLabel and StartButton. No errors.
 
 **Step 4: Commit**
 
@@ -346,21 +362,13 @@ git commit -m "feat: add ActionMenu scene and script"
 
 **Step 1: Add ActionMenu instance to main.tscn**
 
-In `scenes/main.tscn`, add a new `ext_resource` entry for the ActionMenu scene and a node instance.
-
-Find the `[ext_resource ... path="res://scenes/ui/day_summary.tscn" id="6"]` line and add immediately after it:
+In `scenes/main.tscn`, find the `ext_resource` line for `day_summary.tscn` and add immediately after:
 
 ```
 [ext_resource type="PackedScene" path="res://scenes/ui/action_menu.tscn" id="10"]
 ```
 
-Then find the line:
-
-```
-[node name="DaySummary" parent="." instance=ExtResource("6")]
-```
-
-And add immediately after it:
+Then find the `[node name="DaySummary" ...]` line and add immediately after:
 
 ```
 [node name="ActionMenu" parent="." instance=ExtResource("10")]
@@ -368,11 +376,7 @@ And add immediately after it:
 
 **Step 2: Verify**
 
-```bash
-godot
-```
-
-Open the Godot editor. Confirm `scenes/main.tscn` has an `ActionMenu` node in the scene tree. No errors.
+Open Godot editor. Confirm `scenes/main.tscn` has an `ActionMenu` node in the scene tree. No errors.
 
 **Step 3: Commit**
 
@@ -389,8 +393,6 @@ git commit -m "feat: add ActionMenu instance to main scene"
 |-------|-------|-------|
 | A (sequential) | Task 4 → Task 5 | Task 5 instances the scene Task 4 creates |
 
----
-
 ### Smoketest Checkpoint 2 — Action menu opens on Cantina plot interact
 
 **Step 1: Fetch and merge latest master**
@@ -404,18 +406,15 @@ godot --headless -s addons/gut/gut_cmdln.gd
 ```
 Expected: All tests pass. Zero failures.
 
-**Step 3: Launch game and verify visually**
-```bash
-godot
-```
+**Step 3: Launch game with `/run` skill and verify:**
+- Go to Cantina, interact with the green square
+- ActionMenu appears: `"Yield: 1 rations"` and `"Start (1.5 hr)"` button
+- Clicking Start: clock advances 90 min, green square turns amber/yellow, menu closes
+- Interacting again: HUD shows `"Plot is already growing."`
+- Pressing Escape dismisses without action
+- With clock at 21:00+, Start button is greyed out with "Not enough time today."
 
-**Step 4: Confirm with user**
-Verify all of the following:
-- Go to Cantina and interact with the green ResourceNode sprite
-- An action menu popup appears showing: `"Yield: 1 rations"` (yield_amount=1 until Task 6 sets it to 2) and `"Start (1.5 hr)"` button
-- Clicking Start advances the clock by 90 min and closes the menu
-- Pressing Escape dismisses the menu without any action
-- When clock time + 90 min > 22:00 (960), the Start button is greyed out
+**Step 4: Confirm with user before proceeding.**
 
 ---
 
@@ -427,18 +426,18 @@ Verify all of the following:
 **Depends on:** Smoketest Checkpoint 2
 **Parallelizable with:** Task 7, Task 8 — different output files, no shared state.
 
-**Step 1: Remove QuenSpawn and set yield_amount**
+**Step 1: Set yield_amount and remove QuenSpawn**
 
-In `scenes/areas/cantina.tscn`, make these two changes:
+In `scenes/areas/cantina.tscn`:
 
-**Change 1 — Set yield_amount on the ResourceNode instance.** Find:
+**Change 1 — yield_amount.** Find:
 
 ```
 [node name="ResourceNode" type="Area2D" parent="RationsNode" unique_id=240848598 instance=ExtResource("2")]
 script = ExtResource("4_gv2i0")
 ```
 
-Add `yield_amount = 2` as a property:
+Add `yield_amount = 2`:
 
 ```
 [node name="ResourceNode" type="Area2D" parent="RationsNode" unique_id=240848598 instance=ExtResource("2")]
@@ -446,7 +445,7 @@ script = ExtResource("4_gv2i0")
 yield_amount = 2
 ```
 
-**Change 2 — Remove QuenSpawn node.** Delete the following two lines entirely:
+**Change 2 — Remove QuenSpawn.** Delete these two lines entirely:
 
 ```
 [node name="QuenSpawn" type="Node2D" parent="." unique_id=-1120141237]
@@ -455,9 +454,7 @@ position = Vector2(360, 128)
 
 **Step 2: Verify**
 
-Open Cantina area in the Godot editor. Confirm:
-- `QuenSpawn` node no longer exists in the scene tree
-- `ResourceNode` shows `yield_amount = 2` in the Inspector
+Open Cantina in the Godot editor. Confirm `QuenSpawn` is gone and `ResourceNode` shows `yield_amount = 2` in the Inspector.
 
 **Step 3: Commit**
 
@@ -478,7 +475,7 @@ git commit -m "feat: set Cantina ResourcePlot yield=2, remove QuenSpawn"
 
 **Step 1: Add QuenSpawn node**
 
-In `scenes/areas/security_post.tscn`, add a `QuenSpawn` node after the `TileMapLayer` node and before `CantinaDoor`. Insert after line 20 (after the `tile_set = ExtResource("1_ts")` line):
+In `scenes/areas/security_post.tscn`, insert after the `tile_set = ExtResource("1_ts")` line:
 
 ```
 [node name="QuenSpawn" type="Node2D" parent="."]
@@ -487,7 +484,7 @@ position = Vector2(240, 128)
 
 **Step 2: Verify**
 
-Open the SecurityPost scene in the Godot editor. Confirm `QuenSpawn` node appears at position (240, 128) in the center of the room.
+Open SecurityPost in the Godot editor. Confirm `QuenSpawn` node at (240, 128).
 
 **Step 3: Commit**
 
@@ -506,21 +503,9 @@ git commit -m "feat: add QuenSpawn to SecurityPost scene"
 **Depends on:** Smoketest Checkpoint 2
 **Parallelizable with:** Task 6, Task 7 — different output file, no shared state.
 
-**Step 1: Update NPC_SPAWN_AREAS**
+**Step 1: Change quen spawn area**
 
-In `scripts/main.gd`, find:
-
-```gdscript
-const NPC_SPAWN_AREAS = {
-	"maris":   "cantina",
-	"quen":    "cantina",
-	"dex":     "workshop",
-	"velreth": "med_bay",
-	"sable":   "trade_dock",
-}
-```
-
-Change `"quen": "cantina"` to `"quen": "security_post"`:
+In `scripts/main.gd`, change `"quen": "cantina"` to `"quen": "security_post"`:
 
 ```gdscript
 const NPC_SPAWN_AREAS = {
@@ -532,11 +517,7 @@ const NPC_SPAWN_AREAS = {
 }
 ```
 
-**Step 2: Verify**
-
-No GUT test required. Verified at Smoketest Checkpoint 3.
-
-**Step 3: Commit**
+**Step 2: Commit**
 
 ```bash
 git add scripts/main.gd
@@ -549,11 +530,9 @@ git commit -m "feat: move Quen spawn area from cantina to security_post"
 
 | Group | Tasks | Notes |
 |-------|-------|-------|
-| A (parallel) | Task 6, Task 7, Task 8 | Different output files; cantina, security_post, and main.gd are fully independent |
+| A (parallel) | Task 6, Task 7, Task 8 | Cantina tscn, security_post tscn, and main.gd are fully independent |
 
----
-
-### Smoketest Checkpoint 3 — Quen in Security Post, Cantina plot shows yield=2
+### Smoketest Checkpoint 3 — Quen in Security Post, Cantina plot yield=2 and color-changing
 
 **Step 1: Fetch and merge latest master**
 ```bash
@@ -566,17 +545,10 @@ godot --headless -s addons/gut/gut_cmdln.gd
 ```
 Expected: All tests pass. Zero failures.
 
-**Step 3: Launch game and verify visually**
-```bash
-godot
-```
-
-**Step 4: Confirm with user**
-Verify all of the following:
-- Go to Cantina: Quen is NOT present. Maris is present. ResourceNode (green sprite) is visible.
-- Interact with the ResourceNode: menu shows `"Yield: 2 rations"` (not 1)
-- Confirm Start: clock advances 90 min, day summary shows `"Started rations plot"` in action log
-- Go to Security Post: Quen IS present in the center of the room
-- Talk to Quen: dialogue works, clock advances 30 min after conversation ends
-- The ResourceNode in Cantina now shows a GROWING state after Start — interacting with it again does nothing (no Tend yet — that's a future plan)
-- Sable is NOT visible anywhere on Day 1
+**Step 3: Launch game with `/run` skill and verify:**
+- Cantina: Quen NOT present. Maris present. Green square visible.
+- Interact with square → menu shows `"Yield: 2 rations"` (not 1)
+- Confirm Start → clock +90 min, square turns amber/yellow, day summary shows `"Started rations plot"`
+- Interact again → HUD message `"Plot is already growing."`
+- Security Post: Quen IS present at center. Talking to Quen → dialogue works, clock +30 min after
+- Sable NOT visible on Day 1
