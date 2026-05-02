@@ -4,6 +4,7 @@ extends GutTest
 var _plot: Node = null
 
 func before_each():
+	GameState.reset()
 	ClockManager.reset()
 	_plot = load("res://scenes/resource_node.tscn").instantiate()
 	add_child_autofree(_plot)

@@ -17,7 +17,11 @@ const COLOR_GROWING: Color = Color(0.8, 0.6, 0.1)
 
 func _ready() -> void:
 	add_to_group("interactable")
-	_visual.color = COLOR_EMPTY
+	if GameState.get_flag("plot_%s_growing" % resource_id):
+		_state = PlotState.GROWING
+		_visual.color = COLOR_GROWING
+	else:
+		_visual.color = COLOR_EMPTY
 
 func interact() -> void:
 	if _state == PlotState.GROWING:
@@ -35,6 +39,7 @@ func start_plot() -> void:
 		return
 	_state = PlotState.GROWING
 	_visual.color = COLOR_GROWING
+	GameState.set_flag("plot_%s_growing" % resource_id, true)
 	ClockManager.commit_action(90)
 	ClockManager.log_action("Started %s plot" % resource_id)
 	plot_state_changed.emit(_state)
