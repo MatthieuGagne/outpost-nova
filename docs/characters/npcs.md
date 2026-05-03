@@ -30,11 +30,11 @@ The ruins are a genuine discovery. The superintendent did not know about the bur
 
 **Backgrounds (player choice):**
 
-| Background | Inner Voice | Starting resource | Why they're here | Why they're suspicious |
-|------------|-------------|-------------------|-----------------|----------------------|
-| Engineer | The Head (logical, analytical) | Parts | Hegemony needed someone to assess technical state | They've seen Hegemony's surveys — they know what "assess viability" really means |
-| Medic | The Heart (empathetic, perceptive) | Rations | Hegemony framed it as humanitarian | They've watched Hegemony's "support" displace communities before |
-| Drifter | The Edge (instinctive, blunt) | Energy Cells | Hegemony offered stability in exchange for a report | They've survived corporate exploitation; they recognize the shape of it |
+| Background | Starting resource | Why they're here | Why they're suspicious |
+|------------|-------------------|-----------------|----------------------|
+| Engineer | Parts | Hegemony needed someone to assess technical state | They've seen Hegemony's surveys — they know what "assess viability" really means |
+| Medic | Rations | Hegemony framed it as humanitarian | They've watched Hegemony's "support" displace communities before |
+| Drifter | Energy Cells | Hegemony offered stability in exchange for a report | They've survived corporate exploitation; they recognize the shape of it |
 
 ---
 
