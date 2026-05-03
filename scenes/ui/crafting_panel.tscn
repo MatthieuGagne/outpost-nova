@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/crafting_panel.gd" id="1"]
 [ext_resource type="FontFile" path="res://data/fonts/m5x7.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menu_cursor.tscn" id="3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.08, 0.08, 0.12, 0.95)
@@ -41,7 +42,4 @@ horizontal_alignment = 1
 [node name="RecipesContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
 theme_override_constants/separation = 4
 
-[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer"]
-theme_override_fonts/font = ExtResource("2")
-theme_override_font_sizes/font_size = 16
-text = "Close"
+[node name="MenuCursor" parent="." instance=ExtResource("3")]
