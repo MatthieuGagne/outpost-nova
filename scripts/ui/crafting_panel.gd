@@ -47,8 +47,6 @@ func _build_recipe_list() -> void:
 			label += "  —  need more"
 		var btn := Button.new()
 		btn.text = label
-		btn.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
-		btn.add_theme_font_size_override("font_size", 13)
 		btn.disabled = not can
 		btn.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		btn.pressed.connect(_craft.bind(recipe_id))
@@ -61,4 +59,4 @@ func _build_recipe_list() -> void:
 
 func _craft(recipe_id: String) -> void:
 	CraftingSystem.craft(recipe_id)
-	_build_recipe_list()
+	hide()
