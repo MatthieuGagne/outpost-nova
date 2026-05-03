@@ -44,7 +44,7 @@ func _get_facing(direction: Vector2) -> String:
 	return "down" if direction.y > 0 else "up"
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("ui_accept"):
 		_try_interact()
 		get_viewport().set_input_as_handled()
 	if event.is_action_pressed("attack"):
