@@ -178,6 +178,8 @@ func _build_choices(options: Array, on_option_selected: Callable) -> void:
 		lbl.mouse_filter = Control.MOUSE_FILTER_STOP
 		lbl.add_theme_font_override("normal_font", load("res://data/fonts/m5x7.tres"))
 		lbl.add_theme_font_size_override("normal_font_size", 13)
+		lbl.add_theme_font_override("italics_font", load("res://data/fonts/m5x7.tres"))
+		lbl.add_theme_font_size_override("italics_font_size", 13)
 		lbl.text = display
 		lbl.set_meta("option_id", option.dialogue_option_id)
 		lbl.set_meta("on_option_selected", on_option_selected)
