@@ -1,7 +1,9 @@
+# scripts/ui/action_menu.gd
 extends CanvasLayer
 
 @onready var _preview_lbl: Label = $PanelContainer/VBoxContainer/PreviewLabel
 @onready var _start_btn: Button = $PanelContainer/VBoxContainer/StartButton
+@onready var _cursor: MenuCursor = $MenuCursor
 
 const START_COST_MINUTES: int = 90
 
@@ -10,14 +12,18 @@ var _current_plot: Node = null
 func _ready() -> void:
 	add_to_group("action_menu")
 	_start_btn.pressed.connect(_on_start_pressed)
+	_cursor.track_item(_start_btn)
 	hide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
-	if event.is_action_pressed("ui_cancel"):
+	if UIInput.is_cancel(event):
 		hide()
 		_current_plot = null
+		get_viewport().set_input_as_handled()
+	elif UIInput.is_confirm(event):
+		_on_start_pressed()
 		get_viewport().set_input_as_handled()
 
 func show_for_plot(plot: Node) -> void:
@@ -33,7 +39,7 @@ func show_for_plot(plot: Node) -> void:
 	_start_btn.grab_focus()
 
 func _on_start_pressed() -> void:
-	if _current_plot == null:
+	if _current_plot == null or _start_btn.disabled:
 		return
 	_current_plot.start_plot()
 	hide()
