@@ -48,6 +48,10 @@ interact={
 ]
 }
 
+[gui]
+
+theme/custom="res://data/themes/nova_ui_theme.tres"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

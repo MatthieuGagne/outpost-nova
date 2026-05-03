@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d1egurn6jhlow"]
 
 [ext_resource type="Script" path="res://scripts/ui/character_creation.gd" id="1"]
-[ext_resource type="Theme" path="res://data/themes/character_creation_theme.tres" id="2"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_1"]
 
@@ -17,7 +16,6 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
-theme = ExtResource("2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=37817519]
 layout_mode = 1
