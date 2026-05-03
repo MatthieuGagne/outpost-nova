@@ -12,7 +12,6 @@ func _ready() -> void:
 	text = "▶"
 	add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
 	add_theme_font_size_override("font_size", 13)
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 
 func _process(delta: float) -> void:

@@ -23,23 +23,23 @@ func test_is_cancel_rejects_ui_accept():
 	assert_false(UIInput.is_cancel(_make_action_event("ui_accept")))
 
 func test_navigate_down_increments():
-	var items: Array = [Control.new(), Control.new(), Control.new()]
+	var items: Array = [{}, {}, {}]
 	assert_eq(UIInput.navigate(_make_action_event("ui_down"), items, 0), 1)
 
 func test_navigate_up_decrements():
-	var items: Array = [Control.new(), Control.new(), Control.new()]
+	var items: Array = [{}, {}, {}]
 	assert_eq(UIInput.navigate(_make_action_event("ui_up"), items, 2), 1)
 
 func test_navigate_down_wraps():
-	var items: Array = [Control.new(), Control.new(), Control.new()]
+	var items: Array = [{}, {}, {}]
 	assert_eq(UIInput.navigate(_make_action_event("ui_down"), items, 2), 0)
 
 func test_navigate_up_wraps():
-	var items: Array = [Control.new(), Control.new(), Control.new()]
+	var items: Array = [{}, {}, {}]
 	assert_eq(UIInput.navigate(_make_action_event("ui_up"), items, 0), 2)
 
 func test_navigate_returns_current_on_unrelated_action():
-	var items: Array = [Control.new(), Control.new(), Control.new()]
+	var items: Array = [{}, {}, {}]
 	assert_eq(UIInput.navigate(_make_action_event("ui_accept"), items, 1), 1)
 
 func test_navigate_returns_current_on_empty_items():
