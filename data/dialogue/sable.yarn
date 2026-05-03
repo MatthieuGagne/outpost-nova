@@ -16,5 +16,7 @@ Sable: ...you're going to ask, aren't you.
 -> Sure. #register:detached
     <<register detached>>
     Sable: ...hm. Maybe you're alright.
+-> Everyone out here is waiting for something to go wrong. #inner_voice #register:bitter
+    <<register bitter>>
 <<log_action "Met Sable">>
 ===

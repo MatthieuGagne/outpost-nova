@@ -20,6 +20,8 @@ Maris: Don't let the name fool you, it actually makes real food. Mostly.
 -> ...right. #register:detached
     <<register detached>>
     Maris: ...okay then.
+-> Something in her voice says she means it. #inner_voice #register:hopeful
+    <<register hopeful>>
 <<log_action "Met Maris">>
 <<flag met_maris>>
 ===
