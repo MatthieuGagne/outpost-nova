@@ -17,8 +17,8 @@ Dex: I'm Dex. I keep the systems from eating themselves. So far, so good.
 -> Fair enough. #register:detached
     <<register detached>>
     Dex: Fair enough is about the best you can hope for out here.
--> You sound like you've been here a while. #register:sharp
-    <<register sharp>>
+-> You sound like you've been here a while. #register:cynical
+    <<register cynical>>
     Dex: Long enough to know where the bodies are buried. Metaphorically. Probably.
 <<log_action "Checked in with Dex">>
 <<flag met_dex>>
