@@ -74,18 +74,18 @@ func _unhandled_input(event: InputEvent) -> void:
 				_line_advance_requested.emit()
 		get_viewport().set_input_as_handled()
 	if _state == _State.CHOOSING:
-		var buttons := _choices_container.get_children()
+		var labels := _choices_container.get_children()
 		if event.is_action_pressed("ui_up"):
-			_move_selection(buttons, -1)
+			_move_selection(labels, -1)
 			get_viewport().set_input_as_handled()
 		elif event.is_action_pressed("ui_down"):
-			_move_selection(buttons, 1)
+			_move_selection(labels, 1)
 			get_viewport().set_input_as_handled()
 		else:
-			for i in range(min(4, buttons.size())):
+			for i in range(min(4, labels.size())):
 				if event is InputEventKey and event.pressed and \
 				   event.keycode == KEY_1 + i:
-					_select_choice(buttons[i])
+					_select_choice(labels[i])
 					get_viewport().set_input_as_handled()
 
 # ── YarnSpinner GDScript view protocol ───────────────────────────────────────
@@ -104,12 +104,10 @@ func run_line_async(line: Dictionary) -> void:
 	await _line_advance_requested
 
 func run_options_async(options: Array, on_option_selected: Callable) -> void:
-	push_warning("run_options_async called, options count: %d" % options.size())
 	_dialogue_text.visible = false
 	_speaker_label.visible = false
 	_build_choices(options, on_option_selected)
 	_choices_container.visible = true
-	push_warning("choices_container children: %d, visible: %s" % [_choices_container.get_child_count(), _choices_container.visible])
 	_state = _State.CHOOSING
 	await _option_chosen
 	_dialogue_text.visible = true
@@ -145,50 +143,85 @@ func _make_atlas(index: int) -> AtlasTexture:
 	return atlas
 
 func _build_choices(options: Array, on_option_selected: Callable) -> void:
-	push_warning("_build_choices called, options: %d" % options.size())
 	for child in _choices_container.get_children():
 		child.queue_free()
 	for i in range(options.size()):
-		push_warning("option[%d] keys: %s" % [i, str(options[i].keys())])
 		var option := YarnSpinner.DialogueOption.from_dictionary(options[i])
 		if option == null:
-			push_warning("option %d is null!" % i)
 			continue
-		push_warning("option %d text: %s" % [i, option.line.text_without_character_name.text])
-		var btn := Button.new()
-		var pair_label := ""
+		var text := option.line.text_without_character_name.text
+		var is_inner_voice := false
+		var tag_label := ""
 		for tag in option.line.metadata:
 			var tag_s: String = str(tag)
-			if tag_s.begins_with("pair:"):
+			if tag_s == "inner_voice":
+				is_inner_voice = true
+			elif tag_s.begins_with("register:"):
+				tag_label = "[%s] " % tag_s.substr(9).capitalize()
+			elif tag_s.begins_with("pair:"):
 				var pair_id: String = tag_s.substr(5)
 				var state := GameState.get_pair_state(pair_id)
-				pair_label = "[%s] " % GameState.get_pair_state_label(state)
-				break
-		btn.text = "[%d] %s%s" % [i + 1, pair_label, option.line.text_without_character_name.text]
-		btn.add_theme_font_override("font", load("res://data/fonts/m5x7.tres"))
-		btn.add_theme_font_size_override("font_size", 13)
-		btn.disabled = not option.is_available
-		btn.pressed.connect(_on_choice_pressed.bind(option.dialogue_option_id, on_option_selected))
-		_choices_container.add_child(btn)
+				tag_label = "[%s] " % GameState.get_pair_state_label(state)
+		var body: String
+		if is_inner_voice:
+			body = "[i]… %s%s[/i]" % [tag_label, text]
+		else:
+			body = "%s%s" % [tag_label, text]
+		var display: String = "%d  %s" % [i + 1, body]
+		if not option.is_available:
+			display = "[color=#808080]%s[/color]" % display
+		var lbl := RichTextLabel.new()
+		lbl.bbcode_enabled = true
+		lbl.fit_content = true
+		lbl.scroll_active = false
+		lbl.focus_mode = Control.FOCUS_ALL
+		lbl.mouse_filter = Control.MOUSE_FILTER_STOP
+		lbl.add_theme_font_override("normal_font", load("res://data/fonts/m5x7.tres"))
+		lbl.add_theme_font_size_override("normal_font_size", 13)
+		lbl.text = display
+		lbl.set_meta("option_id", option.dialogue_option_id)
+		lbl.set_meta("on_option_selected", on_option_selected)
+		lbl.set_meta("is_available", option.is_available)
+		if option.is_available:
+			lbl.gui_input.connect(_on_choice_gui_input.bind(lbl))
+		lbl.focus_entered.connect(_on_label_focus_entered.bind(lbl))
+		lbl.focus_exited.connect(_on_label_focus_exited.bind(lbl))
+		_choices_container.add_child(lbl)
 	for child in _choices_container.get_children():
-		if not child.disabled:
+		if child.focus_mode != Control.FOCUS_NONE:
 			child.grab_focus()
 			break
 
-func _on_choice_pressed(option_id: int, on_option_selected: Callable) -> void:
+func _on_choice_gui_input(event: InputEvent, lbl: RichTextLabel) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_commit_choice(lbl)
+		get_viewport().set_input_as_handled()
+
+func _on_label_focus_entered(lbl: RichTextLabel) -> void:
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color(1, 1, 1, 0.08)
+	sb.border_color = Color(1, 1, 1, 0.4)
+	sb.set_border_width_all(1)
+	lbl.add_theme_stylebox_override("normal", sb)
+
+func _on_label_focus_exited(lbl: RichTextLabel) -> void:
+	lbl.remove_theme_stylebox_override("normal")
+
+func _commit_choice(lbl: RichTextLabel) -> void:
+	if not lbl.get_meta("is_available", false):
+		return
 	_state = _State.IDLE
 	_choices_container.visible = false
-	on_option_selected.call(option_id)
+	lbl.get_meta("on_option_selected").call(lbl.get_meta("option_id"))
 	_option_chosen.emit()
 
-func _move_selection(buttons: Array, direction: int) -> void:
+func _move_selection(labels: Array, direction: int) -> void:
 	var focused := _choices_container.get_viewport().gui_get_focus_owner()
-	var current_idx := buttons.find(focused)
+	var current_idx := labels.find(focused)
 	if current_idx == -1:
 		current_idx = 0
-	var next_idx := wrapi(current_idx + direction, 0, buttons.size())
-	buttons[next_idx].grab_focus()
+	var next_idx := wrapi(current_idx + direction, 0, labels.size())
+	labels[next_idx].grab_focus()
 
-func _select_choice(btn: Button) -> void:
-	if not btn.disabled:
-		btn.emit_signal("pressed")
+func _select_choice(lbl: RichTextLabel) -> void:
+	_commit_choice(lbl)
