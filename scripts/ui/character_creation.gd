@@ -77,7 +77,7 @@ func _set_background(idx: int) -> void:
 	_selected_background = BACKGROUNDS[idx]
 	_update_start_btn()
 
-func _update_start_btn(_ignored: String = "") -> void:
+func _update_start_btn() -> void:
 	start_btn.disabled = (
 		name_input.text.strip_edges() == "" or
 		_selected_appearance == -1 or
