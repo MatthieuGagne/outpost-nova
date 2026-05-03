@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://d1egurn6jhlow"]
+[gd_scene load_steps=3 format=3 uid="uid://d1egurn6jhlow"]
 
 [ext_resource type="Script" path="res://scripts/ui/character_creation.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menu_cursor.tscn" id="2"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_1"]
 
@@ -104,3 +105,5 @@ focus_neighbor_top = NodePath("../Medic")
 layout_mode = 2
 disabled = true
 text = "Begin"
+
+[node name="MenuCursor" parent="." instance=ExtResource("2")]
