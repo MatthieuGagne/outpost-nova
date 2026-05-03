@@ -1,17 +1,21 @@
+# scripts/ui/day_summary.gd
 extends CanvasLayer
 
 @onready var day_lbl: Label = $Panel/VBox/DayLabel
 @onready var events_container: VBoxContainer = $Panel/VBox/EventsContainer
 @onready var rest_btn: Button = $Panel/VBox/RestButton
+@onready var _cursor: MenuCursor = $MenuCursor
 
 func _ready() -> void:
 	hide()
 	rest_btn.pressed.connect(_on_rest)
+	rest_btn.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_cursor.track_item(rest_btn)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
-	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_select"):
+	if UIInput.is_confirm(event):
 		_on_rest()
 		get_viewport().set_input_as_handled()
 

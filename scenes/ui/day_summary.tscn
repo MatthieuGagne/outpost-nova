@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/day_summary.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menu_cursor.tscn" id="2"]
 
 [node name="DaySummary" type="CanvasLayer"]
 process_mode = 3
@@ -25,4 +26,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_constants/separation = 6
 
 [node name="RestButton" type="Button" parent="Panel/VBox"]
+mouse_filter = 2
 text = "Rest and begin next day"
+
+[node name="MenuCursor" parent="." instance=ExtResource("2")]
