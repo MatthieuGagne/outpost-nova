@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://d1egurn6jhlow"]
+[gd_scene load_steps=3 format=3 uid="uid://d1egurn6jhlow"]
 
 [ext_resource type="Script" path="res://scripts/ui/character_creation.gd" id="1"]
-[ext_resource type="Theme" path="res://data/themes/character_creation_theme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menu_cursor.tscn" id="2"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_1"]
 
@@ -17,7 +17,6 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
-theme = ExtResource("2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=37817519]
 layout_mode = 1
@@ -42,6 +41,7 @@ horizontal_alignment = 1
 [node name="NameInput" type="LineEdit" parent="VBoxContainer" unique_id=1680166273]
 layout_mode = 2
 placeholder_text = "Your name..."
+focus_neighbor_bottom = NodePath("../AppearancePicker/Appearance0")
 
 [node name="AppearanceLabel" type="Label" parent="VBoxContainer" unique_id=886582674]
 layout_mode = 2
@@ -55,22 +55,28 @@ layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_1")
 text = "A"
+focus_neighbor_top = NodePath("../../NameInput")
 focus_neighbor_right = NodePath("../Appearance1")
+focus_neighbor_bottom = NodePath("../../BackgroundPicker/Engineer")
 
 [node name="Appearance1" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=98444489]
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_1")
 text = "B"
+focus_neighbor_top = NodePath("../../NameInput")
 focus_neighbor_left = NodePath("../Appearance0")
 focus_neighbor_right = NodePath("../Appearance2")
+focus_neighbor_bottom = NodePath("../../BackgroundPicker/Engineer")
 
 [node name="Appearance2" type="Button" parent="VBoxContainer/AppearancePicker" unique_id=1684006321]
 layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_1")
 text = "C"
+focus_neighbor_top = NodePath("../../NameInput")
 focus_neighbor_left = NodePath("../Appearance1")
+focus_neighbor_bottom = NodePath("../../BackgroundPicker/Engineer")
 
 [node name="BackgroundLabel" type="Label" parent="VBoxContainer" unique_id=1635339208]
 layout_mode = 2
@@ -101,8 +107,12 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_2")
 text = "Drifter (starts with Energy Cells)"
 focus_neighbor_top = NodePath("../Medic")
+focus_neighbor_bottom = NodePath("../../StartBtn")
 
 [node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=67328775]
 layout_mode = 2
 disabled = true
 text = "Begin"
+focus_neighbor_top = NodePath("../BackgroundPicker/Drifter")
+
+[node name="MenuCursor" parent="." instance=ExtResource("2")]

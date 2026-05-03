@@ -29,6 +29,7 @@ signal _option_chosen
 @onready var _speaker_label: Label = $PanelContainer/MarginContainer/HBoxContainer/ContentContainer/SpeakerLabel
 @onready var _dialogue_text: RichTextLabel = $PanelContainer/MarginContainer/HBoxContainer/ContentContainer/DialogueText
 @onready var _choices_container: VBoxContainer = $PanelContainer/MarginContainer/HBoxContainer/ContentContainer/ChoicesContainer
+@onready var _cursor: MenuCursor = $MenuCursor
 
 var _typewriter_timer: float = 0.0
 var _typewriter_target: int = 0
@@ -52,41 +53,30 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		match _state:
-			_State.TYPEWRITING:
-				_dialogue_text.visible_characters = -1
-				_typewriter_timer = 9999.0
-				_state = _State.COMPLETE
-			_State.COMPLETE:
-				_state = _State.IDLE
-				_line_advance_requested.emit()
-		get_viewport().set_input_as_handled()
-		return
-	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_select"):
-		match _state:
-			_State.TYPEWRITING:
-				_dialogue_text.visible_characters = -1
-				_typewriter_timer = 9999.0
-				_state = _State.COMPLETE
-			_State.COMPLETE:
-				_state = _State.IDLE
-				_line_advance_requested.emit()
-		get_viewport().set_input_as_handled()
 	if _state == _State.CHOOSING:
 		var labels := _choices_container.get_children()
-		if event.is_action_pressed("ui_up"):
-			_move_selection(labels, -1)
+		if event.is_action_pressed("ui_up") or event.is_action_pressed("ui_down"):
+			var focused := get_viewport().gui_get_focus_owner()
+			var curr := labels.find(focused)
+			var next := UIInput.navigate(event, labels, curr if curr != -1 else 0)
+			labels[next].grab_focus()
 			get_viewport().set_input_as_handled()
-		elif event.is_action_pressed("ui_down"):
-			_move_selection(labels, 1)
+		elif UIInput.is_confirm(event):
+			var focused := get_viewport().gui_get_focus_owner()
+			if focused is RichTextLabel and focused.get_parent() == _choices_container:
+				_commit_choice(focused)
 			get_viewport().set_input_as_handled()
-		else:
-			for i in range(min(4, labels.size())):
-				if event is InputEventKey and event.pressed and \
-				   event.keycode == KEY_1 + i:
-					_select_choice(labels[i])
-					get_viewport().set_input_as_handled()
+		return
+	if UIInput.is_confirm(event):
+		match _state:
+			_State.TYPEWRITING:
+				_dialogue_text.visible_characters = -1
+				_typewriter_timer = 9999.0
+				_state = _State.COMPLETE
+			_State.COMPLETE:
+				_state = _State.IDLE
+				_line_advance_requested.emit()
+		get_viewport().set_input_as_handled()
 
 # ── YarnSpinner GDScript view protocol ───────────────────────────────────────
 
@@ -167,7 +157,7 @@ func _build_choices(options: Array, on_option_selected: Callable) -> void:
 			body = "[i]… %s%s[/i]" % [tag_label, text]
 		else:
 			body = "%s%s" % [tag_label, text]
-		var display: String = "%d  %s" % [i + 1, body]
+		var display: String = body
 		if not option.is_available:
 			display = "[color=#808080]%s[/color]" % display
 		var lbl := RichTextLabel.new()
@@ -175,7 +165,7 @@ func _build_choices(options: Array, on_option_selected: Callable) -> void:
 		lbl.fit_content = true
 		lbl.scroll_active = false
 		lbl.focus_mode = Control.FOCUS_ALL
-		lbl.mouse_filter = Control.MOUSE_FILTER_STOP
+		lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		lbl.add_theme_font_override("normal_font", load("res://data/fonts/m5x7.tres"))
 		lbl.add_theme_font_size_override("normal_font_size", 13)
 		lbl.add_theme_font_override("italics_font", load("res://data/fonts/m5x7.tres"))
@@ -184,20 +174,14 @@ func _build_choices(options: Array, on_option_selected: Callable) -> void:
 		lbl.set_meta("option_id", option.dialogue_option_id)
 		lbl.set_meta("on_option_selected", on_option_selected)
 		lbl.set_meta("is_available", option.is_available)
-		if option.is_available:
-			lbl.gui_input.connect(_on_choice_gui_input.bind(lbl))
 		lbl.focus_entered.connect(_on_label_focus_entered.bind(lbl))
 		lbl.focus_exited.connect(_on_label_focus_exited.bind(lbl))
 		_choices_container.add_child(lbl)
+	_cursor.track(_choices_container)
 	for child in _choices_container.get_children():
 		if child.focus_mode != Control.FOCUS_NONE:
 			child.grab_focus()
 			break
-
-func _on_choice_gui_input(event: InputEvent, lbl: RichTextLabel) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		_commit_choice(lbl)
-		get_viewport().set_input_as_handled()
 
 func _on_label_focus_entered(lbl: RichTextLabel) -> void:
 	var sb := StyleBoxFlat.new()
@@ -216,14 +200,6 @@ func _commit_choice(lbl: RichTextLabel) -> void:
 	_choices_container.visible = false
 	lbl.get_meta("on_option_selected").call(lbl.get_meta("option_id"))
 	_option_chosen.emit()
-
-func _move_selection(labels: Array, direction: int) -> void:
-	var focused := _choices_container.get_viewport().gui_get_focus_owner()
-	var current_idx := labels.find(focused)
-	if current_idx == -1:
-		current_idx = 0
-	var next_idx := wrapi(current_idx + direction, 0, labels.size())
-	labels[next_idx].grab_focus()
 
 func _select_choice(lbl: RichTextLabel) -> void:
 	_commit_choice(lbl)
