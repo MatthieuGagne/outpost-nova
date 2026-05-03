@@ -19,6 +19,8 @@ Velreth: You are not injured. That is, statistically speaking, the least common 
 -> I'll come back when I need something. #register:detached
     <<register detached>>
     Velreth: [beat] That is what most people say. I will be here.
+-> There's more here than they're saying. #inner_voice #register:curious
+    <<register curious>>
 <<log_action "Met Velreth">>
 <<flag met_velreth>>
 ===

@@ -21,6 +21,8 @@ Quen: What Hegemony has given you, Superintendent, is a report. What I carry is 
 -> Fine. #register:detached
     <<register detached>>
     Quen: [beat] Yes. That is often how it begins.
+-> Fifteen years. They've been carrying this alone. #inner_voice #register:warm
+    <<register warm>>
 <<log_action "Spoke with Quen">>
 <<flag met_quen>>
 ===

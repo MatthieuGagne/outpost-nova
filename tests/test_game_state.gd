@@ -159,3 +159,58 @@ func test_pair_state_normalizes_order():
 	GameState.reset()
 	GameState.set_pair_state("velreth_maris", GameState.PairState.TENSION)
 	assert_eq(GameState.get_pair_state("maris_velreth"), GameState.PairState.TENSION)
+
+# --- alignment axis tests ---
+
+func test_alignment_axis_people_empty_returns_zero():
+	GameState.reset()
+	assert_eq(GameState.get_alignment_axis("people"), 0)
+
+func test_alignment_axis_people_warm_dominant():
+	GameState.reset()
+	GameState.record_register("warm")
+	GameState.record_register("warm")
+	GameState.record_register("detached")
+	assert_eq(GameState.get_alignment_axis("people"), 1)
+
+func test_alignment_axis_people_detached_dominant():
+	GameState.reset()
+	GameState.record_register("detached")
+	GameState.record_register("detached")
+	assert_eq(GameState.get_alignment_axis("people"), -2)
+
+func test_alignment_axis_future_hopeful_dominant():
+	GameState.reset()
+	GameState.record_register("hopeful")
+	GameState.record_register("hopeful")
+	GameState.record_register("cynical")
+	assert_eq(GameState.get_alignment_axis("future"), 1)
+
+func test_alignment_axis_future_cynical_dominant():
+	GameState.reset()
+	GameState.record_register("cynical")
+	GameState.record_register("cynical")
+	assert_eq(GameState.get_alignment_axis("future"), -2)
+
+func test_alignment_axis_unknown_curious_dominant():
+	GameState.reset()
+	GameState.record_register("curious")
+	GameState.record_register("bitter")
+	GameState.record_register("bitter")
+	assert_eq(GameState.get_alignment_axis("unknown"), -1)
+
+func test_alignment_axis_unknown_bitter_dominant():
+	GameState.reset()
+	GameState.record_register("bitter")
+	GameState.record_register("bitter")
+	assert_eq(GameState.get_alignment_axis("unknown"), -2)
+
+func test_alignment_axis_unrelated_poles_dont_affect_other_axes():
+	GameState.reset()
+	GameState.record_register("warm")
+	GameState.record_register("hopeful")
+	assert_eq(GameState.get_alignment_axis("unknown"), 0)
+
+func test_alignment_axis_invalid_axis_returns_zero():
+	GameState.reset()
+	assert_eq(GameState.get_alignment_axis("invalid_axis"), 0)
