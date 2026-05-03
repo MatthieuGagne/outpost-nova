@@ -53,6 +53,20 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
+	if _state == _State.CHOOSING:
+		var labels := _choices_container.get_children()
+		if event.is_action_pressed("ui_up") or event.is_action_pressed("ui_down"):
+			var focused := get_viewport().gui_get_focus_owner()
+			var curr := labels.find(focused)
+			var next := UIInput.navigate(event, labels, curr if curr != -1 else 0)
+			labels[next].grab_focus()
+			get_viewport().set_input_as_handled()
+		elif UIInput.is_confirm(event):
+			var focused := get_viewport().gui_get_focus_owner()
+			if focused is RichTextLabel and focused.get_parent() == _choices_container:
+				_commit_choice(focused)
+			get_viewport().set_input_as_handled()
+		return
 	if UIInput.is_confirm(event):
 		match _state:
 			_State.TYPEWRITING:
@@ -63,20 +77,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				_state = _State.IDLE
 				_line_advance_requested.emit()
 		get_viewport().set_input_as_handled()
-		return
-	if _state == _State.CHOOSING:
-		var labels := _choices_container.get_children()
-		if event.is_action_pressed("ui_up") or event.is_action_pressed("ui_down"):
-			var focused := _choices_container.get_viewport().gui_get_focus_owner()
-			var curr := labels.find(focused)
-			var next := UIInput.navigate(event, labels, curr if curr != -1 else 0)
-			labels[next].grab_focus()
-			get_viewport().set_input_as_handled()
-		elif UIInput.is_confirm(event):
-			var focused := _choices_container.get_viewport().gui_get_focus_owner()
-			if focused is RichTextLabel and focused.get_parent() == _choices_container:
-				_commit_choice(focused)
-			get_viewport().set_input_as_handled()
 
 # ── YarnSpinner GDScript view protocol ───────────────────────────────────────
 

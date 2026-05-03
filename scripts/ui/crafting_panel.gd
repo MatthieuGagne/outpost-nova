@@ -4,8 +4,6 @@ extends CanvasLayer
 @onready var recipes_container: VBoxContainer = $PanelContainer/VBoxContainer/RecipesContainer
 @onready var _cursor: MenuCursor = $MenuCursor
 
-var _recipe_ids: Array = []
-
 func _ready() -> void:
 	hide()
 
@@ -26,7 +24,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif UIInput.is_confirm(event):
 		var focused := get_viewport().gui_get_focus_owner()
 		if focused is Button and focused.get_parent() == recipes_container and not focused.disabled:
-			focused.emit_signal("pressed")
+			focused.pressed.emit()
 		get_viewport().set_input_as_handled()
 
 func open() -> void:
@@ -34,13 +32,11 @@ func open() -> void:
 	show()
 
 func _build_recipe_list() -> void:
-	_recipe_ids = []
 	for child in recipes_container.get_children():
 		child.queue_free()
 	for recipe_id in CraftingSystem.get_all_recipes():
 		if not CraftingSystem.is_recipe_available(recipe_id):
 			continue
-		_recipe_ids.append(recipe_id)
 		var recipe = CraftingSystem.get_all_recipes()[recipe_id]
 		var cost_parts = []
 		for input in recipe["inputs"]:
