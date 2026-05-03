@@ -14,6 +14,12 @@ const _PAIR_STATE_LABELS: Dictionary = {
 	PairState.BONDED:    "Bonded",
 }
 
+const _AXIS_POLES: Dictionary = {
+	"future":  ["hopeful", "cynical"],
+	"people":  ["warm", "detached"],
+	"unknown": ["curious", "bitter"],
+}
+
 const DEFAULT_PAIR_STATES: Dictionary = {
 	"maris_velreth": PairState.COLLEGIAL,
 	"dex_velreth":   PairState.COLLEGIAL,
@@ -103,6 +109,12 @@ func record_register(register: String) -> void:
 
 func get_register_history() -> Dictionary:
 	return _register_history.duplicate()
+
+func get_alignment_axis(axis: String) -> int:
+	var poles: Array = _AXIS_POLES.get(axis, [])
+	if poles.is_empty():
+		return 0
+	return _register_history.get(poles[0], 0) - _register_history.get(poles[1], 0)
 
 func set_flag_on(flag_id: String) -> void:
 	set_flag(flag_id, true)
