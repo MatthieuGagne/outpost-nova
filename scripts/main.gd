@@ -2,7 +2,7 @@
 extends Node2D
 
 const AREA_SCENES = {
-	"trade_dock":        "res://scenes/areas/trade_dock.tscn",
+	"trade_dock":        "res://data/maps/trade_dock.tscn",
 	"cantina":           "res://scenes/areas/cantina.tscn",
 	"workshop":          "res://scenes/areas/workshop.tscn",
 	"quarters":          "res://scenes/areas/quarters.tscn",
@@ -135,7 +135,7 @@ func go_to_area(area_id: String) -> void:
 		else:
 			npc.visible = in_area
 		if npc.visible:
-			var spawn = _current_area.get_node_or_null("%sSpawn" % npc_id.capitalize())
+			var spawn = _current_area.find_child("%sSpawn" % npc_id.capitalize(), true, false)
 			if spawn:
 				npc.position = spawn.global_position
 			if npc.has_method("_pick_wander_target"):
