@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2"
+     orientation="orthogonal" renderorder="right-down"
+     width="30" height="16" tilewidth="16" tileheight="16"
+     infinite="0">
+ <tileset firstgid="1" source="station_tile.tsx"/>
+ <layer name="World" width="30" height="16">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+  </data>
+ </layer>
+ <objectgroup name="Interactions">
+  <object id="1" name="CantinaExitDoor" class="instance" x="8" y="128" width="16" height="48">
+   <properties>
+    <property name="res_path" type="file" value="res://scenes/props/door_trigger.tscn"/>
+    <property name="target_area" value="cantina"/>
+   </properties>
+  </object>
+  <object id="2" name="SecurityPostDoor" class="instance" x="472" y="128" width="16" height="48">
+   <properties>
+    <property name="res_path" type="file" value="res://scenes/props/door_trigger.tscn"/>
+    <property name="target_area" value="security_post"/>
+   </properties>
+  </object>
+  <object id="3" name="SpinePropTrigger" class="instance" x="240" y="200" width="48" height="32">
+   <properties>
+    <property name="res_path" type="file" value="res://scenes/props/proximity_label.tscn"/>
+    <property name="label_text" value="Maintenance Corridor"/>
+   </properties>
+  </object>
+  <object id="4" name="SableSpawn" class="instance" x="240" y="128">
+   <properties>
+    <property name="res_path" type="file" value="res://scenes/props/spawn_point.tscn"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
