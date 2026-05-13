@@ -11,6 +11,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
 	if UIInput.is_cancel(event):
+		get_tree().paused = false
 		hide()
 		get_viewport().set_input_as_handled()
 		return
@@ -29,6 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func open() -> void:
 	_build_recipe_list()
+	get_tree().paused = true
 	show()
 
 func _build_recipe_list() -> void:
@@ -59,4 +61,5 @@ func _build_recipe_list() -> void:
 
 func _craft(recipe_id: String) -> void:
 	CraftingSystem.craft(recipe_id)
+	get_tree().paused = false
 	hide()

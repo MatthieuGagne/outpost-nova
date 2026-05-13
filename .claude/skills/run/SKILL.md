@@ -34,8 +34,13 @@ pwd
 
 **If in the main repo**:
 
-```sh
-cd /home/mathdaman/code/outpost-nova && godot &
-```
+1. Run a headless import to ensure the class cache is up to date (required after any `git pull` that adds new `class_name` scripts — skipping this causes parse errors at runtime):
+   ```sh
+   godot --headless --import --path /home/mathdaman/code/outpost-nova
+   ```
+2. Launch the game:
+   ```sh
+   godot &
+   ```
 
 Report to the user that the game is launching.

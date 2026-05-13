@@ -7,7 +7,7 @@
 
 ## How to Use This Document
 
-This is the canonical reference for all named characters in Outpost Nova. It covers appearance, background, emotional profile, relationships, and dramatic function. For the dialogue system, alignment axes, and arc mechanics, see `docs/plans/2026-03-16-story-bible-design.md`.
+This is the canonical reference for all named characters in Outpost Nova. It covers appearance, background, emotional profile, relationships, and dramatic function.
 
 **Emotional profiles** use the three-axis format: Future (Hopeful/Cynical) · People (Warm/Detached) · Unknown (Curious/Bitter).
 
