@@ -1,6 +1,6 @@
 # Quen — Character Reference
 
-**Last updated:** 2026-04-07
+**Last updated:** 2026-05-31
 **Cross-references:** `docs/characters/npcs.md` (roster), `docs/story/year1.md` (arc context)
 
 ---
