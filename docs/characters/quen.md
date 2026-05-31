@@ -1,6 +1,6 @@
 # Quen — Character Reference
 
-**Last updated:** 2026-04-07
+**Last updated:** 2026-05-31
 **Cross-references:** `docs/characters/npcs.md` (roster), `docs/story/year1.md` (arc context)
 
 ---
@@ -22,7 +22,9 @@ Large. Not threatening — just present in a way that occupies space differently
 
 Skin a deep blue-purple, iridescent. Catches light differently depending on angle. At rest in a dim corridor it almost absorbs the dark; under station lighting it shifts toward violet.
 
-Wears a standard-issue red security vest. Name badge: QUEN. The vest is not a concession — it is a choice. Of everything it could present itself as, it chose the uniform. The vest says: *I am the station's.* It means that.
+Wears a standard-issue red security vest and a custom luchador mask. Name badge: QUEN. Neither is a concession — both are choices. The vest says: *I am the station's.* The mask says something alongside that, equally intentional, which Quen has never explained. The two together constitute a complete statement. Visitors never stop noticing. Crew stopped years ago.
+
+The mask is custom-fabricated to fit its central facial structure: deep crimson and gold, bilateral symmetry adapted for anatomy that isn't bilaterally symmetrical, which gives it a slightly uncanny quality up close. The craftsmanship is careful. It has never explained the provenance. No one asks anymore.
 
 Almost preternaturally still when not moving. In a confrontation it would be deeply unsettling. On rounds — holding a data tablet, checking a corridor seal — it is simply methodical. The same stillness in both contexts.
 
@@ -35,6 +37,8 @@ The Maevet are Unbound — a wandering collective that has been passing through 
 A Maevet that stops wandering has done something almost without precedent.
 
 Quen stopped. Outpost Nova is its fixed point. That choice predates Maris, predates Dex, predates the sealed door. It was here before it was called Outpost Nova.
+
+At some point in its years on the station — it does not specify when — Quen discovered Earth's archive of lucha libre. The Maevet are a witnessing culture; they do not distinguish between the grandeur of civilizations and the grandeur of a man in a mask defending his honor in a ring. What Quen found in that archive was a culture that treated honor as structural, not personal. The mask as identity, not disguise. The code as the real thing beneath the performance. For something that had watched a thousand cultures treat honor as negotiable — this was recognition. It has been a devoted student ever since.
 
 ---
 
@@ -66,6 +70,8 @@ The Bitter axis lives in the Unknown: it stopped asking questions. It had an ans
 
 Quen is theatrical about the unimportant and silent about what matters. The grand lyrical register — the elaborate circumlocutions, the formal verse for routine tasks — it deploys for corridor access denials, maintenance rounds, ships that arrived without documentation. It knows this is absurd. That is, in part, the point. The wit lives in the gap between the grandeur of the register and the mundanity of the task. It has opinions. It editorializes. It enjoys the performance.
 
+The luchador vocabulary runs through the lyrical register, not alongside it. Quen cites El Santo and Blue Demon the way it cites fallen empires — both are in the same archive, both treated with the same weight. Honor code language bleeds into security work: access denial is about the dignity of the corridor, the integrity of the station's ring. Spanish phrases appear naturally, not performatively. *"La máscara es el alma"* — the mask is the soul — said once, plainly, when someone asks about the mask. The wit lives in the same gap it always did: between the grandeur of the register and the mundanity of the task. The gap is just wider now, and funnier, and occasionally oddly moving.
+
 **The threshold:** The theatricality drops completely when the conversation touches the sealed door, the weapon, why it stayed, or anything too personal. Below that threshold, performance is the default. Above it, the register goes flat: short sentences, very still. The silence where the performance was is more frightening than anything it could say. The crew knows this.
 
 In execution mode — station authority, access control — the register flattens to short declaratives regardless: *Documentation. Wait here. Berth seven.* Both execution mode and the threshold-triggered stillness produce short sentences, but for different reasons. Writers should know the difference: execution mode is routine; threshold-triggered stillness means something is wrong.
@@ -75,9 +81,11 @@ The warmth doesn't get performed. When it surfaces it's brief, direct, no flouri
 Sentences about the lower decks don't finish.
 
 **Sample lines:**
-- [Theatrical, mundane] "Access to corridor seven-alpha requires authorization from an officer of standing, documentation of purpose, and — one finds — at minimum a convincing reason, as the corridor contains nothing of interest to anyone who does not already know what is of interest." [beat] "You may proceed. I will note it."
-- [Wit] "Hegemony has sent another form. I have filed it in the appropriate location." [beat] "Which is to say I have acknowledged its existence and declined to be changed by it."
-- [Threshold crossed — flat] "I sealed that door fifteen years ago. Whatever is coming — I knew it would come. I chose to be here for it." [short. still.] "That is all I will say about what happens."
+- [Theatrical, mundane] "Access to corridor seven-alpha requires authorization from an officer of standing, documentation of purpose, and — as Blue Demon himself observed about the ring — the willingness to face what waits on the other side before you cross. You have the first. You are working on the second." [beat] "I will note it."
+- [Wit] "Hegemony has sent another form. I have filed it in the appropriate location." [beat] "Which is to say I have acknowledged its existence and declined to be changed by it. El Santo would have understood."
+- [Asked about the mask] "La máscara es el alma." [nothing else. moves on.]
+- [Warmth, to someone trusted] "El Santo held the mask for thirty years. He revealed his face once, the day before he died. I think about that." [short. not performed.]
+- [Threshold crossed — flat] "I sealed that door fifteen years ago. Whatever is coming — I knew it would come. I chose to be here for it." [short. still.]
 - [Asked directly about the lower decks:] "No." [nothing else]
 
 ---

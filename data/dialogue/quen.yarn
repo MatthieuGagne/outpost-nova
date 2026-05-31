@@ -10,17 +10,17 @@ title: Quen
 title: Quen_FirstMeeting
 ---
 Quen: So. The station has been assigned a superintendent.
-Quen: I have stood at this post through three such appointments. Each arrived with a mandate, a certainty, and a thorough unfamiliarity with what this place actually is.
-Quen: What Hegemony has given you, Superintendent, is a report. What I carry is fifteen years of what the report did not include.
+Quen: I have stood at this post through three such appointments. Each arrived with a mandate, a certainty, and a thorough unfamiliarity with what this place actually is. El Santo himself could not have prepared them.
+Quen: What Hegemony has given you, Superintendent, is a report. What I carry is fifteen years of what the report did not include. The ring, as they say, does not lie.
 -> Tell me more. #register:curious
     <<register curious>>
-    Quen: In time. There is an order to these things. You are not ready for more — I say that with neither condescension nor comfort. Simply fact.
+    Quen: In time. There is an order to these things — a proper sequence, as in any good match. You are not ready for more. I say that with neither condescension nor comfort. Simply fact.
 -> We'll figure it out together. #register:warm
     <<register warm>>
-    Quen: A generous sentiment. [beat] I will remember you said it.
+    Quen: A generous sentiment. Blue Demon would have approved. [beat] I will remember you said it.
 -> Fine. #register:detached
     <<register detached>>
-    Quen: [beat] Yes. That is often how it begins.
+    Quen: [beat] Yes. That is often how it begins. Even the greatest luchadores started somewhere.
 -> Fifteen years. They've been carrying this alone. #inner_voice #register:warm
     <<register warm>>
 <<log_action "Spoke with Quen">>
@@ -29,7 +29,10 @@ Quen: What Hegemony has given you, Superintendent, is a report. What I carry is 
 
 title: Quen_Casual
 ---
-Quen: The corridors remain as I left them.
+Quen: The corridors remain as I left them. The ring, intact.
 -> What do you think of Dex? #pair:dex_quen
-    Quen: The engineer. Competent. Cautious. Whether that caution is wisdom or fear, I have not yet determined.
+    Quen: The engineer. Competent. Cautious in the way of someone who has seen something go wrong once and has not forgotten it. Whether that caution is wisdom or fear — a luchador would say the two are not always different things.
+-> That mask — what does it mean to you? #register:curious
+    <<register curious>>
+    Quen: La máscara es el alma.
 ===
