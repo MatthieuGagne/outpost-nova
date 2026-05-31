@@ -4,3 +4,4 @@
 .worktrees/
 .claude/worktrees/
 *:Zone.Identifier
+exports/
