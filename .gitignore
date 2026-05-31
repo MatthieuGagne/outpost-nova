@@ -5,3 +5,4 @@
 .claude/worktrees/
 *:Zone.Identifier
 exports/
+export_presets.cfg
