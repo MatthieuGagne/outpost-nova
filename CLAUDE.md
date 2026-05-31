@@ -9,18 +9,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-# Launch Godot editor (binary at ~/.local/bin/godot)
+# Launch Godot editor
 godot
 
 # Run all GUT tests headlessly
-godot --headless -s addons/gut/gut_cmdln.gd
+godot_console --headless -s addons/gut/gut_cmdln.gd
 
 # Run a single test script
-godot --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_game_state.gd
+godot_console --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_game_state.gd
 
 # Export builds
-godot --headless --export-debug "Linux/X11"
-godot --headless --export-debug "Windows Desktop"
+godot_console --headless --export-debug "Windows Desktop"
 ```
 
 ## Architecture
