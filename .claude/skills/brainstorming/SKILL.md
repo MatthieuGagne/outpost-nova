@@ -46,7 +46,7 @@ When designing any Godot feature, explicitly address these in your design:
 | **Scene tree** | Which scene owns this node? Is it instanced or a child? Does it need `@onready`? |
 | **Signals** | Does UI poll state or connect to signals? (Must connect — never poll.) |
 | **GDScript** | Any typed arrays, custom resources, or `@export` vars needed? |
-| **Testability** | Which logic can be GUT-tested headlessly (`godot --headless -s addons/gut/gut_cmdln.gd`)? |
+| **Testability** | Which logic can be GUT-tested headlessly (`godot_console --headless -s addons/gut/gut_cmdln.gd`)? |
 | **Mobile renderer** | Any shaders, post-processing, or features incompatible with the Mobile renderer? |
 
 ## Process Flow
