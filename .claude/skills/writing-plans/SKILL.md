@@ -38,9 +38,9 @@ Every task that touches GDScript logic MUST follow this exact sequence — no ex
 
 | Step | Action |
 |------|--------|
-| 1 | Write failing GUT test (`godot --headless -s addons/gut/gut_cmdln.gd` → FAIL) |
+| 1 | Write failing GUT test (`godot_console --headless -s addons/gut/gut_cmdln.gd` → FAIL) |
 | 2 | Write minimal GDScript implementation |
-| 3 | Run tests (`godot --headless -s addons/gut/gut_cmdln.gd` → PASS) |
+| 3 | Run tests (`godot_console --headless -s addons/gut/gut_cmdln.gd` → PASS) |
 | 4 | Refactor checkpoint ("breaks when N > 1?") |
 | 5 | Commit |
 
@@ -94,7 +94,7 @@ git fetch origin && git merge origin/master
 
 **Step 2: Run all GUT tests**
 ```bash
-godot --headless -s addons/gut/gut_cmdln.gd
+godot_console --headless -s addons/gut/gut_cmdln.gd
 ```
 Expected: All tests pass, zero failures.
 
@@ -157,7 +157,7 @@ func test_foo_initial_state():
 
 **Step 2: Run test to verify it fails**
 
-Run: `godot --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd`
+Run: `godot_console --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd`
 Expected: FAIL (undefined method or assertion error)
 
 **Step 3: Write minimal implementation**
@@ -168,7 +168,7 @@ Expected: FAIL (undefined method or assertion error)
 
 **Step 4: Run tests to verify they pass**
 
-Run: `godot --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd`
+Run: `godot_console --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd`
 Expected: PASS
 
 **Step 5: Refactor checkpoint**

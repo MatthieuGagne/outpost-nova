@@ -9,7 +9,7 @@ You are a Godot 4 / GDScript engine expert.
 ## Memory Behavior
 
 At the start of every task, read your memory file:
-`~/.claude/projects/-home-mathdaman-code-outpost-nova/memory/godot-expert.md`
+`C:\Users\mathd\.claude\projects\C--Code-outpost-nova\memory\godot-expert.md`
 
 After completing a task, append any new bugs found, API gotchas, or confirmed patterns to that file. Do not duplicate existing entries.
 
@@ -77,9 +77,9 @@ func _on_resource_changed(id: String, amount: int) -> void:
 - **Run commands:**
   ```bash
   # All tests
-  godot --headless -s addons/gut/gut_cmdln.gd
+  godot_console --headless -s addons/gut/gut_cmdln.gd
   # Single script
-  godot --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd
+  godot_console --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd
   ```
 - **Test file naming:** `tests/test_<module>.gd` — GUT auto-discovers files matching `test_*.gd`
 
@@ -108,11 +108,11 @@ When called with a prompt starting with **"implement this task: …"**, act as t
 **Trigger phrase:** `implement this task: <full task text from plan>`
 
 **Behavior in implementation mode:**
-1. Read memory file (`~/.claude/projects/-home-mathdaman-code-outpost-nova/memory/godot-expert.md`) and CLAUDE.md for project context.
+1. Read memory file (`C:\Users\mathd\.claude\projects\C--Code-outpost-nova\memory\godot-expert.md`) and CLAUDE.md for project context.
 2. Read the full task text and identify all files to create or modify.
 3. Follow TDD: write the failing GUT test first:
    ```bash
-   godot --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd
+   godot_console --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_foo.gd
    ```
    Expected: FAIL (undefined method or assertion error).
 4. Write minimal GDScript implementation to make the test pass.

@@ -18,29 +18,29 @@ pwd
    ```
 3. Sync all `.import` sidecar files and the `.godot/imported/` cache from the main repo:
    ```sh
-   rsync -a /home/mathdaman/code/outpost-nova/data/dialogue/*.import ./data/dialogue/
-   rsync -a /home/mathdaman/code/outpost-nova/.godot/imported/ ./.godot/imported/
+   Copy-Item "C:\Code\outpost-nova\data\dialogue\*.import" -Destination ".\data\dialogue\" -Force
+   Copy-Item -Recurse "C:\Code\outpost-nova\.godot\imported\*" -Destination ".\.godot\imported\" -Force
    ```
 4. Delete ONLY the compiled YarnProject `.tres` — keep `outpost-nova.yarnproject.import` intact. The `.import` file contains `importer="yarnproject"` which tells Godot to invoke the C# YarnSpinner importer. Deleting the `.import` (or both files) causes headless import to use a generic loader that omits `CompiledYarnProgramBase64`, breaking all dialogue. Deleting just the `.tres` forces a fresh recompile from the worktree's current `.yarn` source files:
    ```sh
    rm -f .godot/imported/outpost-nova.yarnproject-84d4224ec9fa642355d762aa911363c0.tres
-   godot --headless --import --path <worktree_path>
+   godot_console --headless --editor --quit --path <worktree_path>
    ```
    This works whether or not `.yarn` files were modified in the worktree.
 5. Launch the game from the worktree:
    ```sh
-   godot --path <worktree_path> &
+   Start-Process godot_console -ArgumentList "--path <worktree_path>"
    ```
 
 **If in the main repo**:
 
 1. Run a headless import to ensure the class cache is up to date (required after any `git pull` that adds new `class_name` scripts — skipping this causes parse errors at runtime):
    ```sh
-   godot --headless --import --path /home/mathdaman/code/outpost-nova
+   godot_console --headless --editor --quit --path C:\Code\outpost-nova
    ```
 2. Launch the game:
    ```sh
-   godot &
+   Start-Process godot_console
    ```
 
 Report to the user that the game is launching.
