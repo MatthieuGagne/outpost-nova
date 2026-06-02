@@ -2,7 +2,7 @@
 extends Node2D
 
 const AREA_SCENES = {
-	"trade_dock":        "res://data/maps/trade_dock.tmx",
+	"trade_dock":        "res://scenes/areas/trade_dock.tscn",
 	"cantina":           "res://scenes/areas/cantina.tscn",
 	"workshop":          "res://scenes/areas/workshop.tscn",
 	"quarters":          "res://scenes/areas/quarters.tscn",
