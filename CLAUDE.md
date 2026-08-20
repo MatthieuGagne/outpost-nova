@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Outpost Nova** is a cozy indie space station-builder game targeting a 30-60 minute MVP vertical slice. Built with **Godot 4.6.1 / GDScript**, Mobile renderer. Task 1 (project setup, GUT install, autoload config) is complete — see `docs/plans/2026-03-15-mvp-implementation.md` for the full plan and current status.
 
+`docs/index.md` catalogs the project's design, story, world, and character docs — consult it to find existing knowledge, and add a line to it for any new doc under `docs/`.
+
 ## Commands
 
 ```bash
