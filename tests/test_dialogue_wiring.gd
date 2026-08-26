@@ -9,7 +9,9 @@ const MAIN_SCENE_PATH := "res://scenes/main.tscn"
 const RUNNER_NODE_NAME := "DialogueRunner"
 const PROVIDER_NODE_NAME := "TextLineProvider"
 const PROVIDER_NODE_PATH := "./DialogueRunner/TextLineProvider"
+const PROVIDER_RELATIVE_PATH := "TextLineProvider"
 const YARN_PROJECT_PATH := "res://data/dialogue/outpost-nova.yarnproject"
+const PROVIDER_SCRIPT_PATH := "res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs"
 
 var _state: SceneState
 
@@ -49,7 +51,7 @@ func test_dialogue_runner_line_provider_points_at_provider_node():
 		"DialogueRunner.lineProvider must be wired, or YarnSpinner lazily builds a broken one")
 	if path == null:
 		return
-	assert_eq(str(path), PROVIDER_NODE_NAME)
+	assert_eq(str(path), PROVIDER_RELATIVE_PATH)
 
 func test_text_line_provider_node_exists_under_runner():
 	var idx := _find_node_index(PROVIDER_NODE_NAME)
@@ -57,6 +59,9 @@ func test_text_line_provider_node_exists_under_runner():
 	if idx == -1:
 		return
 	assert_eq(str(_state.get_node_path(idx)), PROVIDER_NODE_PATH)
+	var script = _get_property(idx, "script")
+	assert_true(script != null and script.resource_path == PROVIDER_SCRIPT_PATH,
+		"%s node must use the TextLineProvider script, or lineProvider will fail to bind" % PROVIDER_NODE_NAME)
 
 func test_text_line_provider_has_yarn_project_assigned():
 	var idx := _find_node_index(PROVIDER_NODE_NAME)
