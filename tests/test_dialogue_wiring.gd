@@ -8,7 +8,7 @@ extends GutTest
 const MAIN_SCENE_PATH := "res://scenes/main.tscn"
 const RUNNER_NODE_NAME := "DialogueRunner"
 const PROVIDER_NODE_NAME := "TextLineProvider"
-const PROVIDER_NODE_PATH := "DialogueRunner/TextLineProvider"
+const PROVIDER_NODE_PATH := "./DialogueRunner/TextLineProvider"
 const YARN_PROJECT_PATH := "res://data/dialogue/outpost-nova.yarnproject"
 
 var _state: SceneState
@@ -36,7 +36,7 @@ func test_dialogue_runner_exists_in_scene():
 func test_dialogue_runner_has_yarn_project_assigned():
 	var idx := _find_node_index(RUNNER_NODE_NAME)
 	var project = _get_property(idx, "yarnProject")
-	assert_not_null(project,
+	assert_true(project != null,
 		"DialogueRunner.yarnProject must be assigned in the scene, not only at runtime")
 	if project == null:
 		return
@@ -64,7 +64,7 @@ func test_text_line_provider_has_yarn_project_assigned():
 		assert_ne(idx, -1, "main.tscn must contain an explicit %s node" % PROVIDER_NODE_NAME)
 		return
 	var project = _get_property(idx, "YarnProject")
-	assert_not_null(project,
+	assert_true(project != null,
 		"TextLineProvider.YarnProject must be set in the scene so it is valid at _Ready()")
 	if project == null:
 		return
