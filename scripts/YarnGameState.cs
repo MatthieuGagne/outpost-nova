@@ -6,9 +6,15 @@ namespace OutpostNova;
 
 /// <summary>
 /// Exposes GameState query methods as Yarn functions.
-/// Auto-registered by the YarnSpinner source generator — no manual registration needed.
+///
+/// The <see cref="YarnFunctionAttribute"/> below is picked up by the YarnSpinner
+/// source generator, but that generator is a locally-built analyzer DLL which
+/// Windows Application Control can block (CSC warning CS8034). When that happens
+/// no registration code is emitted and Yarn dies at runtime with
+/// "Function get_flag is not present in the library". <see cref="Register"/> does
+/// the same registration explicitly so dialogue works either way.
 /// </summary>
-public static class YarnGameState
+public partial class YarnGameState : Node
 {
     /// <summary>
     /// Returns the value of a GameState flag.
@@ -20,5 +26,15 @@ public static class YarnGameState
         var sceneTree = (SceneTree)Engine.GetMainLoop();
         var gameState = sceneTree.Root.GetNode("GameState");
         return gameState.Call("get_flag", flagId).AsBool();
+    }
+
+    /// <summary>
+    /// Registers every Yarn function on <paramref name="runner"/>. Called from
+    /// GDScript (main.gd) right after the YarnProject is assigned. Re-registering
+    /// an existing name is harmless — the runner replaces the entry.
+    /// </summary>
+    public void Register(DialogueRunner runner)
+    {
+        runner.AddFunction("get_flag", (System.Func<string, bool>)GetFlag);
     }
 }
