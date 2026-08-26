@@ -89,6 +89,10 @@ func _setup_dialogue_runner() -> void:
 		return
 	var project := load("res://data/dialogue/outpost-nova.yarnproject")
 	runners[0].SetProject(project)
+	# Yarn functions are registered explicitly rather than relying on the
+	# YarnSpinner source generator, which Windows Application Control can block.
+	var yarn_functions = load("res://scripts/YarnGameState.cs").new()
+	yarn_functions.Register(runners[0])
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {

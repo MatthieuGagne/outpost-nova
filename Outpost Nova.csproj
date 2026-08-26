@@ -1,4 +1,4 @@
-<Project Sdk="Godot.NET.Sdk/4.6.3">
+<Project Sdk="Godot.NET.Sdk/4.7.1">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
@@ -6,6 +6,17 @@
     <RootNamespace>OutpostNova</RootNamespace>
   </PropertyGroup>
   <Import Project="addons/YarnSpinner-Godot/YarnSpinner-Godot.props" />
+  <!--
+    Drop the YarnSpinner source generator from the build. It is a locally-built
+    analyzer DLL that Windows Application Control blocks (CSC warning CS8034 +
+    a Windows Security prompt), so its [YarnFunction] registration code never
+    gets emitted anyway. Yarn functions are registered explicitly in
+    scripts/YarnGameState.cs -> Register(), called from scripts/main.gd.
+    Add new Yarn functions there, not via the attribute alone.
+  -->
+  <ItemGroup>
+    <ProjectReference Remove="addons/YarnSpinner-Godot/SourceGenerator/YarnSpinnerGodotSourceGenerator.csproj" />
+  </ItemGroup>
   <!-- Fix: props file uses backslash exclusions which don't work on Linux -->
   <ItemGroup>
     <Compile Remove="addons/YarnSpinner-Godot/SourceGenerator/**" />

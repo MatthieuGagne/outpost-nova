@@ -4,24 +4,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-**Outpost Nova** is a cozy indie space station-builder game targeting a 30-60 minute MVP vertical slice. Built with **Godot 4.6.1 / GDScript**, Mobile renderer. The MVP implementation plan was completed and its plan files deleted (2026-04-03); work since then is tracked per-feature in `docs/plans/` and `docs/superpowers/plans/`.
+**Outpost Nova** is a cozy indie space station-builder game targeting a 30-60 minute MVP vertical slice. Built with **Godot 4.7.1 (mono) / GDScript + C#**, Mobile renderer. The MVP implementation plan was completed and its plan files deleted (2026-04-03); work since then is tracked per-feature in `docs/plans/` and `docs/superpowers/plans/`.
 
 `docs/index.md` catalogs the project's design, story, world, and character docs — consult it to find existing knowledge, and add a line to it for any new doc under `docs/`.
 
 ## Commands
 
-```bash
-# Launch Godot editor
-godot
+Always invoke Godot through `tools/godot.ps1`, never the `godot` / `godot_console`
+commands on PATH — those are WinGet shims and Godot fails to find its bundled
+`GodotSharp\` through them, crashing with `.NET: Assemblies not found` / signal 11.
+`-Console` selects the console build (stdout/stderr attached); `$env:GODOT_BIN`
+overrides executable discovery.
 
-# Run all GUT tests headlessly
-godot_console --headless -s addons/gut/gut_cmdln.gd
+```powershell
+# Build C# assemblies (required before running — dialogue is C#)
+dotnet build "Outpost Nova.csproj"
+
+# Launch Godot editor
+./tools/godot.ps1
+
+# Launch the game
+./tools/godot.ps1 --path .
+
+# Run all GUT tests headlessly (quote any res:// arg — PowerShell splits on the colon)
+./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd "-gdir=res://tests" -gexit
 
 # Run a single test script
-godot_console --headless -s addons/gut/gut_cmdln.gd -gtest=res://tests/test_game_state.gd
+./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd "-gtest=res://tests/test_game_state.gd" -gexit
 
 # Export builds
-godot_console --headless --export-debug "Windows Desktop"
+./tools/godot.ps1 -Console --headless --export-debug "Windows Desktop"
 ```
 
 ## Architecture
