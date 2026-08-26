@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-**Outpost Nova** is a cozy indie space station-builder game targeting a 30-60 minute MVP vertical slice. Built with **Godot 4.6.1 / GDScript**, Mobile renderer. Task 1 (project setup, GUT install, autoload config) is complete — see `docs/plans/2026-03-15-mvp-implementation.md` for the full plan and current status.
+**Outpost Nova** is a cozy indie space station-builder game targeting a 30-60 minute MVP vertical slice. Built with **Godot 4.6.1 / GDScript**, Mobile renderer. The MVP implementation plan was completed and its plan files deleted (2026-04-03); work since then is tracked per-feature in `docs/plans/` and `docs/superpowers/plans/`.
+
+`docs/index.md` catalogs the project's design, story, world, and character docs — consult it to find existing knowledge, and add a line to it for any new doc under `docs/`.
 
 ## Commands
 
@@ -53,7 +55,7 @@ tests/                   # GUT tests (extend GutTest, use before_each to call Ga
 
 ## Implementation Plan
 
-Follow `docs/plans/2026-03-15-mvp-implementation.md` in order. That file contains full code for every task — read it before implementing anything.
+Each feature has its own plan under `docs/plans/` or `docs/superpowers/plans/` — read the one for the feature you are implementing before touching code. Completed plans are deleted, so their absence means the work landed; `git log` is the record.
 
 ## Key Design Constraints
 
