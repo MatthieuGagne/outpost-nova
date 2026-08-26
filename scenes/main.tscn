@@ -80,6 +80,7 @@ lineProvider = NodePath("TextLineProvider")
 [node name="TextLineProvider" type="Node" parent="DialogueRunner"]
 script = ExtResource("11")
 YarnProject = ExtResource("9")
+textLanguageCode = "en"
 
 [node name="ArcEvents" type="Node" parent="."]
 script = ExtResource("7")

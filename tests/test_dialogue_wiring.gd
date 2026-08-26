@@ -63,6 +63,36 @@ func test_text_line_provider_node_exists_under_runner():
 	assert_true(script != null and script.resource_path == PROVIDER_SCRIPT_PATH,
 		"%s node must use the TextLineProvider script, or lineProvider will fail to bind" % PROVIDER_NODE_NAME)
 
+func _project_base_language() -> String:
+	# Read baseLanguage from the .yarnproject JSON directly rather than through the
+	# C#-backed YarnProject resource, which GUT's assert helpers cannot stringify.
+	var file := FileAccess.open(YARN_PROJECT_PATH, FileAccess.READ)
+	if file == null:
+		return ""
+	var parsed = JSON.parse_string(file.get_as_text())
+	if typeof(parsed) != TYPE_DICTIONARY:
+		return ""
+	return str(parsed.get("baseLanguage", ""))
+
+func test_text_line_provider_language_matches_project_base_language():
+	# Issue #108: unpinned, textLanguageCode defaults to the machine's culture, which
+	# drives [plural]/[select] marker resolution and localisation lookup. Pinning it in
+	# the scene only helps if it cannot drift from the project's declared base language.
+	var base_language := _project_base_language()
+	assert_ne(base_language, "",
+		"could not read baseLanguage from %s" % YARN_PROJECT_PATH)
+	var idx := _find_node_index(PROVIDER_NODE_NAME)
+	if idx == -1:
+		assert_ne(idx, -1, "main.tscn must contain an explicit %s node" % PROVIDER_NODE_NAME)
+		return
+	var language = _get_property(idx, "textLanguageCode")
+	assert_true(language != null,
+		"%s.textLanguageCode must be pinned in the scene, or it defaults to the machine locale" % PROVIDER_NODE_NAME)
+	if language == null:
+		return
+	assert_eq(str(language), base_language,
+		"textLanguageCode must match baseLanguage in the yarnproject")
+
 func test_text_line_provider_has_yarn_project_assigned():
 	var idx := _find_node_index(PROVIDER_NODE_NAME)
 	if idx == -1:
