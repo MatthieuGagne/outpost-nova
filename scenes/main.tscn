@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/characters/player.tscn" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scripts/derelict/arc_events.gd" id="7"]
 [ext_resource type="Script" path="res://addons/YarnSpinner-Godot/Runtime/DialogueRunner.cs" id="8"]
 [ext_resource type="Resource" uid="uid://b63maae1xqnff" path="res://data/dialogue/outpost-nova.yarnproject" id="9"]
+[ext_resource type="Script" path="res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs" id="11"]
 
 [sub_resource type="Animation" id="Animation_fade_out"]
 resource_name = "fade_out"
@@ -68,11 +69,17 @@ position = Vector2(240, 128)
 
 [node name="ActionMenu" parent="." instance=ExtResource("10")]
 
-[node name="DialogueRunner" type="Node" parent="." groups=["dialogue_runner"] node_paths=PackedStringArray("dialoguePresenters")]
+[node name="DialogueRunner" type="Node" parent="." groups=["dialogue_runner"] node_paths=PackedStringArray("dialoguePresenters", "lineProvider")]
 process_mode = 3
 script = ExtResource("8")
-auto_start = false
+autoStart = false
+yarnProject = ExtResource("9")
 dialoguePresenters = [NodePath("../DialogueBox")]
+lineProvider = NodePath("TextLineProvider")
+
+[node name="TextLineProvider" type="Node" parent="DialogueRunner"]
+script = ExtResource("11")
+YarnProject = ExtResource("9")
 
 [node name="ArcEvents" type="Node" parent="."]
 script = ExtResource("7")
