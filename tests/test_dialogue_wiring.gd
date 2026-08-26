@@ -38,6 +38,8 @@ func test_dialogue_runner_has_yarn_project_assigned():
 	var project = _get_property(idx, "yarnProject")
 	assert_not_null(project,
 		"DialogueRunner.yarnProject must be assigned in the scene, not only at runtime")
+	if project == null:
+		return
 	assert_eq(project.resource_path, YARN_PROJECT_PATH)
 
 func test_dialogue_runner_line_provider_points_at_provider_node():
@@ -45,16 +47,25 @@ func test_dialogue_runner_line_provider_points_at_provider_node():
 	var path = _get_property(idx, "lineProvider")
 	assert_not_null(path,
 		"DialogueRunner.lineProvider must be wired, or YarnSpinner lazily builds a broken one")
+	if path == null:
+		return
 	assert_eq(str(path), PROVIDER_NODE_NAME)
 
 func test_text_line_provider_node_exists_under_runner():
 	var idx := _find_node_index(PROVIDER_NODE_NAME)
 	assert_ne(idx, -1, "main.tscn must contain an explicit %s node" % PROVIDER_NODE_NAME)
+	if idx == -1:
+		return
 	assert_eq(str(_state.get_node_path(idx)), PROVIDER_NODE_PATH)
 
 func test_text_line_provider_has_yarn_project_assigned():
 	var idx := _find_node_index(PROVIDER_NODE_NAME)
+	if idx == -1:
+		assert_ne(idx, -1, "main.tscn must contain an explicit %s node" % PROVIDER_NODE_NAME)
+		return
 	var project = _get_property(idx, "YarnProject")
 	assert_not_null(project,
 		"TextLineProvider.YarnProject must be set in the scene so it is valid at _Ready()")
+	if project == null:
+		return
 	assert_eq(project.resource_path, YARN_PROJECT_PATH)
