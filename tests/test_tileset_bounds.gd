@@ -107,3 +107,19 @@ func test_no_tiles_outside_texture():
 			"%s declares %d tile(s) outside the %d x %d atlas grid (texture %s, region %s, separation %s): %s"
 			% [path, outside.size(), grid.x, grid.y,
 				atlas["texture_size"], atlas["region_size"], atlas["separation"], outside])
+
+
+func test_all_valid_cells_declared():
+	for path in _tileset_paths():
+		var atlas := _atlas_report(path)
+		var grid: Vector2i = atlas["grid"]
+		var declared: Dictionary = atlas["coords"]
+		var missing: Array[Vector2i] = []
+		for row in grid.y:
+			for col in grid.x:
+				var coord := Vector2i(col, row)
+				if not declared.has(coord):
+					missing.append(coord)
+		assert_eq(missing.size(), 0,
+			"%s leaves %d of %d valid atlas cell(s) undeclared, so that artwork cannot be painted: %s"
+			% [path, missing.size(), grid.x * grid.y, missing])
