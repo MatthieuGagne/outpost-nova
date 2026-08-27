@@ -9,6 +9,31 @@ const TILESET_DIR := "res://data/tilesets"
 # documented defaults for TileSetAtlasSource.texture_region_size / .separation.
 const GODOT_DEFAULT_REGION_SIZE := Vector2i(16, 16)
 const GODOT_DEFAULT_SEPARATION := Vector2i(0, 0)
+const GODOT_DEFAULT_MARGINS := Vector2i(0, 0)
+
+# Known limits of this text-based parser, accepted for now because nothing in
+# this repo triggers them:
+#
+# - Multiple atlas sources: a TileSet can hold several
+#   [sub_resource type="TileSetAtlasSource"] blocks, each with its own texture,
+#   separation, margins and texture_region_size. This parser takes the FIRST
+#   match of each of those properties but collects tile coordinates from EVERY
+#   source into one set, so a second source's coordinates would be judged
+#   against the first source's grid. A correct fix would split the lines into
+#   per-sub_resource blocks and return one report per source, then loop over
+#   reports instead of files.
+# - Full coverage is a project convention, not an engine requirement. Godot
+#   does not require a tileset to declare every cell of its sheet — a partial
+#   tileset carved from a larger public sheet is perfectly legal.
+#   test_all_valid_cells_declared encodes this project's choice that
+#   station.tres should expose its whole sheet. Because the tests glob every
+#   .tres in the directory, the first deliberately-partial tileset added here
+#   will fail that test without being defective, and will need an opt-out.
+# - size_in_atlas multi-cell tiles: a tile declared at (0,0) with
+#   size_in_atlas = Vector2i(2,1) occupies (0,0) and (1,0) but this parser
+#   only records its origin coordinate. That would show as a false
+#   "undeclared cell" in the coverage test, and such a tile in the last
+#   column could overrun the texture edge without the bounds test noticing.
 
 
 func _tileset_paths() -> PackedStringArray:
@@ -40,7 +65,7 @@ func _parse_vector2i(lines: PackedStringArray, key: String, fallback: Vector2i) 
 	return fallback
 
 
-func _parse_texture_size(lines: PackedStringArray) -> Vector2i:
+func _parse_texture_size(lines: PackedStringArray, path: String) -> Vector2i:
 	# Only the PNG is loaded here, never the tileset itself: loading the .tres
 	# would let Godot drop the out-of-bounds tiles before we could see them.
 	var re := RegEx.new()
@@ -51,6 +76,7 @@ func _parse_texture_size(lines: PackedStringArray) -> Vector2i:
 			var texture: Texture2D = load(found.get_string(1))
 			if texture != null:
 				return Vector2i(texture.get_size())
+	fail_test("no loadable Texture2D ext_resource found in %s" % path)
 	return Vector2i.ZERO
 
 
@@ -67,29 +93,32 @@ func _parse_declared_coords(lines: PackedStringArray) -> Dictionary:
 	return coords
 
 
-func _grid_size(texture_size: Vector2i, region_size: Vector2i, separation: Vector2i) -> Vector2i:
-	# Tile (c, r) starts at c * (region + separation) and spans region px, so the
-	# last valid index is floor((texture - region) / stride).
+func _grid_size(texture_size: Vector2i, region_size: Vector2i, separation: Vector2i, margins: Vector2i) -> Vector2i:
+	# Tile (c, r) starts at margin + c * (region + separation) and spans region
+	# px, so the last valid index is floor((texture - margins - region) / stride).
 	var stride := region_size + separation
 	if stride.x <= 0 or stride.y <= 0:
 		fail_test("non-positive atlas stride %s" % stride)
 		return Vector2i.ZERO
-	var cols := 0 if texture_size.x < region_size.x else (texture_size.x - region_size.x) / stride.x + 1
-	var rows := 0 if texture_size.y < region_size.y else (texture_size.y - region_size.y) / stride.y + 1
+	var usable := texture_size - margins
+	var cols := 0 if usable.x < region_size.x else (usable.x - region_size.x) / stride.x + 1
+	var rows := 0 if usable.y < region_size.y else (usable.y - region_size.y) / stride.y + 1
 	return Vector2i(cols, rows)
 
 
 func _atlas_report(path: String) -> Dictionary:
 	var lines := _read_lines(path)
-	var texture_size := _parse_texture_size(lines)
+	var texture_size := _parse_texture_size(lines, path)
 	var region_size := _parse_vector2i(lines, "texture_region_size", GODOT_DEFAULT_REGION_SIZE)
 	var separation := _parse_vector2i(lines, "separation", GODOT_DEFAULT_SEPARATION)
+	var margins := _parse_vector2i(lines, "margins", GODOT_DEFAULT_MARGINS)
 	return {
 		"path": path,
 		"texture_size": texture_size,
 		"region_size": region_size,
 		"separation": separation,
-		"grid": _grid_size(texture_size, region_size, separation),
+		"margins": margins,
+		"grid": _grid_size(texture_size, region_size, separation, margins),
 		"coords": _parse_declared_coords(lines),
 	}
 
