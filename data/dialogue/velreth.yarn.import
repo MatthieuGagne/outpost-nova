@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://badn73su68xmp"
+path="res://.godot/imported/velreth.yarn-5ab2cfb11e9201462e78445745a49ef7.tres"
+
+[deps]
+
+source_file="res://data/dialogue/velreth.yarn"
+dest_files=["res://.godot/imported/velreth.yarn-5ab2cfb11e9201462e78445745a49ef7.tres"]
+
+[params]
+
