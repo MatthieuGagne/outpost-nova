@@ -76,6 +76,28 @@ function Get-ProjectDir {
 # Success is judged by parsing the import run's output, so it must use the
 # console build: the windowed build detaches stdout and would report zero errors
 # regardless of what actually happened.
+# The YarnSpinner importer is written in C#, so the .NET assemblies must exist
+# before the import runs. Without them the import still reports success, but
+# quietly produces no usable YarnProject and dialogue never starts.
+function Invoke-DotnetBuild {
+    param([string]$ProjectDir)
+
+    $csproj = Get-ChildItem -Path $ProjectDir -Filter '*.csproj' -File -ErrorAction SilentlyContinue |
+        Select-Object -First 1
+    if (-not $csproj) { return }
+
+    if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
+        Write-Warning '[godot.ps1] .NET assemblies are missing and dotnet was not found on PATH. C# code, including dialogue, will not work.'
+        return
+    }
+
+    Write-Host '[godot.ps1] No .NET assemblies found - building C# first.'
+    & dotnet build $csproj.FullName | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning '[godot.ps1] dotnet build failed. Continuing, but C# code will not work.'
+    }
+}
+
 function Invoke-GodotImport {
     param([string]$ProjectDir)
 
@@ -111,6 +133,15 @@ if (-not $exe) {
 if (-not $env:GODOT_SKIP_IMPORT -and ($GodotArgs -notcontains '--import')) {
     $projectDir = Get-ProjectDir -Arguments $GodotArgs
     if ($projectDir -and (Test-Path (Join-Path $projectDir 'project.godot'))) {
+        $binDir = Join-Path $projectDir '.godot/mono/temp/bin'
+        $hasAssemblies = (Test-Path $binDir) -and
+            $null -ne (Get-ChildItem -Path $binDir -Filter '*.dll' -File -Recurse -ErrorAction SilentlyContinue |
+                Select-Object -First 1)
+        if (-not $hasAssemblies) {
+            Invoke-DotnetBuild -ProjectDir $projectDir
+        }
+
+        # Must follow the build: the C# importers cannot run without assemblies.
         $importedDir = Join-Path $projectDir '.godot/imported'
         $hasImportCache = (Test-Path $importedDir) -and
             $null -ne (Get-ChildItem -Path $importedDir -File -ErrorAction SilentlyContinue | Select-Object -First 1)
