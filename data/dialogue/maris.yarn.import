@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://cbu0jk8rvc2o7"
+path="res://.godot/imported/maris.yarn-e83efa9e1d5fe5d658be85cecc0fdc5e.tres"
+
+[deps]
+
+source_file="res://data/dialogue/maris.yarn"
+dest_files=["res://.godot/imported/maris.yarn-e83efa9e1d5fe5d658be85cecc0fdc5e.tres"]
+
+[params]
+

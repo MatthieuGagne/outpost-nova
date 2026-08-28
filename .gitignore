@@ -1,6 +1,4 @@
 .godot/
-*.uid
-*.import
 .worktrees/
 .claude/worktrees/
 *:Zone.Identifier

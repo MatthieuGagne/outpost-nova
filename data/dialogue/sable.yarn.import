@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://bxv07tk745o7e"
+path="res://.godot/imported/sable.yarn-9489aa39b22ee3734d3b3f32c1ab6f0c.tres"
+
+[deps]
+
+source_file="res://data/dialogue/sable.yarn"
+dest_files=["res://.godot/imported/sable.yarn-9489aa39b22ee3734d3b3f32c1ab6f0c.tres"]
+
+[params]
+

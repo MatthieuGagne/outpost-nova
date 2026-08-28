@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://i6wb1kg1bkto"
+path="res://.godot/imported/quen.yarn-9537badb1fd719c6e5f496dc97e29e54.tres"
+
+[deps]
+
+source_file="res://data/dialogue/quen.yarn"
+dest_files=["res://.godot/imported/quen.yarn-9537badb1fd719c6e5f496dc97e29e54.tres"]
+
+[params]
+
