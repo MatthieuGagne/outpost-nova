@@ -1019,12 +1019,12 @@ TestRoom (Node3D)
 └── ReferenceSprite (AnimatedSprite3D, script scripts/poc3d/pixel_sprite_3d.gd)
       sprite_frames = res://data/sprites/player_frames.tres
       animation = "idle_down"
-      position = (2, 0, 0.5)
+      position = (2, 0, -0.4)
 ```
 
 Set nothing else. `pixel_size`, `billboard`, `alpha_cut`, `texture_filter`, `rotation` and `offset` are all owned by the script and will be overwritten — leave the Inspector defaults alone so the `.tscn` never looks like the source of truth.
 
-The position places it close to `BlockB`, so occlusion is observable: the sprite must read as correctly behind or in front of geometry rather than always drawing on top.
+`RoomCamera` sits at `(9, 9, 9)`, so distance from the camera increases toward −X and −Z — a point is only behind `BlockB` (at `(2, 1.5, -1)`) if it sits farther along −X/−Z than the column. The sprite must therefore be placed just outside the column's footprint on the near (less negative Z) side so part of its silhouette's line of sight still crosses the column's AABB. Verified numerically with `AABB.intersects_segment()` against the real scene: 2 of 6 sampled points on the sprite quad (the right-hand edge) are occluded by `BlockB`, the rest are not — partial occlusion, so the depth-buffer occlusion technique is actually demonstrated rather than only asserted.
 
 **Step 2: Verify**
 
