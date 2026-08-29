@@ -1,6 +1,7 @@
 .godot/
 .worktrees/
 .claude/worktrees/
+.superpowers/
 *:Zone.Identifier
 exports/
 export_presets.cfg
