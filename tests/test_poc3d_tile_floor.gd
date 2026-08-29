@@ -67,7 +67,7 @@ func test_material_samples_with_nearest_filtering():
 	assert_not_null(material.albedo_texture, "floor material has no albedo texture")
 
 
-func test_out_of_bounds_tile_is_rejected_rather_than_sampling_off_sheet():
+func test_out_of_bounds_tile_is_clamped_into_the_grid():
 	var floor_node := _build_floor()
 	var grid := WorldScale.tile_grid_size()
 	floor_node.tile_col = grid.x + 10

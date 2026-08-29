@@ -20,7 +20,14 @@ func test_pixel_size_comes_from_the_world_scale_constant():
 
 
 func test_billboarding_is_off_so_the_z_buffer_can_occlude_the_sprite():
-	var sprite := _build_sprite()
+	# Pre-set the opposite of the contract value before _ready() runs, so the
+	# assertion below observes the script stamping it back rather than passing
+	# on SpriteBase3D's own default (which happens to already be DISABLED).
+	var sprite := PixelSprite3D.new()
+	sprite.sprite_frames = load(FRAMES_PATH)
+	sprite.animation = &"idle_down"
+	sprite.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	add_child_autofree(sprite)
 	assert_eq(sprite.billboard, BaseMaterial3D.BILLBOARD_DISABLED)
 	assert_eq(sprite.alpha_cut, SpriteBase3D.ALPHA_CUT_DISCARD,
 		"alpha scissor is what lets geometry occlude the sprite correctly")

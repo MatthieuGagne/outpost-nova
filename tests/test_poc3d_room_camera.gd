@@ -5,6 +5,7 @@ const ANGLE_TOLERANCE := 0.001
 
 func test_camera_adopts_the_contract_angle_by_default():
 	var camera := RoomCamera.new()
+	camera.projection = Camera3D.PROJECTION_ORTHOGONAL
 	add_child_autofree(camera)
 	assert_almost_eq(camera.fov, WorldScale.CAMERA_FOV, ANGLE_TOLERANCE)
 	assert_almost_eq(camera.rotation_degrees.x, WorldScale.CAMERA_PITCH_DEGREES, ANGLE_TOLERANCE)

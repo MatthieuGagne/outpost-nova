@@ -64,7 +64,11 @@ func test_the_reference_sprite_matches_the_world_scale():
 	var sprite := _entry.find_child("ReferenceSprite", true, false) as AnimatedSprite3D
 	assert_not_null(sprite, "the AC2 reference sprite is missing from the test room")
 	assert_almost_eq(sprite.pixel_size, WorldScale.SPRITE_PIXEL_SIZE, SIZE_TOLERANCE)
-	assert_eq(sprite.billboard, BaseMaterial3D.BILLBOARD_DISABLED)
+	# No billboard assertion here: the scene is already instantiated by
+	# before_each(), so _ready() has already stamped the value and there is no
+	# way to pre-set the opposite first — any assertion here would pass even if
+	# the stamping in pixel_sprite_3d.gd were deleted. That contract is covered
+	# (load-bearingly) by test_poc3d_pixel_sprite.gd instead.
 	assert_eq(sprite.alpha_cut, SpriteBase3D.ALPHA_CUT_DISCARD)
 
 
