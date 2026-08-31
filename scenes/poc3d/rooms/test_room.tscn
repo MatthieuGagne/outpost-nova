@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/poc3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="SpriteFrames" path="res://data/sprites/player_frames.tres" id="4"]
 [ext_resource type="Script" path="res://scripts/poc3d/tile_collision.gd" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/player3d.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/npc3d.tscn" id="7"]
 
 [sub_resource type="BoxMesh" id="1"]
 size = Vector3(2, 1, 2)
@@ -74,6 +75,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 9, 9)
 
 [node name="Player3D" parent="." instance=ExtResource("6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="NPC3D" parent="." instance=ExtResource("7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
+facing = "right"
 
 [node name="ReferenceSprite" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.1)
