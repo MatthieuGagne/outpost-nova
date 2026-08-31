@@ -21,7 +21,7 @@ None. All design decisions were resolved in the grilling session on 2026-08-30 a
 | # | Decision |
 |---|---|
 | 1 | Collision is authored as a **2D tile grid on XZ**, compiled into physics bodies at `_ready()`. |
-| 2 | New `TileCollision` node — `@export var blocked: Array[Vector2i]`, `@export var wall_height`. One `StaticBody3D` with one `BoxShape3D` per blocked tile. |
+| 2 | New `TileCollision` node — `@export var blocked: Array[Vector2i]`, `@export var border_for_floor: Vector2i`, `@export var wall_height`. One `StaticBody3D` with one `BoxShape3D` per solid tile. The boundary ring is **derived** from `border_for_floor`, never hand-listed in the `.tscn` (pre-flight Ruling 1). |
 | 3 | Player is `CharacterBody3D` + `move_and_slide()` — R5 and AC8 met as written, no PRD amendment needed. |
 | 4 | **BlockB, BlockC and ReferenceSprite all shift by `(+0.5, 0, +0.5)`** so block footprints land on tile boundaries and collision matches the art exactly. BlockA is already aligned and does not move. |
 | 5 | Input reads the built-in `ui_left` / `ui_right` / `ui_up` / `ui_down`. `project.godot` is **not** modified. |
@@ -420,6 +420,29 @@ func test_reassigning_blocked_tiles_rebuilds_rather_than_accumulates():
 	assert_eq(_static_body().get_child_count(), 1,
 		"stale shapes from the previous grid are still in the scene")
 
+func test_the_boundary_ring_is_generated_rather_than_hand_listed():
+	# The .tscn authors only the tiles under the blocks; the ring is derived, so it lives
+	# in exactly one place. Without this, border_tiles() would be dead code and the scene
+	# would hand-maintain 52 coordinates.
+	_collision.blocked = [Vector2i(2, -1)] as Array[Vector2i]
+	_collision.border_for_floor = Vector2i(12, 12)
+	add_child_autofree(_collision)
+	await wait_frames(1)
+	assert_eq(_static_body().get_child_count(), 53, "1 authored tile + a 52-tile ring")
+
+func test_no_border_is_generated_when_border_for_floor_is_unset():
+	_collision.blocked = [Vector2i(2, -1)] as Array[Vector2i]
+	add_child_autofree(_collision)
+	await wait_frames(1)
+	assert_eq(_static_body().get_child_count(), 1)
+
+func test_a_tile_listed_in_both_the_ring_and_blocked_is_not_duplicated():
+	_collision.blocked = [Vector2i(-7, 0)] as Array[Vector2i]
+	_collision.border_for_floor = Vector2i(12, 12)
+	add_child_autofree(_collision)
+	await wait_frames(1)
+	assert_eq(_static_body().get_child_count(), 52, "(-7, 0) is already in the ring")
+
 func test_it_adds_no_light_to_the_scene():
 	# tests/test_poc3d_pipeline.gd asserts the POC has exactly one Light3D.
 	_collision.blocked = [Vector2i(0, 0)]
@@ -469,6 +492,14 @@ const TILE_EXTENT := 1.0
 		blocked = value
 		_rebuild()
 
+## When non-zero, the boundary ring for a floor of this many tiles is generated and
+## appended to `blocked` at build time. Keeps the ring in ONE place — the .tscn would
+## otherwise hand-maintain 52 tiles that border_tiles() already knows how to derive.
+@export var border_for_floor := Vector2i.ZERO:
+	set(value):
+		border_for_floor = value
+		_rebuild()
+
 @export var wall_height := DEFAULT_WALL_HEIGHT:
 	set(value):
 		wall_height = maxf(value, 0.01)
@@ -504,6 +535,21 @@ static func border_tiles(tiles: Vector2i) -> Array[Vector2i]:
 	return ring
 
 
+## Every solid tile: the authored ones plus, when border_for_floor is set, the generated
+## boundary ring. Duplicates are harmless (they would only stack identical boxes) but are
+## removed so the shape count stays a meaningful assertion.
+func solid_tiles() -> Array[Vector2i]:
+	var tiles: Array[Vector2i] = []
+	for tile in blocked:
+		if not tiles.has(tile):
+			tiles.append(tile)
+	if border_for_floor != Vector2i.ZERO:
+		for tile in border_tiles(border_for_floor):
+			if not tiles.has(tile):
+				tiles.append(tile)
+	return tiles
+
+
 func _rebuild() -> void:
 	if not is_inside_tree():
 		return
@@ -513,7 +559,7 @@ func _rebuild() -> void:
 		existing.queue_free()
 	var body := StaticBody3D.new()
 	body.name = BODY_NAME
-	for tile in blocked:
+	for tile in solid_tiles():
 		var shape_node := CollisionShape3D.new()
 		var box := BoxShape3D.new()
 		box.size = Vector3(TILE_EXTENT, wall_height, TILE_EXTENT)
@@ -530,7 +576,7 @@ func _rebuild() -> void:
 ```powershell
 ./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd "-gtest=res://tests/test_poc3d_tile_collision.gd" -gexit
 ```
-Expected: PASS, 8 tests, 0 failures.
+Expected: PASS, 11 tests, 0 failures.
 
 **Step 5: Refactor checkpoint**
 
@@ -587,10 +633,13 @@ and the node, as a child of `TestRoom` after `Blocks`:
 ```
 [node name="Collision" type="Node3D" parent="."]
 script = ExtResource("5")
-blocked = Array[Vector2i]([Vector2i(-4, 1), Vector2i(-4, 2), Vector2i(-3, 1), Vector2i(-3, 2), Vector2i(2, -1), Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3), Vector2i(-7, -7), Vector2i(-7, -6), Vector2i(-7, -5), Vector2i(-7, -4), Vector2i(-7, -3), Vector2i(-7, -2), Vector2i(-7, -1), Vector2i(-7, 0), Vector2i(-7, 1), Vector2i(-7, 2), Vector2i(-7, 3), Vector2i(-7, 4), Vector2i(-7, 5), Vector2i(-7, 6), Vector2i(6, -7), Vector2i(6, -6), Vector2i(6, -5), Vector2i(6, -4), Vector2i(6, -3), Vector2i(6, -2), Vector2i(6, -1), Vector2i(6, 0), Vector2i(6, 1), Vector2i(6, 2), Vector2i(6, 3), Vector2i(6, 4), Vector2i(6, 5), Vector2i(6, 6), Vector2i(-6, -7), Vector2i(-5, -7), Vector2i(-4, -7), Vector2i(-3, -7), Vector2i(-2, -7), Vector2i(-1, -7), Vector2i(0, -7), Vector2i(1, -7), Vector2i(2, -7), Vector2i(3, -7), Vector2i(4, -7), Vector2i(5, -7), Vector2i(-6, 6), Vector2i(-5, 6), Vector2i(-4, 6), Vector2i(-3, 6), Vector2i(-2, 6), Vector2i(-1, 6), Vector2i(0, 6), Vector2i(1, 6), Vector2i(2, 6), Vector2i(3, 6), Vector2i(4, 6), Vector2i(5, 6)])
+blocked = Array[Vector2i]([Vector2i(-4, 1), Vector2i(-4, 2), Vector2i(-3, 1), Vector2i(-3, 2), Vector2i(2, -1), Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3)])
+border_for_floor = Vector2i(12, 12)
 ```
 
-> **Prefer authoring this in the editor.** Open `test_room.tscn`, add a `Node3D` named `Collision`, attach `tile_collision.gd`, and fill the `blocked` array in the inspector — the eight block tiles by hand, then paste the 52 ring tiles. Godot will serialise the array itself, which is less error-prone than hand-editing the `.tscn`. The literal above is the expected result; use it to verify, not necessarily to type.
+Only the eight tiles under the blocks are authored. The 52-tile boundary ring is **derived** from `border_for_floor` by `TileCollision.border_tiles()`, so the ring exists in exactly one place — the `.tscn` never hand-maintains it. `Vector2i(12, 12)` must match `Floor`'s `tiles` property in the same scene.
+
+> **Prefer authoring this in the editor.** Open `test_room.tscn`, add a `Node3D` named `Collision`, attach `tile_collision.gd`, and fill in the eight `blocked` tiles and `border_for_floor` in the inspector. Godot will serialise the array itself, which is less error-prone than hand-editing the `.tscn`.
 
 **Step 2: Verify**
 
