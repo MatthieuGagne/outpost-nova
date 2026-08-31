@@ -37,9 +37,17 @@ The player reads `ui_left` / `ui_right` / `ui_up` / `ui_down` (Godot's default
 arrow-key bindings — `project.godot` defines no overrides) via
 `Input.get_axis()` in `scripts/poc3d/player3d.gd`. Input is camera-relative:
 "up" moves the player away from the camera along the room's authored yaw, not
-along world -Z. There is no camera rotation anywhere in the POC — every room
-inherits the fixed yaw from `WorldScale.CAMERA_YAW_DEGREES` (45°) — so
-camera-relative and room-relative currently mean the same thing.
+along world -Z.
+
+That yaw is read every physics frame from the `Camera3D` actually rendering the
+player (`Player3D._camera_yaw_degrees()`), so a room that sets
+`RoomCamera.use_contract_angle = false` and hand-authors its own angle gets
+controls that match what is on screen. When the viewport has no camera at all —
+headless tests, mainly — the yaw falls back silently to
+`WorldScale.CAMERA_YAW_DEGREES` (45°).
+
+There is still no camera *rotation* anywhere in the POC: the angle is authored
+per room and fixed at runtime.
 
 ### The two-function facing contract
 
