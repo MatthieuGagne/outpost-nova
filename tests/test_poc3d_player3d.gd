@@ -11,6 +11,11 @@ const VELOCITY_TOLERANCE := 0.01
 ## mid-test cannot leave a key stuck down and cascade into unrelated failures.
 const MOVEMENT_ACTIONS := ["ui_up", "ui_down", "ui_left", "ui_right"]
 
+## The yaw used for the "room authors its own angle" case. 90 degrees on purpose: it
+## makes screen-up map to exactly (-1, 0, 0), so the expected velocity is a checkable
+## fact rather than a copied float.
+const HAND_AUTHORED_YAW_DEGREES := 90.0
+
 
 func after_each():
 	for action in MOVEMENT_ACTIONS:
@@ -104,3 +109,29 @@ func test_releasing_input_keeps_the_last_facing_and_returns_to_idle():
 	assert_eq(player.get_facing(), "up", "released input keeps the last facing")
 	assert_eq(player.get_node("PixelSprite3D").animation, "idle_up")
 	assert_almost_eq(player.velocity.length(), 0.0, VELOCITY_TOLERANCE)
+
+func test_a_room_that_authors_its_own_yaw_gets_controls_that_match_the_screen():
+	# AC4. RoomCamera.use_contract_angle = false leaves the hand-authored rotation
+	# alone; Player3D must follow the camera rather than the shared constant. At yaw 90
+	# the camera looks down -X, so screen-up is exactly (-1, 0, 0).
+	var player = await _player_under_camera(HAND_AUTHORED_YAW_DEGREES, false)
+	Input.action_press("ui_up")
+	await wait_physics_frames(2)
+	assert_almost_eq(player.velocity.x, -Player3D.SPEED, VELOCITY_TOLERANCE)
+	assert_almost_eq(player.velocity.z, 0.0, VELOCITY_TOLERANCE)
+	assert_eq(player.get_facing(), "up",
+		"facing is camera-space and must not change with the camera yaw")
+
+func test_without_a_camera_the_yaw_falls_back_to_the_contract_angle():
+	# The documented fallback. Asserted through velocity rather than through a getter,
+	# so it also proves the call site uses the resolved value.
+	var player: Player3D = load("res://scenes/poc3d/player3d.tscn").instantiate()
+	add_child_autofree(player)
+	await wait_frames(1)
+	assert_null(player.get_viewport().get_camera_3d(),
+		"this test is only meaningful with no Camera3D in the runner's viewport")
+	Input.action_press("ui_up")
+	await wait_physics_frames(2)
+	var expected := -sqrt(0.5) * Player3D.SPEED
+	assert_almost_eq(player.velocity.x, expected, VELOCITY_TOLERANCE)
+	assert_almost_eq(player.velocity.z, expected, VELOCITY_TOLERANCE)
