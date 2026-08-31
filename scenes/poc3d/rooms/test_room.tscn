@@ -1,9 +1,12 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://scripts/poc3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
 [ext_resource type="Script" path="res://scripts/poc3d/pixel_sprite_3d.gd" id="3"]
 [ext_resource type="SpriteFrames" path="res://data/sprites/player_frames.tres" id="4"]
+[ext_resource type="Script" path="res://scripts/poc3d/tile_collision.gd" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/player3d.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/npc3d.tscn" id="7"]
 
 [sub_resource type="BoxMesh" id="1"]
 size = Vector3(2, 1, 2)
@@ -46,14 +49,19 @@ mesh = SubResource("1")
 material_override = SubResource("2")
 
 [node name="BlockB" type="MeshInstance3D" parent="Blocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -0.5)
 mesh = SubResource("3")
 material_override = SubResource("4")
 
 [node name="BlockC" type="MeshInstance3D" parent="Blocks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1, 3.5)
 mesh = SubResource("5")
 material_override = SubResource("6")
+
+[node name="Collision" type="Node3D" parent="."]
+script = ExtResource("5")
+blocked = Array[Vector2i]([Vector2i(-4, 1), Vector2i(-4, 2), Vector2i(-3, 1), Vector2i(-3, 2), Vector2i(2, -1), Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3)])
+border_for_floor = Vector2i(12, 12)
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 rotation_degrees = Vector3(-50, -40, 0)
@@ -65,8 +73,15 @@ environment = SubResource("7")
 [node name="RoomCamera" parent="." instance=ExtResource("2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 9, 9)
 
+[node name="Player3D" parent="." instance=ExtResource("6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="NPC3D" parent="." instance=ExtResource("7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
+facing = "right"
+
 [node name="ReferenceSprite" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.1)
 script = ExtResource("3")
 sprite_frames = ExtResource("4")
 animation = &"idle_down"
