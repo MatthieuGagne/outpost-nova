@@ -33,3 +33,16 @@ static func from_input(input: Vector2) -> String:
 	if absf(input.x) >= absf(input.y):
 		return "right" if input.x > 0.0 else "left"
 	return "down" if input.y > 0.0 else "up"
+
+## Rotates a camera-space input vector into a world-space XZ direction.
+##
+## A Camera3D looks down its local -Z. Under a yaw of theta that forward direction is
+## (-sin theta, 0, -cos theta) and its right is (cos theta, 0, -sin theta). Screen-up is
+## input.y == -1, hence the negation on the forward term.
+static func input_to_world(input: Vector2, yaw_degrees: float) -> Vector3:
+	if input.is_zero_approx():
+		return Vector3.ZERO
+	var yaw := deg_to_rad(yaw_degrees)
+	var forward := Vector3(-sin(yaw), 0.0, -cos(yaw))
+	var right := Vector3(cos(yaw), 0.0, -sin(yaw))
+	return (right * input.x + forward * -input.y).normalized()
