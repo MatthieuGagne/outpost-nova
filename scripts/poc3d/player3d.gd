@@ -6,6 +6,11 @@ extends CharacterBody3D
 ##
 ## PRD 2 (#102) R5/R6/R7. All of the interesting maths lives in SpriteFacing so it can be
 ## tested headlessly; this script is the thin node-side wiring around it.
+##
+## Known limitation: _physics_process rotates input by the constant
+## WorldScale.CAMERA_YAW_DEGREES, not by the room's actual Camera3D. RoomCamera exposes
+## use_contract_angle for a room to author a different angle; a room that opts out today
+## would get silently mismatched controls, with no error and no test failure.
 
 ## The 2D player moves at 80 px/s. Divided by the world scale that is world units/s, so
 ## the two builds move at visually identical speeds and neither number is magic.

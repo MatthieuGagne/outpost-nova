@@ -34,6 +34,7 @@ static func from_input(input: Vector2) -> String:
 		return "right" if input.x > 0.0 else "left"
 	return "down" if input.y > 0.0 else "up"
 
+
 ## Rotates a camera-space input vector into a world-space XZ direction.
 ##
 ## A Camera3D looks down its local -Z. Under a yaw of theta that forward direction is

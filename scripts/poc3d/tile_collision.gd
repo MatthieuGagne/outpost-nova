@@ -103,5 +103,3 @@ func _rebuild() -> void:
 		shape_node.position = tile_centre(tile, wall_height)
 		body.add_child(shape_node)
 	add_child(body)
-	if Engine.is_editor_hint():
-		body.owner = get_tree().edited_scene_root
