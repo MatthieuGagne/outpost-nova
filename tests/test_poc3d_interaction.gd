@@ -68,3 +68,73 @@ func test_a_skipped_candidate_does_not_hide_a_later_valid_one():
 	var hidden := _stub(true, false, true)
 	var valid := _stub(true, true, true)
 	assert_eq(InteractScan.first_interactable([hidden, valid], []), valid)
+
+
+# ── Console (R5 / AC2) ────────────────────────────────────────────────────────
+
+const CONSOLE_SCENE := "res://scenes/poc3d/console.tscn"
+
+
+func _console() -> PocConsole:
+	var node: PocConsole = load(CONSOLE_SCENE).instantiate()
+	add_child_autofree(node)
+	return node
+
+
+func test_the_console_joins_the_interactable_group():
+	assert_true(_console().is_in_group(InteractScan.INTERACTABLE_GROUP))
+
+
+func test_the_console_satisfies_the_scan_contract():
+	# Guards the whole chain at once: group, visibility and the duck-typed method.
+	var console := _console()
+	assert_true(InteractScan.is_interactable(console))
+
+
+func test_interacting_grants_the_console_yield():
+	GameState.reset()
+	var before := GameState.get_resource(PocConsole.RESOURCE_ID)
+	_console().interact()
+	assert_eq(GameState.get_resource(PocConsole.RESOURCE_ID), before + PocConsole.CONSOLE_YIELD)
+
+
+func test_the_console_is_repeatable():
+	# Deliberately has no one-shot latch: the gate play-session hammers this prop.
+	GameState.reset()
+	var console := _console()
+	console.interact()
+	console.interact()
+	console.interact()
+	assert_eq(GameState.get_resource(PocConsole.RESOURCE_ID), PocConsole.CONSOLE_YIELD * 3)
+
+
+func test_interacting_emits_dispensed():
+	GameState.reset()
+	var console := _console()
+	watch_signals(console)
+	console.interact()
+	assert_signal_emitted_with_parameters(
+		console, "dispensed", [PocConsole.RESOURCE_ID, PocConsole.CONSOLE_YIELD])
+
+
+# ── AC2: the HUD updates from the signal, not from polling ───────────────────
+
+const HUD_SCENE := "res://scenes/ui/hud.tscn"
+
+
+func test_the_hud_reflects_a_console_grant_through_the_resource_changed_signal():
+	# AC2. hud.gd connects GameState.resource_changed in _ready() and never polls; this
+	# asserts the connection itself, so deleting it fails here even if a later _process
+	# happened to refresh the same label.
+	GameState.reset()
+	# Untyped on purpose: hud.gd carries no class_name, and typing this as CanvasLayer
+	# would make _refresh_resources an unknown member at parse time.
+	var hud = load(HUD_SCENE).instantiate()
+	add_child_autofree(hud)
+	await wait_frames(1)
+	assert_true(GameState.resource_changed.is_connected(hud._refresh_resources),
+		"hud.gd must stay connected to GameState.resource_changed — AC2 is signal discipline")
+	_console().interact()
+	await wait_frames(1)
+	var label: Label = hud.get_node("HBoxContainer/PartsLabel")
+	assert_eq(label.text, "Parts: %d" % GameState.get_resource(PocConsole.RESOURCE_ID))
