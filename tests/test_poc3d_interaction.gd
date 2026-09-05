@@ -299,3 +299,42 @@ func test_the_speaker_maps_to_a_real_portrait_index():
 	add_child_autofree(box)
 	assert_true(box.NPC_PORTRAIT_INDEX.has(SPEAKER),
 		"'%s' is not a key of dialogue_box.NPC_PORTRAIT_INDEX" % SPEAKER)
+
+
+# ── The NPC's interact target (R7) ───────────────────────────────────────────
+
+const NPC_SCENE := "res://scenes/poc3d/npc3d.tscn"
+const INTERACT_TARGET_NODE := "InteractTarget"
+
+
+func test_the_npc_carries_an_interact_target_in_the_group():
+	var npc = load(NPC_SCENE).instantiate()
+	add_child_autofree(npc)
+	await wait_frames(1)
+	# Untyped: get_node_or_null on an untyped node returns Variant, and typing this as
+	# InteractTarget would hard-error instead of failing the assert below if it were not.
+	var target = npc.get_node_or_null(INTERACT_TARGET_NODE)
+	assert_not_null(target, "npc3d.tscn must carry an %s Area3D" % INTERACT_TARGET_NODE)
+	assert_true(InteractScan.is_interactable(target),
+		"the NPC's interact target must satisfy the same contract as the console")
+
+
+func test_the_interact_target_forwards_to_its_parent():
+	var parent := Node3D.new()
+	parent.set_script(load(STUB_SCRIPT))
+	var target := InteractTarget.new()
+	parent.add_child(target)
+	add_child_autofree(parent)
+	await wait_frames(1)
+	target.interact()
+	assert_eq(parent.interact_count, 1)
+
+
+func test_the_interact_target_ignores_a_parent_that_cannot_interact():
+	var parent := Node3D.new()
+	var target := InteractTarget.new()
+	parent.add_child(target)
+	add_child_autofree(parent)
+	await wait_frames(1)
+	target.interact()
+	pass_test("forwarding to a parent without interact() must not error")
