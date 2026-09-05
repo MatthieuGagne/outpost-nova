@@ -3,7 +3,8 @@
 class_name WorldScale
 extends RefCounted
 
-## Single source of truth for the POC's 3D presentation constants.
+## Single source of truth for the POC's 3D presentation constants, and for the one rule
+## that resolves them against the live camera.
 ##
 ## Not an autoload on purpose: project.godot is read-only in PRD 1 and epic #100
 ## states the autoloads are untouched. A class_name is globally reachable from

@@ -13,7 +13,7 @@ const FRAME_SIZE := Vector2i(16, 32)
 const FRAME_COUNT := 4
 
 ## Half of FRAME_SIZE.x. A blush centroid above this sits on the right of the frame.
-const FRAME_CENTRE_X := 8.0
+const FRAME_CENTRE_X := FRAME_SIZE.x * 0.5
 
 ## The cheek blush is (209, 157, 167): clearly redder than it is green or blue, unlike
 ## every other colour in these palettes. Thresholds in 0..1 float, from 25/255 and 10/255.
@@ -30,13 +30,19 @@ const SHEETS := [
 ]
 
 
-func _image(path: String) -> Image:
-	var texture: Texture2D = load(path)
-	assert_not_null(texture, "missing texture: " + path)
+## Decompresses `texture`'s image if needed. The single place that does so, so
+## `_image()` and `_frame_blush_centre_x()` cannot drift on the dance.
+func _decompressed_image(texture: Texture2D) -> Image:
 	var image := texture.get_image()
 	if image.is_compressed():
 		image.decompress()
 	return image
+
+
+func _image(path: String) -> Image:
+	var texture: Texture2D = load(path)
+	assert_not_null(texture, "missing texture: " + path)
+	return _decompressed_image(texture)
 
 
 ## Mean x of the blush pixels in `image`, or -1.0 if the sprite shows no blush.
@@ -59,10 +65,7 @@ func _blush_centre_x(image: Image) -> float:
 ## The blush centroid of one frame of `animation`, decompressed and measured.
 func _frame_blush_centre_x(frames: SpriteFrames, animation: String, index: int) -> float:
 	var texture := frames.get_frame_texture(animation, index)
-	var image := texture.get_image()
-	if image.is_compressed():
-		image.decompress()
-	return _blush_centre_x(image)
+	return _blush_centre_x(_decompressed_image(texture))
 
 
 func test_each_side_sheet_is_an_exact_mirror_of_the_other():

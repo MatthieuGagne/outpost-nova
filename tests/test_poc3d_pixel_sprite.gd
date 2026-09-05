@@ -54,7 +54,9 @@ func test_sprite_samples_with_nearest_filtering():
 	assert_eq(sprite.texture_filter, BaseMaterial3D.TEXTURE_FILTER_NEAREST)
 
 
-func test_sprite_faces_the_contract_camera_yaw():
+func test_without_a_camera_the_quad_falls_back_to_the_contract_angle():
+	# The GUT runner's viewport has no Camera3D, so this exercises the fallback branch
+	# of WorldScale.camera_yaw_degrees(), not a live camera's yaw.
 	var sprite := _build_sprite()
 	assert_almost_eq(sprite.rotation_degrees.y, WorldScale.CAMERA_YAW_DEGREES, TOLERANCE)
 

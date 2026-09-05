@@ -43,6 +43,11 @@ func _process(_delta: float) -> void:
 ##
 ## Written as a global rotation so a sprite nested under a rotated pivot or NPC node still
 ## lands on the camera's angle rather than that angle plus its ancestors'.
+##
+## Relies on the camera already having its final rotation for this frame: _process order
+## between Node3Ds is unspecified, so if a runtime controller ever rotates the camera
+## in _process (there is none today — see scenes/poc3d/README.md and room_camera.gd),
+## this quad can trail it by one frame.
 func _face_active_camera() -> void:
 	var yaw := WorldScale.CAMERA_YAW_DEGREES
 	if not Engine.is_editor_hint():
