@@ -16,6 +16,17 @@ commands on PATH — those are WinGet shims and Godot fails to find its bundled
 `-Console` selects the console build (stdout/stderr attached); `$env:GODOT_BIN`
 overrides executable discovery.
 
+Run `tools/godot.ps1` with **PowerShell 7 (`pwsh`)**, not Windows PowerShell 5.1
+(`powershell`): under 5.1 the script's `$ErrorActionPreference='Stop'` + `2>&1`
+import loop throws `NativeCommandError` on the first stderr line, so a fresh
+worktree's asset import never finishes.
+
+From the omp agent (Git Bash), invoke through `pwsh -Command` and single-quote any
+`res://` arg — `-File` passes quotes literally and PowerShell still colon-splits
+`res:` off:
+
+    pwsh -NoProfile -Command "& ./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd '-gdir=res://tests' -gexit"
+
 ```powershell
 # Build C# assemblies (required before running — dialogue is C#)
 dotnet build "Outpost Nova.csproj"
