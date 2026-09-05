@@ -262,3 +262,40 @@ func test_a_non_player_leaving_does_not_clear_the_latch():
 	door._on_body_exited(crate)
 	door._on_body_entered(body)
 	assert_signal_emit_count(door, "triggered", 1)
+
+
+# ── Hardcoded dialogue line (R7 / AC3) ───────────────────────────────────────
+
+const SPEAKER := "Maris"
+const BODY := "The recycler's coughing again. Third time this week."
+
+
+func _localized() -> YarnSpinner.LocalizedLine:
+	return YarnSpinner.LocalizedLine.from_dictionary(PocDialogueLine.build(SPEAKER, BODY))
+
+
+func test_the_line_round_trips_into_a_localized_line():
+	assert_not_null(_localized(),
+		"from_dictionary() returns null and push_errors when a required key is missing")
+
+
+func test_the_speaker_is_recoverable_as_the_character_name():
+	# This is what drives dialogue_box's SpeakerLabel and its portrait lookup.
+	assert_eq(_localized().character_name, SPEAKER)
+
+
+func test_the_body_survives_with_the_speaker_prefix_stripped():
+	assert_eq(_localized().text_without_character_name.text, BODY)
+
+
+func test_the_raw_text_keeps_the_full_line():
+	assert_eq(_localized().raw_text, SPEAKER + PocDialogueLine.SPEAKER_SEPARATOR + BODY)
+
+
+func test_the_speaker_maps_to_a_real_portrait_index():
+	# dialogue_box falls back to FALLBACK_PORTRAIT_INDEX for an unknown speaker; AC3 wants
+	# Maris's actual portrait, so the name must match NPC_PORTRAIT_INDEX exactly.
+	var box = load("res://scenes/ui/dialogue_box.tscn").instantiate()
+	add_child_autofree(box)
+	assert_true(box.NPC_PORTRAIT_INDEX.has(SPEAKER),
+		"'%s' is not a key of dialogue_box.NPC_PORTRAIT_INDEX" % SPEAKER)
