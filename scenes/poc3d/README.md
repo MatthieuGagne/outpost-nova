@@ -22,12 +22,12 @@ Opening `scenes/poc3d/poc_entry.tscn` in the editor and pressing F6 also works.
 
 | File | Role |
 |------|------|
-| `poc_entry.tscn` | The 480x270 `SubViewport` render target, with `hud.tscn` as a sibling above it |
-| `rooms/test_room.tscn` | Greybox geometry, one directional light, the camera |
+| `poc_entry.tscn` | The 480x270 `SubViewport` render target, with `hud.tscn` and `dialogue_box.tscn` as siblings above it |
+| `rooms/test_room.tscn` | Greybox geometry — floor, four walls, console, crate, exit door — one directional light, the camera |
 | `room_camera.tscn` | The per-room camera contract — FOV/pitch/yaw from `WorldScale` |
 | `scripts/poc3d/world_scale.gd` | Every constant. 16 px = 1 world unit |
 
-The HUD must never be moved inside the `SubViewport`; see the comment in `scripts/poc3d/poc_entry.gd`.
+Neither the HUD nor the dialogue box may be moved inside the `SubViewport`; see the comment in `scripts/poc3d/poc_entry.gd`.
 
 ## Sprite characters (PRD 2, #102)
 
@@ -92,14 +92,14 @@ The boundary ring around the floor is not hand-listed: setting
 `border_for_floor` to the floor's tile dimensions derives the ring via
 `TileCollision.border_tiles()` and appends it to the authored `blocked` array
 at build time. `test_room.tscn` sets `border_for_floor = Vector2i(12, 12)` to
-match its 12×12 floor, on top of eight explicitly authored `blocked` tiles
-covering `BlockA`, `BlockB`, and `BlockC`.
+match its 12×12 floor, on top of four explicitly authored `blocked` tiles:
+`(2, -1)` for `BlockB`, `(-6, -1)` and `(-6, 0)` for the `Console`, and
+`(1, 1)` for the `Crate`. `BlockA` and `BlockC` were removed in #103 and their
+seven tiles freed; the props that replaced them are described below.
 
-During this PRD, `BlockB` and `BlockC` were moved by `(+0.5, 0, +0.5)` (from
-`(2, 1.5, -1)` / `(1, 1.0, 3)` to `(2.5, 1.5, -0.5)` / `(1.5, 1, 3.5)`) so
-their footprints land exactly on tile boundaries and match the authored
-`blocked` tiles `(2, -1)` and `(0, 3)`/`(1, 3)`/`(2, 3)`. `BlockA` was already
-grid-aligned and did not need to move. `ReferenceSprite` moved by the same
+During PRD 2, `BlockB` was moved by `(+0.5, 0, +0.5)` (from `(2, 1.5, -1)` to
+`(2.5, 1.5, -0.5)`) so its footprint lands exactly on tile boundaries and
+matches the authored `blocked` tile `(2, -1)`. `ReferenceSprite` moved by the same
 `(+0.5, 0, +0.5)` delta (to `(2.5, 0, 0.1)`) to preserve PRD 1's framing: its
 billboard quad intersects `BlockB`'s new footprint, and that intersection is
 what produces the deliberate partial occlusion `ReferenceSprite` demonstrates.
@@ -113,3 +113,101 @@ sprite's hard pixel edges. Every PNG in `assets/sprites/characters/` has
 character PNG added for 3D use needs the same setting, or it will silently
 reimport with VRAM compression and look softer than its neighbours the next
 time the editor touches it.
+
+## Greybox room, interaction & NPC (PRD 3, #103)
+
+This is the room the epic's **go/no-go gate** is answered in. PRD 4 (#104) does
+not begin until it is.
+
+### Room shape, and why two walls are short
+
+The floor is 12×12 tiles centred on the origin, spanning world X and Z from
+`-6` to `+6`. `border_for_floor` already generates a solid 3-unit collision ring
+just outside it, on tile columns `x = -7`/`x = 6` and rows `z = -7`/`z = 6`.
+
+**The walls added in #103 are purely visual.** Every one of their footprints was
+already blocked by that ring, so no collision changed — which is also why AC1's
+"stopped by all four walls" was true before the meshes existed.
+
+`RoomCamera` looks down at the origin from the `+X`/`+Z` corner, so:
+
+| Wall | Height | Why |
+|------|--------|-----|
+| `WestWall` (`−X`), `NorthWall*` (`−Z`) | 3 units | Far from the camera; they read as the room's back |
+| `EastParapet` (`+X`), `SouthParapet` (`+Z`) | 0.5 units | Between camera and room. At full height they would occlude the entire interior |
+
+All four footprints are real and grid-snapped, so PRD 4 has somewhere to drop
+kit pieces on **every** side — the parapets are a mesh-height choice, not a
+missing wall. The `−Z` wall is three boxes (`NorthWallLeft`, `NorthWallRight`,
+`NorthWallLintel`) whose gap is the 2 × 2.5-unit door opening.
+
+### The door does not open
+
+The collision ring stays solid across the doorway: the player is stopped at the
+threshold, and `ExitDoor`'s `Area3D` covers the two floor tiles in front of the
+opening. Real area-to-area transitions are PRD 6 — this door only *reports*,
+via `triggered` → `poc_entry.gd` → `HUD.show_message()`.
+
+Two things worth not undoing:
+
+- **The `_occupied` latch** is what makes AC4's "exactly once per entry" true.
+  Physics re-emits `body_entered` while the player is pressed against the wall
+  inside the zone; without the latch the banner spams.
+- **The HUD wiring lives in `poc_entry.gd`, not in the room.** The HUD is
+  deliberately outside the `SubViewport`, and a `NodePath` reaching across that
+  boundary from inside the room would couple the room to whatever hosts it.
+
+### The interaction contract
+
+`scripts/poc3d/interact_scan.gd` is node-free on purpose — the same reasoning as
+`SpriteFacing` above. A real `Area3D` overlap needs physics frames, so keeping
+the *rule* free of nodes is what makes AC9's headless coverage possible.
+
+It mirrors `scripts/characters/player.gd._try_interact()` exactly: bodies before
+areas, first match wins, a candidate qualifies on `interactable` group membership
+plus `visible`. It adds one stricter filter — `has_method("interact")` — so a
+malformed prop is skipped rather than erroring. That differs from the 2D original
+only in the case where 2D currently crashes.
+
+Both interactables reach it the same way, through an `Area3D` in the
+`interactable` group:
+
+- `PocConsole` **is** that `Area3D` (`scenes/poc3d/console.tscn`).
+- The NPC uses a forwarding `InteractTarget` child, because `Npc3D` is a plain
+  `Node3D` — `tests/test_poc3d_npc3d.gd` asserts it is not a physics body, so it
+  is invisible to the scan on its own.
+
+The console's *solidity* is a blocked tile in `TileCollision`, authored
+separately from both its mesh and its interaction volume. That separation is R3:
+PRD 4 replaces the mesh and must not be able to disturb either.
+
+### Dialogue without YarnSpinner
+
+`PocDialogueLine.build()` hand-builds the `Dictionary` that
+`dialogue_box.run_line_async()` expects. **`dialogue_box.gd` and
+`dialogue_box.tscn` are completely unmodified** — they are instanced as-is.
+
+This works because `YarnSpinner` is the **pure GDScript** helper class in
+`addons/YarnSpinner-Godot/Runtime/Views/GDScriptHelper.gd`, not C#. No
+`DialogueRunner`, no `.yarnproject`, no C# assembly — and therefore testable
+headlessly, which is why the round-trip through `LocalizedLine.from_dictionary()`
+is asserted in `tests/test_poc3d_interaction.gd` rather than eyeballed.
+
+`Npc3D.speaker_name` must match a key of `dialogue_box.NPC_PORTRAIT_INDEX`
+(`Maris`, `Dex`, `Sable`) or the portrait silently falls back to the generic one.
+A test guards that for `Maris`.
+
+Why hardcoded at all: `DialogueRunner` is set up in
+`main.gd._setup_dialogue_runner()`, which this PRD deliberately does not touch.
+Re-doing that wiring would prove nothing about the 3D move. The question worth
+answering is whether the dialogue UI *layers correctly over the low-res
+`SubViewport`* — one line answers that at a fraction of the cost.
+
+### The dialogue box is a sibling
+
+Same invariant as the HUD, for the same reason: anything inside the
+`SubViewport` renders at 480×270 and upscales with the world, turning text to
+mush. `dialogue_box.tscn` is a `CanvasLayer` at `layer = 10` against the HUD's
+`layer = 1`, so as a sibling it draws above both, at full window resolution.
+`tests/test_poc3d_interaction.gd` asserts it and will fail if a later PRD
+reparents it.
