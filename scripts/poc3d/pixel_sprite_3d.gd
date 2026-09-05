@@ -12,8 +12,9 @@ extends AnimatedSprite3D
 ##
 ## Billboarding is off and alpha_cut is ALPHA_CUT_DISCARD so the depth buffer
 ## handles occlusion against geometry rather than the sprite always drawing on
-## top. Yaw is fixed to the camera's contract angle: with 4-direction atlases and
-## a locked camera there is nothing to rotate toward.
+## top. With billboarding off the quad is flat, so it is turned to face whatever
+## camera renders it — see _face_active_camera(). With 4-direction atlases and a
+## locked per-room camera there is nothing further to rotate toward.
 
 
 func _ready() -> void:
@@ -22,8 +23,33 @@ func _ready() -> void:
 	alpha_cut = SpriteBase3D.ALPHA_CUT_DISCARD
 	# default_texture_filter in project.godot is 2D-only and does not reach here.
 	texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
-	rotation_degrees.y = WorldScale.CAMERA_YAW_DEGREES
+	_face_active_camera()
 	_lift_feet_to_origin()
+
+
+## In the editor there is no room camera to follow: get_viewport() resolves to the 3D
+## editor's own viewport, and tracking its free camera would billboard the quad while a
+## room is being composed by eye. The contract angle is stamped once at _ready() instead,
+## which is exactly what this node did before #116.
+func _process(_delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+	_face_active_camera()
+
+
+## The quad is flat and billboarding is off, so it has to be turned toward the camera that
+## renders it; at a 180-degree difference the camera sees its mirrored back face instead
+## (#116). Same rule and same fallback as the player's movement yaw (#114).
+##
+## Written as a global rotation so a sprite nested under a rotated pivot or NPC node still
+## lands on the camera's angle rather than that angle plus its ancestors'.
+func _face_active_camera() -> void:
+	var yaw := WorldScale.CAMERA_YAW_DEGREES
+	if not Engine.is_editor_hint():
+		yaw = WorldScale.camera_yaw_degrees(get_viewport())
+	var euler := global_rotation_degrees
+	euler.y = yaw
+	global_rotation_degrees = euler
 
 
 ## AnimatedSprite3D centres the frame on the node, so half the sprite would sink
