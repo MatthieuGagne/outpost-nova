@@ -8,7 +8,7 @@ extends CharacterBody3D
 ## tested headlessly; this script is the thin node-side wiring around it.
 ##
 ## The camera yaw is read from the Camera3D actually rendering the player — see
-## _camera_yaw_degrees() — so a room may author its own angle via
+## WorldScale.camera_yaw_degrees() — so a room may author its own angle via
 ## RoomCamera.use_contract_angle = false without desyncing the controls (#114).
 
 ## The 2D player moves at 80 px/s. Divided by the world scale that is world units/s, so
@@ -52,25 +52,10 @@ func _physics_process(_delta: float) -> void:
 	var input := Vector2(
 		Input.get_axis("ui_left", "ui_right"),
 		Input.get_axis("ui_up", "ui_down"))
-	velocity = SpriteFacing.input_to_world(input, _camera_yaw_degrees()) * SPEED
+	velocity = SpriteFacing.input_to_world(
+		input, WorldScale.camera_yaw_degrees(get_viewport())) * SPEED
 	move_and_slide()
 	_update_animation(input)
-
-
-## Yaw of the Camera3D actually rendering this player, so a room that authors its own
-## angle (RoomCamera.use_contract_angle = false) gets controls consistent with what is
-## on screen. Read every physics frame rather than cached at _ready: nothing orders the
-## camera before the player in a room scene, and a cached null would silently mis-steer.
-## global_ so a camera parented under a rotated node still resolves correctly.
-##
-## Fallback: WorldScale.CAMERA_YAW_DEGREES when the viewport has no camera. Silent on
-## purpose — a room with no Camera3D renders a black screen, so a warning would add no
-## diagnostic value, and the no-camera path is the normal one under headless tests.
-func _camera_yaw_degrees() -> float:
-	var camera := get_viewport().get_camera_3d()
-	if camera == null:
-		return WorldScale.CAMERA_YAW_DEGREES
-	return camera.global_rotation_degrees.y
 
 
 ## Facing is resolved from the RAW input, not from velocity: velocity has already been
