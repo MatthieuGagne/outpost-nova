@@ -40,11 +40,19 @@ arrow-key bindings — `project.godot` defines no overrides) via
 along world -Z.
 
 That yaw is read every physics frame from the `Camera3D` actually rendering the
-player (`Player3D._camera_yaw_degrees()`), so a room that sets
+player (`WorldScale.camera_yaw_degrees()`), so a room that sets
 `RoomCamera.use_contract_angle = false` and hand-authors its own angle gets
 controls that match what is on screen. When the viewport has no camera at all —
 headless tests, mainly — the yaw falls back silently to
 `WorldScale.CAMERA_YAW_DEGREES` (45°).
+
+The **sprite quad** reads the same yaw, through the same helper, every frame
+(`PixelSprite3D._face_active_camera()`). Billboarding is off, so the quad is flat:
+if it did not turn with the camera, a room at a different angle would see it
+edge-on, and a room 180° away would see its mirrored back face (#116). In the
+editor the contract angle is stamped instead, because `get_viewport()` there is
+the 3D editor's own viewport and following its free camera would billboard the
+sprite while a room is being composed.
 
 There is still no camera *rotation* anywhere in the POC: the angle is authored
 per room and fixed at runtime.
