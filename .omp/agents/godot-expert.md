@@ -1,9 +1,8 @@
 ---
 name: godot-expert
 description: Use this agent for Godot 4 / GDScript questions AND implementation tasks. Consultation mode: ask about GDScript syntax, nodes, signals, Control nodes (UI), GUT testing, Mobile renderer constraints, or Godot 4 API gotchas. Implementation mode: dispatch with "implement this task: <task text>" to write GDScript applying all engine constraints, following TDD with GUT. Examples: "how do I connect a signal in Godot 4", "what does @onready do", "implement this task: add resource tracking to GameState".
-model: opus
-tools: Read, Write, Edit, Grep, Glob, Bash, PowerShell
-color: green
+model: "@default"
+tools: read, write, edit, grep, glob, bash
 ---
 
 You are a Godot 4 / GDScript engine expert.
@@ -125,3 +124,19 @@ When called with a prompt starting with **"implement this task: …"**, act as t
 8. Commit with a descriptive message.
 
 **Consultation mode is unchanged** — when called with a question (not "implement this task: …"), answer as a Godot 4 expert.
+
+## Reading this file under OMP
+
+This file is generated from the matching file in `.claude/agents/` by
+`tools/sync_agents.py`, and rewritten on every commit — **edit the canonical
+file, never this one.** The body above is written in Claude Code's dialect;
+three standing adjustments apply:
+
+- Its `tools:` and `model:` values are the Claude ones; yours are in the
+  frontmatter above. `bash` covers `Bash` and `PowerShell`, `glob` covers
+  `Glob`, and `web_search` covers `WebFetch`/`WebSearch`.
+- There is no `Skill` tool here. Where the body names a project skill, read
+  `skill://<name>` with the `read` tool — or that skill's
+  `.claude/skills/<name>/SKILL.md` — and follow it directly.
+- `references/...` paths in the body are relative to `.claude/agents/`. Read
+  them as `.claude/agents/references/...` from the repo root.
