@@ -185,3 +185,80 @@ func test_interacting_with_nothing_in_reach_is_a_no_op():
 	await wait_physics_frames(2)
 	player._try_interact()
 	pass_test("an empty interaction zone must not error")
+
+
+# ── Exit door (R8 / AC4) ──────────────────────────────────────────────────────
+
+const DOOR_SCENE := "res://scenes/poc3d/exit_door.tscn"
+
+
+func _door() -> ExitDoor:
+	var node: ExitDoor = load(DOOR_SCENE).instantiate()
+	add_child_autofree(node)
+	return node
+
+
+func _player_body() -> Node3D:
+	# A stand-in for Player3D: the door filters on the group, not the type.
+	var body := Node3D.new()
+	body.add_to_group(ExitDoor.PLAYER_GROUP)
+	add_child_autofree(body)
+	return body
+
+
+func test_entering_fires_the_trigger_once():
+	var door := _door()
+	watch_signals(door)
+	door._on_body_entered(_player_body())
+	assert_signal_emit_count(door, "triggered", 1)
+
+
+func test_the_trigger_reports_the_destination_id():
+	var door := _door()
+	door.destination_id = "cantina"
+	watch_signals(door)
+	door._on_body_entered(_player_body())
+	assert_signal_emitted_with_parameters(door, "triggered", ["cantina"])
+
+
+func test_jitter_inside_the_zone_does_not_refire():
+	# AC4: "exactly once per entry". Physics can re-emit body_entered while the player is
+	# pressed against the wall inside the trigger; the latch is what makes AC4 true.
+	var door := _door()
+	var body := _player_body()
+	watch_signals(door)
+	door._on_body_entered(body)
+	door._on_body_entered(body)
+	door._on_body_entered(body)
+	assert_signal_emit_count(door, "triggered", 1)
+
+
+func test_leaving_and_re_entering_fires_again():
+	var door := _door()
+	var body := _player_body()
+	watch_signals(door)
+	door._on_body_entered(body)
+	door._on_body_exited(body)
+	door._on_body_entered(body)
+	assert_signal_emit_count(door, "triggered", 2)
+
+
+func test_a_non_player_body_is_ignored():
+	var door := _door()
+	var crate := Node3D.new()
+	add_child_autofree(crate)
+	watch_signals(door)
+	door._on_body_entered(crate)
+	assert_signal_emit_count(door, "triggered", 0)
+
+
+func test_a_non_player_leaving_does_not_clear_the_latch():
+	var door := _door()
+	var body := _player_body()
+	var crate := Node3D.new()
+	add_child_autofree(crate)
+	watch_signals(door)
+	door._on_body_entered(body)
+	door._on_body_exited(crate)
+	door._on_body_entered(body)
+	assert_signal_emit_count(door, "triggered", 1)
