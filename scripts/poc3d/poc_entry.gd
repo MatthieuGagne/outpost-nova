@@ -11,7 +11,10 @@ extends Node
 ##   │   └── SubViewport        the 3D world renders here, at 480x270
 ##   │       └── TestRoom
 ##   │           └── ExitDoor   reports through the HUD, wired below (#103)
-##   └── HUD                    instanced hud.tscn — a SIBLING, never a child
+##   ├── HUD                    instanced hud.tscn — a SIBLING, never a child
+##   └── DialogueBox            instanced dialogue_box.tscn, also a SIBLING (#103).
+##                              layer = 10 against the HUD's 1, so it draws above both
+##                              the upscaled world and the HUD, at full resolution.
 ##
 ## THE INVARIANT: the HUD must never be parented under the SubViewport. Anything
 ## inside the SubViewport is rendered into the low-res target and upscaled with

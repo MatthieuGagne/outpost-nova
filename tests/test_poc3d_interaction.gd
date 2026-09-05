@@ -382,3 +382,33 @@ func test_interacting_shows_the_line_in_the_real_dialogue_box():
 	# on_dialogue_start_async() pauses the tree; leave it clean for the next test.
 	box.on_dialogue_complete_async()
 	await wait_frames(1)
+
+
+# ── AC3 structure: the dialogue box is NOT inside the low-res target ──────────
+
+const ENTRY_SCENE := "res://scenes/poc3d/poc_entry.tscn"
+
+
+func test_the_dialogue_box_draws_above_the_low_res_viewport():
+	# AC3. Parented under the SubViewport it would render at 480x270 and upscale with the
+	# world, turning the text to mush — the same invariant the HUD has in
+	# tests/test_poc3d_pipeline.gd, and the reason the box is a SIBLING.
+	var entry: Node = load(ENTRY_SCENE).instantiate()
+	add_child_autofree(entry)
+	await wait_frames(2)
+	var box: Node = entry.find_child("DialogueBox", true, false)
+	assert_not_null(box, "poc_entry.tscn no longer instances dialogue_box.tscn")
+	var viewport: SubViewport = entry.get_node("SubViewportContainer/SubViewport")
+	assert_false(viewport.is_ancestor_of(box),
+		"the dialogue box has been reparented under the SubViewport — it must stay a sibling")
+	assert_true(box is CanvasLayer)
+
+
+func test_the_room_casts_maris_with_a_line():
+	var entry: Node = load(ENTRY_SCENE).instantiate()
+	add_child_autofree(entry)
+	await wait_frames(2)
+	var npc = entry.find_child("NPC3D", true, false)
+	assert_not_null(npc, "the test room no longer has an NPC3D")
+	assert_eq(npc.speaker_name, SPEAKER)
+	assert_false(npc.dialogue_line.is_empty(), "Maris must have an authored line")
