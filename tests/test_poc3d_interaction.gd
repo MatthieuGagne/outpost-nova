@@ -338,3 +338,47 @@ func test_the_interact_target_ignores_a_parent_that_cannot_interact():
 	await wait_frames(1)
 	target.interact()
 	pass_test("forwarding to a parent without interact() must not error")
+
+
+# ── Npc3D dialogue wiring (R7) ───────────────────────────────────────────────
+
+const DIALOGUE_BOX_SCENE := "res://scenes/ui/dialogue_box.tscn"
+const SPEAKER_LABEL_PATH := "PanelContainer/MarginContainer/HBoxContainer/ContentContainer/SpeakerLabel"
+const DIALOGUE_TEXT_PATH := "PanelContainer/MarginContainer/HBoxContainer/ContentContainer/DialogueText"
+
+
+func _npc_with_line() -> Node3D:
+	var npc = load(NPC_SCENE).instantiate()
+	npc.speaker_name = SPEAKER
+	npc.dialogue_line = BODY
+	add_child_autofree(npc)
+	await wait_frames(1)
+	return npc
+
+
+func test_an_npc_without_a_line_does_not_open_the_dialogue_box():
+	var box = load(DIALOGUE_BOX_SCENE).instantiate()
+	add_child_autofree(box)
+	var npc = load(NPC_SCENE).instantiate()
+	add_child_autofree(npc)
+	await wait_frames(1)
+	npc.interact()
+	await wait_frames(1)
+	assert_false(box.visible, "an NPC with no authored line must stay silent")
+	get_tree().paused = false
+
+
+func test_interacting_shows_the_line_in_the_real_dialogue_box():
+	var box = load(DIALOGUE_BOX_SCENE).instantiate()
+	add_child_autofree(box)
+	var npc = await _npc_with_line()
+	npc.interact()
+	await wait_frames(2)
+	assert_true(box.visible, "dialogue_box.tscn must be shown by the NPC's interact()")
+	var speaker: Label = box.get_node(SPEAKER_LABEL_PATH)
+	var text: RichTextLabel = box.get_node(DIALOGUE_TEXT_PATH)
+	assert_eq(speaker.text, SPEAKER)
+	assert_eq(text.text, BODY)
+	# on_dialogue_start_async() pauses the tree; leave it clean for the next test.
+	box.on_dialogue_complete_async()
+	await wait_frames(1)
