@@ -138,3 +138,50 @@ func test_the_hud_reflects_a_console_grant_through_the_resource_changed_signal()
 	await wait_frames(1)
 	var label: Label = hud.get_node("HBoxContainer/PartsLabel")
 	assert_eq(label.text, "Parts: %d" % GameState.get_resource(PocConsole.RESOURCE_ID))
+
+
+# ── Player3D reach (R4) ──────────────────────────────────────────────────────
+
+const PLAYER_SCENE := "res://scenes/poc3d/player3d.tscn"
+
+## Just inside INTERACT_RADIUS (20 px / 16 = 1.25 units), and just outside it.
+const WITHIN_REACH := 1.0
+const BEYOND_REACH := 3.0
+
+
+func _player_and_console_at(separation: float) -> Player3D:
+	# The console's own 1x2 box is centred on it, so `separation` is measured between
+	# origins; anything under INTERACT_RADIUS plus half the box depth overlaps.
+	var player: Player3D = load(PLAYER_SCENE).instantiate()
+	var console: PocConsole = load(CONSOLE_SCENE).instantiate()
+	add_child_autofree(player)
+	add_child_autofree(console)
+	console.global_position = Vector3(separation, 0.0, 0.0)
+	# Overlaps are resolved by the physics server, not on add_child.
+	await wait_physics_frames(2)
+	return player
+
+
+func test_the_player_reaches_a_console_standing_next_to_it():
+	GameState.reset()
+	var player = await _player_and_console_at(WITHIN_REACH)
+	player._try_interact()
+	assert_eq(GameState.get_resource(PocConsole.RESOURCE_ID), PocConsole.CONSOLE_YIELD,
+		"INTERACT_RADIUS does not reach a prop the player is standing against")
+
+
+func test_the_player_does_not_reach_a_distant_console():
+	GameState.reset()
+	var player = await _player_and_console_at(BEYOND_REACH)
+	player._try_interact()
+	assert_eq(GameState.get_resource(PocConsole.RESOURCE_ID), 0,
+		"the interaction zone is reaching further than INTERACT_RADIUS allows")
+
+
+func test_interacting_with_nothing_in_reach_is_a_no_op():
+	GameState.reset()
+	var player: Player3D = load(PLAYER_SCENE).instantiate()
+	add_child_autofree(player)
+	await wait_physics_frames(2)
+	player._try_interact()
+	pass_test("an empty interaction zone must not error")

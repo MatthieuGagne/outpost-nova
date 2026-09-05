@@ -23,16 +23,20 @@ const BODY_HEIGHT_PIXELS := 16.0
 const BODY_RADIUS := BODY_RADIUS_PIXELS / WorldScale.PIXELS_PER_UNIT
 const BODY_HEIGHT := BODY_HEIGHT_PIXELS / WorldScale.PIXELS_PER_UNIT
 
-## Reach of the (unwired) interaction zone: 20 px, matching the 2D player's
-## InteractionZone circle in scenes/characters/player.tscn. PRD 3 (#103) wires it up.
+## Reach of the interaction zone: 20 px, matching the 2D player's InteractionZone circle
+## in scenes/characters/player.tscn.
 const INTERACT_RADIUS_PIXELS := 20.0
 const INTERACT_RADIUS := INTERACT_RADIUS_PIXELS / WorldScale.PIXELS_PER_UNIT
+
+## The action that fires an interaction, matching scripts/characters/player.gd.
+const INTERACT_ACTION := "ui_accept"
 
 ## Facing the player falls back to when input is released.
 const INITIAL_FACING := "down"
 
 @onready var sprite: PixelSprite3D = $PixelSprite3D
 @onready var _shape: CollisionShape3D = $CollisionShape3D
+@onready var _interaction_zone: Area3D = $InteractionZone
 @onready var _interact_shape: CollisionShape3D = $InteractionZone/CollisionShape3D
 
 var _facing := INITIAL_FACING
@@ -81,3 +85,24 @@ func _apply_body_shape() -> void:
 	reach.radius = INTERACT_RADIUS
 	_interact_shape.shape = reach
 	_interact_shape.position = Vector3(0.0, BODY_HEIGHT * 0.5, 0.0)
+
+
+## _unhandled_input rather than _input: the dialogue box runs at PROCESS_MODE_ALWAYS and
+## pauses the tree while a line is up, so a paused Player3D stops receiving input and the
+## box gets ui_accept to itself. No explicit "is dialogue open" guard is needed.
+func _unhandled_input(event: InputEvent) -> void:
+	if not event.is_action_pressed(INTERACT_ACTION):
+		return
+	_try_interact()
+	get_viewport().set_input_as_handled()
+
+
+## Mirrors scripts/characters/player.gd._try_interact(): bodies before areas, first match
+## wins, duck-typed call. The rule itself lives in InteractScan so it can be tested.
+func _try_interact() -> void:
+	var target := InteractScan.first_interactable(
+		_interaction_zone.get_overlapping_bodies(),
+		_interaction_zone.get_overlapping_areas())
+	if target == null:
+		return
+	target.interact()
