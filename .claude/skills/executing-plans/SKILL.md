@@ -26,14 +26,14 @@ pwd
 git worktree list
 ```
 
-If `pwd` output is already under `C:\Code\worktrees\`, you are in a worktree — skip to Step 2.
+If `pwd` output is already under `~\orca\workspaces\`, you are in a worktree — skip to Step 2.
 
-Otherwise, determine the feature branch name from the plan (use `feat/issue-<N>-<short-description>` convention, where `<N>` is the GitHub issue number). Then use the `EnterWorktree` tool to create and enter the worktree:
+Otherwise, determine the feature branch name from the plan (use `feat/issue-<N>-<short-description>` convention, where `<N>` is the GitHub issue number). Then create the worktree through Orca: invoke the `orca-cli` skill (exact commands come from `ORCA skills get orca-cli` — never guess flags):
 
-- Worktree path: `C:\Code\worktrees\<branch-name-with-slashes-as-dashes>`
+- Worktree path: `~\orca\workspaces\<repo>\<name>` (Orca-managed)
 - Branch: `feat/issue-<N>-<short-description>`
 
-`EnterWorktree` creates a fresh branch off master — no separate sync step is needed.
+Never use `git worktree add`, the `EnterWorktree` tool, or `.worktrees/`/`.claude/worktrees/` directories. Orca creates a fresh branch off master — no separate sync step is needed.
 
 ### Step 2: Load and Review Plan
 
@@ -122,7 +122,7 @@ Do not push or open the PR until you have received an explicit answer to this qu
 **Don't force through blockers** — stop and ask.
 
 ## Remember
-- Enter worktree FIRST before any other action — writing-plans may have already created it; use `EnterWorktree` only if not already inside one
+- Enter worktree FIRST before any other action — writing-plans may have already created it; create one through Orca (`orca-cli` skill) only if not already inside one — never `git worktree add` or `EnterWorktree`
 - Review plan critically before starting
 - Follow plan steps exactly
 - Don't skip verifications
