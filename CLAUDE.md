@@ -29,6 +29,17 @@ dotnet build "Outpost Nova.csproj"
 # Run all GUT tests headlessly (quote any res:// arg — PowerShell splits on the colon)
 ./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd "-gdir=res://tests" -gexit
 
+# GUT prints "---- All tests passed! ----" even when a test script failed to PARSE and was
+# skipped entirely. Read the Scripts/Tests COUNT, never the banner: a drop between runs means
+# a file silently vanished from the suite (#103 reported success at 162 tests instead of 191).
+# Prefer this form, which surfaces the parse errors the banner swallows:
+./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd "-gdir=res://tests" -gexit 2>&1 |
+  Select-String -Pattern "SCRIPT ERROR|Failing Tests|Passing Tests|Scripts "
+
+# `Identifier "Foo" not declared` for a class_name that plainly exists means the class cache is
+# stale — after a merge, a branch switch, or adding any class_name. Rebuild it, then re-run:
+./tools/godot.ps1 -Console --headless --path . --editor --quit
+
 # Run a single test script
 ./tools/godot.ps1 -Console --headless --path . -s addons/gut/gut_cmdln.gd "-gtest=res://tests/test_game_state.gd" -gexit
 
