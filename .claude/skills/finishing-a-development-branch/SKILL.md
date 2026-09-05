@@ -150,17 +150,19 @@ else
 fi
 ```
 
-**Step 7a: Exit EnterWorktree session if active**
+**Step 7a: Remove the worktree via Orca**
 
-If the current session was started with `EnterWorktree` and is still inside the worktree, use `ExitWorktree` first:
+Orca-managed worktrees (under `~\orca\workspaces\<repo>\<name>`) are removed via the Orca CLI: invoke the `orca-cli` skill (exact commands come from `ORCA skills get orca-cli` — never guess flags).
+
+After Orca removes the worktree, skip to Step 7d.
+
+**Legacy fallback (pre-Orca worktrees only):** if the worktree is not Orca-managed (e.g. under `C:\Code\worktrees\`), continue to Step 7b. If the session was started with the legacy `EnterWorktree` tool and is still inside the worktree, use `ExitWorktree` first:
 
 ```
 ExitWorktree(action="remove", discard_changes=true)
 ```
 
 After `ExitWorktree` returns, skip to Step 7d — the worktree is already removed.
-
-If not inside an active `EnterWorktree` session, continue to Step 7b.
 
 **Step 7b: cd to main repo root**
 

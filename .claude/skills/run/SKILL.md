@@ -14,10 +14,13 @@ description: Launch the current build of the Outpost Nova game in the Godot edit
 Determine whether you are running inside a git worktree or the main repo:
 
 ```sh
-pwd
+git rev-parse --git-dir
+git rev-parse --git-common-dir
 ```
 
-**If inside a worktree** (path contains `.claude/worktrees/`):
+If the two outputs differ, you are in a linked worktree; if they match, you are in the main repo. (Orca-managed worktrees live under `~\orca\workspaces\`.)
+
+**If inside a worktree**:
 
 1. Kill any running Godot instance
 2. Rebuild C# assemblies from the worktree directory:
