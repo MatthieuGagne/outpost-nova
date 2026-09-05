@@ -1,0 +1,26 @@
+#!/bin/sh
+# Repository hook — keep the OMP agent mirror in sync with .claude/agents/.
+#
+# Canonical agent files live in .claude/agents/ (Claude Code reads those); OMP
+# reads .omp/agents/. tools/sync_agents.py mirrors the former into the latter,
+# so an edit to a canonical agent and its mirror land in one commit. The script
+# is idempotent — an unchanged mirror stages nothing.
+#
+# Bypass with `git commit --no-verify`. Do not.
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+if command -v python >/dev/null 2>&1; then
+    PY=python
+elif command -v python3 >/dev/null 2>&1; then
+    PY=python3
+else
+    echo "pre-commit: no python on PATH — agent mirror sync skipped" >&2
+    exit 0
+fi
+
+if ! "$PY" tools/sync_agents.py; then
+    echo "" >&2
+    echo "pre-commit: tools/sync_agents.py failed — commit blocked." >&2
+    exit 1
+fi
+git add .omp/agents/
