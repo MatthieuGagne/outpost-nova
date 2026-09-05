@@ -58,3 +58,57 @@ func test_tile_bounds_check_rejects_coordinates_off_the_grid():
 	assert_false(WorldScale.is_tile_in_bounds(grid.x, 0))
 	assert_false(WorldScale.is_tile_in_bounds(0, grid.y))
 	assert_false(WorldScale.is_tile_in_bounds(-1, 0))
+
+
+## Yaw comparisons are float degrees; a hundredth of a degree is far below anything
+## authored by hand and far above float noise.
+const YAW_TOLERANCE := 0.01
+
+## Used for the "room authors its own angle" cases. 90 and the 30/60 split are chosen so
+## the expected results are checkable facts rather than copied floats.
+const HAND_AUTHORED_YAW := 90.0
+const PARENT_YAW := 30.0
+const CHILD_LOCAL_YAW := 60.0
+
+
+func test_a_null_viewport_falls_back_to_the_contract_angle():
+	assert_almost_eq(WorldScale.camera_yaw_degrees(null),
+		WorldScale.CAMERA_YAW_DEGREES, YAW_TOLERANCE,
+		"a caller not yet in the tree must still get a usable yaw")
+
+
+func test_a_viewport_with_no_camera_falls_back_to_the_contract_angle():
+	# The normal headless-test path: the GUT runner's viewport has no Camera3D.
+	assert_null(get_viewport().get_camera_3d(),
+		"this test is only meaningful with no Camera3D in the runner's viewport")
+	assert_almost_eq(WorldScale.camera_yaw_degrees(get_viewport()),
+		WorldScale.CAMERA_YAW_DEGREES, YAW_TOLERANCE)
+
+
+func test_a_current_camera_wins_over_the_contract_angle():
+	var camera := Camera3D.new()
+	camera.rotation_degrees = Vector3(WorldScale.CAMERA_PITCH_DEGREES, HAND_AUTHORED_YAW, 0.0)
+	add_child_autofree(camera)
+	camera.make_current()
+	await wait_frames(1)
+	assert_almost_eq(WorldScale.camera_yaw_degrees(get_viewport()),
+		HAND_AUTHORED_YAW, YAW_TOLERANCE,
+		"the live camera, not the shared constant, is the contract at runtime")
+
+
+func test_a_camera_under_a_rotated_parent_reports_its_global_yaw():
+	# The gap PR #115 flagged: its helper added the camera directly under the test root,
+	# where local and global transforms coincide, so a rotation_degrees /
+	# global_rotation_degrees mix-up could not fail. 30 + 60 = 90 here, and only the
+	# global read produces it.
+	var pivot := Node3D.new()
+	pivot.rotation_degrees = Vector3(0.0, PARENT_YAW, 0.0)
+	add_child_autofree(pivot)
+	var camera := Camera3D.new()
+	camera.rotation_degrees = Vector3(0.0, CHILD_LOCAL_YAW, 0.0)
+	pivot.add_child(camera)
+	camera.make_current()
+	await wait_frames(1)
+	assert_almost_eq(WorldScale.camera_yaw_degrees(get_viewport()),
+		PARENT_YAW + CHILD_LOCAL_YAW, YAW_TOLERANCE,
+		"must read global_rotation_degrees, not rotation_degrees")

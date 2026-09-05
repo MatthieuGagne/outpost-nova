@@ -3,7 +3,8 @@
 class_name WorldScale
 extends RefCounted
 
-## Single source of truth for the POC's 3D presentation constants.
+## Single source of truth for the POC's 3D presentation constants, and for the one rule
+## that resolves them against the live camera.
 ##
 ## Not an autoload on purpose: project.godot is read-only in PRD 1 and epic #100
 ## states the autoloads are untouched. A class_name is globally reachable from
@@ -36,6 +37,27 @@ const RENDER_HEIGHT := 270
 const CAMERA_FOV := 40.0
 const CAMERA_PITCH_DEGREES := -35.0
 const CAMERA_YAW_DEGREES := 45.0
+
+## Yaw of the Camera3D currently rendering `viewport`, in degrees.
+##
+## Both movement (#114) and the sprite quad's own rotation (#116) have to agree with what
+## is actually on screen, so the rule lives here once rather than in each caller. Callers
+## read it live rather than caching at _ready(): nothing orders the camera before other
+## nodes in a room scene, and a cached value taken before the camera existed would be
+## silently wrong for the life of the room.
+##
+## global_ so a camera parented under a rotated node still resolves correctly.
+##
+## Fallback: CAMERA_YAW_DEGREES when there is no camera. Silent on purpose — a room with
+## no Camera3D renders a black screen, so a warning would add no diagnostic value, and
+## the no-camera path is the normal one under headless tests.
+static func camera_yaw_degrees(viewport: Viewport) -> float:
+	if viewport == null:
+		return CAMERA_YAW_DEGREES
+	var camera := viewport.get_camera_3d()
+	if camera == null:
+		return CAMERA_YAW_DEGREES
+	return camera.global_rotation_degrees.y
 
 
 # --- Tile sheet geometry -----------------------------------------------------
