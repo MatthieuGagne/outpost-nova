@@ -26,11 +26,15 @@ func _process(delta: float) -> void:
 func track(container: Control) -> void:
 	for child in container.get_children():
 		if child is Control and child.focus_mode != Control.FOCUS_NONE:
-			child.focus_entered.connect(_on_focus_entered.bind(child))
+			var cb := _on_focus_entered.bind(child)
+			if not child.focus_entered.is_connected(cb):
+				child.focus_entered.connect(cb)
 
 func track_item(item: Control) -> void:
 	if item.focus_mode != Control.FOCUS_NONE:
-		item.focus_entered.connect(_on_focus_entered.bind(item))
+		var cb := _on_focus_entered.bind(item)
+		if not item.focus_entered.is_connected(cb):
+			item.focus_entered.connect(cb)
 
 func clear() -> void:
 	_focused = null
