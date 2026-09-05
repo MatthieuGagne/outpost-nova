@@ -76,10 +76,21 @@ func test_each_side_sheet_is_an_exact_mirror_of_the_other():
 		row.flip_x()
 		assert_eq(mirror.get_size(), row.get_size(),
 			"%s must be the same size as the base sheet's side row" % sheet["mirror"])
+		## A PNG's fully-transparent pixels carry arbitrary RGB — Godot's decode/decompress
+		## does not normalise it away, and different export passes routinely leave different
+		## garbage colour behind alpha=0. Comparing those channels would fail this test on
+		## bytes nobody ever sees. The invariant this test protects is "the two sheets look
+		## identical when mirrored", and an invisible pixel has no look — so alpha is always
+		## compared (a pixel becoming visible/invisible IS a visible change), while RGB is
+		## only compared where the pixel is actually visible in either image.
 		var differing := 0
 		for y in row.get_height():
 			for x in row.get_width():
-				if not row.get_pixel(x, y).is_equal_approx(mirror.get_pixel(x, y)):
+				var a := row.get_pixel(x, y)
+				var b := mirror.get_pixel(x, y)
+				if not is_equal_approx(a.a, b.a):
+					differing += 1
+				elif a.a > 0.0 and not Color(a.r, a.g, a.b).is_equal_approx(Color(b.r, b.g, b.b)):
 					differing += 1
 		assert_eq(differing, 0,
 			"%s must stay a pixel-exact horizontal mirror of %s row y=%d"
