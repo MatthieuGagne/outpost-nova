@@ -91,6 +91,8 @@ tests/                   # GUT tests (extend GutTest, use before_each to call Ga
 
 Each feature has its own plan under `docs/plans/` or `docs/superpowers/plans/` — read the one for the feature you are implementing before touching code. Completed plans are deleted, so their absence means the work landed; `git log` is the record.
 
+Worktrees: every worktree is an Orca worktree — create and remove via the `orca` CLI (`orca-cli` skill). Never `git worktree add`, never `EnterWorktree`; Orca worktrees live under `~\orca\workspaces\<repo>\<name>`.
+
 ## Key Design Constraints
 
 - **MVP scope is fixed:** 2 rooms, 3 characters (Cook/Maris, Engineer/Dex, Drifter/Sable), 3 resources, 5 recipes, 3 Cantina upgrades. No save system, day cycle, or relationship simulation.

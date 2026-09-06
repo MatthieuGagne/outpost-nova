@@ -5,6 +5,8 @@ this import, by OMP). This file carries only what is OMP-specific.
 
 @../CLAUDE.md
 
+Worktrees: every worktree is an Orca worktree — create and remove via the `orca` CLI. Never raw `git worktree add`; Orca worktrees live under `~\orca\workspaces\<repo>\<name>`.
+
 ## Dispatch the specialist agents — they will not fire on their own
 
 Claude Code auto-delegates from an agent's `description`. **OMP does not**:

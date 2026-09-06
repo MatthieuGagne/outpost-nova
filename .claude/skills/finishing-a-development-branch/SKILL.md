@@ -97,13 +97,13 @@ EOF
 After PR is created, report:
 
 > "PR created: <URL>
-> When the PR is merged, let me know and I'll clean up the worktree at `C:\Code\worktrees\<sanitized-branch>`."
+> When the PR is merged, let me know and I'll clean up the worktree (Orca worktrees live under `~\orca\workspaces\<repo>\<name>`)."
 
 **Do NOT run Step 7 yet.** Cleanup only happens after the user confirms the merge.
 
 #### Option 2: Keep As-Is
 
-Report: "Keeping branch `<name>`. Worktree preserved at `C:\Code\worktrees\<sanitized-branch>`."
+Report: "Keeping branch `<name>`. Worktree preserved (Orca worktrees live under `~\orca\workspaces\<repo>\<name>`)."
 
 **Do NOT run Step 7.**
 
@@ -115,7 +115,7 @@ Report: "Keeping branch `<name>`. Worktree preserved at `C:\Code\worktrees\<sani
 This will permanently delete:
 - Branch <name>
 - All commits: <commit-list>
-- Worktree at C:\Code\worktrees\<sanitized-branch>
+- Its worktree (Orca worktrees live under `~\orca\workspaces\<repo>\<name>`)
 
 Type 'discard' to confirm.
 ```
@@ -152,11 +152,15 @@ fi
 
 **Step 7a: Remove the worktree via Orca**
 
-Orca-managed worktrees (under `~\orca\workspaces\<repo>\<name>`) are removed via the Orca CLI: invoke the `orca-cli` skill (exact commands come from `ORCA skills get orca-cli` — never guess flags).
+Orca-managed worktrees (under `~\orca\workspaces\<repo>\<name>`) are removed via the Orca CLI, run from the repo root:
 
-After Orca removes the worktree, skip to Step 7d.
+```bash
+orca worktree rm --worktree path:<absoluteWorktreePath> --force --json
+```
 
-**Legacy fallback (pre-Orca worktrees only):** if the worktree is not Orca-managed (e.g. under `C:\Code\worktrees\`), continue to Step 7b. If the session was started with the legacy `EnterWorktree` tool and is still inside the worktree, use `ExitWorktree` first:
+(See the `orca-cli` skill for details.) After Orca removes the worktree, skip to Step 7d.
+
+**Legacy fallback (non-Orca worktrees only):** if the worktree is not Orca-managed (a legacy worktree under `.worktrees/` or `.claude/worktrees/`), continue to Step 7b. If the session was started with the legacy `EnterWorktree` tool and is still inside the worktree, use `ExitWorktree` first:
 
 ```
 ExitWorktree(action="remove", discard_changes=true)
@@ -172,21 +176,21 @@ Always `cd` first — if the session CWD is inside a deleted worktree, git panic
 cd C:\Code\outpost-nova
 ```
 
-**Step 7c: Remove the worktree**
+**Step 7c: Remove the worktree (legacy non-Orca worktrees only)**
 
 ```bash
-git worktree remove C:\Code\worktrees\<sanitized-branch>
+git worktree remove <legacy-worktree-path>
 ```
 
 If that fails (dirty working tree):
 ```bash
-git worktree remove --force C:\Code\worktrees\<sanitized-branch>
+git worktree remove --force <legacy-worktree-path>
 # Warn: "Worktree had uncommitted changes — removed with --force."
 ```
 
 If `--force` also fails (directory already deleted from disk, stale git ref):
 ```bash
-Remove-Item -Recurse -Force C:\Code\worktrees\<sanitized-branch>
+Remove-Item -Recurse -Force <legacy-worktree-path>
 git worktree prune
 # Note: "Worktree directory was already gone — pruned stale ref."
 ```
@@ -222,9 +226,9 @@ Run Step 7a → 7b → 7c → 7d in sequence. Skip 7e (branch already deleted wi
 
 ## Worktree Path Convention
 
-Branch names are sanitized before use as directory names: replace all `/` with `-`.
+Every worktree is an Orca worktree, living under `~\orca\workspaces\<repo>\<name>` — created and removed via the Orca CLI (`orca-cli` skill).
 
-- Example: `feat/issue-19-worktree` → `C:\Code\worktrees\feat-issue-19-worktree`
+Legacy non-Orca worktrees (under `.worktrees/` or `.claude/worktrees/`) used sanitized branch names as directory names: replace all `/` with `-` (e.g. `feat/issue-19-worktree` → `feat-issue-19-worktree`).
 
 ## Quick Reference
 
@@ -248,8 +252,11 @@ Branch names are sanitized before use as directory names: replace all `/` with `
 **`git worktree remove` fails with "Unable to read current working directory"**
 - **Fix:** Always `cd C:\Code\outpost-nova` before any worktree remove command (Step 7b)
 
-**`git worktree remove --force` fails with "is not a working tree"**
-- **Fix:** Fall back to `rm -rf <path> && git worktree prune` to clean up the stale ref
+**Using raw `git worktree remove` on an Orca worktree**
+- **Fix:** Orca worktrees (under `~\orca\workspaces\`) are removed via `orca worktree rm` (Step 7a); raw `git worktree` commands are for legacy `.worktrees/` / `.claude/worktrees/` only
+
+**`git worktree remove --force` fails with "is not a working tree" (legacy worktrees only)**
+- **Fix:** Fall back to `rm -rf <legacy-worktree-path> && git worktree prune` to clean up the stale ref
 
 **Merging directly to main**
 - **Fix:** Always use a PR — never `git merge` to main locally
@@ -273,7 +280,7 @@ Branch names are sanitized before use as directory names: replace all `/` with `
 - Integrate via PR only
 - Run GUT tests headlessly before presenting options
 - Run smoketest — launch `godot &`, wait for explicit user confirmation
-- Sanitize branch name (replace `/` with `-`) for worktree paths
+- Remove Orca worktrees via the Orca CLI (raw `git worktree` only for legacy worktrees)
 - Infer issue number from branch name before asking
 - Present exactly 3 options
 - Get typed `discard` for Option 3
