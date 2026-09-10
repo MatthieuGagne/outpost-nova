@@ -114,6 +114,13 @@ character PNG added for 3D use needs the same setting, or it will silently
 reimport with VRAM compression and look softer than its neighbours the next
 time the editor touches it.
 
+The same rule applies to the kit textures under `assets/sprites/kit/` (PRD 4,
+#104): they feed `StandardMaterial3D` on `BoxMesh`/`CylinderMesh`, which gets
+the same "Detect 3D" VRAM-compression default — a fresh import writes
+`detect_3d/compress_to=1`, so every kit PNG must be flipped to
+`detect_3d/compress_to=0` (and `mipmaps/generate=false`) in its `.import`, or
+its hard pixel edges soften on the next editor touch.
+
 ## Greybox room, interaction & NPC (PRD 3, #103)
 
 This is the room the epic's **go/no-go gate** is answered in. PRD 4 (#104) does
