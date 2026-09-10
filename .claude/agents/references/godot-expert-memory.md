@@ -21,6 +21,7 @@ silently rewriting history.
 | `load().instantiate()` returns Variant — `:=` cannot infer | [load(path).instantiate() returns Variant — := cannot infer it](#loadpathinstantiate-returns-variant----cannot-infer-it) |
 | GUT prints "All tests passed" for a silently skipped file | [GUT prints "All tests passed" for a file it silently skipped](#gut-prints-all-tests-passed-for-a-file-it-silently-skipped) |
 | A `Control` under a `Node2D` never resolves anchor size (stays 0×0) | [A Control under a Node2D never resolves anchor size (stays 0x0)](#a-control-under-a-node2d-never-resolves-anchor-size-stays-0x0) |
+| `SceneState.get_node_path()` returns a `./`-prefixed path | [SceneState.get_node_path() returns a ./-prefixed path](#scenestateget_node_path-returns-a--prefixed-path) |
 
 ---
 
@@ -153,3 +154,17 @@ Symptom in the hybrid runner (#129): the `World3D` `SubViewportContainer` is a c
 
 Confirmed 2026-09-09, Godot 4.7.1 mono (#129). Falsified if a future Godot version resolves a
 `Control`'s anchors against the viewport even under a `Node2D` parent.
+
+---
+
+## SceneState.get_node_path() returns a ./-prefixed path
+
+`PackedScene.get_state().get_node_path(i)` returns root-relative paths with a **leading `./`** — a
+direct child is `"./HUD"`, not `"HUD"`, and a nested node is `"./World3D/SubViewport/Area3D/Player3D"`.
+Writing a structural test that asserts `paths.has("HUD")` or `paths.has("World3D/…")` fails even though
+the node exists. Normalise with `str(state.get_node_path(i)).trim_prefix("./")` before comparing, or
+assert against the explicit `"./"` form (as `tests/test_dialogue_wiring.gd` already does with
+`"./DialogueRunner/TextLineProvider"`).
+
+Confirmed 2026-09-09, Godot 4.7.1 mono (#129). Falsified if a future Godot version drops the leading
+`./` from `SceneState` node paths.
