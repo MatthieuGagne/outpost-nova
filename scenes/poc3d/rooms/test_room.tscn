@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3]
 
-[ext_resource type="Script" path="res://scripts/poc3d/tile_floor.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/world3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
-[ext_resource type="Script" path="res://scripts/poc3d/pixel_sprite_3d.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/world3d/pixel_sprite_3d.gd" id="3"]
 [ext_resource type="SpriteFrames" path="res://data/sprites/player_frames.tres" id="4"]
-[ext_resource type="Script" path="res://scripts/poc3d/tile_collision.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/world3d/tile_collision.gd" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/player3d.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/npc3d.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/console.tscn" id="8"]

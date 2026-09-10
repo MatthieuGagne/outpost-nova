@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scripts/poc3d/npc3d.gd" id="1"]
-[ext_resource type="Script" path="res://scripts/poc3d/pixel_sprite_3d.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/world3d/npc3d.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/world3d/pixel_sprite_3d.gd" id="2"]
 [ext_resource type="SpriteFrames" path="res://data/sprites/npc_frames.tres" id="3"]
-[ext_resource type="Script" path="res://scripts/poc3d/interact_target.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/world3d/interact_target.gd" id="4"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(1, 2, 1)
