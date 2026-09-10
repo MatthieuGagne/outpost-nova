@@ -20,6 +20,7 @@ silently rewriting history.
 | `detect_3d/compress_to` blurs pixel art in 3D | [detect_3d/compress_to blurs pixel art the first time a texture is used in 3D](#detect_3dcompress_to-blurs-pixel-art-the-first-time-a-texture-is-used-in-3d) |
 | `load().instantiate()` returns Variant — `:=` cannot infer | [load(path).instantiate() returns Variant — := cannot infer it](#loadpathinstantiate-returns-variant----cannot-infer-it) |
 | GUT prints "All tests passed" for a silently skipped file | [GUT prints "All tests passed" for a file it silently skipped](#gut-prints-all-tests-passed-for-a-file-it-silently-skipped) |
+| A `Control` under a `Node2D` never resolves anchor size (stays 0×0) | [A Control under a Node2D never resolves anchor size (stays 0x0)](#a-control-under-a-node2d-never-resolves-anchor-size-stays-0x0) |
 
 ---
 
@@ -130,3 +131,25 @@ between runs, and grep for `SCRIPT ERROR` / `Nothing was run` alongside every he
 
 Confirmed 2026-09-05, Godot 4.7.1 mono, GUT (#103). Falsified if GUT starts failing the run on an
 uncollectable script.
+
+---
+
+## A Control under a Node2D never resolves anchor size (stays 0x0)
+
+A `Control` (e.g. `SubViewportContainer`) parented to a `Node2D` gets anchor-based size **(0, 0)** — its
+full-rect anchors (`anchor_right/bottom = 1.0`) do NOT resolve against the viewport. A `Control`'s
+anchors resolve against its parent's `get_anchorable_rect()`: a plain `Node` is not a `CanvasItem`, so the
+`Control` falls back to the viewport's visible rect; a `Node2D` **is** a `CanvasItem`, so the `Control`
+uses the `Node2D`'s own (zero-sized) rect instead. Same result under a `Control` parent works correctly.
+
+Symptom in the hybrid runner (#129): the `World3D` `SubViewportContainer` is a child of the `Node2D` root
+`Main`, so it stays 0×0 and `stretch = true` drives the `SubViewport` down to its **2×2 minimum**. That
+2×2 texture is then upscaled to full screen by the container — the room renders as a flat grey (only the
+`WorldEnvironment` background colour), with no resolvable geometry. Camera was current, geometry present
+(28 `MeshInstance3D`), world/environment all correct — so it is easy to chase the wrong hypothesis
+(`own_world_3d`, `make_current`). The fix is to give the container an explicit size (`offset_right = 480.0`,
+`offset_bottom = 270.0`), which the fixed 480×270 render target makes safe. Verified by reading back the
+`SubViewport` texture: `svp.size` went `(2,2)` → `(480,270)` and the floor/walls/props appeared.
+
+Confirmed 2026-09-09, Godot 4.7.1 mono (#129). Falsified if a future Godot version resolves a
+`Control`'s anchors against the viewport even under a `Node2D` parent.
