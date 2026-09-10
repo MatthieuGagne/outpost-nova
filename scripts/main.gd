@@ -2,7 +2,7 @@
 extends Node2D
 
 const AREA_SCENES = {
-	"trade_dock":        {"scene": "res://scenes/areas/trade_dock.tscn", "presentation": "2d"},
+	"trade_dock":        {"scene": "res://scenes/areas3d/trade_dock.tscn", "presentation": "3d"},
 	"cantina":           {"scene": "res://scenes/areas/cantina.tscn", "presentation": "2d"},
 	"workshop":          {"scene": "res://scenes/areas/workshop.tscn", "presentation": "2d"},
 	"quarters":          {"scene": "res://scenes/areas/quarters.tscn", "presentation": "2d"},
@@ -16,18 +16,11 @@ const NPC_SPAWN_AREAS = {
 	"quen":    "security_post",
 	"dex":     "workshop",
 	"velreth": "med_bay",
-	"sable":   "trade_dock",
 }
 
 # Entry spawn positions per area, keyed by the previous area.
 # Left wall entry: x=32, right wall entry: x=448, top wall entry: y=32, bottom wall entry: y=224
 const AREA_ENTRY_POSITIONS = {
-	"trade_dock": {
-		"cantina":           Vector2(32, 128),   # cantina bottom → trade_dock left
-		"security_post":     Vector2(448, 128),  # security_post bottom → trade_dock right
-		"derelict_entrance": Vector2(240, 200),
-		"default":           Vector2(240, 128),
-	},
 	"cantina": {
 		"workshop":      Vector2(32, 128),   # workshop right → cantina left
 		"security_post": Vector2(448, 128),  # security_post left → cantina right
@@ -107,7 +100,6 @@ func _spawn_npcs() -> void:
 		"quen":    "res://scripts/characters/quen.gd",
 		"dex":     "res://scripts/characters/dex.gd",
 		"velreth": "res://scripts/characters/velreth.gd",
-		"sable":   "res://scripts/characters/sable.gd",
 	}
 	for npc_id in npc_scripts:
 		var base = load("res://scenes/characters/npc_base.tscn").instantiate()
@@ -152,10 +144,7 @@ func _enter_2d(area_id: String, prev: String) -> void:
 		var npc = _npc_instances[npc_id]
 		var spawn_area = NPC_SPAWN_AREAS.get(npc_id, "cantina")
 		var in_area = (spawn_area == area_id)
-		if npc_id == "sable":
-			npc.visible = in_area and GameState.get_flag("sable_arrived")
-		else:
-			npc.visible = in_area
+		npc.visible = in_area
 		if npc.visible:
 			var spawn = _current_area.find_child("%sSpawn" % npc_id.capitalize(), true, false)
 			if spawn:
