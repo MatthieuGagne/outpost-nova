@@ -21,7 +21,7 @@ git fetch origin && git merge origin/master
 ```
 Resolve any conflicts before proceeding.
 
-**Second: run grill-me.** Always invoke the `grill-me` skill before writing — it surfaces requirements, acceptance criteria, scope, and constraints. Once grill-me is satisfied, continue below.
+**Second: run grill-me (if installed).** Invoke the `grill-me` skill before writing when it is present in the skills list — it surfaces requirements, acceptance criteria, scope, and constraints. When `grill-me` is absent (or the issue/PRD is already self-sufficient), derive requirements directly from the issue/PRD and proceed.
 
 **Third: create a git worktree through Orca.** After grill-me and before writing the plan file, create a worktree on a feature branch:
 
