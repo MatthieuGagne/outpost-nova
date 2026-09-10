@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/characters/player.tscn" id="2"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://addons/YarnSpinner-Godot/Runtime/DialogueRunner.cs" id="8"]
 [ext_resource type="Resource" uid="uid://b63maae1xqnff" path="res://data/dialogue/outpost-nova.yarnproject" id="9"]
 [ext_resource type="Script" path="res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs" id="11"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/player3d.tscn" id="12"]
 
 [sub_resource type="Animation" id="Animation_fade_out"]
 resource_name = "fade_out"
@@ -58,6 +59,26 @@ y_sort_enabled = true
 
 [node name="Player" parent="AreaContainer" instance=ExtResource("2")]
 position = Vector2(240, 128)
+
+[node name="World3D" type="SubViewportContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="World3D"]
+handle_input_locally = false
+transparent_bg = false
+render_target_update_mode = 4
+
+[node name="Area3D" type="Node3D" parent="World3D/SubViewport"]
+
+[node name="Player3D" parent="World3D/SubViewport/Area3D" instance=ExtResource("12")]
+process_mode = 4
 
 [node name="HUD" parent="." instance=ExtResource("3")]
 
