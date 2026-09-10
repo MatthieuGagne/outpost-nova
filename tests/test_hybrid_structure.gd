@@ -34,6 +34,10 @@ func test_2d_trade_dock_files_are_gone():
 	assert_false(ResourceLoader.exists("res://scenes/areas/trade_dock.tscn"), "2D trade_dock scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/areas/trade_dock.gd"), "2D trade_dock script must be deleted")
 
+func test_2d_cantina_files_are_gone():
+	assert_false(ResourceLoader.exists("res://scenes/areas/cantina.tscn"), "2D cantina scene must be deleted")
+	assert_false(ResourceLoader.exists("res://scripts/areas/cantina.gd"), "2D cantina script must be deleted")
+
 func test_trade_dock_authors_entry_markers_for_every_2d_neighbour():
 	var room = load(TRADE_DOCK_3D).instantiate()
 	add_child_autofree(room)
@@ -42,6 +46,7 @@ func test_trade_dock_authors_entry_markers_for_every_2d_neighbour():
 
 func test_2d_neighbours_keep_entry_positions_keyed_by_trade_dock():
 	var main_script = load("res://scripts/main.gd")
-	for area in ["cantina", "security_post"]:
+	# cantina left this list in #130 — it is a 3D room now and spawns from EntryFrom* markers.
+	for area in ["security_post"]:
 		assert_true(main_script.AREA_ENTRY_POSITIONS[area].has("trade_dock"),
 			"2D area '%s' lost its trade_dock entry position" % area)
