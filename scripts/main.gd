@@ -96,6 +96,10 @@ func _setup_dialogue_runner() -> void:
 	# YarnSpinner source generator, which Windows Application Control can block.
 	var yarn_functions = load("res://scripts/YarnGameState.cs").new()
 	yarn_functions.Register(runners[0])
+	# Yarn commands, registered once at boot (#129 R5) — not lazily per-NPC.
+	runners[0].AddCommandHandlerCallable("register", Callable(GameState, "record_register"))
+	runners[0].AddCommandHandlerCallable("log_action", Callable(ClockManager, "log_action"))
+	runners[0].AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {

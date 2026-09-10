@@ -15,8 +15,6 @@ var _wander_target: Vector2 = Vector2.ZERO
 var _is_talking: bool = false
 var _facing: String = "down"
 
-static var _commands_registered: bool = false
-
 func _ready() -> void:
 	add_to_group("npcs")
 	add_to_group("interactable")
@@ -62,11 +60,6 @@ func interact() -> void:
 		push_error("npc_base: no node in group 'dialogue_runner'")
 		return
 	var runner := runners[0]
-	if not _commands_registered:
-		runner.AddCommandHandlerCallable("register", Callable(GameState, "record_register"))
-		runner.AddCommandHandlerCallable("log_action", Callable(ClockManager, "log_action"))
-		runner.AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
-		_commands_registered = true
 	var boxes := get_tree().get_nodes_in_group("dialogue_box")
 	if not boxes.is_empty():
 		var box := boxes[0]
