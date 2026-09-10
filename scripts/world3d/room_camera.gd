@@ -19,11 +19,16 @@ extends Camera3D
 
 
 func _ready() -> void:
-	if not use_contract_angle:
-		return
-	projection = PROJECTION_PERSPECTIVE
-	fov = WorldScale.CAMERA_FOV
-	rotation_degrees = Vector3(
-		WorldScale.CAMERA_PITCH_DEGREES,
-		WorldScale.CAMERA_YAW_DEGREES,
-		0.0)
+	if use_contract_angle:
+		projection = PROJECTION_PERSPECTIVE
+		fov = WorldScale.CAMERA_FOV
+		rotation_degrees = Vector3(
+			WorldScale.CAMERA_PITCH_DEGREES,
+			WorldScale.CAMERA_YAW_DEGREES,
+			0.0)
+	# A SubViewport renders 3D through its current Camera3D; nothing else sets this,
+	# so without it the viewport falls back to a default origin camera and the room
+	# shows as a featureless grey background. Runtime-only: the editor manages its own
+	# preview camera and make_current() here would fight it.
+	if not Engine.is_editor_hint():
+		make_current()
