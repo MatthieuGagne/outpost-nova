@@ -160,8 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
 [node name="NPC3D" parent="." instance=ExtResource("7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
 facing = "right"
-speaker_name = "Maris"
-dialogue_line = "The recycler's coughing again. Third time this week. Dex says it's fine. Dex says a lot of things."
+dialogue_node = ""
 
 [node name="ExitDoor" parent="." instance=ExtResource("9")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5.5)

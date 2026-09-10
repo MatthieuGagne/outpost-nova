@@ -8,13 +8,15 @@
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(1, 2, 1)
 
-[node name="Npc3D" type="Node3D"]
+[node name="Npc3D" type="CharacterBody3D"]
 script = ExtResource("1")
 
 [node name="PixelSprite3D" type="AnimatedSprite3D" parent="."]
 script = ExtResource("2")
 sprite_frames = ExtResource("3")
 animation = &"idle_down"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 
 [node name="InteractTarget" type="Area3D" parent="."]
 script = ExtResource("4")

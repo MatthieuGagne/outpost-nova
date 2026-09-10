@@ -1,0 +1,2 @@
+extends Node
+signal conversation_ended
