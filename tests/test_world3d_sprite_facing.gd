@@ -73,3 +73,13 @@ func test_the_result_is_normalised_so_diagonals_are_not_faster():
 
 func test_zero_input_produces_no_movement():
 	_assert_axes(SpriteFacing.input_to_world(Vector2.ZERO, WorldScale.CAMERA_YAW_DEGREES), Vector3.ZERO, "zero input")
+
+func test_from_world_maps_world_velocity_back_to_facing():
+	# contract yaw 45°: screen-up walks (-sin45, 0, -cos45) = (-√½, 0, -√½)
+	assert_eq(SpriteFacing.from_world(Vector3(-0.707, 0.0, -0.707), 45.0), "up")
+	# screen-right walks (√½, 0, -√½)
+	assert_eq(SpriteFacing.from_world(Vector3(0.707, 0.0, -0.707), 45.0), "right")
+	# y is ignored — facing is XZ-only
+	assert_eq(SpriteFacing.from_world(Vector3(-0.707, 99.0, -0.707), 45.0), "up")
+	# zero velocity → no facing
+	assert_eq(SpriteFacing.from_world(Vector3.ZERO, 45.0), SpriteFacing.NO_FACING)
