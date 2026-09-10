@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/poc3d/player3d.gd" id="1"]
-[ext_resource type="Script" path="res://scripts/poc3d/pixel_sprite_3d.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/world3d/player3d.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/world3d/pixel_sprite_3d.gd" id="2"]
 [ext_resource type="SpriteFrames" path="res://data/sprites/player_frames.tres" id="3"]
 
 [node name="Player3D" type="CharacterBody3D"]

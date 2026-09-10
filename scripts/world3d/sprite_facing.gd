@@ -47,3 +47,14 @@ static func input_to_world(input: Vector2, yaw_degrees: float) -> Vector3:
 	var forward := Vector3(-sin(yaw), 0.0, -cos(yaw))
 	var right := Vector3(cos(yaw), 0.0, -sin(yaw))
 	return (right * input.x + forward * -input.y).normalized()
+
+
+## Inverts input_to_world: rotates a world-space XZ velocity back into camera
+## space, then resolves facing. For NPCs, whose velocity is already world-space.
+static func from_world(world: Vector3, yaw_degrees: float) -> String:
+	if world.length_squared() < 0.0001:
+		return NO_FACING
+	var yaw := deg_to_rad(yaw_degrees)
+	var right := Vector3(cos(yaw), 0.0, -sin(yaw))
+	var forward := Vector3(-sin(yaw), 0.0, -cos(yaw))
+	return from_input(Vector2(world.dot(right), -world.dot(forward)))

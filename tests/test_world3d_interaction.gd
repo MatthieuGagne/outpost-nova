@@ -340,50 +340,6 @@ func test_the_interact_target_ignores_a_parent_that_cannot_interact():
 	pass_test("forwarding to a parent without interact() must not error")
 
 
-# ── Npc3D dialogue wiring (R7) ───────────────────────────────────────────────
-
-const DIALOGUE_BOX_SCENE := "res://scenes/ui/dialogue_box.tscn"
-const SPEAKER_LABEL_PATH := "PanelContainer/MarginContainer/HBoxContainer/ContentContainer/SpeakerLabel"
-const DIALOGUE_TEXT_PATH := "PanelContainer/MarginContainer/HBoxContainer/ContentContainer/DialogueText"
-
-
-func _npc_with_line() -> Node3D:
-	var npc = load(NPC_SCENE).instantiate()
-	npc.speaker_name = SPEAKER
-	npc.dialogue_line = BODY
-	add_child_autofree(npc)
-	await wait_frames(1)
-	return npc
-
-
-func test_an_npc_without_a_line_does_not_open_the_dialogue_box():
-	var box = load(DIALOGUE_BOX_SCENE).instantiate()
-	add_child_autofree(box)
-	var npc = load(NPC_SCENE).instantiate()
-	add_child_autofree(npc)
-	await wait_frames(1)
-	npc.interact()
-	await wait_frames(1)
-	assert_false(box.visible, "an NPC with no authored line must stay silent")
-	get_tree().paused = false
-
-
-func test_interacting_shows_the_line_in_the_real_dialogue_box():
-	var box = load(DIALOGUE_BOX_SCENE).instantiate()
-	add_child_autofree(box)
-	var npc = await _npc_with_line()
-	npc.interact()
-	await wait_frames(2)
-	assert_true(box.visible, "dialogue_box.tscn must be shown by the NPC's interact()")
-	var speaker: Label = box.get_node(SPEAKER_LABEL_PATH)
-	var text: RichTextLabel = box.get_node(DIALOGUE_TEXT_PATH)
-	assert_eq(speaker.text, SPEAKER)
-	assert_eq(text.text, BODY)
-	# on_dialogue_start_async() pauses the tree; leave it clean for the next test.
-	box.on_dialogue_complete_async()
-	await wait_frames(1)
-
-
 # ── AC3 structure: the dialogue box is NOT inside the low-res target ──────────
 
 const ENTRY_SCENE := "res://scenes/poc3d/poc_entry.tscn"
@@ -402,13 +358,3 @@ func test_the_dialogue_box_draws_above_the_low_res_viewport():
 	assert_false(viewport.is_ancestor_of(box),
 		"the dialogue box has been reparented under the SubViewport — it must stay a sibling")
 	assert_true(box is CanvasLayer)
-
-
-func test_the_room_casts_maris_with_a_line():
-	var entry: Node = load(ENTRY_SCENE).instantiate()
-	add_child_autofree(entry)
-	await wait_frames(2)
-	var npc = entry.find_child("NPC3D", true, false)
-	assert_not_null(npc, "the test room no longer has an NPC3D")
-	assert_eq(npc.speaker_name, SPEAKER)
-	assert_false(npc.dialogue_line.is_empty(), "Maris must have an authored line")

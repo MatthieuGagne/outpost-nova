@@ -71,20 +71,6 @@ func _run() -> void:
 		}
 	)
 
-	# Trade Dock — left→Cantina, right→Security Post; bottom prop door (no tile gap)
-	_process_area(
-		"res://scenes/areas/trade_dock.tscn",
-		tileset,
-		{"left_door": true, "right_door": true},
-		{
-			"CantinaExitDoor":  Vector2(8, 128),
-			"SecurityPostDoor": Vector2(472, 128),
-			"SableSpawn":       Vector2(240, 128),
-			"SpinePropTrigger": Vector2(240, 200),
-			"SpineDoorLabel":   Vector2(170, 175),
-		}
-	)
-
 	# Security Post — left→Cantina, right→Med Bay, bottom→Trade Dock
 	_process_area(
 		"res://scenes/areas/security_post.tscn",

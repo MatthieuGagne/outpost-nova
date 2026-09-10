@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://scripts/poc3d/poc_entry.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/world3d/poc_entry.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/rooms/test_room.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/ui/dialogue_box.tscn" id="4"]
