@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://scripts/world3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/crate.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/pipe.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/console.tscn" id="9"]
+[ext_resource type="Script" path="res://scripts/areas3d/cantina.gd" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/exit_door.tscn" id="11"]
 
 [sub_resource type="Environment" id="1"]
 background_mode = 1
@@ -28,6 +30,7 @@ size = Vector3(1, 0.5, 4)
 size = Vector3(6, 0.5, 1)
 
 [node name="Cantina" type="Node3D"]
+script = ExtResource("10")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 script = ExtResource("1")
@@ -158,3 +161,34 @@ environment = SubResource("1")
 
 [node name="RoomCamera" parent="." instance=ExtResource("2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 10.5, 10.5)
+
+[node name="WorkshopExit" parent="." instance=ExtResource("11")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -7.5, 1, 0)
+destination_id = "workshop"
+
+[node name="QuartersExit" parent="." instance=ExtResource("11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5.5)
+destination_id = "quarters"
+
+[node name="SecurityPostExit" parent="." instance=ExtResource("11")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 7.5, 1, 0)
+destination_id = "security_post"
+
+[node name="TradeDockExit" parent="." instance=ExtResource("11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5.5)
+destination_id = "trade_dock"
+
+[node name="EntryFromWorkshop" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="EntryFromQuarters" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="EntryFromSecurityPost" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="EntryFromTradeDock" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="DefaultSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
