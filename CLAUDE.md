@@ -58,6 +58,16 @@ dotnet build "Outpost Nova.csproj"
 ./tools/godot.ps1 -Console --headless --export-debug "Windows Desktop"
 ```
 
+**Headless verification gotchas:**
+
+- A `-s` throwaway script that instantiates a scene referencing an autoload
+  (e.g. `GameState`) fails to compile under a bare `SceneTree` — autoloads are
+  only registered by the full game or the GUT runner. Verify scene structure
+  under GUT, or register the autoloads in the throwaway script.
+- `tools/godot.ps1` does not forward `--` user args to a `-s` script
+  (`OS.get_cmdline_user_args()` comes back empty), so hardcode the scene/output
+  path in the throwaway script instead.
+
 ## Architecture
 
 Two global **autoload singletons** (already registered in `project.godot`) are the backbone:
