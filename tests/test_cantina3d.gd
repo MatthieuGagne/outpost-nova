@@ -55,3 +55,27 @@ func test_exits_forward_to_the_main_area_router():
 	var room := _room()
 	assert_true(room.has_method("_on_exit_triggered"),
 		"cantina.gd must forward ExitDoor.triggered to Main.go_to_area")
+
+func test_room_hosts_maris_as_a_production_npc3d():
+	var room := _room()
+	var maris = room.find_child("Maris", false, false)
+	assert_not_null(maris, "3D cantina must host Maris in-scene, like trade_dock hosts Sable")
+	assert_true(maris is Npc3D, "Maris must be an Npc3D instance")
+	assert_eq(maris.dialogue_node, "Maris", "Maris must point at the 'Maris' Yarn node")
+
+func test_maris_wander_box_stays_inside_the_walkable_floor():
+	var room := _room()
+	var maris: Npc3D = room.find_child("Maris", false, false)
+	var half := maris.wander_half_extents
+	assert_between(maris.position.x - half.x, -8.0, 8.0, "Maris can wander out of the floor in -X")
+	assert_between(maris.position.x + half.x, -8.0, 8.0, "Maris can wander out of the floor in +X")
+	assert_between(maris.position.z - half.y, -6.0, 6.0, "Maris can wander out of the floor in -Z")
+	assert_between(maris.position.z + half.y, -6.0, 6.0, "Maris can wander out of the floor in +Z")
+
+func test_room_hosts_the_rations_plot_with_the_2d_yield():
+	var room := _room()
+	var plot = room.find_child("RationsPlot", false, false)
+	assert_not_null(plot, "3D cantina must host the rations plot")
+	assert_true(plot is Plot3D)
+	assert_eq(plot.resource_id, "rations")
+	assert_eq(plot.yield_amount, 2, "the 2D cantina plot yielded 2 — parity, not a new number")
