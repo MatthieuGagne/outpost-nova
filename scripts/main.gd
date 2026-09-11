@@ -3,7 +3,7 @@ extends Node2D
 
 const AREA_SCENES = {
 	"trade_dock":        {"scene": "res://scenes/areas3d/trade_dock.tscn", "presentation": "3d"},
-	"cantina":           {"scene": "res://scenes/areas/cantina.tscn", "presentation": "2d"},
+	"cantina":           {"scene": "res://scenes/areas3d/cantina.tscn", "presentation": "3d"},
 	"workshop":          {"scene": "res://scenes/areas/workshop.tscn", "presentation": "2d"},
 	"quarters":          {"scene": "res://scenes/areas/quarters.tscn", "presentation": "2d"},
 	"security_post":     {"scene": "res://scenes/areas/security_post.tscn", "presentation": "2d"},
@@ -12,7 +12,6 @@ const AREA_SCENES = {
 }
 
 const NPC_SPAWN_AREAS = {
-	"maris":   "cantina",
 	"quen":    "security_post",
 	"dex":     "workshop",
 	"velreth": "med_bay",
@@ -21,13 +20,6 @@ const NPC_SPAWN_AREAS = {
 # Entry spawn positions per area, keyed by the previous area.
 # Left wall entry: x=32, right wall entry: x=448, top wall entry: y=32, bottom wall entry: y=224
 const AREA_ENTRY_POSITIONS = {
-	"cantina": {
-		"workshop":      Vector2(32, 128),   # workshop right → cantina left
-		"security_post": Vector2(448, 128),  # security_post left → cantina right
-		"quarters":      Vector2(240, 32),   # quarters bottom → cantina top
-		"trade_dock":    Vector2(240, 224),  # trade_dock left → cantina bottom
-		"default":       Vector2(240, 128),
-	},
 	"workshop": {
 		"cantina": Vector2(448, 128),
 		"default": Vector2(240, 128),
@@ -96,7 +88,6 @@ func _setup_dialogue_runner() -> void:
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {
-		"maris":   "res://scripts/characters/maris.gd",
 		"quen":    "res://scripts/characters/quen.gd",
 		"dex":     "res://scripts/characters/dex.gd",
 		"velreth": "res://scripts/characters/velreth.gd",
@@ -142,7 +133,7 @@ func _enter_2d(area_id: String, prev: String) -> void:
 	area_container.move_child(_current_area, 0)
 	for npc_id in _npc_instances:
 		var npc = _npc_instances[npc_id]
-		var spawn_area = NPC_SPAWN_AREAS.get(npc_id, "cantina")
+		var spawn_area = NPC_SPAWN_AREAS.get(npc_id, "")
 		var in_area = (spawn_area == area_id)
 		npc.visible = in_area
 		if npc.visible:
