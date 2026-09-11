@@ -218,3 +218,71 @@ mush. `dialogue_box.tscn` is a `CanvasLayer` at `layer = 10` against the HUD's
 `layer = 1`, so as a sibling it draws above both, at full window resolution.
 `tests/test_poc3d_interaction.gd` asserts it and will fail if a later PRD
 reparents it.
+
+## Production rooms: what the cantina added (#130)
+
+`scenes/areas3d/trade_dock.tscn` established the room shape; the cantina is the
+first room migrated *into* the live game with doors on every side, an NPC, and
+an interactable. These are the rules it settled, so the next migration
+(workshop, M3) does not re-derive them.
+
+### Doors on a near side leave a gap, not a wall
+
+The camera looks from `+X`/`+Z`, so those two sides are parapets (see the PRD 3
+table above). A door on a parapet side is authored as a **4-unit gap in the
+parapet**, split into two mesh segments either side of it — not as a full-height
+wall with a doorframe, which would occlude the interior the parapet exists to
+keep visible. The cantina's East parapet is two `BoxMesh(1, 0.5, 4)` pieces
+leaving `Z ∈ [-2, 2]` open; the South parapet is two `BoxMesh(6, 0.5, 1)` pieces
+leaving `X ∈ [-2, 2]` open.
+
+### A wall running along Z needs a 90° yaw — on two nodes
+
+`doorframe.tscn` and `exit_door.tscn` are both authored facing `-Z`. On a wall
+that runs along Z (the West/East sides), **both** need
+`rotation_degrees = (0, 90, 0)`. For the `ExitDoor` this is not cosmetic: its
+collision box is `(2, 3, 1)` — 2 units wide in **local X** — so without the yaw
+the trigger spans the wall instead of the doorway.
+
+### Where the trigger and the marker go
+
+Two different offsets, and swapping them breaks the room:
+
+| Node | Offset from the floor edge | Why |
+|------|---------------------------|-----|
+| `ExitDoor` | **0.5 units inside** | Its 1-unit-deep box then covers the first *walkable* tile row. The border collision ring stays solid across the doorway, so the player is stopped at the threshold — the trigger fires, the door never "opens" |
+| `EntryFrom*` marker | **2 units inside** | Clear of the exit trigger box above. A marker placed inside that box re-fires the door the instant the player arrives, bouncing them straight back |
+
+Markers must be **direct children of the room root** — `main._find_3d_entry_marker`
+searches non-recursively, so a nested marker is silently invisible and the player
+falls back to `DefaultSpawn`.
+
+### Migrating a room moves its NPC out of the 2D roster
+
+A 3D room hosts its own NPCs in-scene as `Npc3D` instances (trade_dock hosts
+Sable; the cantina hosts Maris). Migrating a room therefore means deleting its
+NPC from **both** halves of the 2D roster in `main.gd` — `NPC_SPAWN_AREAS` and
+the `npc_scripts` dict in `_spawn_npcs()`. Leaving it in either place spawns a
+duplicate 2D NPC that is invisible everywhere.
+
+The same commit drops that room's whole `AREA_ENTRY_POSITIONS` block (3D rooms
+spawn from `EntryFrom*` markers instead), but **keeps** the surviving 2D
+neighbours' keys *naming* it — those describe arrival into a 2D room from the
+migrated one and stay valid.
+
+`dialogue_box.gd` keys portraits off the Yarn **speaker** name, so an `Npc3D`
+whose `dialogue_node` matches the character's name gets the right portrait with
+no extra wiring.
+
+### Interactables are `Area3D` roots
+
+`Plot3D` (`scenes/poc3d/plot3d.tscn`) is the first production interactable. Its
+root **is** the `Area3D`, like `PocConsole` and unlike `Npc3D`'s forwarding
+`InteractTarget` child — so it lands directly in `Player3D`'s
+`get_overlapping_areas()` scan. Its `CollisionShape3D` is `BoxShape3D(1, 2, 1)`
+at `(0, 1, 0)`, the same volume `InteractTarget` uses and proven to sit inside
+the player's 1.25-unit reach.
+
+It is self-contained: the room script knows nothing about plots. A second plot
+is one more instance with a different `resource_id` — the flag key is derived as
+`"plot_%s_growing" % resource_id`, never written literally.
