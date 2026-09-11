@@ -38,6 +38,16 @@ func test_2d_cantina_files_are_gone():
 	assert_false(ResourceLoader.exists("res://scenes/areas/cantina.tscn"), "2D cantina scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/areas/cantina.gd"), "2D cantina script must be deleted")
 
+func test_dead_pre_mvp_rooms_cantina_is_gone():
+	assert_false(ResourceLoader.exists("res://scenes/rooms/cantina.tscn"), "pre-MVP rooms/cantina scene must be deleted")
+	assert_false(ResourceLoader.exists("res://scripts/rooms/cantina.gd"), "pre-MVP rooms/cantina script must be deleted")
+
+func test_orphaned_pre_mvp_character_pair_is_gone():
+	# rooms/cantina.tscn was character.tscn's only consumer; deleting it orphaned the pair.
+	# The live NPCs (maris/quen/dex/velreth/sable) extend npc_base.gd and are unaffected.
+	assert_false(ResourceLoader.exists("res://scenes/characters/character.tscn"), "orphaned character scene must be deleted")
+	assert_false(ResourceLoader.exists("res://scripts/characters/character.gd"), "orphaned character script must be deleted")
+
 func test_trade_dock_authors_entry_markers_for_every_2d_neighbour():
 	var room = load(TRADE_DOCK_3D).instantiate()
 	add_child_autofree(room)
