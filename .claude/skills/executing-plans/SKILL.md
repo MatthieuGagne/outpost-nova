@@ -52,6 +52,23 @@ Never use `git worktree add`, the `EnterWorktree` tool, or `.worktrees/`/`.claud
 
 **Batch atomicity rule (HARD):** If ANY implementer in a parallel group fails, halt the entire batch immediately. Passing implementers MUST discard their in-progress work — do NOT stage or commit partial results. Fix the failure, then re-dispatch the entire group from scratch.
 
+**Before executing a deletion task (HARD):** confirm each target's blast radius
+against the tree, never the plan prose. For every file a task says to delete:
+
+- `grep` the repo for consumers of the target's symbol or filename — a file the
+  plan did not list may still reference it (e.g. `grep -rn "<name>" scripts/ scenes/ tests/`).
+- If the target is a script (`.gd`), check the inheritance chain: `grep -n "^extends"` on
+  every script sharing the target's directory — a sibling may extend it and the
+  plan may not have said so.
+- If the plan's description of the target does not match the tree — it names a
+  file that does not exist, or misreads an `ext_resource` id / scene sub-resource
+  as a script filename — STOP and report the mismatch. Do not silently work
+  around it by hunting "phantom" files or guessing.
+
+The plan is a hypothesis; the tree is the fact. A deletion's real risk is often
+adjacent to what the plan names (e.g. the inheritance chain of a script about to
+be deleted), not the file the plan points at.
+
 For each task (whether parallel or sequential):
 1. Mark as in_progress
 2. Determine task type:
