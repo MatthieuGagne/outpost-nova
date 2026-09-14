@@ -24,3 +24,13 @@ if ! "$PY" tools/sync_agents.py; then
     exit 1
 fi
 git add .omp/agents/
+
+if command -v pwsh >/dev/null 2>&1; then
+    if ! pwsh -NoProfile -File tools/check-assets.ps1; then
+        echo "" >&2
+        echo "pre-commit: tools/check-assets.ps1 reported violations — commit blocked." >&2
+        exit 1
+    fi
+else
+    echo "pre-commit: no pwsh on PATH — asset checks skipped" >&2
+fi

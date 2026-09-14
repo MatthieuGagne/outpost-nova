@@ -68,6 +68,15 @@ dotnet build "Outpost Nova.csproj"
   (`OS.get_cmdline_user_args()` comes back empty), so hardcode the scene/output
   path in the throwaway script instead.
 
+**`.uid` companions ship with the commit.** Godot writes `foo.gd.uid` on the
+*next* import pass — after the commit that added `foo.gd` — so an explicit-path
+`git add scripts/foo.gd` leaves the companion untracked, and it is silently
+missing from the commit. After adding a `.gd`, run the import
+(`./tools/godot.ps1 -Console --headless --path . --editor --quit`) so the `.uid`
+exists, then commit the `.gd` and its `.uid` together. `tools/check-assets.ps1`
+(wired into the pre-commit hook) flags a tracked `.gd` whose `.uid` is missing or
+untracked, and a stale `.uid` whose `.gd` is gone — it is the gate, not a note.
+
 ## Architecture
 
 Two global **autoload singletons** (already registered in `project.godot`) are the backbone:

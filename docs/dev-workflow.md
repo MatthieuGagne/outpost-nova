@@ -59,7 +59,7 @@ Open a new Claude Code session (or use Subagent-Driven mode) and invoke the `exe
 
 1. **Checks for an existing worktree** — `writing-plans` creates the worktree before saving the plan, so the session may already be inside it. If not, `EnterWorktree` creates it now. All implementation work happens in the worktree, isolated from the main repo.
 2. Loads and reviews the plan critically
-3. Executes tasks in batches, running GUT tests after every GDScript change:
+3. Executes tasks in batches, running GUT tests after every GDScript change, and verifying a deletion's blast radius (consumers + `extends` chain) against the tree before deleting:
    ```bash
    godot --headless -s addons/gut/gut_cmdln.gd
    ```
@@ -101,6 +101,7 @@ Invoked automatically by `executing-plans` (or standalone). It:
 - **Worktrees are mandatory** — no fallback for working directly on a branch in the main repo
 - **MVP scope is fixed** — 2 rooms, 3 characters, 3 resources, 5 recipes, 3 Cantina upgrades; no scope creep
 - **TDD for all GDScript logic** — write the failing test before writing the implementation
+- **Commit a `.gd` and its `.uid` together** — Godot writes the `.uid` on the *next* import pass, so an explicit-path `git add` leaves it untracked; `tools/check-assets.ps1` (wired into the pre-commit hook) is the gate
 
 ---
 
