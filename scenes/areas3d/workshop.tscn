@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://scripts/world3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/table.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/console.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/pipe.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/exit_door.tscn" id="9"]
+[ext_resource type="Script" path="res://scripts/areas3d/workshop.gd" id="10"]
 
 [sub_resource type="Environment" id="1"]
 background_mode = 1
@@ -27,6 +29,7 @@ size = Vector3(1, 0.5, 3)
 size = Vector3(14, 0.5, 1)
 
 [node name="Workshop" type="Node3D"]
+script = ExtResource("10")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 script = ExtResource("1")
@@ -158,3 +161,13 @@ environment = SubResource("1")
 
 [node name="RoomCamera" parent="." instance=ExtResource("2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 9, 9)
+
+[node name="CantinaExit" parent="." instance=ExtResource("9")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 6.5, 1, 0)
+destination_id = "cantina"
+
+[node name="EntryFromCantina" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="DefaultSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
