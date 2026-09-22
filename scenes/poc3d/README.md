@@ -286,3 +286,50 @@ the player's 1.25-unit reach.
 It is self-contained: the room script knows nothing about plots. A second plot
 is one more instance with a different `resource_id` — the flag key is derived as
 `"plot_%s_growing" % resource_id`, never written literally.
+
+## Production rooms: what the workshop added (#131)
+
+The workshop is the second migrated room and the first whose only door is on a
+**near** side and whose interactable is *not* a plot. These are the rules it
+settled that the cantina did not already establish, so security_post (M4) does
+not re-derive them.
+
+### A near-side-only door has no doorframe at all
+
+`doorframe.tscn` is only for full-height (far) walls. A room whose sole door is
+on a near (parapet) side authors the door as a gap in the parapet and nothing
+else — the workshop's east parapet is two `BoxMesh(1, 0.5, 3)` pieces leaving
+`Z ∈ [-2, 2]` open, with **no** `doorframe.tscn` anywhere in the scene.
+
+### Two plots in one room is zero new code
+
+`Plot3D` keys its flag off `resource_id` (`"plot_%s_growing"`), so `parts` and
+`energy_cells` in the same room keep fully independent state by pure scene
+instancing. A room needing three plots is three instances — never a code edit
+to `plot3d.gd`.
+
+### The non-plot interactable that opens a 2D panel
+
+`Workbench3D` (`scripts/world3d/workbench3d.gd` + `scenes/poc3d/workbench3d.tscn`)
+is the template for any future console/terminal that opens a 2D `CanvasLayer`
+panel over the 3D view: `Area3D` root in the `interactable` group, an
+`interact()` that forwards to a one-line `Main` method (`open_crafting()`), and
+`get_node_or_null` so it degrades quietly headless. The 2D panel is opened
+unmodified — `CraftingSystem` is untouched.
+
+### Solid interactables stay `Area3D` roots
+
+A 2D interactable that was a solid `StaticBody2D` becomes **walk-through** in 3D
+(its root must be the `Area3D` that lands in `Player3D`'s overlap scan). When
+walk-through reads wrong, restore solidity with a `TileCollision.blocked` entry —
+the workbench's `2×1` footprint blocked the two tiles `(-1, -3)` and `(0, -3)` —
+never by changing the root's type. Solidity and reachability are authored in two
+different places on purpose.
+
+### Migrating deletes the generator entry too
+
+`tools/generate_rooms.gd` hardcodes `res://scenes/areas/<room>.tscn` paths and
+crashes on a deleted one. Migrating a room therefore removes its
+`_process_area(...)` block from that script *alongside* the
+`AREA_ENTRY_POSITIONS` block in `main.gd` — the cantina's already-dead block was
+stripped here too, which is what restored the tool to a runnable state.
