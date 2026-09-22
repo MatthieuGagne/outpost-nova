@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://scripts/world3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/pipe.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/exit_door.tscn" id="9"]
 [ext_resource type="Script" path="res://scripts/areas3d/workshop.gd" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/workbench3d.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/plot3d.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/npc3d.tscn" id="13"]
 
 [sub_resource type="Environment" id="1"]
 background_mode = 1
@@ -171,3 +174,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
 [node name="DefaultSpawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="PartsPlot" parent="." instance=ExtResource("12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -1.5)
+resource_id = "parts"
+yield_amount = 1
+
+[node name="EnergyPlot" parent="." instance=ExtResource("12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 1.5)
+resource_id = "energy_cells"
+yield_amount = 1
+
+[node name="Workbench" parent="." instance=ExtResource("11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
+
+[node name="Dex" parent="." instance=ExtResource("13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1)
+dialogue_node = "Dex"
+wander_half_extents = Vector2(2, 2)
