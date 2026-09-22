@@ -45,18 +45,6 @@ func _run() -> void:
 		}
 	)
 
-	# Security Post — left→Cantina, right→Med Bay, bottom→Trade Dock
-	_process_area(
-		"res://scenes/areas/security_post.tscn",
-		tileset,
-		{"left_door": true, "right_door": true, "bottom_door": true},
-		{
-			"CantinaDoor":   Vector2(8, 128),
-			"MedBayDoor":    Vector2(472, 128),
-			"TradeDockDoor": Vector2(240, 248),
-		}
-	)
-
 	# Med Bay — left door only → Security Post (dead end)
 	_process_area(
 		"res://scenes/areas/med_bay.tscn",
