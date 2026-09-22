@@ -333,3 +333,12 @@ crashes on a deleted one. Migrating a room therefore removes its
 `_process_area(...)` block from that script *alongside* the
 `AREA_ENTRY_POSITIONS` block in `main.gd` — the cantina's already-dead block was
 stripped here too, which is what restored the tool to a runnable state.
+
+### Generator node keys are not stale references
+
+A stale-reference sweep after a migration must not flag `CantinaDoor` /
+`CantinaBottomDoor` keys in the *still-2D* rooms' `_process_area` calls in
+`tools/generate_rooms.gd`. Those keys name **doors** that lead into the migrated
+area — they are not references to the deleted `res://scenes/areas/<room>.tscn`.
+Distinguish node-name keys from scene-path strings: a key is only stale if it
+points at a deleted scene *path*.

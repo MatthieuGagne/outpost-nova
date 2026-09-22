@@ -44,6 +44,14 @@ Every task that touches GDScript logic MUST follow this exact sequence — no ex
 | 4 | Refactor checkpoint ("breaks when N > 1?") |
 | 5 | Commit |
 
+> **Test-count expectations in a plan are a hypothesis, not a contract.** When a
+> plan states an expected GUT count — "holds 8 tests", "expected to fail on all
+> four" — that is the author's snapshot of the *current* tree, not a requirement
+> the executor must reproduce. The executor verifies against the actual
+> `Scripts`/`Tests` output and treats a pre-existing green guard test as normal
+> (see `executing-plans`). Don't over-specify counts in the plan; label them as
+> expectations.
+
 Non-logic tasks (scenes, UI, docs, assets): write → verify visually in editor → commit. No test gate.
 
 **Scene/UI gate:** If the plan touches any game state (add/remove autoload state, change signal definitions, change story beat triggers), add a task to verify all existing GUT tests still pass. Always ask the user before modifying existing tests — do not auto-update them.
