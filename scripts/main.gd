@@ -4,7 +4,7 @@ extends Node2D
 const AREA_SCENES = {
 	"trade_dock":        {"scene": "res://scenes/areas3d/trade_dock.tscn", "presentation": "3d"},
 	"cantina":           {"scene": "res://scenes/areas3d/cantina.tscn", "presentation": "3d"},
-	"workshop":          {"scene": "res://scenes/areas/workshop.tscn", "presentation": "2d"},
+	"workshop":          {"scene": "res://scenes/areas3d/workshop.tscn", "presentation": "3d"},
 	"quarters":          {"scene": "res://scenes/areas/quarters.tscn", "presentation": "2d"},
 	"security_post":     {"scene": "res://scenes/areas/security_post.tscn", "presentation": "2d"},
 	"med_bay":           {"scene": "res://scenes/areas/med_bay.tscn", "presentation": "2d"},
@@ -13,17 +13,12 @@ const AREA_SCENES = {
 
 const NPC_SPAWN_AREAS = {
 	"quen":    "security_post",
-	"dex":     "workshop",
 	"velreth": "med_bay",
 }
 
 # Entry spawn positions per area, keyed by the previous area.
 # Left wall entry: x=32, right wall entry: x=448, top wall entry: y=32, bottom wall entry: y=224
 const AREA_ENTRY_POSITIONS = {
-	"workshop": {
-		"cantina": Vector2(448, 128),
-		"default": Vector2(240, 128),
-	},
 	"quarters": {
 		"cantina": Vector2(240, 224),
 		"default": Vector2(240, 128),
@@ -89,7 +84,6 @@ func _setup_dialogue_runner() -> void:
 func _spawn_npcs() -> void:
 	var npc_scripts = {
 		"quen":    "res://scripts/characters/quen.gd",
-		"dex":     "res://scripts/characters/dex.gd",
 		"velreth": "res://scripts/characters/velreth.gd",
 	}
 	for npc_id in npc_scripts:

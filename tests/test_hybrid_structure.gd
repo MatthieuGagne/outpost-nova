@@ -38,6 +38,15 @@ func test_2d_cantina_files_are_gone():
 	assert_false(ResourceLoader.exists("res://scenes/areas/cantina.tscn"), "2D cantina scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/areas/cantina.gd"), "2D cantina script must be deleted")
 
+func test_2d_workshop_files_are_gone():
+	assert_false(ResourceLoader.exists("res://scenes/areas/workshop.tscn"), "2D workshop scene must be deleted")
+	assert_false(ResourceLoader.exists("res://scripts/areas/workshop.gd"), "2D workshop script must be deleted")
+
+func test_orphaned_2d_workbench_script_is_gone():
+	# scenes/areas/workshop.tscn was workbench.gd's only instantiator; the 3D room
+	# uses scripts/world3d/workbench3d.gd instead.
+	assert_false(ResourceLoader.exists("res://scripts/workbench.gd"), "orphaned 2D workbench script must be deleted")
+
 func test_dead_pre_mvp_rooms_cantina_is_gone():
 	assert_false(ResourceLoader.exists("res://scenes/rooms/cantina.tscn"), "pre-MVP rooms/cantina scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/rooms/cantina.gd"), "pre-MVP rooms/cantina script must be deleted")

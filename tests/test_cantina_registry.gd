@@ -17,8 +17,9 @@ func test_cantina_has_no_2d_entry_position_block():
 
 func test_surviving_2d_neighbours_keep_their_cantina_entry_positions():
 	# These describe arrival INTO a 2D room FROM cantina, so they stay.
+	# workshop left this list in #131 — it is a 3D room now and spawns from EntryFrom* markers.
 	var positions: Dictionary = _main_script().AREA_ENTRY_POSITIONS
-	for area in ["workshop", "quarters", "security_post"]:
+	for area in ["quarters", "security_post"]:
 		assert_true(positions[area].has("cantina"),
 			"2D area '%s' lost its cantina entry position" % area)
 

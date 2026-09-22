@@ -17,35 +17,9 @@ func _run() -> void:
 		push_error("station.tres not found at: " + TILESET_PATH)
 		return
 
-	# Workshop — right wall → Cantina (only door)
-	_process_area(
-		"res://scenes/areas/workshop.tscn",
-		tileset,
-		{"right_door": true, "left_door": false},
-		{
-			"CantinaDoor": Vector2(472, 128),
-			"DexSpawn":    Vector2(300, 128),
-			"Workbench":   Vector2(240, 128),
-			"PartsNode":   Vector2(80, 80),
-			"EnergyNode":  Vector2(80, 176),
-		}
-	)
-
-	# Cantina — 4-way hub
-	_process_area(
-		"res://scenes/areas/cantina.tscn",
-		tileset,
-		{"left_door": true, "right_door": true, "top_door": true, "bottom_door": true},
-		{
-			"WorkshopDoor":     Vector2(8, 128),
-			"SecurityPostDoor": Vector2(472, 128),
-			"QuartersDoor":     Vector2(240, 8),
-			"TradeDockDoor":    Vector2(240, 248),
-			"MarisSpawn":       Vector2(120, 128),
-			"QuenSpawn":        Vector2(360, 128),
-			"RationsNode":      Vector2(80, 80),
-		}
-	)
+	# Only 2D areas belong here. Rooms migrated to 3D (trade_dock #129, cantina #130,
+	# workshop #131) are hand-composed in scenes/areas3d/ and are not generated.
+	# Delete this script once the last 2D area migrates (epic #100, M6).
 
 	# Quarters — bottom door only → Cantina
 	_process_area(
