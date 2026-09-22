@@ -42,6 +42,10 @@ func test_2d_workshop_files_are_gone():
 	assert_false(ResourceLoader.exists("res://scenes/areas/workshop.tscn"), "2D workshop scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/areas/workshop.gd"), "2D workshop script must be deleted")
 
+func test_2d_security_post_files_are_gone():
+	assert_false(ResourceLoader.exists("res://scenes/areas/security_post.tscn"), "2D security_post scene must be deleted")
+	assert_false(ResourceLoader.exists("res://scripts/areas/security_post.gd"), "2D security_post script must be deleted")
+
 func test_orphaned_2d_workbench_script_is_gone():
 	# scenes/areas/workshop.tscn was workbench.gd's only instantiator; the 3D room
 	# uses scripts/world3d/workbench3d.gd instead.
@@ -63,9 +67,4 @@ func test_trade_dock_authors_entry_markers_for_every_2d_neighbour():
 	for marker in ["EntryFromCantina", "EntryFromSecurityPost", "EntryFromDerelictEntrance", "DefaultSpawn"]:
 		assert_not_null(room.find_child(marker, false, false), "3D trade_dock missing marker '%s'" % marker)
 
-func test_2d_neighbours_keep_entry_positions_keyed_by_trade_dock():
-	var main_script = load("res://scripts/main.gd")
-	# cantina left this list in #130 — it is a 3D room now and spawns from EntryFrom* markers.
-	for area in ["security_post"]:
-		assert_true(main_script.AREA_ENTRY_POSITIONS[area].has("trade_dock"),
-			"2D area '%s' lost its trade_dock entry position" % area)
+
