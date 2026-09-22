@@ -79,6 +79,12 @@ For each task (whether parallel or sequential):
    godot_console --headless -s addons/gut/gut_cmdln.gd
    ```
    If any test fails, stop and fix before continuing.
+
+   **Plan test-count expectations are advisory.** A plan's stated "expected N
+   tests" / "expected to fail on M" is the author's snapshot of the tree, not a
+   contract. Verify against the *actual* `Scripts`/`Tests` counts in GUT output,
+   never the plan's numbers. A test the plan predicted would fail but already
+   passes green (a pre-existing guard) is normal, not a defect.
 4. Run verifications as specified in the plan
 5. Mark as completed
 
