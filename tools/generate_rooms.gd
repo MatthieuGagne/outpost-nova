@@ -45,17 +45,6 @@ func _run() -> void:
 		}
 	)
 
-	# Med Bay — left door only → Security Post (dead end)
-	_process_area(
-		"res://scenes/areas/med_bay.tscn",
-		tileset,
-		{"left_door": true},
-		{
-			"SecurityPostDoor": Vector2(8, 128),
-			"VelrethSpawn":     Vector2(300, 128),
-		}
-	)
-
 	print("✓ Room generation complete.")
 
 func _process_area(

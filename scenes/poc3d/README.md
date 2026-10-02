@@ -366,3 +366,17 @@ A room with three doors (one far + two near) adds no new rule: it is the
 cantina's four-door layout minus the north doorframe. The far wall still gets
 `doorframe.tscn` (yaw 90° on a Z-running wall) and each near side gets a 4-unit
 parapet gap with **no** doorframe.
+
+## Production rooms: what the med bay added (#133)
+
+med_bay is the fourth migrated room. It adds no new 3D rule — the one genuinely
+new outcome is process-level, and the next migration (M6) should not re-derive
+it.
+
+### The last 2D NPC empties the roster
+
+med_bay is the **last** 2D room to host an NPC, so migrating it deletes Velreth
+from both halves of the 2D roster in `main.gd`, leaving `NPC_SPAWN_AREAS` and
+`_spawn_npcs()`'s `npc_scripts` dict **empty**. That orphans `velreth.gd`,
+`npc_base.gd`, and `npc_base.tscn` — they are deferred to the #142 M6 sweep
+rather than deleted one-per-migration.
