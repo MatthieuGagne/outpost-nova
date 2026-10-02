@@ -342,3 +342,27 @@ A stale-reference sweep after a migration must not flag `CantinaDoor` /
 area — they are not references to the deleted `res://scenes/areas/<room>.tscn`.
 Distinguish node-name keys from scene-path strings: a key is only stale if it
 points at a deleted scene *path*.
+
+## Production rooms: what the security post added (#132)
+
+The security post is the third migrated room and the first to host an `Npc3D`
+whose character has no bespoke 3D art. These are the rules it settled that the
+cantina and workshop had not made explicit, so med_bay (M5) does not re-derive
+them.
+
+### An art-less NPC needs no special handling
+
+An `Npc3D` whose character has no bespoke 3D art reuses the shared
+`data/sprites/npc_frames.tres` atlas with **no** `sprite_frames` override, and
+its portrait resolves via the Yarn speaker name to `FALLBACK_PORTRAIT_INDEX`
+when the name is absent from `NPC_PORTRAIT_INDEX`. Quen is the first such NPC —
+Maris, Dex, and Sable were authored before this was explicit. Bespoke art
+(sprite atlas + portrait index) is a separate follow-up, not part of a room
+migration.
+
+### Three doors is the cantina minus the north doorframe
+
+A room with three doors (one far + two near) adds no new rule: it is the
+cantina's four-door layout minus the north doorframe. The far wall still gets
+`doorframe.tscn` (yaw 90° on a Z-running wall) and each near side gets a 4-unit
+parapet gap with **no** doorframe.
