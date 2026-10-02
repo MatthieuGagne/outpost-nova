@@ -24,9 +24,3 @@ func test_no_surviving_2d_area_references_workshop_as_a_neighbour():
 	for area in positions:
 		assert_false(positions[area].has("workshop"),
 			"2D area '%s' still keys an entry position off the now-3D workshop" % area)
-
-
-func test_dex_is_no_longer_a_2d_roster_npc():
-	# The 3D workshop hosts Dex in-scene as an Npc3D, like cantina hosts Maris.
-	assert_false(_main_script().NPC_SPAWN_AREAS.has("dex"),
-		"dex must be dropped from the 2D NPC roster")

@@ -61,7 +61,7 @@ func test_dead_pre_mvp_rooms_cantina_is_gone():
 
 func test_orphaned_pre_mvp_character_pair_is_gone():
 	# rooms/cantina.tscn was character.tscn's only consumer; deleting it orphaned the pair.
-	# The live NPCs (maris/quen/dex/velreth/sable) extend npc_base.gd and are unaffected.
+	# The 2D NPC character scripts (npc_base.gd + the five NPC scripts) were swept in #142.
 	assert_false(ResourceLoader.exists("res://scenes/characters/character.tscn"), "orphaned character scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/characters/character.gd"), "orphaned character script must be deleted")
 
