@@ -50,3 +50,19 @@ func test_exits_forward_to_the_main_area_router():
 	var room := _room()
 	assert_true(room.has_method("_on_exit_triggered"),
 		"med_bay.gd must forward ExitDoor.triggered to Main.go_to_area")
+
+func test_room_hosts_velreth_as_a_production_npc3d():
+	var room := _room()
+	var velreth = room.find_child("Velreth", false, false)
+	assert_not_null(velreth, "3D med_bay must host Velreth in-scene, like security_post hosts Quen")
+	assert_true(velreth is Npc3D, "Velreth must be an Npc3D instance")
+	assert_eq(velreth.dialogue_node, "Velreth", "Velreth must point at the 'Velreth' Yarn node")
+
+func test_velreth_wander_box_stays_inside_the_walkable_floor():
+	var room := _room()
+	var velreth: Npc3D = room.find_child("Velreth", false, false)
+	var half := velreth.wander_half_extents
+	assert_between(velreth.position.x - half.x, -7.0, 7.0, "Velreth can wander out of the floor in -X")
+	assert_between(velreth.position.x + half.x, -7.0, 7.0, "Velreth can wander out of the floor in +X")
+	assert_between(velreth.position.z - half.y, -5.0, 5.0, "Velreth can wander out of the floor in -Z")
+	assert_between(velreth.position.z + half.y, -5.0, 5.0, "Velreth can wander out of the floor in +Z")

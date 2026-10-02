@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=17 format=3]
 
 [ext_resource type="Script" path="res://scripts/world3d/tile_floor.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/room_camera.tscn" id="2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://scenes/poc3d/kit/pipe.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://scenes/poc3d/exit_door.tscn" id="10"]
 [ext_resource type="Script" path="res://scripts/areas3d/med_bay.gd" id="11"]
+[ext_resource type="PackedScene" path="res://scenes/poc3d/npc3d.tscn" id="12"]
 
 [sub_resource type="Environment" id="1"]
 background_mode = 1
@@ -40,6 +41,11 @@ destination_id = "security_post"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="DefaultSpawn" type="Marker3D" parent="."]
+
+[node name="Velreth" parent="." instance=ExtResource("12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1)
+dialogue_node = "Velreth"
+wander_half_extents = Vector2(2, 2)
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 script = ExtResource("1")
