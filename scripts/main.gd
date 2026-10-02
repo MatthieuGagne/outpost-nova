@@ -7,13 +7,11 @@ const AREA_SCENES = {
 	"workshop":          {"scene": "res://scenes/areas3d/workshop.tscn", "presentation": "3d"},
 	"quarters":          {"scene": "res://scenes/areas/quarters.tscn", "presentation": "2d"},
 	"security_post":     {"scene": "res://scenes/areas3d/security_post.tscn", "presentation": "3d"},
-	"med_bay":           {"scene": "res://scenes/areas/med_bay.tscn", "presentation": "2d"},
+	"med_bay":           {"scene": "res://scenes/areas3d/med_bay.tscn", "presentation": "3d"},
 	"derelict_entrance": {"scene": "res://scenes/areas/derelict_entrance.tscn", "presentation": "2d"},
 }
 
-const NPC_SPAWN_AREAS = {
-	"velreth": "med_bay",
-}
+const NPC_SPAWN_AREAS = {}
 
 # Entry spawn positions per area, keyed by the previous area.
 # Left wall entry: x=32, right wall entry: x=448, top wall entry: y=32, bottom wall entry: y=224
@@ -21,10 +19,6 @@ const AREA_ENTRY_POSITIONS = {
 	"quarters": {
 		"cantina": Vector2(240, 224),
 		"default": Vector2(240, 128),
-	},
-	"med_bay": {
-		"security_post": Vector2(32, 128),
-		"default":       Vector2(240, 128),
 	},
 	"derelict_entrance": {
 		"trade_dock": Vector2(32, 128),
@@ -75,9 +69,7 @@ func _setup_dialogue_runner() -> void:
 	runners[0].AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
 
 func _spawn_npcs() -> void:
-	var npc_scripts = {
-		"velreth": "res://scripts/characters/velreth.gd",
-	}
+	var npc_scripts = {}
 	for npc_id in npc_scripts:
 		var base = load("res://scenes/characters/npc_base.tscn").instantiate()
 		base.set_script(load(npc_scripts[npc_id]))
