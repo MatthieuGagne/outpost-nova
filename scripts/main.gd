@@ -11,8 +11,6 @@ const AREA_SCENES = {
 	"derelict_entrance": {"scene": "res://scenes/areas/derelict_entrance.tscn", "presentation": "2d"},
 }
 
-const NPC_SPAWN_AREAS = {}
-
 # Entry spawn positions per area, keyed by the previous area.
 # Left wall entry: x=32, right wall entry: x=448, top wall entry: y=32, bottom wall entry: y=224
 const AREA_ENTRY_POSITIONS = {
@@ -38,13 +36,11 @@ const AREA_ENTRY_POSITIONS = {
 
 var _current_area_id: String = ""
 var _current_area: Node = null
-var _npc_instances: Dictionary = {}
 var _is_transitioning: bool = false
 
 func _ready() -> void:
 	ClockManager.day_ended.connect(_on_day_ended)
 	_setup_dialogue_runner()
-	_spawn_npcs()
 	go_to_area("trade_dock")
 	get_viewport().gui_release_focus()
 
@@ -67,14 +63,6 @@ func _setup_dialogue_runner() -> void:
 	runners[0].AddCommandHandlerCallable("register", Callable(GameState, "record_register"))
 	runners[0].AddCommandHandlerCallable("log_action", Callable(ClockManager, "log_action"))
 	runners[0].AddCommandHandlerCallable("flag", Callable(GameState, "set_flag_on"))
-
-func _spawn_npcs() -> void:
-	var npc_scripts = {}
-	for npc_id in npc_scripts:
-		var base = load("res://scenes/characters/npc_base.tscn").instantiate()
-		base.set_script(load(npc_scripts[npc_id]))
-		area_container.add_child(base)
-		_npc_instances[npc_id] = base
 
 func go_to_area(area_id: String) -> void:
 	if _current_area_id == area_id or _is_transitioning:
@@ -109,17 +97,6 @@ func _enter_2d(area_id: String, prev: String) -> void:
 	_current_area = scene.instantiate()
 	area_container.add_child(_current_area)
 	area_container.move_child(_current_area, 0)
-	for npc_id in _npc_instances:
-		var npc = _npc_instances[npc_id]
-		var spawn_area = NPC_SPAWN_AREAS.get(npc_id, "")
-		var in_area = (spawn_area == area_id)
-		npc.visible = in_area
-		if npc.visible:
-			var spawn = _current_area.find_child("%sSpawn" % npc_id.capitalize(), true, false)
-			if spawn:
-				npc.position = spawn.global_position
-			if npc.has_method("_pick_wander_target"):
-				npc._pick_wander_target()
 
 
 func _enter_3d(area_id: String, prev: String) -> void:
