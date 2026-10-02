@@ -46,6 +46,10 @@ func test_2d_security_post_files_are_gone():
 	assert_false(ResourceLoader.exists("res://scenes/areas/security_post.tscn"), "2D security_post scene must be deleted")
 	assert_false(ResourceLoader.exists("res://scripts/areas/security_post.gd"), "2D security_post script must be deleted")
 
+func test_2d_med_bay_files_are_gone():
+	assert_false(ResourceLoader.exists("res://scenes/areas/med_bay.tscn"), "2D med_bay scene must be deleted")
+	assert_false(ResourceLoader.exists("res://scripts/areas/med_bay.gd"), "2D med_bay script must be deleted")
+
 func test_orphaned_2d_workbench_script_is_gone():
 	# scenes/areas/workshop.tscn was workbench.gd's only instantiator; the 3D room
 	# uses scripts/world3d/workbench3d.gd instead.
