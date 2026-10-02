@@ -6,13 +6,12 @@ const AREA_SCENES = {
 	"cantina":           {"scene": "res://scenes/areas3d/cantina.tscn", "presentation": "3d"},
 	"workshop":          {"scene": "res://scenes/areas3d/workshop.tscn", "presentation": "3d"},
 	"quarters":          {"scene": "res://scenes/areas/quarters.tscn", "presentation": "2d"},
-	"security_post":     {"scene": "res://scenes/areas/security_post.tscn", "presentation": "2d"},
+	"security_post":     {"scene": "res://scenes/areas3d/security_post.tscn", "presentation": "3d"},
 	"med_bay":           {"scene": "res://scenes/areas/med_bay.tscn", "presentation": "2d"},
 	"derelict_entrance": {"scene": "res://scenes/areas/derelict_entrance.tscn", "presentation": "2d"},
 }
 
 const NPC_SPAWN_AREAS = {
-	"quen":    "security_post",
 	"velreth": "med_bay",
 }
 
@@ -22,12 +21,6 @@ const AREA_ENTRY_POSITIONS = {
 	"quarters": {
 		"cantina": Vector2(240, 224),
 		"default": Vector2(240, 128),
-	},
-	"security_post": {
-		"cantina":    Vector2(32, 128),   # cantina right → security_post left
-		"med_bay":    Vector2(448, 128),  # med_bay left → security_post right
-		"trade_dock": Vector2(240, 224),  # trade_dock right → security_post bottom
-		"default":    Vector2(240, 128),
 	},
 	"med_bay": {
 		"security_post": Vector2(32, 128),
@@ -83,7 +76,6 @@ func _setup_dialogue_runner() -> void:
 
 func _spawn_npcs() -> void:
 	var npc_scripts = {
-		"quen":    "res://scripts/characters/quen.gd",
 		"velreth": "res://scripts/characters/velreth.gd",
 	}
 	for npc_id in npc_scripts:
