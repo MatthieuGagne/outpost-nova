@@ -54,3 +54,19 @@ func test_exits_forward_to_the_main_area_router():
 	var room := _room()
 	assert_true(room.has_method("_on_exit_triggered"),
 		"security_post.gd must forward ExitDoor.triggered to Main.go_to_area")
+
+func test_room_hosts_quen_as_a_production_npc3d():
+	var room := _room()
+	var quen = room.find_child("Quen", false, false)
+	assert_not_null(quen, "3D security_post must host Quen in-scene, like the cantina hosts Maris")
+	assert_true(quen is Npc3D, "Quen must be an Npc3D instance")
+	assert_eq(quen.dialogue_node, "Quen", "Quen must point at the 'Quen' Yarn node")
+
+func test_quen_wander_box_stays_inside_the_walkable_floor():
+	var room := _room()
+	var quen: Npc3D = room.find_child("Quen", false, false)
+	var half := quen.wander_half_extents
+	assert_between(quen.position.x - half.x, -7.0, 7.0, "Quen can wander out of the floor in -X")
+	assert_between(quen.position.x + half.x, -7.0, 7.0, "Quen can wander out of the floor in +X")
+	assert_between(quen.position.z - half.y, -5.0, 5.0, "Quen can wander out of the floor in -Z")
+	assert_between(quen.position.z + half.y, -5.0, 5.0, "Quen can wander out of the floor in +Z")
